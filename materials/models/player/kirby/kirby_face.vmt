@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/player/kirby/kirby_face"
+	"$nodecal" 1
+}

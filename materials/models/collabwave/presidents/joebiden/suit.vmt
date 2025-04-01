@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/collabwave/presidents/joebiden/suit"
+	"$bumpmap" "models/collabwave/presidents/joebiden/suit_n"
+        "$nocull" "1"
+}

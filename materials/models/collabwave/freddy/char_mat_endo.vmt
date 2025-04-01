@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/collabwave/freddy/endoskeleton-color"
+	"$surfaceprop" "Metal"
+}

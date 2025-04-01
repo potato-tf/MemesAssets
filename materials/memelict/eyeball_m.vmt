@@ -1,0 +1,6 @@
+"Eyes"
+{
+	"$basetexture"	"models\Goomba\SharedTextures\eyeball"
+	"$iris" 		"models\Goomba\SharedTextures\pupil"
+	"$halflambert"	"1"
+}

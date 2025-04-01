@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/collabwave/presidents/joebiden/joe"
+	$translucent 1
+
+}

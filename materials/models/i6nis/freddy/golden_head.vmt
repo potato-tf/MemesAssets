@@ -1,0 +1,15 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "models/i6nis/freddy/golden_head"
+$halflambert 0
+
+
+	"$lightwarptexture" "models/i6nis/clothes_wrp"
+	"$phong" "1"
+//	"$phongexponent" "5"
+	"$phongalbedotint" "1"
+	"$phongboost" "25"
+	"$phongfresnelranges"	"[.5 1 48]"
+	"$phongexponenttexture" "models/i6nis/exp"
+
+}

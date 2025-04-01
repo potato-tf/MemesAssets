@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/collabwave/presidents/joebiden/joe"
+	"$bumpmap" "models/collabwave/presidents/joebiden/joe_n"
+	"$halflambert" 1
+                "$phong" "1"
+	"$phongexponent" "12"
+	"$phongboost" "1"	
+	"$phongfresnelranges"	"[.0 0.1 1]"
+	"$halflambert" "1"
+	"$nocull" 1 		
+	"$blendtintbybasealpha" 1
+
+}

@@ -1,0 +1,6064 @@
+#base robot_standard.pop
+#base robot_giant.pop
+#base squidgame.pop
+
+//Wave 1-2 : CreatorFroce
+//Wave 3-7 : Colonel
+//Special Thanks to Royal for Lua Programming
+
+WaveSchedule
+{
+    StartingCurrency		2000
+	TextPrintTime 1
+	RespawnWaveTime 2
+	FixedRespawnWaveTime 1
+	BodyPartScaleSpeed 10
+	BotPushaway 0
+	RobotLimit 24
+	CanBotsAttackWhileInSpawnRoom no
+	WaveStartCountdown 3				
+	NoMvMDeathTune 1
+
+	DisableSound "Announcer.MVM_First_Wave_Start"                        [$SIGSEGV]
+    DisableSound "Announcer.MVM_Wave_Start"                                [$SIGSEGV]
+    DisableSound "Announcer.MVM_Wave_End"                                [$SIGSEGV]
+    DisableSound "Announcer.MVM_Final_Wave_Start"                        [$SIGSEGV]    
+    DisableSound "Announcer.MVM_Final_Wave_End"                            [$SIGSEGV]
+	DisableSound "music.mvm_end_last_wave"								[$SIGSEGV]
+	DisableSound "music.mvm_end_mid_wave"								[$SIGSEGV]
+	DisableSound "music.mvm_end_tank_wave"								[$SIGSEGV]
+	DisableSound "music.mvm_end_wave"									[$SIGSEGV]
+	DisableSound "music.mvm_lost_wave"									[$SIGSEGV]
+	DisableSound "music.mvm_start_last_wave"							[$SIGSEGV]
+	DisableSound "music.mvm_start_mid_wave"								[$SIGSEGV]
+	DisableSound "music.mvm_start_tank_wave"							[$SIGSEGV]
+	DisableSound "music.mvm_start_wave"									[$SIGSEGV]
+	DisableSound "Announcer.MVM_Get_To_Upgrade"							[$SIGSEGV]
+	DisableSound "Announcer.MVM_All_Dead"								[$SIGSEGV]
+	DisableSound "Announcer.MVM_Sentry_Buster_Alert"					[$SIGSEGV]
+	DisableSound "Announcer.MVM_Sentry_Buster_Alert_Another"			[$SIGSEGV]
+	DisableSound "Announcer.MVM_Game_Over_Loss"							[$SIGSEGV]
+
+	ClassLimit [$SIGSEGV] //Limits the number of specified classes
+	{
+		Scout 0
+		Engineer 0
+		Medic 0
+	}
+	
+	
+	//Wave 1
+	PrecacheSound "mvm_defuck/ballwave/scout_1.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_2.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_3.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_4.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_5.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_6.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_7.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_8.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_9.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_10.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_11.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_12.wav"
+
+	PrecacheSound "mvm_defuck/ballwave/scout_everyonescream.wav"
+	PrecacheSound "mvm_defuck/ballwave/scout_violence_start_5.wav"
+	PrecacheSound "mvm_defuck/ballwave/demo_laugh.wav"
+
+	PrecacheSound "mvm_defuck/ballwave/end_overall.wav"
+	PrecacheSound "mvm_defuck/ballwave/end_song_2.wav"
+	PrecacheSound "mvm_defuck/ballwave/end_1.wav"
+	PrecacheSound "mvm_defuck/ballwave/end_2.wav"
+	PrecacheSound "mvm_defuck/ballwave/end_3.wav"
+	PrecacheSound "mvm_defuck/ballwave/end_4.wav"
+	PrecacheSound "mvm_defuck/ballwave/end_5.wav"
+	PrecacheSound "mvm_defuck/ballwave/end_6.wav"
+
+	PrecacheSound "mvm_defuck/memes/eas-alarm.wav"
+	PrecacheModel "models/props_gameplay/ball001_fix.mdl"
+
+	//Wave 2
+	PrecacheModel "models/player/bacteria/bacteria.mdl"
+
+	//Wave 3-7
+	PrecacheModel "props_badlands/quarry_rockpike.mdl"
+	PrecacheSound "ui/gamestartup10.mp3"
+	PrecacheSound "ui/gamestartup7.mp3"
+	PrecacheSound "ui/gamestartup6.mp3"
+	PrecacheSound "mvm_defuck/HERE_I_COME_doors.mp3"
+	PrecacheSound "coach\coach_attack_here.wav"
+	PrecacheSound "coach\coach_defend_here.wav"
+
+
+	BodyPartScaleSpeed 10
+	CustomWeapon [$SIGSEGV] //Allows you to use an alias for items with custom attributes
+	{
+		"mega rocket" // The name you would use in Item key in TFBot
+		{
+			OriginalItemName "TF_WEAPON_ROCKETLAUNCHER" // The item used as a base
+			"mult projectile count" 4
+			"projectile spread angle penalty" 3
+		} //je;;llo
+	}
+	ExtraTankPath [$SIGSEGV] //Adds tank path to follow
+	{
+		Name "tankpath_funnyblimp_colonel" //name of the starting path node prefix. First tank node name would be name_1
+		Node "-1306.73 1412 5848.7" // note XYZ coordinates. First node is the starting point
+		Node "-544.72 -53.81 5748.7"
+		Node "-851.74 -3131.05 5648.7"
+		Node "-1651.39 -3014.18 5567.24"
+		Node "-1693.62 -3475.19 5410.72"
+	}
+	ExtraTankPath [$SIGSEGV] //Adds tank path to follow
+	{
+		Name "finale_stucktank" //name of the starting path node prefix. First tank node name would be name_1
+		Node "4796.39 1262.66 1941.88" // note XYZ coordinates. First node is the starting point
+		Node "4796.39 1599.66 1941.88"
+	}
+	ExtraSpawnPoint
+	{
+	    Name "spawnbot_epicengi"
+		TeamNum 3
+		X "-1452.44"
+        Y "387.08"
+        Z "4812.55"
+}
+ExtraSpawnPoint [$SIGSEGV]  //Adds spawn points on specified location
+    {
+        Name "chaser_guy_idk"
+		// StartDisabled 1 // If the spawn point starts disabled (Default: 0)
+        TeamNum 3 // 2 - Red team 3 - Robots. If you are adding spawn for reprogrammed robots, use team 3
+        X	"3371.45"        
+        Y	"-2963.91"                  
+        Z	"1982.32"        
+    }
+	ExtraSpawnPoint [$SIGSEGV]  //Adds spawn points on specified location
+    {
+        Name "squidgame_the_girl_thing_idk_lol"
+		// StartDisabled 1 // If the spawn point starts disabled (Default: 0)
+        TeamNum 3 // 2 - Red team 3 - Robots. If you are adding spawn for reprogrammed robots, use team 3
+        X	"-5557.82"                     
+        Y	"-653.4"                  
+        Z	"3184.54"        
+    }
+	ExtraSpawnPoint    //Adds spawn points on specified location
+    {
+        Name "spawn_hateengis"
+		// StartDisabled 1 // If the spawn point starts disabled (Default: 0)
+        TeamNum 3 // 2 - Red team 3 - Robots. If you are adding spawn for reprogrammed robots, use team 3
+        X	"-1668.97"  
+        Y	"-3409.03"                  
+        Z	"4615.54"      
+    }
+	
+	ExtraSpawnPoint    //Adds spawn points on specified location
+    {
+        Name "spawn_finale_1"
+		// StartDisabled 1 // If the spawn point starts disabled (Default: 0)
+        TeamNum 3 // 2 - Red team 3 - Robots. If you are adding spawn for reprogrammed robots, use team 3
+        X	"3921.32"               
+        Y	"-4991.07"                  
+        Z	"1974.07"      
+    }
+
+	ExtraSpawnPoint    //Adds spawn points on specified location
+    {
+        Name "spawn_finale_alt_1"
+        // StartDisabled 1 // If the spawn point starts disabled (Default: 0)
+        TeamNum 3 // 2 - Red team 3 - Robots. If you are adding spawn for reprogrammed robots, use team 3
+        X    "4796.39"
+        Y    "1599.66"
+        Z    "1941.88"
+    }
+	
+	ExtraSpawnPoint    //Adds spawn points on specified location
+    {
+        Name "spawn_finale_2"
+		// StartDisabled 1 // If the spawn point starts disabled (Default: 0)
+        TeamNum 3 // 2 - Red team 3 - Robots. If you are adding spawn for reprogrammed robots, use team 3
+        X	"4870"      
+        Y	"-5654"                   
+        Z	"2018.42"      
+    }
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_3"
+		TeamNum 3
+		X "5014.1"
+	    Y "-3076"
+		Z "1974.39"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_4"
+		TeamNum 3
+		X "6386.97"
+	    Y "-1977.96"
+		Z "1994.32"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_theend_bot"
+		TeamNum 3
+		X "6596.41"
+	    Y "4164.9"
+		Z "-187"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_5"
+		TeamNum 3
+		X "4318.94"
+	    Y "-2547.07"
+		Z "1986.75"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_6"
+		TeamNum 3
+		X "4636.07"
+	    Y "-1538.96"
+		Z "1979.12"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_7"
+		TeamNum 3
+		X "3659.02"
+	    Y "-1924.18"
+		Z "1974.71"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_8"
+		TeamNum 3
+		X "3012.51"
+	    Y "-437.83"
+		Z "2006.33"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_9"
+		TeamNum 3
+		X "5093.88"
+	    Y "174.53"
+		Z "1984.44"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_10"
+		TeamNum 3
+		X "4888.8"
+	    Y "-508.86"
+		Z "1989.31"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_11"
+		TeamNum 3
+		X "5660.28"
+	    Y "1244.97"
+		Z "1986.89"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_12"
+		TeamNum 3
+		X "6164.95"
+	    Y "454.82"
+		Z "1969.17"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_13"
+		TeamNum 3
+		X "6097.75"
+	    Y "2689.78"
+		Z "1971.21"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_special"
+		TeamNum 3
+		X "6434.55"
+	    Y "2812.78"
+		Z "1940.03"
+	}
+	
+	ExtraSpawnPoint
+	{
+	    Name "spawn_finale_fin"
+		TeamNum 3
+		X "6591.87"
+	    Y "3068.02"
+		Z "1965.67"
+	}
+	
+	SpawnTemplate "wf_cutscenes"
+
+    ExtraSpawnPoint [$SIGSEGV]  //Wave 1 - Balls
+    {
+        Name "spawnballs"
+        TeamNum 3
+        X	"-1575"
+        Y	"904"
+        Z	"4482"
+    }
+
+    ExtraSpawnPoint [$SIGSEGV]  //Wave 1 - Balls - Ball Spawning
+    {
+        Name "spawnballs2"
+        TeamNum 3
+        X	"-1575"
+        Y	"660"
+        Z	"4485"
+    }
+
+    Templates
+    {
+		SG_TIMER_2
+			    {
+				class scout
+				name "get ready..."
+				health 2
+				scale 0.00001
+				MaxVisionRange 10
+				Attributes IgnoreFlag
+				CharacterAttributes
+				{
+				"is suicide counter" 1
+				}
+			    }
+				SG_TIMER_1
+			    {
+				class scout
+				health 7
+				scale 0.00001
+				MaxVisionRange 10
+				name "get ready..."
+				Attributes IgnoreFlag
+				CharacterAttributes
+				{
+				"is suicide counter" 1
+				"fire rate bonus" 99999
+				}
+			    }
+				SG_TIMER_4
+			    {
+				scale 0.00001
+				MaxVisionRange 10
+				class scout
+				health 4
+				name "get ready..."
+				Attributes IgnoreFlag
+				CharacterAttributes
+				{
+				"is suicide counter" 1
+				"fire rate bonus" 99999
+				}
+			    }
+				SG_TIMER_5
+			    {
+				scale 0.00001
+				MaxVisionRange 10
+				class scout
+				name "get ready..."
+				health 5
+				Attributes IgnoreFlag
+				CharacterAttributes
+				{
+				"is suicide counter" 1
+				"fire rate bonus" 99999
+				}
+			    }
+				SG_TIMER_3
+			    {
+				class scout
+				scale 0.00001
+				MaxVisionRange 10
+				name "get ready..."
+				Attributes IgnoreFlag
+				health 3
+				CharacterAttributes
+				{
+				"is suicide counter" 1
+				"fire rate bonus" 99999
+				}
+			    }
+        T_TFBot_Scout_W1
+        {
+            Class Scout
+			ClassIcon scout_stun_giant_armored
+			Skill Expert
+			Item "the bolt action blitzer"
+			Item "mnc mascot outfit"
+			Item "The Sandman"
+			WeaponRestrictions MeleeOnly
+            Scale 1.9
+                        Name "Ma BALLS!"
+                        Health 99999
+                        UseHumanModel 1
+                        Action Mobber 
+                        ChangeAttributes [$SIGSEGV] 
+                        {
+                            Delay  0
+                            Cooldown  999
+                            Name  "Stopped"
+                        }
+                        ChangeAttributes [$SIGSEGV] 
+                        {
+                            Delay  17.3
+                            Cooldown  999
+                            Name  "Running"
+                        }
+                        ChangeAttributes [$SIGSEGV] 
+                        {
+                            Delay  42.8
+                            Cooldown  999
+                            Name  "Death"
+                        }
+                        EventChangeAttributes
+                        {
+                            Stopped
+                            {
+                                MaxVisionRange 1
+                                CharacterAttributes
+                                {
+                                    "move speed bonus"  0.001
+                                    "increased jump height" 0.01
+                                    "cannot pick up intelligence" 1	
+									"voice pitch scale" 0
+                                }
+                            }
+                            Running
+                            {
+                                FireWeapon [$SIGSEGV] 
+                                {
+                                    Delay 0 
+                                    Duration 30 
+                                    Type "Secondary" 
+                                }
+                                CharacterAttributes
+                                {	
+                                    "increased jump height" 0.01
+                                    "cannot pick up intelligence" 1	
+                                    "voice pitch scale" 0
+                                    "move speed bonus" 2
+                                    "effect bar recharge rate increased" 0.5
+                                    "damage bonus"	0.1
+									"voice pitch scale" 0
+                                }
+                            }
+                            Death
+                            {
+                                MaxVisionRange 1
+                                CharacterAttributes
+                                {	
+                                    "move speed bonus" 0.01
+									"increased jump height" 0.01
+                                    "health regen" -60000
+                                    "cannot pick up intelligence" 1	
+                                    "dmg taken increased" 1
+                                    "damage force reduction" 0
+                                    "mult stun resistance" 0
+                                    "airblast vulnerability multiplier" 0
+                                    "airblast vertical vulnerability multiplier" 0
+                                    "cannot pick up intelligence" 1	
+                                    "voice pitch scale" 0
+                                }
+                            }
+                        }
+        }
+    }
+
+    PointTemplates
+    {
+		screenoverlay_engineerswave
+        {
+            NoFixup 1
+            env_screenoverlay
+            {
+                "targetname" "engi_overlays"
+                "OverlayName1" "memes/final/engi_wave_overlay"
+                "OverlayTime1" "420"
+            }
+        }
+		screenoverlay_squidintro
+        {
+            NoFixup 1
+            env_screenoverlay
+            {
+                "targetname" "squid_overlays"
+                "OverlayName1" "memes/final/squidgame_introcard"
+                "OverlayTime1" "420"
+            }
+        }
+		screenoverlay_france
+        {
+            NoFixup 1
+            env_screenoverlay
+            {
+                "targetname" "france_overlay"
+                "OverlayName1" "memes/final/france"
+                "OverlayTime1" "420"
+            }
+        }
+	    hud_name_change_0
+		{ 
+			logic_relay
+			{
+				"targetname" "istoleyourlogic_0"
+				"origin" "0 0 0"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,THE CYCLE WASNT BROKEN,0,-1"
+			}
+			OnSpawnOutput
+			{
+				Target "istoleyourlogic_0" 
+				Action trigger
+			}
+		}
+	    hud_name_change_1
+		{ 
+			logic_relay
+			{
+				"targetname" "istoleyourlogic_1"
+				"origin" "0 0 0"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,THIS MAP IS CORRUPTED,0,-1"
+			}
+			OnSpawnOutput
+			{
+				Target "istoleyourlogic_1" 
+				Action trigger
+			}
+		}
+		hud_name_change_2
+		{ 
+			logic_relay
+			{
+				"targetname" "istoleyourlogic_2"
+				"origin" "0 0 0"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,EVERYTHING MAKES NO SENSE,0,-1"
+			}
+			OnSpawnOutput
+			{
+				Target "istoleyourlogic_2" 
+				Action trigger
+			}
+		}
+		hud_name_change_3
+		{ 
+			logic_relay
+			{
+				"targetname" "istoleyourlogic_3"
+				"origin" "0 0 0"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,A SHATTERED ILLUSION,0,-1"
+			}
+			OnSpawnOutput
+			{
+				Target "istoleyourlogic_3" 
+				Action trigger
+			}
+		}
+		hud_name_change_4
+		{ 
+			logic_relay
+			{
+				"targetname" "istoleyourlogic_4"
+				"origin" "0 0 0"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,YOU ARE STUCK FOREVER,0,-1"
+			}
+			OnSpawnOutput
+			{
+				Target "istoleyourlogic_4" 
+				Action trigger
+			}
+		}
+		hud_name_change_5
+		{ 
+			logic_relay
+			{
+				"targetname" "istoleyourlogic_5"
+				"origin" "0 0 0"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,A FALSE HOPE,0,-1"
+			}
+			OnSpawnOutput
+			{
+				Target "istoleyourlogic_5" 
+				Action trigger
+			}
+		}
+		hud_name_change_6
+		{ 
+			logic_relay
+			{
+				"targetname" "istoleyourlogic_6"
+				"origin" "0 0 0"
+				"OnTrigger" "tf_objective_resource,$SetClientProp$m_iszMvMPopfileName,SET US FREE,0,-1"
+			}
+			OnSpawnOutput
+			{
+				Target "istoleyourlogic_6" 
+				Action trigger
+			}
+		}
+		w2_prop
+		{
+			NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_bacteria" //Crouch
+                "model"             "models/player/bacteria/bacteria.mdl"
+                "modelscale"        "1.5"
+                "solid"             "0"
+                "angles"            "0 90 0"
+                "origin"	        "1699 -9829 4700" //4600-4555 = 45
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "skin"  "1"
+            }
+			
+			NoFixUp 1
+			logic_relay
+			{
+				"targetname"		"logic_relay_bacteria_appear"
+
+				"OnTrigger"			"prop_bacteria,enable,,0,-1"
+				"OnTrigger"			"prop_bacteria,disable,,2,-1"
+			}
+		}
+		w2_blindgimmick
+		{
+			env_fog_controller
+            {
+                "farz"          "-1"
+                "fogblend"      "1"
+                "fogcolor"      "0 0 0"
+                "fogcolor2"     "0 0 0"
+                "fogdir"        "1 0 0"
+                "fogenable"     "1"
+                "fogend"        "750"
+                "foglerptime"   "2"
+                "fogmaxdensity" "1"
+                "fogstart"      "1"
+				"spawnflags" 	"1"
+                "targetname"    "blindmode"
+            }
+			NoFixUp 1
+            game_text
+            {
+                "targetname"    "display_message"
+
+                "color"         "255 255 255"
+                "color2"        "255 0 36"
+                "effect"        "1"
+                "fadein"        "1"
+                "fadeout"       "0.5"
+                "holdtime"      "1"
+                "message"       "You never escape from this place..."
+                "x"             "-1"
+                "y"             "-1"
+                "spawnflags"    "1"
+                "fxtime"        "0.25"
+            }
+			trigger_multiple
+            {
+                "targetname"    "fog_system"
+                "origin"        "-919 -3756 4628"
+                "mins"          "-9999 -9999 -9999"
+                "maxs"          "9999 9999 9999"
+                "StartDisabled" "1"
+                "spawnflags"    "1"
+                "OnStartTouch"  "!activator,SetFogController,blindmode,0.01,-1"
+            }
+			trigger_multiple
+            {
+                "targetname"    "fog_system_stop"
+                "origin"        "-919 -3756 4628"
+                "mins"          "-9999 -9999 -9999"
+                "maxs"          "9999 9999 9999"
+                "StartDisabled" "1"
+                "spawnflags"    "1"
+				"OnStartTouch"  "!activator,SetFogController,fog_controller,0.01,-1"
+            }
+		}
+        wf_cutscenes
+        {
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p1"
+                "OverlayName1"  "memes/final/1_hello"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p2"
+                "OverlayName1"  "memes/final/2_wonders"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p3"
+                "OverlayName1"  "memes/final/3_what"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p4"
+                "OverlayName1"  "memes/final/4_kick"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p5"
+                "OverlayName1"  "memes/final/5_queueback"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p6"
+                "OverlayName1"  "memes/final/6_restarts"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p7"
+                "OverlayName1"  "memes/final/7_weird"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p8"
+                "OverlayName1"  "memes/final/8_lookaround"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p9"
+                "OverlayName1"  "memes/final/9_breakingpoint"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p10"
+                "OverlayName1"  "memes/final/10_timeloop"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p11"
+                "OverlayName1"  "memes/final/11_BREAKOUT"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p12"
+                "OverlayName1"  "memes/final/12_stuckforever"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p13"
+                "OverlayName1"  "memes/final/13_bleed"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p14"
+                "OverlayName1"  "memes/final/14_BODY_OF_A_ROBOT"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p15"
+                "OverlayName1"  "memes/final/15_hardrive"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p16"
+                "OverlayName1"  "memes/final/16_a_way_out"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p17"
+                "OverlayName1"  "memes/final/17_buttowhere"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p18"
+                "OverlayName1"  "memes/final/18_teleportyouthere"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p19"
+                "OverlayName1"  "memes/final/19_resetbutton"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p20"
+                "OverlayName1"  "memes/final/20_notto"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p21"
+                "OverlayName1"  "memes/final/21_CATCHYOU"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p22"
+                "OverlayName1"  "memes/final/22_donotfear"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "p23"
+                "OverlayName1"  "memes/final/23_otherside"
+                "OverlayTime1"  "0"
+            }
+
+            logic_relay
+            {
+                "targetname"    "final_cutscenes"
+
+                "OnTrigger"     "player,$ForceRespawnDead,,0,-1"     
+                "OnTrigger"     "player,SetHUDVisibility,0,0,-1"   
+                "OnTrigger"     "blackout,Fade,,0,-1"
+
+                "OnTrigger"     "p1,StartOverlays,,2,-1"
+                "OnTrigger"     "p1,StopOverlays,,6,-1"
+
+                "OnTrigger"     "p2,StartOverlays,,6,-1"
+                "OnTrigger"     "p2,StopOverlays,,10,-1"
+                
+                "OnTrigger"     "p3,StartOverlays,,10,-1"
+                "OnTrigger"     "p3,StopOverlays,,14,-1"
+
+                "OnTrigger"     "p4,StartOverlays,,14,-1"
+                "OnTrigger"     "p4,StopOverlays,,18,-1"
+
+                "OnTrigger"     "p5,StartOverlays,,18,-1"
+                "OnTrigger"     "p5,StopOverlays,,22,-1"
+
+                "OnTrigger"     "p6,StartOverlays,,22,-1"
+                "OnTrigger"     "p6,StopOverlays,,26,-1"
+
+                "OnTrigger"     "p7,StartOverlays,,26,-1"
+                "OnTrigger"     "p7,StopOverlays,,30,-1"
+
+                "OnTrigger"     "p8,StartOverlays,,30,-1"
+                "OnTrigger"     "p8,StopOverlays,,34,-1"
+
+                "OnTrigger"     "p9,StartOverlays,,34,-1"
+                "OnTrigger"     "p9,StopOverlays,,38,-1"
+
+                "OnTrigger"     "p10,StartOverlays,,38,-1"
+                "OnTrigger"     "p10,StopOverlays,,42,-1"
+
+                "OnTrigger"     "p11,StartOverlays,,42,-1"
+                "OnTrigger"     "p11,StopOverlays,,46,-1"
+
+                "OnTrigger"     "p12,StartOverlays,,46,-1"
+                "OnTrigger"     "p12,StopOverlays,,50,-1"
+
+                "OnTrigger"     "p13,StartOverlays,,50,-1"
+                "OnTrigger"     "p13,StopOverlays,,55,-1"
+
+                "OnTrigger"     "p14,StartOverlays,,55,-1"
+                "OnTrigger"     "p14,StopOverlays,,59,-1"
+
+                "OnTrigger"     "p15,StartOverlays,,59,-1"
+                "OnTrigger"     "p15,StopOverlays,,64,-1"
+
+                "OnTrigger"     "p16,StartOverlays,,64,-1"
+                "OnTrigger"     "p16,StopOverlays,,68,-1"
+
+                "OnTrigger"     "p17,StartOverlays,,68,-1"
+                "OnTrigger"     "p17,StopOverlays,,72,-1"
+
+                "OnTrigger"     "p18,StartOverlays,,72,-1"
+                "OnTrigger"     "p18,StopOverlays,,76,-1"
+
+                "OnTrigger"     "p19,StartOverlays,,76,-1"
+                "OnTrigger"     "p19,StopOverlays,,80,-1"
+
+                "OnTrigger"     "p20,StartOverlays,,80,-1"
+                "OnTrigger"     "p20,StopOverlays,,84,-1"
+
+                "OnTrigger"     "p21,StartOverlays,,84,-1"
+                "OnTrigger"     "p21,StopOverlays,,88,-1"
+
+                "OnTrigger"     "p22,StartOverlays,,88,-1"
+                "OnTrigger"     "p22,StopOverlays,,92,-1"
+
+                "OnTrigger"     "p23,StartOverlays,,92,-1"
+                "OnTrigger"     "p23,StopOverlays,,96,-1"
+
+                "OnTrigger"     "fadeout_fade,Fade,,96,-1"
+                "OnTrigger"     "player,SetHUDVisibility,1,96,-1"
+            }
+        }
+        w1_pop
+        {
+            NoFixUp 1
+            training_annotation
+            {
+                "display_text"  "What are you doing? POP ME! I hate this guy!"
+                "lifetime"      "5"
+                "offset"        "0"
+                "targetname"    "pop"
+
+                "origin"        "-1584 807 4490"
+            }
+            training_annotation
+            {
+                "display_text"  "Don't just stand there. POP ME, PLEASE!"
+                "lifetime"      "5"
+                "offset"        "0"
+                "targetname"    "pop2"
+
+                "origin"        "-1584 807 4490"
+            }
+            training_annotation
+            {
+                "display_text"  "I BEG YOU!"
+                "lifetime"      "5"
+                "offset"        "0"
+                "targetname"    "pop3"
+
+                "origin"        "-1584 807 4490"
+            }
+            training_annotation
+            {
+                "display_text"  "FINE! You know what? I'm going to pop myself right now!"
+                "lifetime"      "5"
+                "offset"        "0"
+                "targetname"    "pop4"
+
+                "origin"        "-1584 807 4490"
+            }
+
+            logic_relay
+            {
+                "targetname"    "logic_popbloon_reminder"
+
+                "OnTrigger"     "pop,show,,5,-1"
+                "OnTrigger"     "pop2,show,,15,-1"
+                "OnTrigger"     "pop3,show,,22,-1"
+                "OnTrigger"     "pop4,show,,28,-1"
+            }
+        }
+		w1_overlays
+		{
+			NoFixUp 1
+			logic_relay
+			{
+			"targetname"	"logic_overlays_stop"
+			"OnTrigger"		"env_screen_cam,StopOverlays,,0,-1"
+			}
+		}
+
+        w1_cutscene_overlay
+        {
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "blackbar"
+                "OverlayName1"  "memes/cutscenes/bb"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-1"
+                "OverlayName1"  "memes/cutscenes/cutscene-1"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-2"
+                "OverlayName1"  "memes/cutscenes/cutscene-2"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-3"
+                "OverlayName1"  "memes/cutscenes/cutscene-3"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-4"
+                "OverlayName1"  "memes/cutscenes/cutscene-4"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-5"
+                "OverlayName1"  "memes/cutscenes/cutscene-5"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-6"
+                "OverlayName1"  "memes/cutscenes/cutscene-6"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-end-1"
+                "OverlayName1"  "memes/cutscenes/cutscene-end-1"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-end-2"
+                "OverlayName1"  "memes/cutscenes/cutscene-end-2"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "cutscene-end-3"
+                "OverlayName1"  "memes/cutscenes/cutscene-end-3"
+                "OverlayTime1"  "0"
+            }
+            NoFixUp 1
+            env_screenoverlay
+            {
+                "targetname"    "fakeexplosive"
+                "OverlayName1"  "memes/cutscenes/fakeexplosive"
+                "OverlayTime1"  "0"
+            }
+        }
+        w1_blackout
+        {
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "1"
+                "holdtime"      "1"
+                "rendercolor"   "0 0 0"
+                "targetname"    "fadein_fade"
+            }
+
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "2"
+                "holdtime"      "3"
+                "rendercolor"   "0 0 0"
+                "targetname"    "blackout"
+                "spawnflags"    "1"
+            }
+
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "0.1"
+                "holdtime"      "1"
+                "rendercolor"   "0 0 0"
+                "targetname"    "blackout1"
+                "spawnflags"    "1"
+            }
+
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "1"
+                "holdtime"      "1"
+                "rendercolor"   "0 0 0"
+                "targetname"    "fadeout_fade"
+                "spawnflags"    "1"
+            }
+
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "4"
+                "holdtime"      "1"
+                "rendercolor"   "0 0 0"
+                "targetname"    "fadeout_fade_long"
+                "spawnflags"    "1"
+            }
+        }
+        
+        w1_prop_cutscene
+        {
+			NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_idle" //Crouch
+                "model"             "models/player/hwm/scout.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 90 0"
+                "origin"	        "-1568 407 4415"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "skin"  			"1"
+            }
+
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_scoutscene_1" //Crouch
+                "model"             "models/player/hwm/scout.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 90 0"
+                "origin"	        "-1568 407 4415"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "skin"  "1"
+            }
+
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_scoutscene_2"
+                "model"             "models/player/hwm/scout.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 270 0"
+                "origin"	        "-1573 404 4415"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "skin"  "1"
+            }
+
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_scoutscene_3"
+                "model"             "models/player/hwm/scout.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 270 0"
+                "origin"	        "-1573 404 5025"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "skin"  "1"
+            }
+
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_scoutscene_4"
+                "model"             "models/player/hwm/scout.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 270 0"
+                "origin"	        "-1569 262 5076"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "skin"  "1"
+            }
+
+            //Every merc
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_team"
+                "model"             "models/player/soldier.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 120 0"
+                "origin"	        "-1393 -190 4416"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+            }
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_team"
+                "model"             "models/player/spy.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 120 0"
+                "origin"	        "-1460 -162 4416"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+            }
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_team"
+                "model"             "models/player/heavy.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 90 0"
+                "origin"	        "-1532 -182 4416"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+            }
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_team"
+                "model"             "models/player/engineer.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 75 0"
+                "origin"	        "-1611 -191 4416"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+            }
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_team"
+                "model"             "models/player/demo.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 75 0"
+                "origin"	        "-1684 -191 4416"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+            }
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_team"
+                "model"             "models/player/sniper.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 60 0"
+                "origin"	        "-1750 -158 4416"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+            }
+            NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_demo"
+                "model"             "models/player/hwm/demo.mdl"
+                "modelscale"        "1"
+                "solid"             "0"
+                "angles"            "0 90 0"
+                "scale"             "8"
+                "origin"	        "-1565 -92 4420"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "DisableBoneFollowers" "1"
+                "skin"  "0"
+                "modelscale"        "8"
+            }
+
+        }
+        w1_sounds
+        {
+            //V1
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/scout_7.wav"
+                "volume"                "100"
+                "targetname"            "vocal_1"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+            //V2
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/scout_8.wav"
+                "volume"                "100"
+                "targetname"            "vocal_2"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+            //V3
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/scout_9.wav"
+                "volume"                "100"
+                "targetname"            "vocal_3"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+            //V4
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/scout_10.wav"
+                "volume"                "100"
+                "targetname"            "vocal_4"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+            //V5
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/scout_11.wav"
+                "volume"                "100"
+                "targetname"            "vocal_5"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/scout_12.wav"
+                "volume"                "100"
+                "targetname"            "vocal_6"
+
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/scout_6.wav"
+                "volume"                "100"
+                "targetname"            "vocal_laugh"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+
+            ambient_generic
+            {
+                "message"       "ambient/lightsoff.wav"
+                "volume"        "100"
+                "pitch"         "75"
+
+                "targetname"    "sound_offlight"
+                "spawnflags"    "49"
+                "origin"        "0 0 0"
+            }
+
+            ambient_generic
+            {
+                "message"               "#mvm_defuck/ballwave/scout_violence_start_5.wav"
+                "volume"                "100"
+                "targetname"            "vocal_song"
+
+                "health" "10"
+                "spawnflags" 			"17"
+                "origin" "0 0 0"
+            }
+        }
+        w1_end_sound
+        {
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/end_1.wav"
+                "volume"                "100"
+                "targetname"            "vocal_end_1"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            } 
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/end_2.wav"
+                "volume"                "100"
+                "targetname"            "vocal_end_2"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }   
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/end_3.wav"
+                "volume"                "100"
+                "targetname"            "vocal_end_3"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+            ambient_generic
+            {
+                "message"               "mvm_defuck/ballwave/end_4.wav"
+                "volume"                "100"
+                "targetname"            "vocal_end_4"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+
+            }
+			NoFixUp 1
+			ambient_generic
+			{
+				"message"               "#mvm_defuck/ballwave/end_overall.wav"
+                "targetname"            "music_theend_1"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+			}
+			NoFixUp 1
+			ambient_generic
+			{
+				"message"               "mvm_defuck/ballwave/scout_everyonescream.wav"
+                "targetname"            "music_theend_2"
+
+                "health" 				"10"
+                "spawnflags" 			"49"
+                "origin" 				"0 0 0"
+			}
+			ambient_generic
+			{
+				"message"               "mvm_defuck/ballwave/demo_laugh.wav"
+                "targetname"            "music_theend_3"
+
+                "health" 				"10"
+                "spawnflags" 			"49"
+                "origin" 				"0 0 0"
+			}
+			NoFixUp 1
+			ambient_generic
+			{
+				"message"               "#mvm_defuck/ballwave/end_song_2.wav"
+                "targetname"            "end_song_2"
+
+                "health" 				"10"
+               	"spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "ambient\alarms\klaxon1.wav"
+                "targetname"            "klaxon"
+
+                "health" 				"10"
+               	"spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+        }
+        w1_cutscene
+        {
+            //Cutscene - 1
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_1"
+                "spawnflags"        "44"
+                "angles"            "0 270 0"
+                "origin"            "-1572 70 4484"
+                "wait"              "100"
+            }
+
+            //Cutscene 2
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_2"
+                "spawnflags"        "44"
+                "angles"            "0 0 0"
+                "origin"            "-1670 366 4448"
+                "wait"              "100"
+            }
+            logic_measure_movement
+            {
+                "targetname"        "measure_movement_targetname"
+                "measurereference"  "scene_second"
+                "measuretarget"     "scene_second"
+                "measuretype"       "0"
+                "target"            "scene_2"
+                "targetreference"   "scene_second"
+                "targetscale"       "1"
+            }
+            func_tracktrain
+            {
+                "targetname"        "scene_second"
+                "mins"              "-1 -1 -1"
+                "maxs"              "1 1 1"
+                "origin"            "-1670 366 4448"
+                "angles"            "0 0 0"
+                "spawnflags"        "536"
+                "startspeed"        "10"
+                "rendermode"        "10"
+                "orientationtype"   "2"
+                "speed"             "0"
+                "target"            "scene_second_track_1"
+            }
+            path_track
+            {
+                "targetname"        "scene_second_track_1"
+                "target"            "scene_second_track_2"
+                "origin"            "-1670 366 4448"
+            }
+
+            path_track
+            {
+                "targetname"        "scene_second_track_2"
+                "origin"            "-1670 448 4448"
+            }
+
+            //Cutscene-3
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_3"
+                "spawnflags"        "44"
+                "angles"            "0 195 0"
+                "origin"            "-1542 419 4436"
+                "wait"              "100"
+            }
+
+            //Cutscene-4
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_4"
+                "spawnflags"        "44"
+                "angles"            "0 90 0"
+                "origin"            "-1568 304 4491"
+                "wait"              "100"
+            }
+
+            //Cutscene-5
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_5"
+                "spawnflags"        "44"
+                "angles"            "-15 90 0"
+                "origin"            "-1568 304 5062"
+                "wait"              "100"
+            }
+            logic_measure_movement
+            {
+                "targetname"        "measure_movement_targetname"
+                "measurereference"  "scene_fifth"
+                "measuretarget"     "scene_fifth"
+                "measuretype"       "0"
+                "target"            "scene_5"
+                "targetreference"   "scene_fifth"
+                "targetscale"       "1"
+            }
+            func_tracktrain
+            {
+                "targetname"        "scene_fifth"
+                "mins"              "-1 -1 -1"
+                "maxs"              "1 1 1"
+                "origin"            "-1568 304 5062"
+                "angles"            "-15 90 0"
+                "spawnflags"        "536"
+                "startspeed"        "10"
+                "rendermode"        "10"
+                "orientationtype"   "2"
+                "speed"             "0"
+                "target"            "scene_fifth_track_1"
+            }
+            path_track
+            {
+                "targetname"        "scene_fifth_track_1"
+                "target"            "scene_fifth_track_2"
+                "origin"            "-1568 304 5062"
+            }
+
+            path_track
+            {
+                "targetname"        "scene_fifth_track_2"
+                "origin"            "-1568 243 5004"
+            }
+
+            //Cutscene-6
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_6"
+                "spawnflags"        "44"
+                "angles"            "0 0 0"
+                "origin"            "-1449 -182 4708"
+                "wait"              "100"
+            }
+            logic_measure_movement
+            {
+                "targetname"        "measure_movement_targetname"
+                "measurereference"  "scene_sixth"
+                "measuretarget"     "scene_sixth"
+                "measuretype"       "0"
+                "target"            "scene_6"
+                "targetreference"   "scene_sixth"
+                "targetscale"       "1"
+            }
+            func_tracktrain
+            {
+                "targetname"        "scene_sixth"
+                "mins"              "-1 -1 -1"
+                "maxs"              "1 1 1"
+                "origin"            "-1449 -182 4708"
+                "angles"            "0 0 0"
+                "spawnflags"        "536"
+                "startspeed"        "10"
+                "rendermode"        "10"
+                "orientationtype"   "2"
+                "speed"             "0"
+                "target"            "scene_sixth_track_1"
+            }
+            path_track
+            {
+                "targetname"        "scene_sixth_track_1"
+                "target"            "scene_sixth_track_2"
+                "origin"            "-1449 -182 4708"
+            }
+
+            path_track
+            {
+                "targetname"        "scene_sixth_track_2"
+                "origin"            "-1449 -425 4708"
+            }
+
+
+            //Cutscene-7
+
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_7"
+                "spawnflags"        "44"
+                "angles"            "0 180 0"
+                "origin"            "-1810 -808 4545"
+                "wait"              "100"
+            }
+ 
+            //Cutscenes-8
+
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_8"
+                "spawnflags"        "44"
+                "angles"            "0 270 0"
+                "origin"            "-1560 -306 4722"
+                "wait"              "100"
+            }
+            logic_measure_movement
+            {
+                "targetname"        "measure_movement_targetname"
+                "measurereference"  "scene_eighth"
+                "measuretarget"     "scene_eighth"
+                "measuretype"       "0"
+                "target"            "scene_8"
+                "targetreference"   "scene_eighth"
+                "targetscale"       "1"
+            }
+
+            NoFixUp 1
+            func_tracktrain
+            {
+                "targetname"        "scene_eighth"
+                "mins"              "-1 -1 -1"
+                "maxs"              "1 1 1"
+                "origin"            "-1560 -306 4722"
+                "angles"            "0 270 0"
+                "spawnflags"        "536"
+                "startspeed"        "10"
+                "rendermode"        "10"
+                "orientationtype"   "2"
+                "speed"             "0"
+                "target"            "scene_eighth_track_1"
+            }
+
+            NoFixUp 1
+            path_track
+            {
+                "targetname"        "scene_eighth_track_1"
+                "target"            "scene_eighth_track_2"
+                "origin"            "-1560 -306 4722"
+            }
+
+            NoFixUp 1
+            path_track
+            {
+                "targetname"        "scene_eighth_track_2"
+                "origin"            "-1560 -410 4722"
+            }
+
+            //Cutscenes-9
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_9"
+                "spawnflags"        "44"
+                "angles"            "30 90 0"
+                "origin"            "-1589 -1123 498"
+                "wait"              "100"
+            }
+
+            //Cutscenes-10
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_10"
+                "spawnflags"        "44"
+                "angles"            "0 90 0"
+                "origin"            "-1589 1227 5222"
+                "wait"              "100"
+            }
+            logic_measure_movement
+            {
+                "targetname"        "measure_movement_targetname"
+                "measurereference"  "scene_tenth"
+                "measuretarget"     "scene_tenth"
+                "measuretype"       "0"
+                "target"            "scene_10"
+                "targetreference"   "scene_nineth"
+                "targetscale"       "1"
+            }
+            func_tracktrain
+            {
+                "targetname"        "scene_tenth"
+                "mins"              "-1 -1 -1"
+                "maxs"              "1 1 1"
+                "origin"            "-1589 1227 5222"
+                "angles"            "0 90 0"
+                "spawnflags"        "536"
+                "startspeed"        "10"
+                "rendermode"        "10"
+                "orientationtype"   "2"
+                "speed"             "0"
+                "target"            "scene_tenth_track_1"
+            }
+            path_track
+            {
+                "targetname"        "scene_tenth_track_1"
+                "target"            "scene_tenth_track_2"
+                "origin"            "-1589 1227 5222"
+            }
+
+            path_track
+            {
+                "targetname"        "scene_tenth_track_2"
+                "origin"            "-1589 -1536 5222"
+            }
+
+            //Cutscene 11
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_11"
+                "spawnflags"        "44"
+                "angles"            "-30 90 0"
+                "origin"            "-1568 106 5029"
+                "wait"              "100"
+            }
+
+            //----------//
+
+            //Logic Scene
+            NoFixUp 1
+            logic_relay
+            {
+                "targetname"        "cutscene_w1_relay"
+
+                //Misc
+                "OnTrigger"         "player,$ForceRespawnDead,,0,-1"     
+                "OnTrigger"         "player,SetHUDVisibility,0,0,-1"   
+
+                //Fade
+                "OnTrigger"         "fadein_fade,fade,,0,-1"
+                "OnTrigger"         "fadeout_fade,fade,,1.5,-1"
+				"OnTrigger"			"logic_relay_teleport_spawn, trigger,,1.25,-1"
+
+                "OnTrigger"         "blackout,fade,,22,-1"
+                "OnTrigger"         "fadeout_fade,fade,,23,-1"
+
+                //Prop
+				"OnTrigger"         "prop_idle,Disable,,0,-1"
+				
+                "OnTrigger"         "prop_team,Enable,,2,-1"
+                "OnTrigger"         "prop_team,SetAnimation,layer_taunt_laugh,2.5,-1"
+
+                "OnTrigger"         "prop_team,Disable,,8,-1"
+                
+                "OnTrigger"         "prop_scoutscene_1,Enable,,2,-1"
+                "OnTrigger"         "prop_scoutscene_1,SetAnimation,crouch_LOSER,2,-1"
+
+                "OnTrigger"         "prop_scoutscene_1,Disable,,18,-1"
+                "OnTrigger"         "prop_scoutscene_2,Enable,,18,-1"
+
+                "OnTrigger"         "prop_scoutscene_2,SetAnimation,taunt05,18,-1"
+
+                "OnTrigger"         "prop_scoutscene_2,Disable,,22,-1"
+                "OnTrigger"         "prop_scoutscene_3,Enable,,22,-1"
+
+                "OnTrigger"         "prop_scoutscene_3,Disable,,40.2,-1"
+                "OnTrigger"         "prop_scoutscene_4,Enable,,40.2,-1"
+
+                //Cutscene 1        [Laugh Team]
+                "OnTrigger"         "scene_1,$EnableAll,,2,-1"
+                "OnTrigger"         "vocal_laugh,PlaySound,,2.5,-1"
+
+                "OnTrigger"         "blackbar,StartOverlays,,2,-1"
+                "OnTrigger"         "blackbar,StopOverlays,,9,-1"
+
+                //Cutscene 2        
+                "OnTrigger"         "scene_2,$EnableAll,,6,-1"
+                "OnTrigger"         "scene_second,Speed,50,6,-1"
+                "OnTrigger"         "scene_second,StartForward,,6,-1"
+                
+
+                "OnTrigger"         "cutscene-1,StartOverlays,,9,-1"
+                "OnTrigger"         "vocal_1,PlaySound,,9,-1"
+                "OnTrigger"         "cutscene-1,StopOverlays,,12,-1"
+
+                "OnTrigger"         "blackbar,StartOverlays,,12,-1"
+                "OnTrigger"         "blackbar,StopOverlays,,13,-1"
+
+                "OnTrigger"         "cutscene-2,StartOverlays,,13,-1"
+                "OnTrigger"         "vocal_2,PlaySound,,13,-1"
+                "OnTrigger"         "cutscene-2,StopOverlays,,14,-1"
+                
+
+                "OnTrigger"         "blackbar,StartOverlays,,14,-1"
+                "OnTrigger"         "blackbar,StopOverlays,,15,-1"
+
+                //Cutscene 3
+                "OnTrigger"         "scene_3,$EnableAll,,15,-1"
+                "OnTrigger"         "vocal_3,PlaySound,,15,-1"
+                "OnTrigger"         "cutscene-3,StartOverlays,,15,-1"
+                "OnTrigger"         "cutscene-3,StopOverlays,,18,-1"
+
+                //Cutscene 4
+                "OnTrigger"         "scene_4,$EnableAll,,18,-1"
+                "OnTrigger"         "vocal_4,PlaySound,,18,-1"
+                "OnTrigger"         "cutscene-4,StartOverlays,,18,-1"
+                "OnTrigger"         "cutscene-4,StopOverlays,,21,-1"
+
+                "OnTrigger"         "blackbar,StartOverlays,,21,-1" 
+
+                //Cutscene 5
+                "OnTrigger"         "scene_5,$EnableAll,,22,-1"    
+                "OnTrigger"         "scene_fifth,Speed,50,22,-1"
+                "OnTrigger"         "scene_fifth,StartForward,,22,-1" 
+
+                "OnTrigger"         "scene_6,$EnableAll,,28.2,-1"
+                "OnTrigger"         "scene_sixth,Speed,50,28.2,-1"
+                "OnTrigger"         "scene_sixth,StartForward,,28.2,-1"
+
+                "OnTrigger"         "scene_7,$EnableAll,,31.5,-1"
+
+                "OnTrigger"         "scene_8,$EnableAll,,34.7,-1"
+                "OnTrigger"         "scene_eighth,Speed,50,,34.7,-1"
+                "OnTrigger"         "scene_eighth,StartForward,,34.7,-1"
+
+                "OnTrigger"         "scene_9,$EnableAll,,38,-1"
+
+                "OnTrigger"         "scene_11,$EnableAll,,40.2,-1"
+                "OnTrigger"         "scene_tenth,Speed,125,40.2,-1"
+                "OnTrigger"         "scene_tenth,StartForward,,40.1,-1"
+
+                "OnTrigger"         "blackout1,fade,,44.8,-1"
+                "OnTrigger"         "scene_11,$DisableAll,,45.8,-1"
+
+                "OnTrigger"         "fadeout_fade_long,fade,,40.2,-1"
+                "OnTrigger"         "scene_10,$DisableAll,,45.8,-1"
+
+                "OnTrigger"         "player,SetHUDVisibility,1,45.8,-1"  
+				"OnTrigger"			"logic_relay_teleport_middle,trigger,,45.8,-1"
+
+
+                "OnTrigger"         "fadeout_fade,fade,,28.2,-1"
+
+                "OnTrigger"         "vocal_song,PlaySound,,22,-1"
+            }
+        }
+
+        w1_end
+        {
+
+            //Cutscene-End-1
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_end_1"
+                "spawnflags"        "44"
+                "angles"            "-9 -90 0"
+                "origin"            "-1569 413 4906"
+                "wait"              "100"
+            }
+
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_end_2"
+                "spawnflags"        "44"
+                "angles"            "-13 90 0"
+                "origin"            "-1569 208 5137"
+                "wait"              "100"
+            }
+			
+			NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_end_3"
+                "spawnflags"        "44"
+                "angles"            "12 176 0"
+                "origin"            "-1032 196 5084"
+                "wait"              "100"
+            }
+
+            NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_end_4"
+                "spawnflags"        "44"
+                "angles"            "-30 -85 0"
+                "origin"            "-1557 267 4818"
+                "wait"              "100"
+            }
+
+            NoFixUp 1
+            logic_relay
+            {
+                "targetname"        "fadetowhite_w1"
+
+                "OnTrigger"         "fadein_white,fade,,0,-1"
+                "OnTrigger"         "fadeout_white,fade,,4,-1"
+            }
+
+			
+
+            NoFixUp 1
+			logic_relay
+            {
+                "targetname"        "end_scene_w1"
+
+                //Cutscenes-1
+				"OnTrigger"         "player,SetHUDVisibility,0,0,-1"
+				"OnTrigger"         "player,SetHUDVisibility,1,20.7,-1"
+
+                "OnTrigger"         "scene_end_1,$EnableAll,,0,-1"
+				"OnTrigger"         "scene_end_2,$EnableAll,,9.7,-1"
+				"OnTrigger"         "scene_end_3,$EnableAll,,11,-1"
+				"OnTrigger"         "scene_end_4,$EnableAll,,13.9,-1"
+				"OnTrigger"         "scene_end_4,$DisableAll,,15,-1"
+
+
+				"OnTrigger"			"music_theend_1,PlaySound,,0,-1"	
+				"OnTrigger"			"music_theend_2,PlaySound,,14.8,-1"	
+				"OnTrigger"			"music_theend_3,PlaySound,,21,-1"	
+
+				"OnTrigger"         "blackbar,StopOverlays,,1.15,-1"
+
+				"OnTrigger"         "cutscene-end-1,StartOverlays,,1.15,-1"	
+				"OnTrigger"         "cutscene-end-1,StopOverlays,,9.7,-1"
+				
+				"OnTrigger"         "cutscene-end-2,StartOverlays,,9.7,-1"
+				"OnTrigger"         "cutscene-end-2,StopOverlays,,11,-1"
+
+				"OnTrigger"         "blackbar,StartOverlays,,11,-1"
+				"OnTrigger"         "blackbar,StopOverlays,,13.9,-1"
+
+				"OnTrigger"         "cutscene-end-3,StartOverlays,,13.9,-1"
+				"OnTrigger"         "cutscene-end-3,StopOverlays,,14.8,-1"
+
+				"OnTrigger"         "fakeexplosive,StartOverlays,,14.8,-1"
+				"OnTrigger"         "fakeexplosive,StopOverlays,,20,-1"
+
+				"OnTrigger"         "prop_demo,Disable,,15,-1"
+				"OnTrigger"         "prop_scoutscene_4,Disable,,15,-1,"
+
+				"OnTrigger"         "prop_demo,Enable,,0,-1"
+                "OnTrigger"         "prop_scoutscene_4,Enable,,0,-1,"
+
+                "OnTrigger"         "prop_demo,SetAnimation,layer_taunt02,13.9,-1"
+            }
+        }
+
+        w1_whiteout
+        {
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "3"
+                "holdtime"      "1"
+                "rendercolor"   "255 255 255"
+                "targetname"    "fadeout_white"
+                "spawnflags"    "1"
+            }
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "4"
+                "holdtime"      "1"
+                "rendercolor"   "255 255 255"
+                "targetname"    "fadein_white"
+            }
+        }
+
+    TeleChain_Start
+    {
+      NoFixup 1
+      KeepAlive 1
+
+      info_target
+      {
+        "targetname" "tele_chain_location"
+      }
+    }
+
+    TeleChain_Continue
+    {
+      KeepAlive 1
+
+      OnSpawnOutput
+            {
+                Target "!activator"
+                Action "$TeleportToEntity"
+        Param "tele_chain_location"
+                Delay 0.05
+            }
+
+      OnSpawnOutput
+            {
+                Target "tele_chain_location"
+                Action "SetParent"
+        Param "!activator"
+                Delay 0.1
+            }
+
+      OnSpawnOutput
+            {
+                Target "tele_chain_location"
+                Action "$SetLocalOrigin"
+        Param "0 0 10"
+                Delay 0.1
+            }
+    }
+
+    TeleChain_End 
+    {
+      OnSpawnOutput
+			{
+				Target "!activator"
+				Action "$TeleportToEntity"
+        Param "tele_chain_location"
+				Delay 0.05
+			}
+
+      OnSpawnOutput
+			{
+				Target "tele_chain_location"
+				Action "Kill"
+				Delay 0.1
+			}
+    }
+	SentryTank
+		{
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "100 70 80"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "-110 70 60"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "100 -70 80"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "-110 -70 60"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+			
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "100 70 120"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "-110 70 100"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "100 -70 120"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+			obj_sentrygun
+			{
+				"targetname" "l"
+				"origin" "-110 -70 100"
+				"SolidToPlayer" "0"
+				"teamnum" "3"
+				"defaultupgrade" "2"
+				"spawnflags" "2"
+			}
+		}
+
+		wf_finalcutscenes
+		{
+			NoFixUp 1
+			env_fade
+            {
+                "duration"      "2"
+                "holdtime"      "1"
+                "rendercolor"   "255 255 255"
+                "targetname"    "fadein_fade_white"
+            }
+			env_fade
+            {
+                "duration"      "2"
+                "holdtime"      "1"
+                "rendercolor"   "255 255 255"
+                "targetname"    "fadeout_fade_white"
+				"spawnflags"	"1"
+            }
+			NoFixUp 1
+            point_viewcontrol
+            {
+                "targetname"        "scene_end"
+                "spawnflags"        "44"
+                "angles"            "11 -50  0"
+                "origin"            "-2569 -1994 4866"
+                "wait"              "100"
+            }
+			ambient_generic
+            {
+                "message"               "ambient\explosions\explode_1.wav"
+                "volume"                "100"
+                "targetname"            "explode_1"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+			ambient_generic
+            {
+                "message"               "ambient\explosions\explode_3.wav"
+                "volume"                "100"
+                "targetname"            "explode_2"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+			ambient_generic
+            {
+                "message"               "ambient\explosions\explode_4.wav"
+                "volume"                "100"
+                "targetname"            "explode_3"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+			ambient_generic
+            {
+                "message"               "ambient\explosions\explode_1.wav"
+                "volume"                "100"
+                "targetname"            "explode_4"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+			ambient_generic
+            {
+                "message"               "ambient\explosions\explode_6.wav"
+                "volume"                "100"
+                "targetname"            "explode_final"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+			ambient_generic
+            {
+                "message"               "MVM.BombExplodes"
+                "volume"                "100"
+                "targetname"            "explode_final_hatch"
+
+                "health" "10"
+                "spawnflags" "49"
+                "origin" "0 0 0"
+            }
+
+
+			logic_relay
+			{
+				"targetname"	"logic_relay_finalcutscenes"
+				
+				"OnTrigger"     "fadein_fade,fade,,0,-1"
+                "OnTrigger"     "fadeout_fade,fade,,1.5,-1"
+
+				"OnTrigger"		"particle_end_1,start,,5,-1"
+				"OnTrigger"		"particle_end_2,start,,7,-1"
+				"OnTrigger"		"particle_end_3,start,,8,-1"
+				"OnTrigger"		"particle_end_4,start,,8.5,-1"
+				"OnTrigger"		"particle_end_5,start,,11,-1"
+				"OnTrigger"		"cap_hatch_destroy_animated_prop,enable,,9.5,-1"
+				"OnTrigger"		"cap_hatch_destroy_delete_prop,kill,,9.5,-1"
+				"OnTrigger"		"end_pit_destroy_particle,start,,9.5,-1"
+
+				"OnTrigger"		"fadein_fade_white,fade,,9,-1"
+				"OnTrigger"		"fadeout_fade_white,fade,,11,-1"
+
+				"OnTrigger"		"explode_1,playsound,,5,-1"
+				"OnTrigger"		"explode_2,playsound,,7,-1"
+				"OnTrigger"		"explode_3,playsound,,8,-1"
+				"OnTrigger"		"explode_4,playsound,,8.5,-1"
+				"OnTrigger"		"explode_final_hatch,playsound,,9.3,-1"
+				"OnTrigger"		"explode_final,playsound,,11,-1"
+				
+
+				"OnTrigger"     "fadein_fade,fade,,15,-1"
+                "OnTrigger"     "fadeout_fade,fade,,16.5,-1"
+
+				"OnTrigger"     "scene_end,$EnableAll,,1.5,-1"
+				"OnTrigger"     "scene_end,$DisableAll,,16,-1"
+			}
+		}
+		music_ambient
+		{
+			ambient_generic
+            {
+                "message"               "#ui/gamestartup6.mp3"
+                "targetname"            "music_spy"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+            }
+			ambient_generic
+            {
+                "message"               "#ui/gamestartup6.mp3"
+                "targetname"            "music_spy"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+            }
+			ambient_generic
+            {
+                "message"               "#ui/gamestartup7.mp3"
+                "targetname"            "music_spy_2"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+            }
+			ambient_generic
+            {
+                "message"               "#ui/gamestartup7.mp3"
+
+                "targetname"            "music_spy_2"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+            }
+			ambient_generic
+            {
+                "message"               "#ui/gamestartup10.mp3"
+                "targetname"            "music_engineer"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+            }
+			ambient_generic
+            {
+                "message"               "#ui/gamestartup10.mp3"
+                "targetname"            "music_engineer"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+            }
+			ambient_generic
+			{
+				"message"               "#mvm_defuck/HERE_I_COME_doors.mp3"
+                "targetname"            "music_final"
+
+                "health" 				"10"
+                "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "mvm_defuck/HERE_I_COME_doors.mp3"
+                "targetname"            "music_final"
+
+                "health" 				"10"
+               "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "#music\stingers\hl1_stinger_song28.mp3"
+                "targetname"            "music_stingers"
+
+                "health" 				"10"
+               "spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			//For Ending Use DoneOutput Like this
+			//DoneOutput
+			//{
+			//	Target music_engineer
+			//	Action playsound // fadeout // fadein // stopsound
+			//}
+		}
+		scream_generic
+		{
+			ambient_generic
+			{
+				"message"               "ambient\halloween\female_scream_04.wav"
+                "targetname"            "scream_01"
+
+                "health" 				"10"
+               	"spawnflags" 			"49"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "ambient\halloween\female_scream_02.wav"
+                "targetname"            "scream_02"
+
+                "health" 				"10"
+               	"spawnflags" 			"49"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "ambient\halloween\female_scream_10.wav"
+                "targetname"            "scream_03"
+
+                "health" 				"10"
+               	"spawnflags" 			"49"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "ambient\halloween\male_scream_08.wav"
+                "targetname"            "scream_04"
+
+                "health" 				"10"
+               	"spawnflags" 			"49"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "ambient\halloween\male_scream_08.wav"
+                "targetname"            "scream_05"
+
+                "health" 				"10"
+               	"spawnflags" 			"49"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			ambient_generic
+			{
+				"message"               "#ambient_mp3\halloween\male_scream_03.mp3"
+                "targetname"            "scream_06"
+
+                "health" 				"10"
+               	"spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			
+			env_shake
+			{
+				"targetname"			"env_shake_finaleff"
+				"amplitude"				"10"
+				"duration"				"10"
+				"frequency"				"255"
+				"radius"				"1000"
+				"spawnflags"			"1"	
+			}
+			logic_relay
+			{
+				"targetname"			"finale_shake"
+
+
+				"OnTrigger"				"env_shake_finaleff,StartShake,,0,-1"
+			}
+		}
+		w1_end_2
+		{
+			NoFixUp 1
+            prop_dynamic
+            {
+                "targetname"        "prop_ball"
+                "model"             "models/props_gameplay/ball001_fix.mdl"
+                "solid"             "0"
+                "angles"            "0 0 0"
+                "origin"	        "-1568 840 4465"
+                "disableshadows"    "1"
+                "StartDisabled"     "1"
+                "DisableBoneFollowers" "1"
+                "skin"  "0"
+                "modelscale"        "1.5"
+            }
+			NoFixUp 1
+            env_fade
+            {
+                "duration"      "2"
+                "holdtime"      "1"
+                "rendercolor"   "255 255 255"
+                "targetname"    "fadeout_white_2"
+                "spawnflags"    "1"
+            }
+            NoFixUp 1
+            env_fade
+            {
+                "duration"      "2"
+                "holdtime"      "1"
+                "rendercolor"   "255 255 255"
+                "targetname"    "fadein_white_2"
+            }
+			ambient_generic
+			{
+				"message"               "#ambient/machines/teleport1.wav"
+                "targetname"            "sound_teleport"
+
+                "health" 				"10"
+               	"spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			env_shake
+			{
+				"targetname"			"env_w1_end"
+				"amplitude"				"10"
+				"duration"				"10"
+				"frequency"				"255"
+				"radius"				"1000"
+				"spawnflags"			"1"	
+			}
+			logic_relay
+			{
+				"TargetName"		"w1_realfinale"
+
+				"OnTrigger"		"scream_05,playsound,,0,-1"
+				"OnTrigger"		"env_w1_end,startshake,0,-1"
+				"OnTrigger"		"fadein_white_2,fade,,1,-1"
+				"OnTrigger"		"fadeout_white_2,fade,,3,-1"
+			}
+		}
+		W1_TankMeme 
+		//I guess i can just persona 5 song...
+		//Gas Gas Gas too overused...
+		{
+			ambient_generic
+			{
+				"message"               "ambient\alarms\razortrain_horn1.wav"
+                "targetname"            "gas_tank"
+
+                "health" 				"10"
+               	"spawnflags" 			"17"
+                "origin" 				"0 0 0"
+				"radius"				"-1"
+			}
+			OnSpawnOutput
+			{
+				Target "tankmeme"
+				Action Trigger
+			}
+			logic_relay
+			{
+				"targetname" 	"tankmeme"
+				"OnTrigger" 	"tankmeme,SetSpeed,75,3,-1" 
+
+				"OnTrigger" 	"gas_tank,playsound,,25.7,-1"
+				"OnTrigger" 	"tankmeme,SetSpeed,9999,25.7,-1" 
+
+				"OnTrigger" 	"tankmeme,Ignite,,27.8,-1"
+				"OnTrigger" 	"tankmeme,SetHealth,0,27.8,-1"
+
+				 
+			}
+		}
+		W1_TankModel
+		{
+			NoFixUp 1
+			prop_dynamic
+            {
+                "model" 				"models/props_gameplay/ball001_fix.mdl"
+				"origin" 				"20 0 75"
+				"modelscale"			"1"
+				"fademaxdist"			"9999"
+				"fademindist"			"9999"
+				"fadescale"				"3"
+				"disablebonefollowers"	"1"
+				"solid"					"0"
+				"pressuredelay" "0"
+				"RandomAnimation" "0"
+				"renderamt" "255"
+				"renderfx" "0"
+				"rendermode" "0"
+            }
+			prop_dynamic
+            {
+                "model" 			"models/props_manor/chair_01.mdl"
+				"origin" 			"0 0 10"
+				"modelscale"		"1.5"
+            }
+			prop_dynamic
+			{
+				"model"				"models/workshop/player/items/all_class/hwn2016_class_crown/hwn2016_class_crown_demo.mdl"
+				"origin"			"20 0 -25"
+				"angles"			"0 0 0"
+				"modelscale"		"1.5"
+			}
+		}
+		w2_backrooms
+		{
+			NoFixUp 1
+			logic_relay
+			{
+				"targetname"	"logic_backrooms_relay_init"
+				"OnTrigger"		"env_screen_cam,startoverlays,,0,-1"
+				"OnTrigger"		"env_screen_cam,stopoverlays,,0.1,-1"
+			}
+		}
+		w3_stop_music
+		{
+			NoFixUp 1
+			logic_relay
+			{
+				"targetname"	"logic_relay_stop_w3"
+
+				"OnTrigger"		"engi_overlays,startoverlays,,0,-1"
+				"OnTrigger"		"engi_overlays,stopoverlays,,0.1,-1"
+				"OnTrigger"		"music_engineer,Fadeout,5,0,-1"
+			}
+		}
+		w5_stop_music
+		{
+			NoFixUp 1
+			logic_relay
+			{
+				"targetname"	"logic_relay_stop_w5"
+
+				"OnTrigger"		"france_overlay,startoverlays,,0,-1"
+				"OnTrigger"		"france_overlay,stopoverlays,,0,-1"
+				"OnTrigger"		"music_spy,Fadeout,5,0,-1"
+			}
+		}
+		w4_squidgames
+		{
+			point_worldtext
+			{
+				"targetname" "exit"
+				"message" "EXIT SQUIDGAMES"
+				"spawnflags" "0"
+				"color" "255 255 255"
+				"origin" "-5850 -150 3244"
+				"angles" "0 90 0"
+				"font" 8
+				"textsize" "0"
+			}
+			point_worldtext
+			{
+				"targetname" "exit_2"
+				"message" "----->"
+				"spawnflags" "0"
+				"origin" "-5400 -150 3134"
+				"angles" "0 270 45"
+				"color" "255 255 255"
+				"font" 8
+				"textsize" "0"
+			}
+			point_worldtext
+			{
+				"targetname" "exit_3"
+				"message" "----->"
+				"spawnflags" "0"
+				"origin" "-5800 -150 3134"
+				"angles" "0 90 45"
+				"color" "255 255 255"
+				"font" 8
+				"textsize" "0"
+			}
+			point_worldtext
+			{
+				"targetname" "exit_4"
+				"message" "FOLLOW THIS DOOR TO EXIT"
+				"spawnflags" "0"
+				"color" "255 255 255"
+				"origin" "-5310 -6233 1413"
+				"angles" "0 0 0"
+				"font" 8
+				"textsize" "0"
+			}
+			logic_relay
+			{
+				"targetname" "relay_squidgames_done"
+				
+				"OnTrigger"	"target_invisible_squidgame,disable,,0,-1"
+				"OnTrigger" "exit,SetTextSize,64,0,-1"
+				"OnTrigger" "exit_2,SetTextSize,48,0,-1"
+				"OnTrigger" "exit_3,SetTextSize,48,0,-1"
+				"OnTrigger" "exit_4,SetTextSize,48,0,-1"
+			}
+		}
+	}
+
+	SpawnTemplate "w4_squidgames"
+	SpawnTemplate "w1_blackout"
+	SpawnTemplate "w2_prop"
+    SpawnTemplate "wf_cutscenes"
+	SpawnTemplate "wf_finalcutscenes"
+	SpawnTemplate "music_ambient"
+	SpawnTemplate "scream_generic"
+	SpawnTemplate "w2_blindgimmick"
+    SpawnTemplate "screenoverlay_engineerswave"
+	SpawnTemplate "screenoverlay_squidintro"
+	SpawnTemplate "screenoverlay_france"
+	SpawnTemplate "w1_prop_cutscene"
+	SpawnTemplate "w1_whiteout"
+	SpawnTemplate "w1_overlays"
+	SpawnTemplate "w2_backrooms"
+	SpawnTemplate "w3_stop_music"
+	SpawnTemplate "w4_squidgames"
+	
+
+    Wave // Wave 1
+    {   
+		SpawnTemplate "w1_end_sound"
+		SpawnTemplate "w1_end"
+		SpawnTemplate "W1_end_2"
+		SpawnTemplate "w1_end_sound"
+		SpawnTemplate "w1_cutscene_overlay"
+		SpawnTemplate "w1_cutscene"
+		SpawnTemplate "w1_sounds"
+
+	    Explanation [$SIGSEGV] 
+		{
+			Line "{red}...HAVE I MET YOU BEFORE?"
+			Line "{red}YOU SEEM FAMILIAR."
+		}
+        SpawnTemplate "w1_pop"
+		SpawnTemplate "hud_name_change_0"
+        StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+        DoneOutput
+        {
+            Target wave_finished_relay
+            Action Trigger
+        }
+        
+		WaveSpawn
+        {
+            Name "Dialogue-1"
+            WaitBeforeStarting 0
+			FirstSpawnOutput
+			{
+				Target prop_idle
+				Action enable
+			}
+         
+        }
+        WaveSpawn
+        {
+            Name "Dialogue-1"
+            WaitBeforeStarting 3
+
+            FirstSpawnWarningSound "mvm_defuck\ballwave\scout_1.wav"
+            FirstSpawnMessage "{FF3D3D}Scout {FBECCB}:  Oh Hey!" [$SIGSEGV]
+        }
+        WaveSpawn
+        {
+            Name "Dialogue-2"
+            WaitBeforeStarting 6
+
+            FirstSpawnWarningSound "mvm_defuck\ballwave\scout_2.wav"
+            FirstSpawnMessage "{FF3D3D}Scout {FBECCB}:  I love my ball!" [$SIGSEGV]
+        }
+        WaveSpawn
+        {
+            Name "Sequence-1-1"
+            Where spawnballs
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            WaitBeforeStarting 6
+            WaitBetweenSpawns 0
+            TotalCurrency 0
+            
+
+            FirstSpawnOutput //Look i'm making bloons references wait...not really
+			{
+				Target logic_popbloon_reminder
+				Action Trigger
+			}	
+
+            TFBot
+            { 
+                Class               Scout
+                Classicon           scout_stun
+                WeaponRestrictions  MeleeOnly
+                Skin                1
+                Health              999999
+                Scale               1.8
+                Name				"Rip Ball"
+                UseCustomModel 		"models/props_gameplay/ball001_fix.mdl"
+                Attributes          SuppressFire
+                Action              Mobber
+                AlwaysGlow          1
+                DeathSound 			"mvm_defuck/bloonpop.wav" [$SIGSEGV]
+                ChangeAttributes [$SIGSEGV] 
+                {
+                    Delay  0
+                    Cooldown  999
+                    Name  "Normalstate"
+                }
+                ChangeAttributes [$SIGSEGV]
+                {
+                    Delay  30
+                    Cooldown  999
+                    Name  "Death"
+                }
+                EventChangeAttributes
+                {
+                    Normalstate
+                    {
+                        MaxVisionRange      1
+                        CharacterAttributes
+                        {
+                            "move speed bonus" 0.001
+                            "increased jump height" 0.01
+                            "cannot pick up intelligence" 1	
+                            "voice pitch scale" 0
+                            "damage force reduction" 0
+                            "mult stun resistance" 0
+                            "airblast vulnerability multiplier" 0
+                            "airblast vertical vulnerability multiplier" 0
+							"afterburn immunity" 1
+                        }
+                    }
+                    Death
+                    {
+                        MaxVisionRange 1
+                        
+                        CharacterAttributes
+                        {	
+                            "move speed bonus" 0.01
+                            "health regen" -499999
+                            "cannot pick up intelligence" 1	
+                            "dmg taken increased" 1
+                            "damage force reduction" 0
+                            "mult stun resistance" 0
+                            "airblast vulnerability multiplier" 0
+                            "airblast vertical vulnerability multiplier" 0
+                            "cannot pick up intelligence" 1	
+                            "voice pitch scale" 0
+                        }
+                    }	
+                }
+
+                CustomWeaponModel [$SIGSEGV]
+				{
+					Slot 2
+					Model "models\empty.mdl"
+				}
+                
+            }
+        }
+        WaveSpawn
+        {
+            Name "Dialogue-3"
+            WaitBeforeStarting 0
+            WaitForAllDead  "Sequence-1-1"
+
+            FirstSpawnWarningSound "mvm_defuck\ballwave\scout_3.wav"
+            FirstSpawnMessage "{FF3D3D}Scout {FBECCB}:  [SCREAM]"
+        }
+        WaveSpawn
+        {
+            Name "Dialogue-4"
+            WaitBeforeStarting 3
+            WaitForAllDead  "Sequence-1-1"
+
+            FirstSpawnWarningSound "mvm_defuck\ballwave\scout_4.wav"
+            FirstSpawnMessage "{FF3D3D}Scout {FBECCB}:  [Dying]" 
+        }
+        WaveSpawn
+        {
+            Name "Dialogue-5"
+            WaitBeforeStarting 8
+            WaitForAllDead  "Sequence-1-1"
+
+            FirstSpawnWarningSound "mvm_defuck\ballwave\scout_5.wav"
+            FirstSpawnMessage "{FF3D3D}Scout {FBECCB}:  My ball :(" 
+        }
+        //SEQUENCE 2
+        WaveSpawn
+        {
+            Name "Cutscene"
+            WaitBeforeStarting 10
+            WaitForAllDead  "Sequence-1-1"
+
+            FirstSpawnOutput
+            {
+                Target cutscene_w1_relay
+                Action trigger
+            }
+        }
+
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-1
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+		
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-2
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-3
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-4
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-5
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-6
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-7
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-8
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+        WaveSpawn
+        {
+            Name "Sequence-2-1"
+            WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 38
+            Where ss-9
+            TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            Squad
+			{
+                RandomChoice
+                {
+                    TFBot
+                    {
+                        Template T_TFBot_Scout_W1
+                    }
+                }
+			}
+        }
+		WaveSpawn
+		{
+			TotalCount 0
+			SpawnCount 0
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 56
+			FirstSpawnMessage	"{fffd00}[Music] Now Playing: DOOM ETERNAL - 264 BPM Super Gore Nest Beta - Andrew Baena"
+		}
+
+        WaveSpawn
+        {
+            Name 				"Sequence-3-1"
+            WaitForAllDead  	"Sequence-1-1"
+			WaitBeforeStarting 	76.5
+            FirstSpawnMessage   "{FF3D3D}[???] {FBECCB} : [LAUGH]"
+            FirstSpawnOutput
+            {
+                Target vocal_end_1
+                Action Playsound
+            }
+        }
+
+        WaveSpawn
+        {
+            Name "Sequence-3-1"
+            WaitBeforeStarting 76.5
+            WaitForAllDead  "Sequence-1-1"
+            FirstSpawnOutput
+			{
+				Target fadetowhite_w1
+				Action Trigger
+			}
+        }
+		WaveSpawn
+        {
+            Name "Sequence-3-1"
+            WaitBeforeStarting 79
+            WaitForAllDead  "Sequence-1-1"
+            FirstSpawnOutput
+			{
+				Target prop_demo
+				Action enable
+			}
+        }
+		WaveSpawn
+        {
+            Name 				"Sequence-3-1"
+            WaitBeforeStarting 	79
+           	WaitForAllDead  	"Sequence-1-1"
+            FirstSpawnOutput
+			{
+				Target music_stingers
+				Action PlaySound
+			}
+        }
+
+		WaveSpawn
+        {
+            Name "Sequence-3-1"
+            WaitBeforeStarting 76.5
+            WaitForAllDead  "Sequence-1-1"
+            FirstSpawnOutput
+            {
+                Target vocal_end_1
+                Action Playsound
+            }
+        }
+
+        WaveSpawn
+        {
+            Name "Sequence-4-1"
+            WaitBeforeStarting 88
+            WaitForAllDead  "Sequence-1-1"
+            FirstSpawnOutput
+			{
+				Target end_scene_w1
+				Action Trigger
+			}
+        }
+		
+		WaveSpawn
+		{
+			Name "Sequence-4-1"
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 115
+			FirstSpawnOutput
+			{
+				Target fadeout_white_2
+				Action fade
+			}
+		}
+		WaveSpawn
+		{
+			Name "Last-Sequence"
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 115
+			FirstSpawnOutput
+			{
+				Target sound_teleport
+				Action playsound
+			}
+		}
+		WaveSpawn
+		{
+			Name "Last-Sequence"
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 117
+			FirstSpawnOutput
+			{
+				Target prop_ball
+				Action enable
+			}
+		}
+
+
+		//LAST SEQUENCE = 120
+		WaveSpawn
+		{
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 120
+			FirstSpawnMessage "{FF3D3D}Ball {FBECCB} : Pathetic scout. You can't even kill everyone!"
+		}
+		WaveSpawn
+		{
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 125
+			FirstSpawnMessage "{FF3D3D}Ball {FBECCB} : My time has come..."
+			FirstSpawnOutput
+			{
+				Target end_song_2
+				Action playsound
+			}
+		}
+		
+		WaveSpawn
+		{
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 131
+			FirstSpawnOutput
+			{
+				Target prop_ball
+				Action disable
+			}
+		}
+		WaveSpawn
+		{
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 128
+			FirstSpawnMessage "{FF3D3D}Ball {FBECCB} : BALL TRANSFORM!!!"
+			FirstSpawnOutput
+			{
+				Target w1_realfinale
+				Action trigger
+			}
+		}
+		WaveSpawn
+		{
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 133
+			FirstSpawnOutput
+			{
+				Target scream_06
+				Action playsound
+			}
+		}
+		WaveSpawn
+		{
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 152
+			FirstSpawnMessage "{FF3D3D}Ball {FBECCB} : This is too goddamn slow"
+		}
+		WaveSpawn
+		{
+			Name "Sequence-Last"
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 156
+			FirstSpawnMessage "{FF3D3D}Ball {FBECCB} : Time for speed up!"
+		}
+		WaveSpawn
+		{
+			Name "Sequence-Last"
+			WaitForAllDead  "Sequence-1-1"
+			WaitBeforeStarting 161
+			FirstSpawnMessage "{FF3D3D}Ball {FBECCB} : Oh Wait..."
+			
+		}
+
+		WaveSpawn
+        {
+            Name "Sequence-Last"
+			WaitForAllDead  "Sequence-1-1"
+            WaitBeforeStarting 135.6
+			TotalCurrency 999
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			FirstSpawnMessage	"{fffd00}[Music] Now Playing: Persona 5 - Blooming Villain"
+			DoneWarningSound "mvm_defuck/ballwave/end_6.wav"
+			Tank
+			{
+				Name "tankmeme"
+				StartingPathTrackNode "boss_path_1"
+				Classicon           scout_stun
+				Health 45000
+				Speed 55
+				DisableSmokestack 1
+				MaxTurnRate 0
+				NoScreenShake 1
+				SpawnTemplate "W1_TankMeme"
+				Scale 2
+				SpawnTemplate "W1_TankModel"
+				Model
+			 	{
+					Default "models/empty.mdl"
+					Damage1 "models/empty.mdl"
+					Damage2 "models/empty.mdl"
+					Damage3 "models/empty.mdl"
+					Destruction "models/empty.mdl"
+					LeftTrack "models/empty.mdl"
+					RightTrack "models/empty.mdl"
+					Bomb "models/empty.mdl"
+				} 
+			}
+        }
+	}
+
+    Wave // Wave 2 // Backrooms
+    {
+		RedTeamWipeCausesWaveLoss 1
+		SpawnTemplate "hud_name_change_1"
+		Explanation [$SIGSEGV]  //Dispayed once the wave is initialized
+		{
+			Line "{red}HUH....."
+		}
+        StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+        InitWaveOutput
+		{
+            Target logic_backrooms_relay_init
+			Action Trigger
+        }
+        DoneOutput
+        {
+            Target wave_finished_relay
+            Action Trigger
+        }
+		ItemAttributes
+		{
+			"ItemSlot" Melee
+            "min respawn time" 99999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" Secondary
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" Primary
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" PDA
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" PDA2
+            "min respawn time" 9999
+        }
+		PlayerAttributes [$SIGSEGV] //Add attributes to players when the wave is active
+        {
+            Soldier
+            {
+            "mult_player_movespeed_active" 0.8125
+            }
+            Pyro
+            {
+            "mult_player_movespeed_active" 0.67
+            }
+            Heavyweapons
+            {
+            "mult_player_movespeed_active" 0.84415584415
+            }
+            Demoman
+            {
+            "mult_player_movespeed_active" 0.69892473118
+            }
+            Sniper
+            {
+            "mult_player_movespeed_active" 0.67
+            }
+            Spy
+            {
+            "mult_player_movespeed_active" 0.60747663551
+            }
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 3
+            FirstSpawnWarningSound "mvm_defuck/memes/eas-alarm.wav"
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 0
+            FirstSpawnMessage "System : [INCOMING MESSAGES...]"
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 2
+            FirstSpawnMessage "System: Some mysterious creatures coming to you..."
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 5
+            FirstSpawnMessage "System: And t--y will teleport you to a str--ge ro-m..."
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 7
+            FirstSpawnMessage "System: You must survive for 60 Seconds..."
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 10
+            FirstSpawnMessage "System: Good luck..."
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 13
+            FirstSpawnMessage "End Messages..."
+        }
+        WaveSpawn // Dummy
+        {
+            WaitBeforeStarting 18
+    
+            FirstSpawnOutput
+            {
+                Target logic_relay_backrooms
+                Action trigger
+            }
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 18
+            FirstSpawnMessage "{FF3D3D}??? : You..."
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 20
+            FirstSpawnMessage "{FF3D3D}??? : Coming..."
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 22
+            FirstSpawnMessage "{FF3D3D}??? : With..."
+        }
+        WaveSpawn 
+        {
+            WaitBeforeStarting 24
+            FirstSpawnMessage "{FF3D3D}??? : Me...!!"
+        }
+		WaveSpawn
+		{
+			WaitBeforeStarting 18
+			FirstSpawnOutput
+			{
+				Target prop_bacteria
+				Action enable
+			}
+		}
+		WaveSpawn
+		{
+			WaitBeforeStarting 34.3
+			FirstSpawnOutput
+			{
+				Target prop_bacteria
+				Action disable
+			}
+		}
+
+		WaveSpawn
+		{
+			Where spawnbot_backrooms_1
+			TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            WaitBeforeStarting 45
+			FirstSpawnMessage "{FF3D3D}??? : Im...comi..ng. Fo..r Yo...u"
+			FirstSpawnWarningSound "npc/combine_gunship/gunship_moan.wav"
+            TotalCurrency 	0
+			RandomChoice
+			{
+				Squad
+				{
+					TFBot
+					{ 
+						Template T_TFBot_Giant_Scout
+						Health 99999
+						Name "Bacteria"
+						Item "tf_weapon_bat"
+						WeaponRestrictions MeleeOnly
+						ClassIcon random_lite
+						UseHumanModel 1
+						Scale 1.25
+						Action Mobber
+						UseCustomModel 		"models/player/bacteria/bacteria.mdl"
+						UseHumanModel 1
+						ExtAttr SuppressCanteenUse
+						ItemModel [$SIGSEGV]
+						{
+							ItemName "tf_weapon_bat"
+							Model "models/empty.mdl" // Remove model due to no attachment point
+						}
+						ItemModel [$SIGSEGV]
+						{
+							ItemName "Battery Canteens"
+							Model "models/empty.mdl" // Remove model due to no attachment point
+						}
+						ItemModel [$SIGSEGV]
+						{
+							ItemName "Battery Canteens"
+							Model "models/empty.mdl" // Remove model due to no attachment point
+						}
+						ChangeAttributes [$SIGSEGV] 
+						{
+							Delay  85
+							Cooldown  999
+							Name  "Death"
+						}
+						EventChangeAttributes
+						{
+							Death
+							{
+								CharacterAttributes
+								{
+									"move speed bonus" 0.01
+									"increased jump height" 0.01
+									"cannot pick up intelligence" 1	
+									"damage force reduction" 0
+									"mult stun resistance" 0
+									"airblast vulnerability multiplier" 0
+									"override footstep sound set" 0
+									"airblast vertical vulnerability multiplier" 0
+									"voice pitch scale" 0
+									"health regen" -999999
+									"afterburn immunity" 1
+								}
+							}
+						}
+						CharacterAttributes
+						{
+							"damage bonus"		999
+							"move speed bonus" 0.5
+							"increased jump height" 0.01
+							"cannot pick up intelligence" 1	
+							"voice pitch scale" 0
+							"damage force reduction" 0
+							"mult stun resistance" 0
+							"airblast vulnerability multiplier" 0
+							"airblast vertical vulnerability multiplier" 0
+							"override footstep sound set" 7
+							"melee range multiplier" 3
+							"afterburn immunity" 1
+						}
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Where spawnbot_backrooms
+			TotalCount 1
+            MaxActive 1
+            SpawnCount 1
+            WaitBeforeStarting 45
+            TotalCurrency 	0
+			RandomChoice
+			{
+				Squad
+				{
+					TFBot
+					{ 
+						Template T_TFBot_Giant_Scout
+						Health 99999
+						Name "Bacteria"
+						Item "tf_weapon_bat"
+						WeaponRestrictions MeleeOnly
+						ClassIcon random_lite
+						UseHumanModel 1
+						Scale 1.25
+						Action Mobber
+						UseCustomModel 		"models/player/bacteria/bacteria.mdl"
+						UseHumanModel 1
+						ExtAttr SuppressCanteenUse
+						ItemModel [$SIGSEGV]
+						{
+							ItemName "tf_weapon_bat"
+							Model "models/empty.mdl" // Remove model due to no attachment point
+						}
+						ItemModel [$SIGSEGV]
+						{
+							ItemName "Battery Canteens"
+							Model "models/empty.mdl" // Remove model due to no attachment point
+						}
+						ItemModel [$SIGSEGV]
+						{
+							ItemName "Battery Canteens"
+							Model "models/empty.mdl" // Remove model due to no attachment point
+						}
+						ChangeAttributes [$SIGSEGV] 
+						{
+							Delay  85
+							Cooldown  999
+							Name  "Death"
+						}
+						EventChangeAttributes
+						{
+							Death
+							{
+								CharacterAttributes
+								{
+									"move speed bonus" 0.01
+									"increased jump height" 0.01
+									"cannot pick up intelligence" 1	
+									"damage force reduction" 0
+									"mult stun resistance" 0
+									"airblast vulnerability multiplier" 0
+									"override footstep sound set" 0
+									"airblast vertical vulnerability multiplier" 0
+									"voice pitch scale" 0
+									"health regen" -999999
+								}
+							}
+						}
+						CharacterAttributes
+						{
+							"damage bonus"		999
+							"move speed bonus" 0.5
+							"increased jump height" 0.01
+							"cannot pick up intelligence" 1	
+							"voice pitch scale" 0
+							"damage force reduction" 0
+							"mult stun resistance" 0
+							"airblast vulnerability multiplier" 0
+							"airblast vertical vulnerability multiplier" 0
+							"override footstep sound set" 7
+							"melee range multiplier" 3
+							"afterburn immunity" 1
+						}
+					}
+				}
+			}
+		}
+
+		WaveSpawn // Dummy
+		{
+			WaitBeforeStarting 75
+			FirstSpawnWarningSound "ambient\creatures\town_zombie_call1.wav"
+			FirstSpawnOutput
+			{
+				Target fog_system
+				Action enable
+			}
+		}
+		WaveSpawn // Dummy
+		{
+			WaitBeforeStarting 75
+			FirstSpawnOutput
+			{
+				Target display_message
+				Action display
+			}
+		}
+		WaveSpawn // Dummy
+		{
+			WaitBeforeStarting 109
+			FirstSpawnOutput
+			{
+				Target fog_system
+				Action disable
+			}
+		}
+		WaveSpawn // Dummy
+		{
+			WaitBeforeStarting 110
+			FirstSpawnOutput
+			{
+				Target fog_system_stop
+				Action enable
+			}
+		}
+
+		
+		WaveSpawn 
+		{
+			name finale_timerguy
+			where spawnbot_timer
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 45
+			TotalCurrency 0
+			Support Limited
+			DoneOutput
+			{
+				Target backtoreality_relay
+				Action trigger
+
+			}
+			RandomChoice
+			{
+				Squad
+				{
+					TFBot
+					{
+						
+						Class Heavyweapons
+						Classicon timer_lite
+						Skill expert
+						Attributes MiniBoss
+						Attributes UseBosshealthbar
+						scale 0.1
+						health 60
+						name "Time's up!"
+						action mobber
+						CharacterAttributes
+						{
+							"is suicide counter" 1
+						}
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+        {
+            WaitBeforeStarting 118
+			FirstSpawnMessage "System: [Incoming MESSAGES...]"
+        }
+		WaveSpawn 
+        {
+            WaitBeforeStarting 122
+            FirstSpawnWarningSound "mvm_defuck/memes/eas-alarm.wav"
+        }
+		WaveSpawn
+        {
+            WaitBeforeStarting 122
+			FirstSpawnMessage "System: You survive from strange room..."
+        }
+
+		WaveSpawn
+        {
+            WaitBeforeStarting 125
+			FirstSpawnMessage "System: Your jo--ey isn't -ver. Now y-ou m--t c-..."
+        }
+
+		WaveSpawn
+        {
+            WaitBeforeStarting 127
+			FirstSpawnMessage "System:..."
+        }
+
+		WaveSpawn
+        {
+            WaitBeforeStarting 129
+			FirstSpawnMessage "End Message..."
+        }
+		
+    }
+
+    //COLONEL WAVES
+	Wave
+	{
+		Explanation [$SIGSEGV]  //Dispayed once the wave is initialized
+		{
+			Line "{red}THAT WAS SOMETHING...."
+			lINE "{red}SO... WHAT IS THIS PLACE?"
+		}
+		SpawnTemplate "hud_name_change_4"
+		InitWaveOutput
+		{
+                Target logic_relay_stop_w3
+                Action trigger
+        }
+		PlayerAttributes
+		{
+		"damage force reduction" 0.25
+		}
+		PlayerAddCond [$SIGSEGV] //Add condition to players when wave starts
+		{
+			Index 26
+		}
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		
+		WaveSpawn
+		{
+			Where	spawn_hateengis
+			TotalCount 1
+			maxactive 1
+			SpawnCount 1
+			WaitBeforestarting 3
+			TotalCurrency 0
+			Support 1
+			FirstSpawnOutput
+			{
+				Target engi_overlays
+                Action StartOverlays
+			}
+			RandomChoice
+			{
+			Squad
+			{
+			TFBot
+			{
+			Class demoman
+			name "I heckin hate engis"
+			health 420
+			scale 1.2
+			DropWeapon 1
+			Skill expert
+			action mobber
+			item "The Loch-n-Load"
+			ItemAttributes
+			{
+			Itemname "The Loch-n-Load"
+			"grenade explode on impact" 1
+			"halloween reload time decreased" 0.31
+			"mult projectile count" 3
+			"damage penalty" 0.65
+			"projectile speed increased" 1
+			"projectile spread angle penalty" 1
+			"sticky air burst mode" -2
+			"special item description" "'ate sentries, simple as"
+			}
+			    AddCond [$SIGSEGV] //Adds conditions to bots
+				{
+					Name "TF_COND_REPROGRAMMED"
+				}
+			}
+			}
+			}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot_invasion
+			TotalCount 1
+			MaxActive 2
+			SpawnCount 1
+			WaitbetweenSpawns 1
+			TotalCurrency 0
+			FirstSpawnOutput
+			{
+				Target	music_engineer
+				Action	PlaySound
+			}
+			// FirstSpawnWarningSound "ui/gamestartup10.mp3"
+			Support 1
+			Squad
+			{
+			RandomChoice
+			{
+			    TFBot
+				{
+					Health	125
+					classicon demo
+					Name	Engibuilder
+					Template	T_TFBot_Engineer_Sentry_Battle
+					Item	"the wrangler"
+					CharacterAttributes
+					{
+					"engy sentry damage bonus" 0.25
+					}
+				}
+			}
+			}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBetweenSpawnsAfterDeath 30
+			TotalCurrency 0
+			FirstSpawnOutput
+			{
+				Target	music_engineer
+				Action	PlaySound
+			}
+			Support 1
+			    TFBot
+				{
+					Name	Engimega
+					health 1300
+					classicon demo
+					Attributes Miniboss
+					scale 1.65
+					Template	T_TFBot_Engineer_Sentry_Battle
+					CharacterAttributes
+					{
+						"building scale" 4
+						"engy building health bonus" 3
+						"engy sentry radius increased" 2
+						"engy dispenser radius increased" 3
+						"sentry rocket weapon" "mega rocket"
+					}
+				}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 1
+			WaitBeforeStarting 4
+			TotalCurrency 0
+			FirstSpawnMessage "The engineers has sabotaged your HUD!"
+			TFBot
+				{
+					Health	3650
+					Name	Engidriver
+					
+					Scale	3
+					DesiredAttackRange 50
+					classicon engineER
+					Attributes	"DisableDodge"
+					UseHumanAnimations 1
+					action fetchflag
+					Attributes miniboss
+					class engineer
+					CharacterAttributes
+					{
+						"move speed bonus"	3
+						"damage force reduction" 0.1
+						"airblast vulnerability multiplier" 0.3
+						"override footstep sound set" 3
+						"taunt move speed" 500
+						"kb fall min velocity" 800
+						"kb fall radius" 500
+						"kb fall stun time" 2
+						"kb fall force" 350
+						"stomp player time" 0.33
+						"stomp player damage" 50
+						"stomp player force" 100
+						"kb fall damage" 100
+					}
+					Item	"the pencil pusher"
+					Item	"the builder's blueprints"
+					Taunt [$SIGSEGV]  //Taunt periodically
+			{
+				Delay 4 //Time before the first taunt starts (Default: 10)
+				Cooldown 10 //Time between each taunt (Default: 10)
+				Repeats 0 //How many times the bot should taunt in total (Default: 0 - Infinite)
+				Duration 9999
+				Name "Taunt: Texas Truckin" //If set, uses this item taunt instead of default
+			}
+				}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot_invasion
+			name thenegis
+			TotalCount 48
+			MaxActive 12
+			SpawnCount 3
+			WaitbetweenSpawns 0.5
+			Waitbeforestarting 5
+			TotalCurrency 0
+			RandomChoice
+			{
+			TFBot
+				{
+					Name	Engigunner
+					Class	Engineer
+					Skill	Normal
+					WeaponRestrictions	PrimaryOnly
+					Item	"texas ten gallon"
+					action fetchflag
+			VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Medic"
+			}
+				}
+				TFBot
+				{
+					Name	Engipopper
+					Class	Engineer
+					Skill	Normal
+					WeaponRestrictions	PrimaryOnly
+					Item	"the frontier justice"
+					Item	"engineer's cap"
+					action fetchflag
+					VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Help"
+			}
+				}
+				TFBot
+				{
+					Name	Engishooter
+					Class	Engineer
+					Skill	Normal
+					Item	"the widowmaker"
+					Item	"l4d hat"
+					VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Yes"
+			}
+					action fetchflag
+				}
+				TFBot
+				{
+					Name	Engilaser
+					Class	Engineer
+					Skill	Normal
+					Item	"the pomson 6000"
+					Item	"engineer welding mask"
+					action fetchflag
+					VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Battle Cry"
+			}
+				}
+				TFBot
+				{
+					Name	Engihelper
+					Class	Engineer
+					Skill	Normal
+					Item	"the rescue ranger"
+					Item	"engineer earmuffs"
+					action fetchflag
+					item "The B.A.S.E. Jumper"
+					CharacterAttributes
+					{
+					"increased jump height" 10
+					}
+					FireWeapon [$SIGSEGV]  //Periodically fires weapon
+                {
+                    Delay 5
+                    Cooldown 30
+					IfSeeTarget 1 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
+                    Duration 0.1 //How long should the button be pressed (Default: 0.1)
+					Type "Jump" // Type of fire input, Possible values:
+				}
+					VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Sentry here"
+			}
+				}
+				TFBot
+				{
+					Name	Engipanic
+					Class	Engineer
+					Skill	Normal
+					Item	"panic attack shotgun"
+					Item	"dr's dapper topper"
+					action fetchflag
+					VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Cheers"
+			}
+			CharacterAttributes
+			{
+			"head scale" 0.1
+			}
+				}
+				TFBot
+				{
+					Name	Engipistol
+					Class	Engineer
+					Skill	Normal
+					WeaponRestrictions	SecondaryOnly
+					Item	"camera helm"
+					action fetchflag
+					VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Go"
+			}
+					
+				}
+				TFBot
+				{
+					Name	Engicapper
+					Class	Engineer
+					Skill	Normal
+					WeaponRestrictions	SecondaryOnly
+					Item	"the c.a.p.p.e.r"
+					Item	"potato hat"
+					action fetchflag
+					VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 7
+				Cooldown 4
+				Repeats 0
+				Type "Go"
+			}
+				}
+				TFBot
+				{
+					Name	Engiannoyer
+					Class	Engineer
+					Skill	Normal
+					WeaponRestrictions	SecondaryOnly
+					Item	"the short circuit"
+					Item	"lo-fi longwave"
+					action fetchflag
+					FireWeapon [$SIGSEGV]  //Periodically fires weapon
+                {
+                    Cooldown 3 //Time between each fire input (Default: 10)
+					IfSeeTarget 1 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
+					Type "Secondary" // Type of fire input, Possible values:
+				}
+				}
+				TFBot
+				{
+					Name	Engiluger
+					Class	Engineer
+					Skill	Normal
+					Item	"ttg max pistol"
+					Item	"killer exclusive"
+					action fetchflag
+				}
+			}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+		    name jacks
+			Where	spawnbot
+			TotalCount 6
+			MaxActive 4
+			SpawnCount 1
+			WaitbetweenSpawns 15
+			TotalCurrency 0
+			TFBot
+				{
+					Health	1500
+					classicon engineER
+					Name	Engidriller
+					Attributes	"DisableDodge"
+					DesiredAttackRange 50
+					Class	Engineer
+					UseHumanAnimations 1
+					Skill	Expert
+					Item	"the trencher's topper"
+					Taunt [$SIGSEGV]  //Taunt periodically
+			{
+				Delay 4 //Time before the first taunt starts (Default: 10)
+				Cooldown 10 //Time between each taunt (Default: 10)
+				Repeats 0 //How many times the bot should taunt in total (Default: 0 - Infinite)
+				Duration 9999
+				Name "Taunt: The Jumping Jack" //If set, uses this item taunt instead of default
+			}
+			action fetchflag
+					Attributes miniboss
+					class engineer
+					CharacterAttributes
+					{
+						"move speed bonus"	3.5
+						"damage force reduction" 0.1
+						"airblast vulnerability multiplier" 0.3
+						"override footstep sound set" 3
+						"taunt move speed" 600
+						"stomp player time" 0.1
+						"stomp player damage" 5
+						"stomp player force" 1
+						"increased jump height" 10
+						"cancel falling damage" 1
+						"kb fall min velocity" 800
+						"kb fall radius" 500
+						"kb fall stun time" 2
+						"kb fall force" 500
+						"kb fall damage" 100
+					}
+					FireWeapon [$SIGSEGV]  //Periodically fires weapon
+                {
+                    Delay 0
+                    Cooldown 15
+					IfSeeTarget 1 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
+                    Duration 0.1 //How long should the button be pressed (Default: 0.1)
+					Type "Jump" // Type of fire input, Possible values:
+				}
+				}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot_epicengi
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 1
+			WaitBeforestarting 3
+			TotalCurrency 0
+			Support limited
+			TFBot
+			{
+			class engineer
+			Scale 10
+			health 99999
+			Action fetchflag
+			UseHumanModel 1
+			Taunt [$SIGSEGV]  //Taunt periodically
+			{
+				Delay 1 //Time before the first taunt starts (Default: 10)
+				Cooldown 10 //Time between each taunt (Default: 10)
+				Repeats 0 //How many times the bot should taunt in total (Default: 0 - Infinite)
+				Duration 9999
+				Name "Taunt: The Dueling Banjo" //If set, uses this item taunt instead of default
+			}
+			}
+		}
+		WaveSpawn
+		{
+			Where	spawnbot_invasion
+			waitforalldead thenegis
+			TotalCount 22
+			maxactive 14
+			SpawnCount 2
+			WaitBeforestarting 10
+			WaitbetweenSpawns 1
+			TotalCurrency 0
+			FirstSpawnMessage "riddle me this, what appears along with engineers in mvm?"
+			DoneOutput
+			{
+					Target logic_relay_stop_w3
+					Action trigger
+			}
+			TFBot
+			{
+				Class Demoman
+				name "Sentry Buster"
+				Skill expert
+				Attributes DisableDodge
+				UseBusterModel 1
+				scale 1.5
+				Action SuicideBomber
+				CharacterAttributes
+				{
+					"move speed bonus" 3
+				}
+			}
+		}
+	}
+	
+	Wave
+	{
+	    RedTeamWipeCausesWaveLoss 1
+		SpawnTemplate "hud_name_change_3"
+		CustomWaveNumber 456 [$SIGSEGV] // Display custom wave number. 511 is max value
+		CustomMaxWaveNumber 0 [$SIGSEGV] // Display custom max wave number. 0 hides the max wave number
+		Explanation [$SIGSEGV]  //Dispayed once the wave is initialized
+		{
+			Line "{red}FOR SOME REASON, I SOMEHOW REMEMBER A TINY BIT OF THIS..."
+			Line "{red}I THINK THE BOSS HERE DIES EASILY TO MELEE DAMAGE."
+		}
+		ItemAttributes
+        {
+            "ItemSlot" Melee
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" Secondary
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" Primary
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" PDA
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" PDA2
+            "min respawn time" 9999
+        }
+		PlayerAttributes [$SIGSEGV] //Add attributes to players when the wave is active
+        {
+            Soldier
+            {
+            "mult_player_movespeed_active" 1.15
+            }
+            Pyro
+            {
+            "mult_player_movespeed_active" 0.9
+            }
+            Heavyweapons
+            {
+            "mult_player_movespeed_active" 1.1987012987
+            }
+            Demoman
+            {
+            "mult_player_movespeed_active" 0.9752688172
+            }
+            Sniper
+            {
+            "mult_player_movespeed_active" 0.9
+            }
+            Spy
+            {
+            "mult_player_movespeed_active" 0.83457943925
+            }
+        }
+		StartWaveOutput
+		{
+			Target squidgame_enterance_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		InitWaveOutput
+		{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+        }
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot
+			TotalCount 1
+			MaxActive 1
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			TotalCurrency 0
+			Support Limited
+			FirstSpawnMessage "{blue}welcome to robotic squid games! we will be playing {red}Red Light {green} Green Light {blue}!"
+			FirstSpawnOutput
+			{
+			    Target squid_overlays
+				Action StartOverlays
+			}
+			DoneOutput
+			{
+			    Target squid_overlays
+				Action StopOverlays
+			}
+			TFBot
+			{
+			class scout
+			CharacterAttributes
+				{
+				"is suicide counter" 1
+				}
+				health 4
+			}
+			
+		}
+		WaveSpawn
+		{
+			Where	spawnbot_squid_mid
+			TotalCount 1
+			maxactive 1
+			SpawnCount 1
+			WaitBeforestarting 30
+			TotalCurrency 456
+			DoneOutput
+		{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+		}
+			TFBot
+			{
+			class heavyweapons
+			classicon the_rlgl_girl
+			Attributes useBosshealthbar
+			name "The squid games girl idk"
+			Attributes Miniboss
+			Health 10000
+			scale 3
+			item "The Crispy Golden Locks"
+			WeaponRestrictions MeleeOnly
+			CharacterAttributes
+			{
+			"move speed bonus" 0.0001
+			"dmg from ranged reduced" 0.33
+			"fire rate bonus" 50
+			"damage causes airblast" 1
+			"damage bonus" 0.01538461538
+			"increased jump height" 0.000001
+			"mult dmgtaken from melee" 15
+			}
+			}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Name 1
+			Where	spawnbot
+			TotalCount 2
+			MaxActive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			WaitBeforestarting 30
+			TotalCurrency 0
+			Support Limited
+			FirstSpawnMessage "{red}Red Light!"
+			FirstSpawnWarningSound "coach\coach_defend_here.wav"
+			LastSpawnOutput
+			{
+			Target popscript
+            Action "$StartRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			   TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				} 
+			}
+		}
+		WaveSpawn
+		{
+			Name 2
+			Waitforalldead 1
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			Support limited	
+			FirstSpawnMessage "{green}Green Light!"
+			FirstSpawnWarningSound "coach\coach_attack_here.wav"
+			FirstSpawnOutput
+			{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				}
+			}
+		}	
+        WaveSpawn
+		{
+			Name 3
+  Waitforalldead 2
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			TotalCurrency 0
+			Support Limited
+			FirstSpawnMessage "{red}Red Light!"
+			FirstSpawnWarningSound "coach\coach_defend_here.wav"
+			LastSpawnOutput
+			{
+			Target popscript
+            Action "$StartRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			   TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				} 
+			}
+		}
+		WaveSpawn
+		{
+			Where	spawnbot
+			TotalCount 1
+			maxactive 1
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			Support limited	
+			waitbeforestarting 25
+			FirstSpawnMessage "Beginning in 3 seconds....."
+			FirstSpawnOutput
+			{
+				Target squidgames_relay
+				Action Trigger
+			}
+			TFBot
+			{
+			template SG_TIMER_2
+			}
+		}
+		WaveSpawn
+		{
+			Name 4
+  Waitforalldead 3
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			Support limited	
+			FirstSpawnMessage "{green}Green Light!"
+			FirstSpawnWarningSound "coach\coach_attack_here.wav"
+			FirstSpawnOutput
+			{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				}
+			}
+		}		
+		WaveSpawn
+		{
+			Name 5
+  Waitforalldead 4
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			TotalCurrency 0
+			Support Limited
+			FirstSpawnMessage "{red}Red Light!"
+			FirstSpawnWarningSound "coach\coach_defend_here.wav"
+			LastSpawnOutput
+			{
+			Target popscript
+            Action "$StartRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			   TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				} 
+			}
+		}
+		WaveSpawn
+		{
+			Name 6
+  Waitforalldead 5
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			Support limited	
+			FirstSpawnMessage "{green}Green Light!"
+			FirstSpawnWarningSound "coach\coach_attack_here.wav"
+			FirstSpawnOutput
+			{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				}
+			}
+		}
+WaveSpawn
+		{
+			Name 7
+  Waitforalldead 6
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			TotalCurrency 0
+			Support Limited
+			FirstSpawnMessage "{red}Red Light!"
+			FirstSpawnWarningSound "coach\coach_defend_here.wav"
+			LastSpawnOutput
+			{
+			Target popscript
+            Action "$StartRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			   TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				} 
+			}
+		}
+		WaveSpawn
+		{
+			Name 8
+  Waitforalldead 7
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			Support limited	
+			FirstSpawnMessage "{green}Green Light!"
+			FirstSpawnWarningSound "coach\coach_attack_here.wav"
+			FirstSpawnOutput
+			{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				}
+			}
+		}
+WaveSpawn
+		{
+			Name 9
+  Waitforalldead 8
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+												WaitbetweenSpawns 1
+			TotalCurrency 0
+			Support Limited
+			FirstSpawnMessage "{red}Red Light!"
+			FirstSpawnWarningSound "coach\coach_defend_here.wav"
+			LastSpawnOutput
+			{
+			Target popscript
+            Action "$StartRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			   TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				} 
+			}
+		}
+		WaveSpawn
+		{
+			Name 10
+  Waitforalldead 9
+			Where	spawnbot
+			TotalCount 2
+			maxactive 2
+												SpawnCount 1
+			WaitbetweenSpawns 1
+			Support limited	
+			FirstSpawnMessage "{green}Green Light!"
+			FirstSpawnWarningSound "coach\coach_attack_here.wav"
+			FirstSpawnOutput
+			{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+			}
+			RandomChoice
+			{
+			TFBot
+			    {
+				Template SG_TIMER_1
+				}
+				TFBot
+			    {
+				Template SG_TIMER_2
+				}
+				TFBot
+			    {
+				Template SG_TIMER_3
+				}
+				TFBot
+			    {
+				Template SG_TIMER_4
+				}
+				TFBot
+			    {
+				Template SG_TIMER_5
+				}
+			}
+		}	
+WaveSpawn
+		{
+			Name 11
+  Waitforalldead 10
+			Where squidgame_the_girl_thing_idk_lol
+			TotalCount 1
+			maxactive 20
+												SpawnCount 1
+			WaitbetweenSpawns 1
+			WaitBeforeStarting 10
+			Support 1
+			FirstSpawnMessage "You took too much time....."
+			FirstSpawnOutput
+			{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+			}
+			TFBot
+			{
+			Class sniper
+			classicon scout
+			name "Guards"
+			item "The Scariest Mask EVER"
+			WeaponRestrictions Secondaryonly
+			Skill Expert
+			CharacterAttributes
+			{
+			"damage bonus" 1.33
+			}
+			health 9999
+		    Action Mobber
+			}
+		}	
+WaveSpawn
+		{
+			Where squidgame_the_girl_thing_idk_lol
+			TotalCount 1
+			maxactive 1
+												SpawnCount 1
+			Waitbeforestarting 35
+			WaitBetweenSpawnsAfterDeath 3
+			Support 1
+			DoneOutput
+			{
+			target relay_squidgames_done
+			action trigger
+			}
+			TFBot
+			{
+			Class Scout
+			health 1
+			WeaponRestrictions Secondaryonly
+			Attributes AlwaysFireWeapon
+		    Action Mobber
+			Item "Mad Milk"
+			Name "Slow Milk Scout"
+			ItemAttributes
+			{
+			Itemname "Mad Milk"
+			"applies snare effect" 0.33
+			"effect bar recharge rate increased" 0.01
+			}
+			}
+		}		
+	}
+	
+	Wave
+	{
+		SpawnTemplate "hud_name_change_2"
+		Explanation [$SIGSEGV]  //Dispayed once the wave is initialized
+		{
+		    Line "{green}There's a teleporter behind the tree, you can come back using that!"
+			Line "{red}THESE BOTS AND WAVES ARE WEIRD..."
+		}
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput					
+		{
+			Target wave_finished_relay
+			Action trigger
+		}
+		InitWaveOutput
+		{
+			Target popscript
+            Action "$StopRedLightGreenLight"
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot
+			TotalCount 10
+			name spies
+			MaxActive 10
+			SpawnCount 10
+			WaitbetweenSpawns 1
+			TotalCurrency 100
+			FirstSpawnMessage "{red}THERE'S SOMETHING WRONG WITH THESE ROBOTS....."
+			FirstSpawnOutput
+			{
+				Target music_spy
+				Action playsound
+			}
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Spy
+			health 250
+			AlwaysGlow 1
+			name "aggressive weapon spy"
+			Skill expert
+			 StripItemSlot    1
+			Item "TF_WEAPON_MINIGUN"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			TFBot
+			{
+			Class Spy
+			health 250
+			name "explosive behavior"
+			AlwaysGlow 1
+			Skill expert
+			 StripItemSlot    1
+			Item "THE ORIGINAL"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			TFBot
+			{
+			Class Spy
+			health 250
+			name "like father, like son"
+			 StripItemSlot    1
+			 AlwaysGlow 1
+			Skill expert
+			Item "TF_WEAPON_SCATTERGUN"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			TFBot
+			{
+			Class Spy
+			health 250
+			Name "cant win em, join em"
+			Skill expert
+			AlwaysGlow 1
+			 StripItemSlot    1
+			Item "TF_WEAPON_FLAMETHROWER"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot
+			name spies
+			TotalCount 10
+			MaxActive 10
+			SpawnCount 10
+			WaitbetweenSpawns 1
+			TotalCurrency 100
+			FirstSpawnOutput
+			{
+				Target music_spy
+				Action playsound
+			}
+			DoneOutput
+			{
+			    target france_overlay
+				Action StopOverlays
+			}
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Spy
+			health 250
+			name "aggressive weapon spy"
+			Skill expert
+			AlwaysGlow 1
+			 StripItemSlot    1
+			Item "TF_WEAPON_MINIGUN"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			TFBot
+			{
+			Class Spy
+			health 250
+			name "explosive behavior"
+			 StripItemSlot    1
+			 AlwaysGlow 1
+			Skill expert
+			Item "THE ORIGINAL"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			TFBot
+			{
+			Class Spy
+			health 250
+			name "like father, like son"
+			 StripItemSlot    1
+			Skill expert
+			AlwaysGlow 1
+			Item "TF_WEAPON_SCATTERGUN"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			TFBot
+			{
+			Class Spy
+			health 250
+			Name "cant win em, join em"
+			Skill expert
+			AlwaysGlow 1
+			 StripItemSlot    1
+			Item "TF_WEAPON_FLAMETHROWER"
+			CharacterAttributes
+			{
+			"move speed bonus" 1.5
+			}
+			}
+			}
+		}
+		WaveSpawn
+		{
+			Where	spawnbot
+			Waitforalldead DEMOMANS
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 5
+			WaitBeforeStarting 5
+			TotalCurrency 1
+			Support limited
+			TotalCurrency 1000
+			FirstSpawnMessage "{red}THIS IS ALL COMPLETE NONSENSE...."
+			FirstSpawnOutput
+			{
+			    target france_overlay
+				action StartOverlays
+			}
+			Squad
+			{
+			Tank
+            {
+                Health 3000
+				Speed 60
+				DisableSmokestack 1
+                MaxTurnRate 69  
+                Gravity 0  
+                DisableTracks 1  
+                Name "tank"
+                StartingPathTrackNode "tankpath_funnyblimp_colonel_1"
+
+                OnKilledOutput                                  
+			{
+				Target boss_dead_relay
+				Action Trigger                         
+			}
+			OnBombDroppedOutput                             
+			{
+				Target boss_deploy_relay 
+				Action Trigger                         
+			}
+
+            }
+			}
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			
+			FirstSpawnMessage "shitty bot has joined the game"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			
+			FirstSpawnMessage "shitty bot has joined the game"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			
+			FirstSpawnMessage "shitty bot has joined the game"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			
+			FirstSpawnMessage "shitty bot has joined the game"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			
+			FirstSpawnMessage "shitty bot has joined the game"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			waitbeforestarting 2
+			
+			FirstSpawnMessage "shitty bot was automatically assigned to team ROBOTS"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			waitbeforestarting 2
+			
+			FirstSpawnMessage "shitty bot was automatically assigned to team ROBOTS"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			waitbeforestarting 2
+			
+			FirstSpawnMessage "shitty bot was automatically assigned to team ROBOTS"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			waitbeforestarting 2
+			
+			FirstSpawnMessage "shitty bot was automatically assigned to team ROBOTS"
+		}
+		WaveSpawn 
+		{
+			Waitforalldead spies
+			waitbeforestarting 2
+			
+			FirstSpawnMessage "shitty bot was automatically assigned to team ROBOTS"
+		}
+		
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot_invasion
+			TotalCount 24
+			name snipers
+			Waitforalldead spies
+			MaxActive 22
+			SpawnCount 2
+			WaitbetweenSpawns 1
+			TotalCurrency 100
+			FirstSpawnOutput
+			{
+			Target func_brush_sneed 
+Action enable
+}
+			RandomChoice{
+			TFBot
+			{
+			Name "shitty bot"
+			skill expert
+			action mobber
+			AimOffset "0 0 2000"
+			Class Sniper
+			UseHumanModel 1
+			
+			VoiceCommand [$SIGSEGV]  //Periodacally uses voice commands
+			{
+				Delay 1
+				Cooldown 2
+				Type "Nice shot"
+			}
+			Item "Noise Maker - TF Birthday"
+			NoCrouchButtonRelease 1 [$SIGSEGV] // Do not automatically release crouch button when the bot is on the ground
+				FireWeapon [$SIGSEGV]  //Periodically fires weapon
+                {
+                    Delay 1 //Time before the first fire input starts (Default: 10)
+                    Cooldown 1 //Time between each fire input (Default: 10)
+                    Repeats 0 //How many times should bot use the fire input in total (Default: 0 - Infinite)
+                    Duration 0.5 //How long should the button be pressed (Default: 0.1)
+					Type "Action"
+				}
+			item "TF_Weapon_GRENADELAUNCHER" 
+			Attributes AlwaysFireWeapon
+			ItemAttributes
+			{
+			itemname "TF_Weapon_GRENADELAUNCHER"
+			"custom projectile model" "models/empty.mdl" 
+			"custom kill icon" "headshot"
+			"custom item model" "models/weapons/c_models/c_sniperrifle/c_sniperrifle.mdl"
+			"blast radius increased" 421
+			"projectile speed increased" 0.00001
+			"fuse bonus" 0.00001
+			"override projectile type" 3
+			}
+			CharacterAttributes
+			{
+			"faster reload rate" 5
+			"move speed bonus" 1.5
+			"dmg taken from self reduced" 0
+			"dmg pierces resists absorbs" 1
+			"crit vs burning players" 1
+			"crit vs non burning players" 1
+			"damage penalty" 0.05
+			}
+			}
+			}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Where	spawnbot
+			Waitforalldead spies
+			TotalCount 24
+			MaxActive 2
+			SpawnCount 1
+			WaitbetweenSpawns 15
+			Waitbeforestarting 6
+			FirstSpawnOutput
+			{
+			Target func_brush_sneed 
+Action disable
+}
+			TotalCurrency 0
+			Support limited
+			TFBot
+            {
+            Taunt [$SIGSEGV]  //Taunt periodically
+            {
+                Delay 0
+                Cooldown 5
+                Repeats 0
+                Name "Laugh Taunt" //If set, uses this item taunt instead of default
+            }
+            Template T_TFbot_Giant_Scout_bonk
+            usehumanmodel 1
+            action mobber
+            Item "The Corpse Carrier"
+            name "torture device"
+            DamageAppliesCond [$SIGSEGV] //Adds conditions to players on hit
+                {
+                    Index 83
+                    Duration 5
+                }
+            CharacterAttributes
+            {
+                "damage penalty" 0.1
+                "gesture speed increase" 3
+                "torso scale" 0.5
+                "hand scale" 0.001
+                "melee range multiplier" 3
+                "move speed penalty" 2
+				"effect bar recharge rate increased" 0.3
+            }
+            }
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Waitforalldead snipers
+			Where	spawnbot
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 1
+			TotalCurrency 1337
+            FirstSpawnMessage "{green}he comes"		
+			TFBot
+			{
+				Class Heavy
+				Attributes Miniboss
+				classicon heavy_fists
+				usehumanmodel 1
+				Attributes UseBossHealthBar
+				name "insane cyclepath"
+				skill Expert
+				SpawnTemplate "TeleChain_Start"
+				WeaponRestrictions MeleeOnly
+				health 15000
+				Taunt [$SIGSEGV]  //Taunt periodically
+			    {
+				Delay 5 //Time before the first taunt starts (Default: 10)
+				Cooldown 3 //Time between each taunt (Default: 10)
+				Repeats 0 //How many times the bot should taunt in total (Default: 0 - Infinite)
+				IfSeeTarget 1 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
+			    }
+				characterattributes
+				{
+				"move speed bonus" 0.31
+				"taunt attack time mult" 0.5
+				"gesture speed increase" 2
+				"taunt attack after end" 1
+				}
+			}
+		}
+		WaveSpawn //WAVE 01a: YOUr
+		{
+			Waitforalldead snipers
+			Where	spawnbot
+			TotalCount 30
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 25
+			WaitBetweenSpawns 9
+			TotalCurrency 1	
+Support Limited
+            RandomChoice
+{
+Squad
+{			
+			TFBot
+			{
+				Class Heavy
+				Attributes Miniboss
+				classicon heavy_fists
+				usehumanmodel 1
+				name "schizo shadow clones"
+				skill hard
+				Action mobber
+				SpawnTemplate "TeleChain_Continue"
+				WeaponRestrictions MeleeOnly
+				health 750
+				Taunt [$SIGSEGV]  //Taunt periodically
+			    {
+				Delay 5 //Time before the first taunt starts (Default: 10)
+				Cooldown 3 //Time between each taunt (Default: 10)
+				Repeats 0 //How many times the bot should taunt in total (Default: 0 - Infinite)
+				IfSeeTarget 1 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
+			    }
+				characterattributes
+				{
+				"damage bonus" 0.3
+				"taunt attack time mult" 0.5
+				"taunt_attr_player_invis_percent" 0.65
+				"gesture speed increase" 2
+				"taunt attack after end" 1
+				}
+			}
+			}
+			}
+		}
+	}
+	
+	Wave
+	{
+		Explanation [$SIGSEGV]  //Dispayed once the wave is initialized
+		{
+			Line "{red}ARE YOU DONE?"
+			line "{red}I THINK I KNOW WHAT IS GOING ON."
+			Line "{red}LET'S TALK."
+		}
+		
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		InitWaveOutput
+		{
+                Target engi_overlays
+                Action StopOverlays
+        }
+		SpawnTemplate "hud_name_change_5"
+		WaveSpawn 
+		{
+			Where	spawnbot
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 1
+			Waitbeforestarting 1
+			TotalCurrency 0
+			FirstSpawnOutput
+			{
+			target "final_cutscenes"
+            action trigger
+            }
+RandomChoice
+{
+Squad
+{
+			TFbot
+			{
+			class scout
+			skill easy
+			action mobber
+			health 95
+			CharacterAttributes
+			{
+			"is suicide counter" 1
+			"move speed bonus" 0.001
+			}
+			}
+		}
+	}
+		}
+		WaveSpawn 
+		{
+			Where	spawnbot
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 1
+			Waitbeforestarting 1
+			TotalCurrency 0
+			FirstSpawnOutput
+			{
+			Target "music_spy_2"
+			Action PlaySound
+			}
+			DoneOutput
+			{
+				Target "music_spy_2"
+				Action fadeout
+				Param 3
+			}
+			Support Limited
+RandomChoice
+{
+Squad
+{
+			TFbot
+			{
+			class scout
+			skill easy
+			action mobber
+			health 95
+			CharacterAttributes
+			{
+			"is suicide counter" 1
+			"move speed bonus" 0.001
+			}
+			}
+		}
+	}
+		}
+	}
+	Wave
+	{   
+	    RedTeamWipeCausesWaveLoss 1
+		Explanation [$SIGSEGV]  //Dispayed once the wave is initialized
+		{
+			Line "{red}GOOD LUCK."
+			Line "{red}YOU WON'T BE ABLE TO RESPAWN."
+		}
+		SpawnTemplate "hud_name_change_6"
+		ItemAttributes
+		{
+			"ItemSlot" Melee
+            "min respawn time" 99999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" Secondary
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" Primary
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" PDA
+            "min respawn time" 9999
+        }
+		ItemAttributes
+        {
+            "ItemSlot" PDA2
+            "min respawn time" 9999
+        }
+		PlayerAttributes [$SIGSEGV] //Add attributes to players when the wave is active
+        {
+            Soldier
+            {
+            "mult_player_movespeed_active" 1.15
+            }
+            Pyro
+            {
+            "mult_player_movespeed_active" 0.9
+            }
+            Heavyweapons
+            {
+            "mult_player_movespeed_active" 1.1987012987
+            }
+            Demoman
+            {
+            "mult_player_movespeed_active" 0.9752688172
+            }
+            Sniper
+            {
+            "mult_player_movespeed_active" 0.9
+            }
+            Spy
+            {
+            "mult_player_movespeed_active" 0.83457943925
+            }
+        }
+		StartWaveOutput
+		{
+			Target logic_relay_chaser
+			Action Trigger
+		}
+		WaveSpawn 
+		{
+			Where	spawnbot
+			TotalCount 1
+			name finale_timerguy
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 5
+			Waitbeforestarting 13
+			TotalCurrency 0
+			FirstSpawnOutput
+			{
+				Target music_final
+				Action playsound
+			}
+			Support Limited
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Heavyweapons
+			Classicon timer_lite
+			Skill expert
+			Attributes miniboss
+			health 180
+			name "TIME IS UP"
+			action mobber
+			CharacterAttributes
+			{
+			"is suicide counter" 1
+			}
+			}
+			}
+			}
+		}
+		WaveSpawn 
+		{
+			Where	spawnbot
+			TotalCount 1
+			waitforalldead finale_timerguy
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 5
+			Waitbeforestarting 1
+			TotalCurrency 0
+			Support Limited
+			FirstSpawnOutput
+			{
+				Target boss_deploy_relay 
+				Action Trigger                         
+			}
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Heavyweapons
+			Skill expert
+			health 260
+			name "lol you lose"
+			action mobber
+			CharacterAttributes
+			{
+			"is suicide counter" 1
+			}
+			}
+			}
+			}
+		}
+		WaveSpawn 
+		{
+			Where	chaser_guy_idk
+			TotalCount 12
+			MaxActive 10
+			SpawnCount 5
+			WaitbetweenSpawns 5
+			Waitbeforestarting 13
+			TotalCurrency 0
+			FirstSpawnMessage "{red}RUN NOW"
+			FirstSpawnOutput
+			{
+				Target music_final
+				Action playsound
+			}
+			support 1
+			Squad
+			{
+			RandomChoice
+			{
+			TFbot
+			{
+			Class Scout
+			name "   it "
+			FastUpdate 1
+			AlwaysGlow 1
+			health 999999
+			scale 0.75
+			Attributes Miniboss
+			skill hard
+			action mobber
+			DamageAppliesCond [$SIGSEGV] //Adds conditions to players on hit
+				{
+					Index 87
+					Duration 90
+				}
+				itemAttributes {
+    itemname				"TF_WEAPON_BAT"
+	"is invisible" 1
+					"custom kill icon" "fists"
+}
+            CharacterAttributes
+            {
+				"move speed penalty" 0.95
+				"melee range multiplier" 2
+				"stomp player time" 0.1
+				"torso scale" 2
+				"mult stun resistance" 0.1
+				"mult debuff duration" 0.1
+				"stomp player damage" 1
+            }
+			action mobber
+			 StripItemSlot    1
+			  StripItemSlot    0
+			  attributes DisableDodge
+			}
+			}
+			}
+		}
+		WaveSpawn 
+		{
+			Where	spawn_finale_special
+			TotalCount 5
+			MaxActive 5
+			SpawnCount 5
+			WaitbetweenSpawns 5
+			Waitbeforestarting 13
+			TotalCurrency 0
+			support Limited
+			FirstSpawnOutput
+			{
+				Target env_shake_finaleff
+				Action startshake
+			}
+			Squad
+			{
+			RandomChoice
+			{
+				TFBot
+				{
+					Class scout
+					Skill Expert
+					action mobber
+					name "GET OUT"
+					WeaponRestrictions MeleeOnly
+					}
+				}
+			}
+		}
+		
+		WaveSpawn 
+		{
+			Where	spawn_finale_12
+			TotalCount 1
+			name finale_colonel
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 5
+			Waitbeforestarting 17
+			FirstSpawnMessage "{green}Now playing: Here I Come {blue}from Doors"
+			TotalCurrency 0
+			support Limited
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Soldier
+			Name "Colonel Barrage"
+			ClassIcon soldier_barrage
+			Health 3800
+
+			Action mobber
+			Skill Expert
+			Attributes AlwaysCrit
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss
+			Attributes HoldFireUntilFullReload
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_ROCKETLAUNCHER"
+				"clip size upgrade atomic" 26.0
+				"faster reload rate" 0.22
+				"fire rate bonus" 0.2
+				"projectile spread angle penalty" 5
+			}
+			CharacterAttributes
+			{
+				"health regen"	40
+				"move speed bonus"	0.000001
+				"damage penalty" 0.1
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+				"airblast vertical vulnerability multiplier" 0.1			
+				"Projectile speed increased" 0.4
+			}
+			}
+			}
+			}
+		}
+		
+		WaveSpawn 
+		{
+			Where	spawn_finale_10
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 5
+			Waitbeforestarting 1
+			TotalCurrency 0
+			support Limited
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Health	690
+					DesiredAttackRange 100
+					MaxVisionRange 250
+					Name "love yourself NOW"
+					UseMeleeThreatPrioritization 1   //Prefer players close to the bot
+					item "tf_weapon_grenadelauncher"
+					Item "apoco-fists"
+					WeaponRestrictions PrimaryOnly
+					Attributes AlwaysFireWeapon
+					Scale	1.33
+					Class	demoman
+					Attributes Miniboss
+					Skill Expert
+					Action mobber
+					ItemAttributes
+					{
+					Itemname "apoco-fists"
+					"is_passive_weapon" 1
+					}
+					ItemAttributes
+					{
+					itemname "tf_weapon_grenadelauncher"
+					"is invisible" 1
+					"custom kill icon" "obj_attachment_sapper"
+					"damage bonus" 0.1
+					"faster reload rate" 0.1
+					"fire rate bonus" 0.6
+					"projectile speed increased" 0.75
+					"custom projectile model" "models/empty.mdl" 
+					"grenade explode on impact" 1
+					"Set DamageType Ignite" 1
+					"explosion particle" wrenchmotron_teleport_beam
+					}
+					CharacterAttributes
+					{
+					"damage force reduction" 0.0001
+					"move speed bonus"	0.15
+					"airblast vulnerability multiplier"	0.1
+					"airblast vertical vulnerability multiplier"	0.1
+					"hand scale" 0.7
+					}
+			}
+			}
+			}
+		}
+		
+		WaveSpawn 
+		{
+			Where	spawn_finale_special
+			Waitforalldead finaltank
+			TotalCount 3
+			MaxActive 3
+			SpawnCount 3
+			TotalCurrency 0
+			support Limited
+			FirstSpawnMessage "{red}REMEMBER"
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Heavyweapons
+name "HEAVY"
+			Skill easy
+			scale 1.05
+			Health 300
+			Action Mobber
+			}
+			}
+			}
+		}
+		WaveSpawn 
+		{
+			Where	spawn_finale_special
+			Waitforalldead finaltank
+			TotalCount 2
+			MaxActive 2
+			SpawnCount 2
+			TotalCurrency 0
+			WaitBeforeStarting 2
+			support Limited
+			FirstSpawnMessage "{red}KILL THE RESET BUTTON WITH YOUR MELEE!"
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Heavyweapons
+			Name "YOU WILL LAUGH"
+			Skill Easy
+			ClassIcon heavy_mittens
+			scale 1.05
+			WeaponRestrictions MeleeOnly
+			Health 100
+			Action Mobber
+			Attributes AlwaysCrit
+			Item "The All-Father"
+			Item "Point and Shoot"
+			Item "The Holiday Punch"
+			CharacterAttributes
+			{
+				"move speed bonus"	2
+				"torso scale" 1
+			}
+			}
+			}
+			}
+		}
+		
+		WaveSpawn
+	    {
+		TotalCount 1
+		WaitBeforeStarting 5
+		name finaltank
+		TotalCurrency 0
+        FirstSpawnOutput                                                                                                                                                            
+		{
+             Target boss_spawn_relay                                            
+             Action Trigger                         
+        }
+        Support Limited
+	    Tank
+		{
+			Health 6900
+			Scale 2
+			Speed 0
+			Name "boss"
+			StartingPathTrackNode "finale_stucktank_1"
+
+			OnKilledOutput                                  
+			{
+				Target boss_dead_relay
+				Action Trigger                         
+			}
+			OnBombDroppedOutput                             
+			{
+				Target boss_deploy_relay 
+				Action Trigger                         
+			} 
+		}			
+	    }
+		WaveSpawn 
+		{
+			Where	spawn_finale_special
+			Waitforalldead finaltank
+			TotalCount 2
+			MaxActive 2
+			SpawnCount 2
+			TotalCurrency 0
+			support Limited
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Heavyweapons
+			Name "YOU WILL LAUGH"
+			Skill Easy
+			ClassIcon heavy_mittens
+			scale 1.05
+			WeaponRestrictions MeleeOnly
+			Health 100
+			Action Mobber
+			Attributes AlwaysCrit
+			Item "The All-Father"
+			Item "Point and Shoot"
+			Item "The Holiday Punch"
+			CharacterAttributes
+			{
+				"move speed bonus"	2
+				"torso scale" 1
+			}
+			}
+			}
+			}
+		}
+		WaveSpawn 
+		{
+			Where spawn_finale_theend_bot
+			TotalCount 1
+			name finalbot
+			MaxActive 1
+			SpawnCount 1
+			waitbeforestarting 3
+			Support Limited
+			DoneOutput
+			{
+				Target logic_relay_finalcutscenes
+				Action trigger
+			}
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class Demoman
+			health 1000
+			skill hard
+			UseHumanAnimations 1
+			AlwaysGlow 1
+			Taunt [$SIGSEGV]  //Taunt periodically
+			{
+			    Delay 0
+				Cooldown 10 //Time between each taunt (Default: 10)
+				Repeats 0 //How many times the bot should taunt in total (Default: 0 - Infinite)
+				Duration 999
+				Name "Taunt: The Fist Bump" //If set, uses this item taunt instead of default
+			}
+			CharacterAttributes
+			{
+			"move speed bonus" 0.00001
+			"damage force reduction" 0.0001
+			"airblast vulnerability multiplier" 0
+			"dmg from ranged reduced" 0.5
+			"increased jump height" 0.00001
+			"mult dmgtaken from melee" 100
+			"cannot be backstabbed" 1
+			"always allow taunt" 1
+			}
+			name "Reset Button"
+			Item "MvM GateBot Light Demoman"
+			AddCond
+			{
+			delay 5
+			index 71
+			}
+			}
+			}
+			}
+		}
+		WaveSpawn 
+		{
+			Waitforalldead finalbot
+			where spawnbot
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitbetweenSpawns 1
+			FirstSpawnMessage "{red}FREE....... AT LAST..."
+			DoneOutput
+			{
+				Target music_final
+				Action fadeout
+				Param 5
+			}
+			Squad
+			{
+			RandomChoice
+			{
+			TFBot
+			{
+			Class scout
+			Action mobber
+			CharacterAttributes
+			{
+			"is suicide counter" 125
+			}
+			}
+			}
+			}
+		}
+		
+	}
+}

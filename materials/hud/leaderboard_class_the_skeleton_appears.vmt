@@ -1,0 +1,10 @@
+"UnlitGeneric"
+{
+	"$basetexture" "hud/leaderboard_class_the_skeleton_appears"
+	"$vertexcolor" 1
+	"$no_fullbright" 1
+	"$ignorez" 1
+	"%keywords" "tf"
+	"$translucent" 1
+}
+

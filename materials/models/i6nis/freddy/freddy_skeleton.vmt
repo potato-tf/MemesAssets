@@ -1,0 +1,21 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "models/i6nis/freddy/freddy_skeleton"
+     	"$bumpmap" "models/i6nis/freddy/flat_normal"
+
+$halflambert 0
+
+
+	"$lightwarptexture" "models/i6nis/clothes_wrp"
+	"$phong" "1"
+//	"$phongexponent" "5"
+	"$phongalbedotint" "1"
+	"$phongboost" "5"
+	"$phongfresnelranges"	"[.5 1 48]"
+	"$phongexponenttexture" "models/i6nis/exp"
+
+	"$detail" "models/i6nis/foxy/detail_metal"
+	"$detailscale" 4
+	"$detailblendfactor" .95
+	"$detailblendmode" 0
+}

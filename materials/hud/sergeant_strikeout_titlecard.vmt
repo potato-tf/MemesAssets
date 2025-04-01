@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "hud/sergeant_strikeout_titlecard"
+	"$translucent" 1
+}

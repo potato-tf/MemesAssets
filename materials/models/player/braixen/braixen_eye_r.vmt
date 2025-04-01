@@ -1,0 +1,37 @@
+"EyeRefract"
+{
+	"$Iris"					"models/player/braixen/braixen_eye_R"
+	"$AmbientOcclTexture"	"models/player/braixen/braixen_eye_occl"
+	"$Envmap"				"models/player/braixen/braixen_eye_cubemap"
+	"$CorneaTexture"		"models/player/braixen/braixen_eye_refract"
+	"$lightwarptexture"		"models/player/braixen/braixen_eye_lightwarp"
+
+	"$EyeballRadius"		"0.5"
+	"$AmbientOcclColor"		"[0.75 0.75 0.75]"
+	"$Dilation"				"0.50"
+	"$ParallaxStrength"		"0.25"
+	"$CorneaBumpStrength"	"0.75"
+	"$Glossiness"			"0.40"
+
+	"$halflambert"			"1"
+	"$nodecal"				"1"
+
+	"$RaytraceSphere"		"0"
+	"$SphereTexkillCombo"	"0"
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+	}
+
+
+	"Eyes_dx8"
+		{
+			"$basetexture"	"models/player/braixen/braixen_eyewhite"
+			"$iris"			"models/player/braixen/braixen_eye_R_dx8"
+		}
+		
+}

@@ -1,0 +1,10 @@
+"UnlitGeneric"
+{
+// Made by Morton - http://steamcommunity.com/id/mad_mortty/
+	"$baseTexture" "hud/leaderboard_class_pyro_infinity_mort"
+	"$vertexcolor" 1
+	"$no_fullbright" 1
+	"$ignorez" 1
+	"%keywords" "tf"
+	"$translucent" 1
+}

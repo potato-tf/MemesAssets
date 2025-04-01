@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "hud/overlay_ohno_our_screen_its_broken"
+	"$translucent" 1
+}

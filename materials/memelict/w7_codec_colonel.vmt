@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "memelict/w7_codec_colonel"
+	"$translucent" 1
+	
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedTextureVar" 		"$basetexture" //What to animate. Can also be $detail and $bumpmap
+			"animatedTextureFrameNumVar"	"$frame"
+			"animatedTextureFrameRate" 	"8" //FPS HERE
+		}
+	}
+
+}

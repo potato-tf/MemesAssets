@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$baseTexture"			"models\Goomba\Main\GoombaEye4"
+	"$bumpmap"				"models\Goomba\SharedTextures\phong"
+	"$halflambert"			"1"
+	"$translucent"			"1"
+
+	"$phong"				"1"
+	"$phongalbedotint"		"1"
+	"$phongboost"			"7"
+	"$phongexponent"		"15"
+	"$phongexponenttexture"	"models\Goomba\SharedTextures\albedo"
+	"$phongfresnelranges"	"[.1 .5 .75]"
+
+	"$rimlight"				"1"
+	"$rimlightboost"		"2"
+}

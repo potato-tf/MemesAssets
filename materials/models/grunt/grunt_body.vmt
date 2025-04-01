@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/grunt/grunt_body"
+	$translucent 0
+}

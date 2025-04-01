@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "hud/overlay_trollge"
+	"$translucent" 1
+}

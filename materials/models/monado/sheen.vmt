@@ -1,0 +1,64 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/monado/sheen"
+	"$translucent" "1"
+	"$envmapmask" "models/monado/sheen"
+	"$selfillumtint" "[1 1 1]"
+	"$selfillum_envmapmask_alpha" "1"
+
+	// Cloaking
+	"$cloakPassEnabled" "1"
+	"$sheenPassEnabled" "1"
+
+	"$sheenmap" 		"cubemaps/cubemap_sheen001"
+	"$sheenmapmask" 		"Effects/AnimatedSheen/animatedsheen0"
+	"$sheenmaptint" 		"[ 1 1 1 ]"
+	"$sheenmapmaskframe" 	"0"
+	"$sheenindex" 		"0"
+
+	"$glowcolor" "1"
+	"$yellow" "0"
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+ 		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+ 			"animatedtextureframerate" "60"
+		}
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+		"ModelGlowColor"
+		{
+			"resultVar" "$glowcolor"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$selfillumtint"
+		}
+		"Equals"
+		{
+			"srcVar1"  "$glowcolor"
+			"resultVar" "$color2"
+		}
+		"YellowLevel"
+		{
+			"resultVar" "$yellow"
+		}
+		"Multiply"
+		{
+			"srcVar1" "$color2"
+			"srcVar2" "$yellow"
+			"resultVar" "$color2"
+		}
+	}
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/collabwave/freddy/body-color"
+	"$surfaceprop" "Metal"
+}

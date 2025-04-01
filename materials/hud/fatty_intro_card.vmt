@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+    "$basetexture" "hud\fatty_intro_card"
+    "$translucent" 1
+}
