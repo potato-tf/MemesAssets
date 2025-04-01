@@ -2,6 +2,9 @@
 {
 	// The missions below are present on dedicated archive servers
 	"mvm_shadows_b3" "adv_bauernhof"
+	"mvm_bigrock" ""
+	"mvm_bigrock" "advanced1"
+	"mvm_bigrock" "advanced2"
 	"mvm_redridge_b3b" "exp_red_ridge"
 	"mvm_condemned_b3" "exp_trespasser"
 	"mvm_condemned_b3" "exp_trespasser_remaster"
