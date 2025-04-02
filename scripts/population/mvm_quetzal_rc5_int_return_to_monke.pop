@@ -4,422 +4,19 @@
 #base robot_giant.pop
 #base robot_standard.pop
 
-Humour_Express [Pineapple]
-{
-	EventHooks
-	{
-		Hook
-		{
-			Event	"wave_init"
-			Execute	"DeployEntityTemplate(GasCanCult)"
-		}
-		Hook
-		{
-			Event	"wave_init"
-			Execute	"DeployEntityTemplate(BovineBrothers)"
-		}
-		Hook
-		{
-			Event	"wave_init"
-			Execute	"DeployEntityTemplate(RaveLightsController)"
-		}
-		Hook
-		{
-			Event	"wave_init"
-			Execute	"DeployEntityTemplate(RaveLights_NE)::DeployEntityTemplate(RaveLights_SE)::DeployEntityTemplate(RaveLights_N)::DeployEntityTemplate(RaveLights_S)::DeployEntityTemplate(RaveLights_NW)::DeployEntityTemplate(RaveLights_SW)"
-		}
-	}
-	EntityTemplates
-	{
-		GasCanCult
-		{
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-960 672 -128"
-				"model"		"models/weapons/c_models/c_gascan/c_gascan.mdl"
-				"angles"	"60 0 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-1020 672 -144"	// S of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 0 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-1000 712 -144"	// SW of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 -45 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-960 732 -144"	// W of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 -90 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-920 712 -144"	// NW of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 -135 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-900 672 -144"	// N of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 180 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-920 632 -144"	// NE of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 135 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-960 612 -144"	// E of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 90 0"
-				"DisableBoneFollowers"	"1"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-1000 632 -144"	// SE of can
-				"model"		"models/player/pyro.mdl"
-				"angles"	"0 45 0"
-				"DisableBoneFollowers"	"1"
-			}
-		}
-		BovineBrothers
-		{
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"2020 3244 -224"	// back right of spawn
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"angles"	"0 180 0"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-1100 2940 544"	// stone tower behind hatch
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"angles"	"0 -30 0"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"816 168 -288"	// blocked off hallway near crocodile pit
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"angles"	"0 165 0"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-1240 -1414 32"	// out of bounds altar room
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"angles"	"0 75 0"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"1000 -2738 -384"	// front upgrade station
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"angles"	"0 90 0"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"-1152 -2648 192"	// stone tower left of front
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"angles"	"0 15 0"
-			}
-			Entity
-			{
-				"classname"	"prop_dynamic"
-				"origin"	"1294 -5296 192"	// on a rock in main robot spawn
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"angles"	"0 120 0"
-			}
-		}
-		RaveLightsController
-		{
-			Entity
-			{
-				"classname"		"logic_relay"
-				"targetname"	"relay_rave"
-				"origin"		"0 0 0"
-
-				"OnTrigger"	"ravelight1,LightOn,,0,-1"
-				"OnTrigger"	"ravelight1,LightOff,,0.2,-1"
-				"OnTrigger"	"ravelight2,LightOn,,0.2,-1"
-				"OnTrigger"	"ravelight2,LightOff,,0.4,-1"
-				"OnTrigger"	"ravelight3,LightOn,,0.4,-1"
-				"OnTrigger"	"ravelight3,LightOff,,0.6,-1"
-				"OnTrigger"	"relay_rave2,Trigger,,0.6,-1"
-			}
-			Entity
-			{
-				"classname"		"logic_relay"
-				"targetname"	"relay_rave2"
-				"origin"		"0 0 32"
-
-				"OnTrigger"	"ravelight1,LightOn,,0,-1"
-				"OnTrigger"	"ravelight1,LightOff,,0.2,-1"
-				"OnTrigger"	"ravelight2,LightOn,,0.2,-1"
-				"OnTrigger"	"ravelight2,LightOff,,0.4,-1"
-				"OnTrigger"	"ravelight3,LightOn,,0.4,-1"
-				"OnTrigger"	"ravelight3,LightOff,,0.6,-1"
-				"OnTrigger"	"relay_rave,Trigger,,0.6,-1"
-			}
-		}
-		RaveLights_NE
-		{
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight1"
-				"origin"			"-4972 746 12"
-				"StartDisabled"		"1"
-				"angles"			"-120 -135 0"	// NW
-				"rendercolor"		"255 255 0"		// yellow
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight2"
-				"origin"			"-4972 746 12"
-				"StartDisabled"		"1"
-				"angles"			"-90 -135 0"	// up
-				"rendercolor"		"255 0 255"		// magenta
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight3"
-				"origin"			"-4972 746 12"
-				"StartDisabled"		"1"
-				"angles"			"-60 -135 0"	// SE
-				"rendercolor"		"0 255 255"		// cyan
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-		}
-		RaveLights_SE
-		{
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight1"
-				"origin"			"-5244 752 12"
-				"StartDisabled"		"1"
-				"angles"			"-120 -45 0"	// SW
-				"rendercolor"		"0 255 255"		// cyan
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight2"
-				"origin"			"-5244 752 12"
-				"StartDisabled"		"1"
-				"angles"			"-90 -45 0"		// up
-				"rendercolor"		"255 255 0"		// yellow
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight3"
-				"origin"			"-5244 752 12"
-				"StartDisabled"		"1"
-				"angles"			"-60 -45 0"		// NE
-				"rendercolor"		"255 0 255"		// magenta
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-		}
-		RaveLights_N
-		{
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight1"
-				"origin"			"-4860 970 24"
-				"StartDisabled"		"1"
-				"angles"			"-120 -90 0"	// W
-				"rendercolor"		"255 0 255"		// magenta
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight2"
-				"origin"			"-4860 970 24"
-				"StartDisabled"		"1"
-				"angles"			"-90 -90 0"		// up
-				"rendercolor"		"255 255 0"		// yellow
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight3"
-				"origin"			"-4860 970 24"
-				"StartDisabled"		"1"
-				"angles"			"-60 -90 0"		// E
-				"rendercolor"		"0 255 255"		// cyan
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-		}
-		RaveLights_S
-		{
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight1"
-				"origin"			"-5368 1000 48"
-				"StartDisabled"		"1"
-				"angles"			"-120 90 0"		// E
-				"rendercolor"		"255 255 0"		// yellow
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight2"
-				"origin"			"-5368 1000 48"
-				"StartDisabled"		"1"
-				"angles"			"-90 90 0"		// up
-				"rendercolor"		"0 255 255"		// cyan
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight3"
-				"origin"			"-5368 1000 48"
-				"StartDisabled"		"1"
-				"angles"			"-60 90 0"		// W
-				"rendercolor"		"255 0 255"		// magenta
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-		}
-		RaveLights_NW
-		{
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight1"
-				"origin"			"-5000 1200 18"
-				"StartDisabled"		"1"
-				"angles"			"-120 135 0"	// NE
-				"rendercolor"		"0 255 255"	// cyan
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight2"
-				"origin"			"-5000 1200 18"
-				"StartDisabled"		"1"
-				"angles"			"-90 135 0"	// up
-				"rendercolor"		"255 0 255"	// magenta
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight3"
-				"origin"			"-5000 1200 18"
-				"StartDisabled"		"1"
-				"angles"			"-60 135 0"	// SW
-				"rendercolor"		"255 255 0"	// yellow
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-		}
-		RaveLights_SW
-		{
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight1"
-				"origin"			"-5288 1370 106"
-				"StartDisabled"		"1"
-				"angles"			"-120 45 0"	// SE
-				"rendercolor"		"255 0 255"	// magenta
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight2"
-				"origin"			"-5288 1370 106"
-				"StartDisabled"		"1"
-				"angles"			"-90 45 0"	// up
-				"rendercolor"		"0 255 255"	// cyan
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-			Entity
-			{
-				"classname"			"point_spotlight"
-				"targetname"		"ravelight3"
-				"origin"			"-5288 1370 106"
-				"StartDisabled"		"1"
-				"angles"			"-60 45 0"	// NW
-				"rendercolor"		"255 255 0"	// yellow
-				"spotlight_width"	"48"
-				"spotlight_length"	"64"
-			}
-		}
-	}
-}
-
-population
+Humour_Express
 {
 	StartingCurrency	700
 	RespawnWaveTime	2
 	CanBotsAttackWhileInSpawnRoom	no
 	FixedRespawnWaveTime	Yes
-	SentryBusterFriendlyFire	0 [$SIGSEGV]
-	BotPushaway	0 [$SIGSEGV]
-	PrecacheModel "models/pyroland/kitteh.mdl" [$SIGSEGV]
-	PrecacheModel "models/items/medkit_small_bday.mdl" [$SIGSEGV]
-	PrecacheModel "models/bots/demo/bot_purpleguy_buster.mdl" [$SIGSEGV]
-	CustomUpgradesFile	"mvm_upgrades_tindall_v2.txt" [$SIGSEGV]
+	BotPushaway	0
+	NoRomevisionCosmetics	1
+	BodyPartScaleSpeed	16
+	PrecacheModel "models/pyroland/kitteh.mdl"
+	PrecacheModel "models/items/medkit_small_bday.mdl"
+	PrecacheModel "models/bots/demo/bot_purpleguy_buster.mdl"
+	CustomUpgradesFile	"mvm_upgrades_tindall_v2.txt"
 	// Upgrade changes:
 	// Melee resistance added: 10% bonus, 250 cost, 4 points
 	// Health regen cost 200 -> 100
@@ -444,7 +41,7 @@ population
 	// Sapper power bonus 1 -> 3, cost 350 -> 500
 	// Ubercharge canteen cost 75 -> 150
 	// Crit boost canteen cost 100 -> 200
-	ExtraSpawnPoint [$SIGSEGV]
+	ExtraSpawnPoint
     {
         Name	"spawnbot_fuckdamn"	// *should* be in a little alcove near the middle of the map
         TeamNum	3
@@ -452,6 +49,164 @@ population
         Y	"-1696"
         Z	"-368"
     }
+	PointTemplates
+	{
+		GlobalProps
+		{
+			NoFixup 1
+			prop_dynamic	// Gas Can Cult
+			{
+				"model"					"models/weapons/c_models/c_gascan/c_gascan.mdl"
+				"origin"				"-960 672 -128"
+				"angles"				"60 0 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-1020 672 -144"	// S of can
+				"angles"				"0 0 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-1000 712 -144"	// SW of can
+				"angles"				"0 -45 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-960 732 -144"	// W of can
+				"angles"				"0 -90 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-920 712 -144"	// NW of can
+				"angles"				"0 -135 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-900 672 -144"	// N of can
+				"angles"				"0 180 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-920 632 -144"	// NE of can
+				"angles"				"0 135 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-960 612 -144"	// E of can
+				"angles"				"0 90 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic
+			{
+				"model"					"models/player/pyro.mdl"
+				"origin"				"-1000 632 -144"	// SE of can
+				"angles"				"0 45 0"
+				"solid"					"0"
+				"disableshadows"		"1"
+				"DisableBoneFollowers"	"1"
+			}
+			prop_dynamic	// Bovine Brothers
+			{
+				"model"				"models/props_2fort/cow001_reference.mdl"
+				"origin"			"2020 3244 -224"	// back right of spawn
+				"angles"			"0 180 0"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+			prop_dynamic
+			{
+				"model"				"models/props_2fort/cow001_reference.mdl"
+				"origin"			"-1100 2940 544"	// stone tower behind hatch
+				"angles"			"0 -60 0"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+			prop_dynamic
+			{
+				"model"				"models/props_2fort/cow001_reference.mdl"
+				"origin"			"816 168 -288"	// blocked off hallway near crocodile pit
+				"angles"			"0 165 0"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+			prop_dynamic
+			{
+				"model"				"models/props_2fort/cow001_reference.mdl"
+				"origin"			"-1240 -1414 32"	// out of bounds altar room
+				"angles"			"0 75 0"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+			prop_dynamic
+			{
+				"model"				"models/props_2fort/cow001_reference.mdl"
+				"origin"			"-1152 -2648 192"	// stone tower left of front
+				"angles"			"0 15 0"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+			prop_dynamic
+			{
+				"model"				"models/props_2fort/cow001_reference.mdl"
+				"origin"			"1294 -5296 192"	// on a rock in main robot spawn
+				"angles"			"0 120 0"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+			prop_dynamic	// Shopkeepers
+			{
+				"model"				"models/yunpolmodels/_282____gardevoir.mdl"
+				"origin"			"1460 2230 -158"	// spawn upgrade station
+				"angles"			"0 90 0"
+				"skin"				"1"	// shiny
+				"modelscale"		"1.4"
+				"setbodygroup"		"196"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+			prop_dynamic
+			{
+				"model"				"models/yunpolmodels/_282____gardevoir.mdl"
+				"origin"			"970 -2738 -384"	// front upgrade station
+				"angles"			"0 90 0"
+				"modelscale"		"1.2"
+				"setbodygroup"		"97"
+				"solid"				"0"
+				"disableshadows"	"1"
+			}
+		}
+	}
+	SpawnTemplate "GlobalProps"
 	Templates
 	{
 		T_TFBot_W1Meme_Heavy_Punchy
@@ -595,7 +350,7 @@ population
 			{
 				"health regen"	1
 			}
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			UseMeleeThreatPrioritization 1
 		}
 		T_TFBot_W1Meme_Sniper_Boomer
 		{
@@ -621,7 +376,7 @@ population
 				"health regen"					1
 				"bombinomicon effect on death"	1
 			}
-			Action Mobber [$SIGSEGV]
+			Action Mobber
 		}
 		T_TFBot_W1Meme_Clem
 		{
@@ -637,22 +392,25 @@ population
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_SMG"
-				"clip size bonus"		4.8		// 120 rounds
-				"fire rate bonus"		0.5		// 1200 RPM
-				"faster reload rate"	2.75	// 3 seconds reload
-				"weapon spread bonus"	1.75	// very inaccurate
-				"damage penalty"		0.25	// 2 damage
+				"clip size bonus"			4.8		// 120 rounds
+				"fire rate bonus"			0.5		// 1200 RPM
+				"faster reload rate"		2.75	// 3 seconds reload
+				"weapon spread bonus"		1.75	// very inaccurate
+				"damage penalty"			0.25	// 2 damage
+				"killstreak tier"			2
+				"killstreak idleeffect"		5	// agonizing emerald
+				"collect currency on kill"	1
 			}
 			CharacterAttributes
 			{
 				"dmg from ranged reduced"	0.25
 				"dmg from melee increased"	0.25
 			}
-			Action Mobber [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W2Meme_Sniper_Thief
@@ -678,7 +436,7 @@ population
 				ItemName "The Cold Killer"
 				"set item tint rgb"	6901050	// radigan conagher brown
 			}
-			UseHumanModel 1 [$SIGSEGV]
+			UseHumanModel 1
 		}
 		T_TFBot_W2Meme_Sniper_Iceskimo
 		{
@@ -703,7 +461,7 @@ population
 				ItemName "The Cold Killer"
 				"set item tint rgb"	2452877	// value of teamwork blue
 			}
-			UseHumanModel 1 [$SIGSEGV]
+			UseHumanModel 1
 		}
 		T_TFBot_W2Meme_Heavy_Barbarian
 		{
@@ -724,7 +482,7 @@ population
 			{
 				"move speed bonus"	1.2
 			}
-			UseHumanModel 1 [$SIGSEGV]
+			UseHumanModel 1
 		}
 		T_TFBot_W2Meme_Soldier_StoveFace
 		{
@@ -746,7 +504,7 @@ population
 			{
 				"move speed bonus"	0.95
 			}
-			UseHumanModel 1 [$SIGSEGV]
+			UseHumanModel 1
 		}
 		T_TFBot_W2Meme_Demoman_Brute_Beefy
 		{
@@ -776,7 +534,7 @@ population
 				"health regen"		1
 				"move speed bonus"	0.85
 			}
-			UseHumanModel 1 [$SIGSEGV]
+			UseHumanModel 1
 		}
 		T_TFBot_W2Meme_Pyro_Chief_Orange
 		{
@@ -826,8 +584,8 @@ population
 				"override footstep sound set"					6
 				"airblast vertical vulnerability multiplier"	0.1
 			}
-			UseHumanModel 1 [$SIGSEGV]
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			UseHumanModel 1
+			UseMeleeThreatPrioritization 1
 		}
 		T_TFBot_W2Meme_Demoman_Jester
 		{
@@ -864,7 +622,7 @@ population
 			{
 				"cannot pick up intelligence"	1
 			}
-			UseHumanModel 1 [$SIGSEGV]
+			UseHumanModel 1
 		}
 		T_TFBot_W2Meme_King
 		{
@@ -882,10 +640,13 @@ population
 			ItemAttributes
 			{
 				ItemName "The Eyelander"
-				"critboost on kill"		5
-				"turn to gold"			1
-				"item style override"	1
-				"is australium item"	1
+				"critboost on kill"			5
+				"turn to gold"				1
+				"item style override"		1
+				"is australium item"		1
+				"killstreak tier"			2
+				"killstreak idleeffect"		2	// deadly daffodil
+				"collect currency on kill"	1
 			}
 			ItemAttributes
 			{
@@ -902,12 +663,12 @@ population
 				"dmg from ranged reduced"				0.25
 				"dmg from melee increased"				0.25
 			}
-			Action Mobber [$SIGSEGV]
-			UseHumanModel 1 [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			UseHumanModel 1
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W3Meme_Sniper_Aimbot1
@@ -941,8 +702,8 @@ population
 				"dmg from melee increased"		0.01
 				"cannot pick up intelligence"	1
 			}
-			Action Mobber [$SIGSEGV]
-			UseHumanModel 1 [$SIGSEGV]
+			Action Mobber
+			UseHumanModel 1
 		}
 		T_TFBot_W3Meme_Sniper_Aimbot2
 		{
@@ -973,36 +734,9 @@ population
 				"dmg from melee increased"		0.01
 				"cannot pick up intelligence"	1
 			}
-			Action Mobber [$SIGSEGV]
-			UseHumanModel 1 [$SIGSEGV]
+			Action Mobber
+			UseHumanModel 1
 		}
-		// T_TFBot_W3Meme_Pyro_Giant_Glitch
-		// {
-			// Class Pyro
-			// Name "Scorch"
-			// ClassIcon glitch_pyro_giant
-			// Skill Expert
-			// Health 3300
-			// WeaponRestrictions PrimaryOnly
-			// Attributes MiniBoss
-			// Item "Upgradeable TF_WEAPON_FLAMETHROWER"
-			// Item "Pyro Helm"
-			// ItemAttributes
-			// {
-				// ItemName "Upgradeable TF_WEAPON_FLAMETHROWER"
-				// "damage penalty"			0.75
-				// "airblast pushback scale"	1.5
-				// "mult airblast refire time"	0.01
-			// }
-			// CharacterAttributes
-			// {
-				// "move speed bonus"					0.5
-				// "damage force reduction"			0.5
-				// "airblast vulnerability multiplier"	0.5
-				// "override footstep sound set"		6
-			// }
-			// UseMeleeThreatPrioritization 1 [$SIGSEGV]
-		// }
 		T_TFBot_W3Meme_Pyro_Giant_Glitch
 		{
 			Class Pyro
@@ -1010,19 +744,19 @@ population
 			ClassIcon glitch_pyro_giant
 			Health 3300
 			Attributes MiniBoss
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		0
 				Cooldown	10
 				Name		"Attr1"
 			}
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		5
 				Cooldown	10
 				Name		"Attr2"
 			}
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			UseMeleeThreatPrioritization 1
 			EventChangeAttributes
 			{
 				Attr1
@@ -1071,26 +805,6 @@ population
 				}
 			}
 		}
-		// T_TFBot_W3Meme_Medic_Glitch
-		// {
-			// Class Medic
-			// Name "Smol Medic"
-			// ClassIcon glitch_medic
-			// Skill Hard
-			// Health 80
-			// Scale 0.35
-			// Attributes SpawnWithFullCharge
-			// Item "Upgradeable TF_WEAPON_SYRINGEGUN_MEDIC"
-			// Item "Upgradeable TF_WEAPON_MEDIGUN"
-			// Item "Das Naggenvatcher"
-			// ItemAttributes
-			// {
-				// ItemName "Upgradeable TF_WEAPON_MEDIGUN"
-				// "ubercharge rate bonus"	5
-				// "uber duration bonus"	-5
-				// "heal rate bonus"		0.01
-			// }
-		// }
 		T_TFBot_W3Meme_Medic_Glitch
 		{
 			Class Medic
@@ -1098,13 +812,13 @@ population
 			ClassIcon glitch_medic
 			Health 80
 			Scale 0.35
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		0
 				Cooldown	10
 				Name		"Attr1"
 			}
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		5
 				Cooldown	10
@@ -1154,46 +868,31 @@ population
 				}
 			}
 		}
-		// T_TFBot_W3Meme_Engineer_Glitch
-		// {
-			// Class Engineer
-			// Name "Mildly Overweight Scout"
-			// ClassIcon glitch_engineer
-			// Skill Hard
-			// Health 125
-			// WeaponRestrictions PrimaryOnly
-			// MaxVisionRange 1500
-			// Item "The Widowmaker"
-			// Item "The Well-Rounded Rifleman"
-			// Item "The Breakneck Baggies"
-			// UseHumanModel 1 [$SIGSEGV]
-			// Action FetchFlag [$SIGSEGV]
-		// }
 		T_TFBot_W3Meme_Engineer_Glitch
 		{
 			Class Engineer
 			Name "Mildly Overweight Scout"
 			ClassIcon glitch_engineer
 			Health 150
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		0
 				Cooldown	10
 				Name		"Attr1"
 			}
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		5
 				Cooldown	10
 				Name		"Attr2"
 			}
-			UseHumanModel 1 [$SIGSEGV]
-			Action FetchFlag [$SIGSEGV]
+			UseHumanModel 1
+			Action FetchFlag
 			EventChangeAttributes
 			{
 				Attr1
 				{
-					Skill Hard
+					Skill Easy
 					WeaponRestrictions PrimaryOnly
 					MaxVisionRange 1200
 					Item "The Widowmaker"
@@ -1206,7 +905,7 @@ population
 				}
 				Attr2
 				{
-					Skill Hard
+					Skill Easy
 					WeaponRestrictions PrimaryOnly
 					MaxVisionRange 1200
 					Item "The Frontier Justice"
@@ -1227,24 +926,6 @@ population
 				}
 			}
 		}
-		// T_TFBot_W3Meme_Scout_Glitch
-		// {
-			// Class Scout
-			// Name "Ankle Biter"
-			// ClassIcon glitch_scout
-			// Skill Hard
-			// Health 100
-			// Scale 0.65
-			// WeaponRestrictions MeleeOnly
-			// Item "Upgradeable TF_WEAPON_BAT"
-			// ItemAttributes
-			// {
-				// ItemName "Upgradeable TF_WEAPON_BAT"
-				// "damage penalty"				0.1
-				// "damage causes airblast"		1
-				// "apply z velocity on damage"	-1000	// push down amount
-			// }
-		// }
 		T_TFBot_W3Meme_Scout_Glitch
 		{
 			Class Scout
@@ -1252,13 +933,13 @@ population
 			ClassIcon glitch_scout
 			Health 100
 			Scale 0.65
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		0
 				Cooldown	10
 				Name		"Attr1"
 			}
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		5
 				Cooldown	10
@@ -1306,41 +987,19 @@ population
 				}
 			}
 		}
-		// T_TFBot_W3Meme_Soldier_Glitch
-		// {
-			// Class Soldier
-			// Name "Crunch Soldier"
-			// ClassIcon glitch_soldier
-			// Skill Hard
-			// Health 200
-			// WeaponRestrictions PrimaryOnly
-			// Attributes HoldFireUntilFullReload
-			// Item "The Liberty Launcher"
-			// Item "Lord Cockswain's Pith Helmet"
-			// ItemAttributes
-			// {
-				// ItemName "The Liberty Launcher"
-				// "damage causes airblast"			1
-				// "apply z velocity on damage"		-1000	// push down amount
-				// "damage penalty"					0.1
-				// "fire rate bonus"					0.01
-				// "blast radius decreased"			0.8
-				// "projectile spread angle penalty"	2
-			// }
-		// }
 		T_TFBot_W3Meme_Soldier_Glitch
 		{
 			Class Soldier
 			Name "Crunch Soldier"
 			ClassIcon glitch_soldier
 			Health 200
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		0
 				Cooldown	10
 				Name		"Attr1"
 			}
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		5
 				Cooldown	10
@@ -1350,7 +1009,7 @@ population
 			{
 				Attr1
 				{
-					Skill Hard
+					Skill Normal
 					WeaponRestrictions PrimaryOnly
 					Attributes HoldFireUntilFullReload
 					Item "The Liberty Launcher"
@@ -1373,7 +1032,7 @@ population
 				}
 				Attr2
 				{
-					Skill Hard
+					Skill Normal
 					WeaponRestrictions PrimaryOnly
 					Item "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
 					Item "The Doe-Boy"
@@ -1431,22 +1090,14 @@ population
 				"dmg pierces resists absorbs"	1
 				"item style override"			1
 				"is australium item"			1
+				"killstreak tier"				2
+				"killstreak idleeffect"			1	// team shine
 			}
 			ItemAttributes
 			{
 				ItemName "The Chill Chullo"
 				"set item tint rgb"	2960676	// after eight
 			}
-			//ItemAttributes
-			//{
-				//ItemName "Particulate Protector"
-				//"set item tint rgb"	12073019	// team spirit red
-			//}
-			//ItemAttributes
-			//{
-				//ItemName "The Snow Scoper"
-				//"set item tint rgb"	1315860	// distinctive lack of hue
-			//}
 			CharacterAttributes
 			{
 				"health regen"				500
@@ -1454,12 +1105,12 @@ population
 				"dmg from melee increased"	0.01
 				"cancel falling damage"		1
 			}
-			Action Mobber [$SIGSEGV]
-			UseHumanModel 1 [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			UseHumanModel 1
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W4Meme_Demoman_Cannon
@@ -1467,7 +1118,7 @@ population
 			Class Demoman
 			Name "Cannon Demoman"
 			ClassIcon demo_loosecannon
-			Skill Hard
+			Skill Easy
 			Health 175
 			WeaponRestrictions PrimaryOnly
 			Item "The Loose Cannon"
@@ -1487,7 +1138,7 @@ population
 			Class Pyro
 			Name "Airblast Pyro"
 			ClassIcon pyro_reflect_daan
-			Skill Hard
+			Skill Normal
 			Health 175
 			WeaponRestrictions PrimaryOnly
 			Item "Upgradeable TF_WEAPON_FLAMETHROWER"
@@ -1498,14 +1149,14 @@ population
 				"mult airblast refire time"	0.01
 				"damage penalty"			0.5
 			}
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			UseMeleeThreatPrioritization 1
 		}
 		T_TFBot_W4Meme_Heavy_Deflector_Push
 		{
 			Class Heavyweapons
 			Name "Push Deflector Heavy"
 			ClassIcon heavy_deflector_push
-			Skill Hard
+			Skill Normal
 			Health 300
 			WeaponRestrictions PrimaryOnly
 			MaxVisionRange 600
@@ -1528,7 +1179,7 @@ population
 			Skill Normal
 			Health 125
 			WeaponRestrictions PrimaryOnly
-			MaxVisionRange 1200
+			MaxVisionRange 800
 			Item "The Force-a-Nature"
 			Item "The Fed-Fightin' Fedora"
 			ItemAttributes
@@ -1567,33 +1218,6 @@ population
 				"override footstep sound set"		3
 			}
 		}
-		// T_TFBot_W4Meme_SkeletronPrime_Head
-		// {
-			// Class HeavyWeapons
-			// Name "Skeletron Prime"
-			// ClassIcon skeletron_prime
-			// Skill Expert
-			// Health 28000
-			// WeaponRestrictions MeleeOnly
-			// Attributes MiniBoss
-			// Attributes UseBossHealthBar
-			// Item "Upgradeable TF_WEAPON_FISTS"
-			// Item "The Dead Head"
-			// ItemAttributes
-			// {
-				// ItemName "Upgradeable TF_WEAPON_FISTS"
-				// "damage bonus"	1.5
-			// }
-			// CharacterAttributes
-			// {
-				// "move speed bonus"					0.5
-				// "damage force reduction"			0.3
-				// "airblast vulnerability multiplier"	0.3
-				// "override footstep sound set"		2
-				// "head scale"						8
-				// "torso scale"						0.25
-			// }
-		// }
 		T_TFBot_W4Meme_SkeletronPrime_Head
 		{
 			Class HeavyWeapons
@@ -1602,13 +1226,13 @@ population
 			Health 28000
 			Attributes MiniBoss
 			Attributes UseBossHealthBar
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		0
 				Cooldown	20
 				Name		"Attr1"
 			}
-			ChangeAttributes [$SIGSEGV]
+			ChangeAttributes
 			{
 				Delay		12
 				Cooldown	20
@@ -1746,7 +1370,7 @@ population
 				"hand scale"						5
 				"torso scale"						0.25
 			}
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			UseMeleeThreatPrioritization 1
 		}
 		T_TFBot_W4Meme_SkeletronPrime_Cannon
 		{
@@ -1779,7 +1403,7 @@ population
 				"hand scale"						5
 				"torso scale"						0.25
 			}
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			UseMeleeThreatPrioritization 1
 		}
 		T_TFBot_W4Meme_Soldier_BalloonSlime
 		{
@@ -1825,8 +1449,11 @@ population
 			ItemAttributes
 			{
 				ItemName "Batsaber"
-				"damage bonus"		2
-				"fire rate penalty"	1.6
+				"damage bonus"				2
+				"fire rate penalty"			1.6
+				"killstreak tier"			2
+				"killstreak idleeffect"		1	// team shine
+				"collect currency on kill"	1
 			}
 			ItemAttributes
 			{
@@ -1842,12 +1469,12 @@ population
 				"dmg from ranged reduced"			0.01
 				"dmg from melee increased"			0.01
 			}
-			Action Mobber [$SIGSEGV]
-			UseHumanModel 1 [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			UseHumanModel 1
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W4Meme_Engineer_AngryDandelion
@@ -2213,7 +1840,7 @@ population
 				"head scale"		4
 				"torso scale"		0.25
 			}
-			AddCond [$SIGSEGV]
+			AddCond
 			{
 				Index		66	// invis spell
 				Delay		0.01
@@ -2240,6 +1867,9 @@ population
 				"blast radius increased"	1.75
 				"use large smoke explosion"	1
 				"fire rate penalty"			10
+				"killstreak tier"			2
+				"killstreak idleeffect"		1	// team shine
+				"collect currency on kill"	1
 			}
 			CharacterAttributes
 			{
@@ -2251,12 +1881,12 @@ population
 				"dmg from ranged reduced"			0.01
 				"dmg from melee increased"			0.01
 			}
-			Action Mobber [$SIGSEGV]
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			UseMeleeThreatPrioritization 1
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W5Meme_Floppa
@@ -2271,6 +1901,13 @@ population
 			Attributes MiniBoss
 			Item "Upgradeable TF_WEAPON_MINIGUN"
 			Item "The Beastly Bonnet"
+			ItemAttributes
+			{
+				ItemName "Upgradeable TF_WEAPON_MINIGUN"
+				"killstreak tier"			2
+				"killstreak idleeffect"		3	// manndarin
+				"collect currency on kill"	1
+			}
 			CharacterAttributes
 			{
 				"move speed bonus"					0.5
@@ -2281,11 +1918,11 @@ population
 				"dmg from ranged reduced"			0.01
 				"dmg from melee increased"			0.01
 			}
-			Action Mobber [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W5Meme_Pungo
@@ -2304,7 +1941,10 @@ population
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_FISTS"
-				"damage bonus"		1.1
+				"damage bonus"				1.1
+				"killstreak tier"			2
+				"killstreak idleeffect"		1	// team shine
+				"collect currency on kill"	1
 			}
 			CharacterAttributes
 			{
@@ -2316,11 +1956,11 @@ population
 				"dmg from ranged reduced"			0.01
 				"dmg from melee increased"			0.01
 			}
-			Action Mobber [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W5Meme_Condor
@@ -2338,7 +1978,11 @@ population
 			ItemAttributes
 			{
 				ItemName "The Enforcer"
-				"faster reload rate"	-0.8
+				"damage bonus"				1.2
+				"faster reload rate"		-0.8
+				"killstreak tier"			2
+				"killstreak idleeffect"		1	// team shine
+				"collect currency on kill"	1
 			}
 			ItemAttributes
 			{
@@ -2356,12 +2000,12 @@ population
 				"dmg from ranged reduced"			0.01
 				"dmg from melee increased"			0.01
 			}
-			Action Mobber [$SIGSEGV]
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			UseMeleeThreatPrioritization 1
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_W6Meme_Demoman_Knight_Samurai_Funny
@@ -2434,7 +2078,7 @@ population
 			Class Demoman
 			Name "Bomber Demoman"
 			ClassIcon demo_clusterbomb
-			Skill Hard
+			Skill Normal
 			Health 200
 			WeaponRestrictions PrimaryOnly
 			Attributes HoldFireUntilFullReload
@@ -2454,7 +2098,7 @@ population
 			Class Pyro
 			Name "Dragon's Fury Pyro"
 			ClassIcon pyro_dragon_fury_swordstone
-			Skill Hard
+			Skill Normal
 			Health 175
 			WeaponRestrictions PrimaryOnly
 			MaxVisionRange 600
@@ -2466,7 +2110,7 @@ population
 				ItemName "The Dragon's Fury"
 				"airblast disabled"	1
 			}
-			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			UseMeleeThreatPrioritization 1
 		}
 		T_TFBot_W6Meme_Heavy_Giant_Deflector
 		{
@@ -2557,7 +2201,7 @@ population
 			Class Sniper
 			Name "Razorback Sniper"
 			ClassIcon sniper
-			Skill Expert
+			Skill Hard
 			Health 150
 			MaxVisionRange 3000
 			Item "Upgradeable TF_WEAPON_SNIPERRIFLE"
@@ -2610,7 +2254,10 @@ population
 			ItemAttributes
 			{
 				ItemName "Upgradeable TF_WEAPON_BAT"
-				"fire rate bonus"	0.5
+				"fire rate bonus"			0.5
+				"killstreak tier"			2
+				"killstreak idleeffect"		1	// team shine
+				"collect currency on kill"	1
 			}
 			CharacterAttributes
 			{
@@ -2622,11 +2269,11 @@ population
 				"dmg from ranged reduced"			0.01
 				"dmg from melee increased"			0.01
 			}
-			Action Mobber [$SIGSEGV]
-			AddCond [$SIGSEGV]
+			Action Mobber
+			AlwaysGlow 1
+			AddCond
 			{
-				Index		43	// reprogrammed
-				Delay		0.01
+				Index	43	// reprogrammed
 			}
 		}
 		T_TFBot_Meme_Scout_Giant_Sandman
@@ -2864,7 +2511,7 @@ population
 				"override footstep sound set"		7
 				"cannot be backstabbed"				1
 			}
-			UseCustomModel "models/bots/demo/bot_purpleguy_buster.mdl" [$SIGSEGV]
+			UseCustomModel "models/bots/demo/bot_purpleguy_buster.mdl"
 		}
 		T_TFBot_Meme_SentryBuster_PurpleGuy_Spam
 		{
@@ -2897,7 +2544,7 @@ population
 				"override footstep sound set"		7
 				"cannot be backstabbed"				1
 			}
-			UseCustomModel "models/bots/demo/bot_purpleguy_buster.mdl" [$SIGSEGV]
+			UseCustomModel "models/bots/demo/bot_purpleguy_buster.mdl"
 		}
 	}
 	Mission // Waves 1 and 2 Sentry Busters
@@ -2944,7 +2591,7 @@ population
 		InitialCooldown	30
 		CooldownTime	45
 		DesiredCount	1
-        SuppressSentryBusterModel	1 [$SIGSEGV]
+        SuppressSentryBusterModel	1
 		RandomChoice
 		{
 			TFBot
@@ -3113,7 +2760,7 @@ population
 		Where	spawnbot_flank
 		BeginAtWave	6
 		RunForThisManyWaves	1
-		InitialCooldown	45
+		InitialCooldown	90
 		CooldownTime	30
 		DesiredCount	2
 		TFBot
@@ -3141,8 +2788,8 @@ population
 		Where	spawnbot_flank
 		BeginAtWave	5
 		RunForThisManyWaves	1
-		InitialCooldown	45
-		CooldownTime	15
+		InitialCooldown	40
+		CooldownTime	20
 		DesiredCount	1
 		TFBot
 		{
@@ -3155,8 +2802,8 @@ population
 		Where	spawnbot_flank
 		BeginAtWave	4
 		RunForThisManyWaves	1
-		InitialCooldown	30
-		CooldownTime	30
+		InitialCooldown	40
+		CooldownTime	40
 		DesiredCount	2
 		TFBot
 		{
@@ -3169,8 +2816,8 @@ population
 		Where	spawnbot_flank
 		BeginAtWave	6
 		RunForThisManyWaves	1
-		InitialCooldown	60
-		CooldownTime	60
+		InitialCooldown	120
+		CooldownTime	75
 		DesiredCount	1
 		TFBot
 		{
@@ -3186,9 +2833,9 @@ population
 //START $700
 //DROP W1 $700 / W2 $800 / W3 $700 / W4 $700 / W5 $700 / W6 $600
 //START: $700 / DROP: $4200 / TOTAL: $4900 / TOTAL PLUS BONUS: $5400
-/////////////////	
+/////////////////
 
-//WAVE 1  /////////////////////////////////////////////////////////////////
+// WAVE 1/6 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // A - 1 Giant Sandman Scout, (0)
 // B - 24 Punch Heavies, (95)
@@ -3397,17 +3044,12 @@ population
 				TFBot
 				{
 					Template	T_TFBot_W1Meme_Pyro_Gas
-					Name	"Pyro Ape"
+					Name	"GYEHSS"
 				}
 				TFBot
 				{
 					Template	T_TFBot_W1Meme_Pyro_Gas
-					Name	"Brainless Gas User"
-				}
-				TFBot
-				{
-					Template	T_TFBot_W1Meme_Pyro_Gas
-					Name	"CHANGE CLASS APE"
+					Name	"SHMELLEH SHMELLEH"
 				}
 			}
 		}
@@ -3445,7 +3087,7 @@ population
 				Template	T_TFBot_W1Meme_Scout_Melee
 			}
 		}
-		WaveSpawn [$SIGSEGV] // Clem arrives with his Grakata!
+		WaveSpawn   // Clem arrives with his Grakata!
 		{
 			WaitForAllDead	Wave1a
 			TotalCurrency	0
@@ -3466,10 +3108,13 @@ population
 			WaitForAllDead	Wave1a
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Well well well. Look who finally decided to show up.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Well well well, look who finally decided to show up.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3477,10 +3122,13 @@ population
 			WaitForAllDead	Wave1a
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  I hope you are all ready for a ride of absolute mediocrity.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  I hope you're all ready for a ride of absolute mediocrity.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3488,10 +3136,13 @@ population
 			WaitForAllDead	Wave1a
 			WaitBeforeStarting	10
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Because you're all about to step onto the most unremarkable ride of your lives!)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Because you're all about to step onto the most unremarkable ride of your lives!`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3499,14 +3150,17 @@ population
 			WaitForAllSpawned	Wave1d1
 			WaitBeforeStarting	20
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Oh no...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Oh no...`)
+				"
 			}
 		}
 	}
-//WAVE 2  /////////////////////////////////////////////////////////////////
+// WAVE 2/6 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // A - 2 Giant Sandman Scouts, (0)
 // B - 48 Random Spawned Thieves, Iceskimos, (190)
@@ -3641,7 +3295,7 @@ population
 				Name	"tankboss"
 				Speed	75
 				StartingPathTrackNode	tank_path_a_10
-				ClassIcon cc_war_machine [$SIGSEGV]
+				ClassIcon cc_war_machine
 				OnKilledOutput
 				{
 					Target	boss_dead_relay
@@ -3725,10 +3379,13 @@ population
 			WaitForAllDead	Wave2a
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  You may have noticed that some of your upgrades are a bit different.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  You may have noticed that some of your upgrades are a bit different.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3736,10 +3393,13 @@ population
 			WaitForAllDead	Wave2a
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  I made some weaker ones are a bit stronger and some strong ones are a bit weaker.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  I made some weak ones a bit stronger, and some strong ones a bit weaker.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3747,10 +3407,13 @@ population
 			WaitForAllDead	Wave2a
 			WaitBeforeStarting	10
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Just because I can.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Just because I can.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3758,13 +3421,16 @@ population
 			WaitForAllSpawned	Wave2b
 			WaitBeforeStarting	30
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  I swear that thing was supposed to have cannons attached to it...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  I swear that thing was supposed to have cannons attached to it...`)
+				"
 			}
 		}
-		WaveSpawn [$SIGSEGV] // The King swings by!
+		WaveSpawn   // The King swings by!
 		{
 			WaitForAllDead	Wave2c
 			TotalCurrency	0
@@ -3781,7 +3447,7 @@ population
 			}
 		}
 	}
-//WAVE 3  /////////////////////////////////////////////////////////////////
+// WAVE 3/6 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // A - 3 Giant Giant Sandman Scouts, (0)
 // B1 - 1 Aimbot, (50)
@@ -3831,10 +3497,13 @@ population
 			WaitBeforeStarting	25
 			WaitBetweenSpawns	0
 			Where	spawnbot
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(CAN YOU QUACK was automatically assigned to team ROBOTS)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBCAN YOU QUACK was automatically assigned to team ROBOTS`)
+				"
 			}
 			TFBot
 			{
@@ -3852,10 +3521,13 @@ population
 			WaitBeforeStarting	40
 			WaitBetweenSpawns	0
 			Where	spawnbot_flank
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(MYGOT was automatically assigned to team ROBOTS)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBMYGOT was automatically assigned to team ROBOTS`)
+				"
 			}
 			TFBot
 			{
@@ -3942,10 +3614,13 @@ population
 			WaitForAllDead	Wave3a
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  God dammit. Reality is falling apart again.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  God dammit. Reality is falling apart again.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3953,10 +3628,13 @@ population
 			WaitForAllDead	Wave3a
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Hopefully you can deal with whatever the rift throws at you.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Hopefully you can deal with whatever the rift throws at you.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3964,10 +3642,13 @@ population
 			WaitForAllDead	Wave3a
 			WaitBeforeStarting	10
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Hell it may even give you something to help. I'll be right back.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Hell, it may even give you something to help. I'll be right back.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3977,10 +3658,13 @@ population
 			WaitBetweenSpawns	0
 			FirstSpawnWarningSound	"r2m_wave3b_collapsingtimerift.mp3"
 			LastSpawnWarningSound	"r2m_wave3b_collapsingtimerift.mp3"
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(CAN YOU QUACK has joined the game)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBCAN YOU QUACK has joined the game`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3988,10 +3672,13 @@ population
 			WaitForAllDead	Wave3a
 			WaitBeforeStarting	30
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(MYGOT has joined the game)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBMYGOT has joined the game`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -3999,10 +3686,13 @@ population
 			WaitForAllDead	Wave3a
 			WaitBeforeStarting	45
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(jerry has joined the game)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBjerry has joined the game`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4010,10 +3700,13 @@ population
 			WaitForAllDead	Wave3b1
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(CAN YOU QUACK left the game (Kicked by administrator.))"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBCAN YOU QUACK left the game (Kicked by administrator.)`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4021,10 +3714,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(MYGOT left the game (Kicked by administrator.))"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBMYGOT left the game (Kicked by administrator.)`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4032,10 +3728,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	18
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  stop today's youth from becoming brainwashed... uninstall team fortress two NOW!!!)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  stop today's youth from becoming brainwashed... uninstall team fortress two NOW!!!`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4043,10 +3742,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	32
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  the captain is in rehab. please pray for his quick recovery)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  the captain is in rehab, please pray for his quick recovery`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4054,10 +3756,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	49
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  THE KING SAID BREAK TIME)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  THE KING SAID BREAK TIME`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4065,10 +3770,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	64
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  takes a real man to get stoned and listen to creepypasta)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  takes a real man to get stoned and listen to creepypasta`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4076,10 +3784,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	77
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  the real funny here is that i'm trolling everyone)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  the real funny here is that i'm trolling everyone`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4087,10 +3798,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	91
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  do not listen to anything dante says. he is fried off that pack)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  do not listen to anything dante says, he is fried off that pack`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4098,10 +3812,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	106
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  thinking about faking some videos of me saying austin powers quotes flawlessly)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  thinking about faking some videos of me saying austin powers quotes flawlessly`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4109,10 +3826,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	119
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  my man is real slick on the keyboard. he plays heavy)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  my man is real slick on the keyboard. he plays heavy`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4120,10 +3840,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	135
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  you called me a bug for the 4rd time and enough is enough... stop it)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  you called me a bug for the 4rd time, enough is enough, stop it`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4131,10 +3854,13 @@ population
 			WaitForAllDead	Wave3b2
 			WaitBeforeStarting	148
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF3D3DFFjerry \x08FBECCBFF:  Who is Tindall Berry?)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF3D3Djerry \x07FBECCB:  Who is Tindall Berry?`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4142,13 +3868,16 @@ population
 			WaitForAllSpawned	Wave3d
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Okay I think I've almost fixed it. Just a little bit longer...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Okay, I think I've almost fixed it. Just hold out a little bit longer...`)
+				"
 			}
 		}
-		WaveSpawn [$SIGSEGV] // Jerry clicks on some heads!
+		WaveSpawn   // Jerry clicks on some heads!
 		{
 			WaitForAllDead	Wave3a
 			TotalCurrency	0
@@ -4159,19 +3888,21 @@ population
 			WaitBetweenSpawns	0
 			Where	spawnbot_fuckdamn
 			Support	Limited
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(jerry was automatically assigned to team DEFENDERS)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FBECCBjerry was automatically assigned to team DEFENDERS`)
+				"
 			}
-			//FirstSpawnMessage	"Jerry was automatically assigned to team DEFENDERS" [$SIGSEGV]
 			TFBot
 			{
 				Template	T_TFBot_W3Meme_Jerry
 			}
 		}
 	}
-//WAVE 4  /////////////////////////////////////////////////////////////////
+// WAVE 4/6 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // A - 4 Giant Sandman Scouts, (0)
 // B - 32 Cannon Demos, (130)
@@ -4304,17 +4035,22 @@ population
 			WaitBetweenSpawns	0
 			Where	spawnbot
 			FirstSpawnWarningSound	"r2m_wave4d_playingwithfirepower.mp3"
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF66FFFFSkeletron Prime has awoken!)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF66FFSkeletron Prime has awoken!`)
+				"
 			}
-			DoneOutput [$SIGSEGV]
+			DoneOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08FF66FFFFSkeletron Prime has been defeated.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07FF66FFSkeletron Prime has been defeated.`)
+				"
 			}
-			// AB40FF
 			Squad
 			{
 				TFBot
@@ -4360,10 +4096,13 @@ population
 			WaitForAllDead	Wave4a
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  It has come to my attention that most of you watching this are not subscribed.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  It has come to my attention that 95% of people watching this are not subscribed.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4371,10 +4110,13 @@ population
 			WaitForAllDead	Wave4a
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  If you enjoy this content then please be sure to hit that subscribe button!)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  If you enjoy this type of content then please be sure to hit that subscribe button!`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4382,10 +4124,13 @@ population
 			WaitForAllDead	Wave4a
 			WaitBeforeStarting	10
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Also smash that like button and hit the notification bell like a good little consumer.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Also savagely eviscerate the like button and hit the notification bell like a good little consumer.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -4393,13 +4138,16 @@ population
 			WaitForAllDead	Wave4c
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x0866FF66FFThe air is getting colder around you...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x0766FF66The air is getting colder around you...`)
+				"
 			}
 		}
-		WaveSpawn [$SIGSEGV] // Glup Shitto is in this one!
+		WaveSpawn   // Glup Shitto is in this one!
 		{
 			WaitForAllDead	Wave4c
 			TotalCurrency	0
@@ -4416,7 +4164,7 @@ population
 			}
 		}
 	}
-//WAVE 5  /////////////////////////////////////////////////////////////////
+// WAVE 5/6 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // A - 5 Giant Sandman Scouts, (0)
 // B - 20 Blue Bloons, (20)
@@ -4650,7 +4398,7 @@ population
 				Name	"tankboss"
 				Speed	75
 				StartingPathTrackNode	tank_path_b1
-				ClassIcon bloon_moab [$SIGSEGV]
+				ClassIcon bloon_moab
 				OnKilledOutput
 				{
 					Target	boss_dead_relay
@@ -4727,7 +4475,7 @@ population
 				Name	"tankboss"
 				Speed	75
 				StartingPathTrackNode	tank_path_b1
-				ClassIcon bloon_moab [$SIGSEGV]
+				ClassIcon bloon_moab
 				OnKilledOutput
 				{
 					Target	boss_dead_relay
@@ -4788,7 +4536,7 @@ population
 				Name	"tankboss"
 				Speed	75
 				StartingPathTrackNode	tank_path_b1
-				ClassIcon bloon_moab [$SIGSEGV]
+				ClassIcon bloon_moab
 				OnKilledOutput
 				{
 					Target	boss_dead_relay
@@ -4823,13 +4571,16 @@ population
 			WaitForAllDead	Wave5a
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  The time has come. Now you must all return to monke!)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  The time has finally come. Now you must all return to monke!`)
+				"
 			}
 		}
-		WaveSpawn [$SIGSEGV] // The Jungle Jokers pop in!
+		WaveSpawn   // The Jungle Jokers pop in!
 		{
 			WaitForAllDead	Wave5a
 			TotalCurrency	0
@@ -4861,7 +4612,7 @@ population
 			}
 		}
 	}
-//WAVE 6  /////////////////////////////////////////////////////////////////
+// WAVE 6/6 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 // A - 6 Giant Sandman Scouts, (0)
 // B - 25 Funny Samurai Demoknights, (125)
@@ -4929,11 +4680,6 @@ population
 			WaitBetweenSpawns	40
 			Where	spawnbot
 			FirstSpawnWarningSound	"r2m_wave6c_buckleyourpants.mp3"
-			FirstSpawnOutput [$SIGSEGV]
-			{
-				Target	relay_rave
-				Action	Trigger
-			}
 			TFBot
 			{
 				Template	T_TFBot_W6Meme_Scout_Giant_FaN
@@ -5025,10 +4771,13 @@ population
 			WaitForAllDead	Wave6a
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  I hear that some are you aren't laughing at these jokes like I wouldn't find out.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  HEY! I hear you Daniel, not laughing at these jokes like I wouldn't find out.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5036,10 +4785,13 @@ population
 			WaitForAllDead	Wave6a
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  To those people I ask that you feast your sides on THIS!)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  You know what, just because you've wronged me so, feast your sides on THIS!`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5047,10 +4799,13 @@ population
 			WaitForAllDead	Wave6b
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  With that out of the way I am going to turn myself into a pickle.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Now that you're through with that, I am going to go turn myself into a pickle.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5058,10 +4813,13 @@ population
 			WaitForAllDead	Wave6b
 			WaitBeforeStarting	10
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  It will be the funniest shit anyone's ever seen.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  It will be the funniest shit anyone's ever seen.`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5069,10 +4827,13 @@ population
 			WaitForAllDead	Wave6b
 			WaitBeforeStarting	15
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFThe Overseer \x08FFB1C7FF:  Farewell.)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEThe Overseer \x07FFB1C7:  Poroporoaki!`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5080,10 +4841,13 @@ population
 			WaitForAllDead	Wave6e
 			WaitBeforeStarting	5
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFPickle Overseer \x08FFB1C7FF:  This is so sad...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEPickle Overseer \x07FFB1C7:  This is so sad........`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5091,10 +4855,13 @@ population
 			WaitForAllDead	Wave6e
 			WaitBeforeStarting	10
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFPickle Overseer \x08FFB1C7FF:  Chief Blast Soldier is dead...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEPickle Overseer \x07FFB1C7:  Chief Blast Soldier is dead........`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5102,10 +4869,13 @@ population
 			WaitForAllDead	Wave6e
 			WaitBeforeStarting	15
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFPickle Overseer \x08FFB1C7FF:  Gamers please type F in chat to pay respects...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEPickle Overseer \x07FFB1C7:  Gamers please type F in chat to pay your respects........`)
+				"
 			}
 		}
 		WaveSpawn	// Dummy spawn for text
@@ -5113,13 +4883,16 @@ population
 			WaitForAllDead	Wave6e
 			WaitBeforeStarting	23
 			WaitBetweenSpawns	0
-			FirstSpawnOutput [$SIGSEGV]
+			FirstSpawnOutput
 			{
-				Target	sourcemod_plugin
-				Action	"PrintMessage(\x08EE82EEFFPickle Overseer \x08FFB1C7FF:  I think I'm going to need a moment...)"
+				Target	gamerules
+				Action	RunScriptCode
+				Param	"
+				ClientPrint(null,3,`\x07EE82EEPickle Overseer \x07FFB1C7:  How could this have happened........`)
+				"
 			}
 		}
-		WaveSpawn [$SIGSEGV] // F - To Pay Respects
+		WaveSpawn   // F - To Pay Respects
 		{
 			Name	Wave6f
 			WaitForAllDead	Wave6e
@@ -5141,14 +4914,14 @@ population
 				}
 			}
 		}
-		WaveSpawn [$SIGSEGV] // Legs runs into battle!
+		WaveSpawn   // Legs runs into battle!
 		{
 			WaitForAllDead	Wave6b
 			TotalCurrency	0
 			TotalCount	1
 			MaxActive	1
 			SpawnCount	1
-			WaitBeforeStarting	45
+			WaitBeforeStarting	25
 			WaitBetweenSpawns	0
 			Where	spawnbot_fuckdamn
 			Support	Limited
