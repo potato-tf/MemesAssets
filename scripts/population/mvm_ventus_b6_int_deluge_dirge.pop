@@ -1,31 +1,6 @@
 //	MvM Venus: Intermediate (Deluge Dirge) made by UltimentM
 //	@ http://steamcommunity.com/id/ultimentm
 //	Starting Money: $50
-Epicspawnstuff [Pineapple]
-{
-	EventHooks
-	{
-		Hook
-		{
-			Event	"wave_init"
-			Execute	"DeployEntityTemplate(Soundscape)"
-		}
-	}
-	EntityTemplates
-	{
-		Soundscape
-		{
-			Entity
-			{
-				"classname"		"env_soundscape"
-				"origin"		"3300 -2600 300"
-				"radius"		"-1"
-				"soundscape"	"Lakeside.Lake"
-                "targetname"	"new_soundscape"
-			}
-		}
-	}
-}
 WaveSchedule
 {
 	StartingCurrency 50
