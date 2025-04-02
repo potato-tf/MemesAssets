@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "console/models/bots/merasmus/merasmus_skullhat_eyeball"
+
+	"$translucent" "1"
+	"$additive" "1"
+
+	"$nodecal" "1"
+
+	
+
+	"$phong" "1"
+	"$phongexponent" "500"
+	"$phongboost" "20"	
+	"$lightwarptexture" "models/props_halloween/halloween_demoeye_lightwarp"
+	"$phongfresnelranges"	"[1 1 1]"
+
+
+}
+

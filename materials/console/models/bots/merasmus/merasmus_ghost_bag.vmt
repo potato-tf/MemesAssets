@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "console/models/bots/merasmus/merasmus_ghost_bag"
+	"$bumpmap" "console/models/bots/merasmus/merasmus_bag_nm"
+	"$surfaceprop"	"default"
+
+	"$phong" "1"
+	"$phongexponent" "2"
+	"$phongtint" "{ 71 53 42 }"
+	"$phongboost" ".2"	
+	"$phongfresnelranges"	"[.3 1 8]"
+	"$halflambert" "0"	
+
+	//"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+}
