@@ -3,15 +3,10 @@
 // By Ultimaximus - https://steamcommunity.com/id/Ultimaximus \\
 //                                                            \\
 // For Operation Starched Silliness (2021 MvM Memes Campaign) \\
-// https://memes.mvm.pineapple.tf/                            \\
 //                                                            \\
 // Requires rafmod                                            \\
 // https://github.com/rafradek/sigsegv-mvm                    \\
-// https://github.com/ramirez-tf2/Rafmod - compilable version \\
 //                                                            \\
-// Requires Hydrogen's mod for bot couple and RED spawn bots  \\
-// Hydro-less version will be available on my Youtube channel \\
-// https://www.youtube.com/channel/UCx3u3OYZ99l3cF_cOpFmiTg   \\
 // ---------------------------------------------------------- \\
 
 #base robot_giant.pop
@@ -861,8 +856,8 @@ WaveSchedule
 			logic_relay
 			{
 				"targetname" "gfkilled"
-				"OnTrigger" "sourcemod_plugin,PrintMessage(\x0899CCFFFFSoldier BF\x08FBECCBFF :  WTF),,0,-1"
-				"OnTrigger" "sourcemod_plugin,PrintMessage(\x0899CCFFFFSoldier BF\x08FBECCBFF :  FUCK YOU!!!!!!),,2,-1"
+				"OnTrigger" "BigNetRunScriptCodeClientPrint(null,3,`\x0899CCFFFFSoldier BF\x08FBECCBFF :  WTF`)-1-1"
+				"OnTrigger" "BigNetRunScriptCodeClientPrint(null,3,`\x0899CCFFFFSoldier BF\x08FBECCBFF :  FUCK YOU!!!!!!`)2-1"
 				"OnTrigger" "ismedicdead,SetValue,1,0,-1"
 			}
 			logic_relay
@@ -876,16 +871,16 @@ WaveSchedule
 				"OnTrigger" "gfkilled,Kill,,0,-1"
 				"OnTrigger" "votekicksfx,PlaySound,,2,-1"
 				"OnTrigger" "medickicked,Enable,,1,-1"
-				"OnTrigger" "sourcemod_plugin,PrintMessage(Giant Medic GF left the game (Removed from match by system)),,2,-1"
+				"OnTrigger" "BigNetRunScriptCodeClientPrint(null,3,`Giant Medic GF left the game (Removed from match by system)`)2-1"
 			}
 			logic_branch
 			{
 				"targetname" "ismedicdead"
 				"initialvalue" "0"
 				"OnTrue" "gfkilled,Kill,,0,-1"
-				"OnTrue" "sourcemod_plugin,PrintMessage(\x0899CCFFFFSoldier BF\x08FBECCBFF :  FUCKING USELESS MEDIC COULDNT EVEN KEEP ME ALIVE),,1,-1"
-				"OnTrue" "sourcemod_plugin,PrintMessage(\x0899CCFFFFSoldier BF\x08FBECCBFF :  AND FUCK YOU RED KICK YOUR BOTS),,4,-1"
-				"OnTrue" "sourcemod_plugin,PrintMessage(Soldier BF left the game (Disconnect by user.)),,6,-1"
+				"OnTrue" "BigNetRunScriptCodeClientPrint(null,3,`\x0899CCFFFFSoldier BF\x08FBECCBFF :  FUCKING USELESS MEDIC COULDNT EVEN KEEP ME ALIVE`)1-1"
+				"OnTrue" "BigNetRunScriptCodeClientPrint(null,3,`\x0899CCFFFFSoldier BF\x08FBECCBFF :  AND FUCK YOU RED KICK YOUR BOTS`)4-1"
+				"OnTrue" "BigNetRunScriptCodeClientPrint(null,3,`Soldier BF left the game (Disconnect by user.)`)6-1"
 				"OnFalse" "bfkilleddialogue,Trigger,,0,-1"
 			}
 			ambient_generic
@@ -2624,11 +2619,23 @@ WaveSchedule
 			}
 			FirstSpawnOutput
 			{
-				Target "sourcemod_plugin"
-				Action "EntityInput(filter_redteam,Kill)::EntityInputID(26555,Kill)::EntityInputID(26873,Kill)"
 				// Kills RED filter so door will open for bots too (even though the filter is needed later)
 				// Setting TeamNum 0 wouldn't work, it would make the door no longer open
 				// Kills func_respawnroomvisualizer
+				Target filter_redteam
+				Action RunScriptCode
+				Param "
+					local found = false
+					for (local e; e = Entities.FindByClassname(e, `func_respawnroomvisualizer`);) {
+						local id = NetProps.GetPropInt(e, `m_iHammerID`)
+						if (id != 26555 && id != 26873) continue
+						EntFireByHandle(e, `Kill`, ``, -1.0, null, null)
+
+						if (found) break
+						found = true
+					}
+					self.Kill()
+				"
 			}
 			DoneOutput
 			{
@@ -3257,9 +3264,15 @@ WaveSchedule
 			TFBot
 			{
 				Template T_TFBot_Chief_Soldier
-				ClassIcon WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW // Longest allowed icon name
+				//ClassIcon WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW // Longest allowed icon name
 				// Actually it can be 1 character longer if the VTF file has the same length, but this VTF is even longer
 				// Less Ws in the VTF results in more compatibility, less funny
+
+				// I hate to be boring and ruin the meme but in the 'modern' MvM era this icon just doesn't display anymore
+				//  since it's both too long and caps don't agree with linux servers, so I just fixed it to the Valve icon
+				//  that it's a copy of anyway. Preserved the above comment for posterity.
+				ClassIcon soldier_sergeant_crits
+
 				Tag "tele"
 				CharacterAttributes
 				{
@@ -3300,7 +3313,8 @@ WaveSchedule
 			TFBot
 			{
 				Template T_TFBot_Chief_Soldier
-				ClassIcon WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+				//ClassIcon WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+				ClassIcon soldier_sergeant_crits
 			}
 		}
 		WaveSpawn // Fake robots
@@ -3312,7 +3326,8 @@ WaveSchedule
 			TFBot
 			{
 				Template T_TFBot_Chief_Soldier
-				ClassIcon WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+				//ClassIcon WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+				ClassIcon soldier_sergeant_crits
 			}
 		}
 	}
@@ -4353,6 +4368,8 @@ WaveSchedule
 	}
 }
 
+// TODO: AFAIK you can't really produce this easter egg in rafmod/VScript without point_servercommand.
+// Best I could get is changing m_szNetname but that doesn't reflect on the scoreboard.
 Hydromod [Pineapple]
 {
 	Eventhooks
