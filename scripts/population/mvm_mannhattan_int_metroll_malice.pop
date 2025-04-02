@@ -4,11 +4,11 @@
 
 //Metroll Malice
 
-//STOP POSTING ABOUT AMONG US! I'M TIRED OF SEEING IT! MY FRIENDS ON TIKTOK SEND ME MEMES, 
-//ON DISCORD IT'S FUCKING MEMES! I was in a server, right? and ALL OF THE CHANNELS were just among us stuff. 
-//I-I showed my champion underwear to my girlfriend and t-the logo I flipped it and I said "hey babe, when the 
-//underwear is sus HAHA DING DING DING DING DING DING DING DI DI DING" I fucking looked at a trashcan and said 
-//"THAT'S A BIT SUSSY" I looked at my penis I think of an astronauts helmet and I go "PENIS? MORE LIKE PENSUS" 
+//STOP POSTING ABOUT AMONG US! I'M TIRED OF SEEING IT! MY FRIENDS ON TIKTOK SEND ME MEMES,
+//ON DISCORD IT'S FUCKING MEMES! I was in a server, right? and ALL OF THE CHANNELS were just among us stuff.
+//I-I showed my champion underwear to my girlfriend and t-the logo I flipped it and I said "hey babe, when the
+//underwear is sus HAHA DING DING DING DING DING DING DING DI DI DING" I fucking looked at a trashcan and said
+//"THAT'S A BIT SUSSY" I looked at my penis I think of an astronauts helmet and I go "PENIS? MORE LIKE PENSUS"
 //AAAAAAAAAAAAAAHGESFG
 
 //
@@ -31,551 +31,65 @@
 // +----------+----------+----------+
 //
 
-we_do_a_little_trolling [Pineapple]
-{
-	EntityTemplates
-	{
-		FakePortalBuild
-		{
-			Entity
-			{
-				"Origin"		"573 -3474 -50"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3123 -341"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-
-		FakePortalBuild2
-		{
-			Entity
-			{
-				"Origin"		"573 -3474 25"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3123 -251"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-
-		FakePortalBuild3
-		{
-			Entity
-			{
-				"Origin"		"573 -3474 90"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3123 -171"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-
-		FakePortalBuild4
-		{
-			Entity
-			{
-				"Origin"		"515 -3474 125"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3063 -121"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-
-		FakePortalBuild5
-		{
-			Entity
-			{
-				"Origin"		"460 -3474 125"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3000 -121"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-		FakePortalBuild6
-		{
-			Entity
-			{
-				"Origin"		"400 -3474 -50"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -2930 -341"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-		FakePortalBuild7
-		{
-			Entity
-			{
-				"Origin"		"400 -3474 25"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -2930 -251"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-		FakePortalBuild8
-		{
-			Entity
-			{
-				"Origin"		"400 -3474 90"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -2930 -171"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-		FakePortal
-		{
-			Entity
-			{
-				"Origin"		"573 -3474 -50"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"573 -3474 25"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"573 -3474 90"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"515 -3474 125"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"460 -3474 125"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"400 -3474 -50"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"400 -3474 25"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"400 -3474 90"
-				"Angles"		"-15 90 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-		FakePortal2
-		{
-			Entity
-			{
-				"Origin"		"-1126 -3123 -341"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3123 -251"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3123 -171"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3063 -121"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -3000 -121"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -2930 -341"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -2930 -251"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"		"-1126 -2930 -171"
-				"Angles"		"-15 0 -0"
-				"model"			"models/player/items/all_class/troll_head_scout.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-
-		CowProp //Cows
-		{
-			Entity
-			{
-				"Origin"	"2332 -1840 23"
-				"Angles"	"0 180 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"384 -375 550"
-				"Angles"	"0 -90 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-1278 -143 -80"
-				"Angles"	"0 0 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-1492 495 -80"
-				"Angles"	"0 0 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-1727 644 193"
-				"Angles"	"20 0 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-1517 -393 400"
-				"Angles"	"-120 0 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"260 448 821"
-				"Angles"	"30 -120 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"724 -1162 600"
-				"Angles"	"75 165 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-417 -1822 800"
-				"Angles"	"12 79 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-1078 -1231 730"
-				"Angles"	"90 6 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"636 -1840 748"
-				"Angles"	"0 -80 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"258 -1855 900"
-				"Angles"	"10 -90 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"658 -3337 570"
-				"Angles"	"29 90 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"347 -3386 900"
-				"Angles"	"31 70 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"1017 -2796 970"
-				"Angles"	"60 180 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"482 -2255 770"
-				"Angles"	"54 -137 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-8545 -145 -289"
-				"Angles"	"0 0 0"
-				"model"			"models/props_2fort/cowtroll_reference.mdl"
-				"classname"	"prop_dynamic"
-                "modelscale"	"4.0"
-			}
-			Entity
-			{
-				"Origin"	"-7756 375 150"
-				"Angles"	"0 -130 0"
-				"model"			"models/props_2fort/cowtroll_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-8950 -737 208"
-				"Angles"	"48 60 0"
-				"model"			"models/props_2fort/cowtroll_reference.mdl"
-				"classname"	"prop_dynamic"
-				"modelscale""4.0"
-			}
-			Entity
-			{
-				"Origin"	"-7327 -896 -112"
-				"Angles"	"0 139 0"
-				"model"			"models/props_2fort/cowtroll_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"25 1055 900"
-				"Angles"	"35 -95 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"-150 2700 -32"
-				"Angles"	"0 -90 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"415 2774 -95"
-				"Angles"	"0 -148 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"	"158 2874 -90"
-				"Angles"	"5 -60 0"
-				"model"		"models/props_2fort/cow001_reference.mdl"
-				"classname"	"prop_dynamic"
-			}
-			Entity
-			{
-				"Origin"		"-8788 68 -400"
-				"Angles"		"0 0 0"
-				"model"			"models/props_2fort/cowtroll_reference.mdl"
-				"classname"		"prop_dynamic"
-				"modelscale"	"4.0"
-			}
-		}
-	}
-}
-
 big_big_chungus_big_chungus_big_chgunus
 {
 	StartingCurrency 	690
 	CanBotsAttackWhileInSpawnRoom yes
 	RespawnWaveTime 3
-	Advanced	1	
-	TextPrintTime 0
+	Advanced 1
+
+	TextPrintTime 0 [$SIGSEGV]
 	NoRomevisionCosmetics 1 [$SIGSEGV]
+
 	//Cows
-	PrecacheModel "models/props_2fort/cow001_reference.mdl"
-	PrecacheModel "models/props_2fort/cowtroll_reference.mdl"
-	PrecacheModel "models/props_2fort/cowgatebot_reference.mdl"
+	PrecacheModel "models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
+	PrecacheModel "models/props_2fort/cowtroll_reference.mdl" [$SIGSEGV]
+	PrecacheModel "models/props_2fort/cowgatebot_reference.mdl" [$SIGSEGV]
 
 	//Sentry SUSter
-	PrecacheModel "models/bots/demo/bot_redsus_buster.mdl"
-	PrecacheModel "models/bots/demo/bot_purpleguy_buster.mdl"
-	PrecacheModel "models/bots/demo/bot_sus_buster.mdl"
+	PrecacheModel "models/bots/demo/bot_redsus_buster.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/demo/bot_purpleguy_buster.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/demo/bot_sus_buster.mdl" [$SIGSEGV]
 
 	//Cosmetics
-	PrecacheModel "models/player/items/engineer/engineer_ttg_max.mdl"
-	PrecacheModel "models/player/items/all_class/troll_head_scout.mdl"
+	PrecacheModel "models/player/items/engineer/engineer_ttg_max.mdl" [$SIGSEGV]
+	PrecacheModel "models/player/items/all_class/troll_head_scout.mdl" [$SIGSEGV]
 
 	//Models and Props
-	PrecacheModel "models/items/currencypack_large.mdl"
-	PrecacheModel "models/player/trollface/trollface.mdl"
-	PrecacheModel "models/props_urban/urban_crate_troll.mdl"
-	PrecacheModel "models/bots/sniper/bot_sniper_troll.mdl"
-	PrecacheModel "models/trollface/trollface.mdl"
-	PrecacheModel "models/trollface/coolface4.mdl"
-	PrecacheModel "models/goofus/fortnite_card.mdl"
+	PrecacheModel "models/items/currencypack_large.mdl" [$SIGSEGV]
+	PrecacheModel "models/player/trollface/trollface.mdl" [$SIGSEGV]
+	PrecacheModel "models/props_urban/urban_crate_troll.mdl" [$SIGSEGV]
+	PrecacheModel "models/bots/sniper/bot_sniper_troll.mdl" [$SIGSEGV]
+	PrecacheModel "models/trollface/trollface.mdl" [$SIGSEGV]
+	PrecacheModel "models/trollface/coolface4.mdl" [$SIGSEGV]
+	PrecacheModel "models/goofus/fortnite_card.mdl" [$SIGSEGV]
 
 	ExtraSpawnPoint [$SIGSEGV]
-    {
-        Name "spawnbot_skybox" 
-        TeamNum 3                      
-        X   "-8231"                     
-        Y "-360"                     
-        Z  "-249"                      
-    }
+	{
+		Name "spawnbot_skybox"
+		TeamNum 3
+		X   "-8231"
+		Y "-360"
+		Z  "-249"
+	}
 
 	ExtraSpawnPoint [$SIGSEGV]
-    {
-        Name "spawnbot_dripboss" 
-        TeamNum 3                      
-        X   "-1516.52"                     
-        Y "-2897"                     
-        Z  "98"                      
-    }
-	
+	{
+		Name "spawnbot_dripboss"
+		TeamNum 3
+		X   "-1516.52"
+		Y "-2897"
+		Z  "98"
+	}
+
 	ExtraSpawnPoint [$SIGSEGV]
-    {
-        Name "spawnbot_among_us" 
-        TeamNum 3                      
-        X   "1175.97"
-        Y " -1771.26"
-        Z  "46.35"
-    }
+	{
+		Name "spawnbot_among_us"
+		TeamNum 3
+		X   "1175.97"
+		Y " -1771.26"
+		Z  "46.35"
+	}
 
 	ExtraSpawnPoint [$SIGSEGV]
 	{
@@ -596,37 +110,37 @@ big_big_chungus_big_chungus_big_chgunus
 	}
 
 	ExtraSpawnPoint [$SIGSEGV]
-    {
-        Name 		"spawnbot_red" 
-        TeamNum 	3 
-        X   		"476"
-        Y 			"2018" 
-        Z  			"-91"    
-    }
+	{
+		Name 		"spawnbot_red"
+		TeamNum 	3
+		X   		"476"
+		Y 			"2018"
+		Z  			"-91"
+	}
 	ExtraSpawnPoint [$SIGSEGV]
-    {
-        Name 		"spawnbot_popbob" 
-        TeamNum 	3
-        X   		"-1680.08"
-        Y 			"-68.09" 
-        Z  			"124.13"    
-    }
+	{
+		Name 		"spawnbot_popbob"
+		TeamNum 	3
+		X   		"-1680.08"
+		Y 			"-68.09"
+		Z  			"124.13"
+	}
 	ExtraSpawnPoint [$SIGSEGV]
-    {
-        Name 		"spawnbot_dripboss_red" 
-        TeamNum 	3
-        X   		"-924.21"
-        Y 			"1451.17" 
-        Z  			"-25.66"
-    }
+	{
+		Name 		"spawnbot_dripboss_red"
+		TeamNum 	3
+		X   		"-924.21"
+		Y 			"1451.17"
+		Z  			"-25.66"
+	}
 	ExtraSpawnPoint [$SIGSEGV]
-    {
-        Name 		"spawnbot_gatea" 
-        TeamNum 	3
-        X   		"1348.34"
-        Y 			"-2491.91" 
-        Z  			"-76.84"
-    }
+	{
+		Name 		"spawnbot_gatea"
+		TeamNum 	3
+		X   		"1348.34"
+		Y 			"-2491.91"
+		Z  			"-76.84"
+	}
 	ExtraSpawnPoint [$SIGSEGV]
 	{
 		Name		"trollspawn"
@@ -635,8 +149,8 @@ big_big_chungus_big_chungus_big_chgunus
 		Y			"-2853"
 		Z			"-286"
 	}
-	
-	ExtraTankPath
+
+	ExtraTankPath [$SIGSEGV]
 	{
 		Name "w7tank1"
 		Node "-1310.52 -2352.67 416.4"
@@ -653,45 +167,45 @@ big_big_chungus_big_chungus_big_chgunus
 		Node "-358.88 4.25 -34.44"
 		Node "-29.36 7.78 -69.65"
 		Node "-33.28 1385.34 -81.35"
-  
-    }
-	
-	ExtraTankPath
+
+	}
+
+	ExtraTankPath [$SIGSEGV]
 	{
-	    Name "aroundtheworld"
+		Name "aroundtheworld"
 		Node "-2417.93 -3063.51 84.73"
-Node "-1203 -2891 30.67"
-Node "-392.17 -2451 292"
-Node "-709.43 -2511 248"
-Node "-84.85 -2283.89 280.11"
-Node "595.80 -2218.67 192.89"
-Node "791 -2571 398.41"
-Node "531 -3018.72 938.2"
-Node "978.92 -2999 -110"
-Node "673 -2627 275"
-Node "774.92 -2309.5 30.53"
-Node "753.61 -1419.25 35.54"
-Node "634.4 -880.35 1191.35"
-Node "755.19 162.77 949"
-Node "-94.66 461.34 1046.93"
-Node "-638.04 -495.13 1046.93"
-Node "-662.46 -1248.53 606.29"
-Node "-118.26 966.32 1003.73"
-    }
-	
-	ExtraTankPath
+		Node "-1203 -2891 30.67"
+		Node "-392.17 -2451 292"
+		Node "-709.43 -2511 248"
+		Node "-84.85 -2283.89 280.11"
+		Node "595.80 -2218.67 192.89"
+		Node "791 -2571 398.41"
+		Node "531 -3018.72 938.2"
+		Node "978.92 -2999 -110"
+		Node "673 -2627 275"
+		Node "774.92 -2309.5 30.53"
+		Node "753.61 -1419.25 35.54"
+		Node "634.4 -880.35 1191.35"
+		Node "755.19 162.77 949"
+		Node "-94.66 461.34 1046.93"
+		Node "-638.04 -495.13 1046.93"
+		Node "-662.46 -1248.53 606.29"
+		Node "-118.26 966.32 1003.73"
+	}
+
+	ExtraTankPath [$SIGSEGV]
 	{
-	    Name "w7tank2"
+		Name "w7tank2"
 		Node "-2949.63 -2475.96 282.27"
 		Node "-2512.46 -3078.06 37.49"
 		Node "-1209.89 -2862.59 25.60"
 		Node "-562.83 -2350 -85.75"
 		Node "-561.22 -2237.32 -100.68"
-    }
+	}
 
-	ExtraTankPath
+	ExtraTankPath [$SIGSEGV]
 	{
-	    Name "w7tank3"
+		Name "w7tank3"
 		Node "-2949.63 -2475.96 282.27"
 		Node "-2512.46 -3078.06 37.49"
 		Node "-1209.89 -2862.59 25.60"
@@ -711,23 +225,23 @@ Node "-118.26 966.32 1003.73"
 		Node "-566.4 878 -267.78"
 		Node "336.47 829.71 -260.1"
 	}
-    
-	ExtraTankPath
+
+	ExtraTankPath [$SIGSEGV]
 	{
-	    Name "w7tank4"
+		Name "w7tank4"
 		Node "5.19 -2948.5 300.74"
 		Node "141.92 -1927.33 -50"
 	}
-    ExtraTankPath
+	ExtraTankPath [$SIGSEGV]
 	{
-	    Name "w7tank5"
+		Name "w7tank5"
 		Node "953.84 -3257.94 660.99"
 		Node "467.39 -3263.34 668.31"
 		Node "631.36 -2405.44 81.3"
 		Node "661.81 -715.43 137.73"
-    }
+	}
 
-	ExtraTankPath
+	ExtraTankPath [$SIGSEGV]
 	{
 		Name "trolltank"
 		Node "0 1025 -83"
@@ -773,8 +287,362 @@ Node "-118.26 966.32 1003.73"
 		Node "-1216 -2816 -284"
 	}
 
-	PointTemplates
+	PointTemplates [$SIGSEGV]
 	{
+		CowProp // Cows
+		{
+			NoFixup 1
+			RemoveIfKilled "w2cowprop"
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"2332 -1840 23"
+				"angles"	"0 180 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"384 -375 550"
+				"angles"	"0 -90 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-1278 -143 -80"
+				"angles"	"0 0 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-1492 495 -80"
+				"angles"	"0 0 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-1727 644 193"
+				"angles"	"20 0 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-1517 -393 400"
+				"angles"	"-120 0 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"260 448 821"
+				"angles"	"30 -120 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"724 -1162 600"
+				"angles"	"75 165 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-417 -1822 800"
+				"angles"	"12 79 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-1078 -1231 730"
+				"angles"	"90 6 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"636 -1840 748"
+				"angles"	"0 -80 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"258 -1855 900"
+				"angles"	"10 -90 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"658 -3337 570"
+				"angles"	"29 90 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"347 -3386 900"
+				"angles"	"31 70 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"1017 -2796 970"
+				"angles"	"60 180 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"482 -2255 770"
+				"angles"	"54 -137 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"		"-8545 -145 -289"
+				"angles"		"0 0 0"
+				"model"			"models/props_2fort/cowtroll_reference.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-7756 375 150"
+				"angles"	"0 -130 0"
+				"model"		"models/props_2fort/cowtroll_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"		"-8950 -737 208"
+				"angles"		"48 60 0"
+				"model"			"models/props_2fort/cowtroll_reference.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-7327 -896 -112"
+				"angles"	"0 139 0"
+				"model"		"models/props_2fort/cowtroll_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"25 1055 900"
+				"angles"	"35 -95 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"-150 2700 -32"
+				"angles"	"0 -90 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"415 2774 -95"
+				"angles"	"0 -148 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"	"158 2874 -90"
+				"angles"	"5 -60 0"
+				"model"		"models/props_2fort/cow001_reference.mdl"
+			}
+			prop_dynamic
+			{
+				"targetname" "w2cowprop"
+				"origin"		"-8788 68 -400"
+				"angles"		"0 0 0"
+				"model"			"models/props_2fort/cowtroll_reference.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		TrollTankDeath
+		{
+			logic_relay
+			{
+				targetname "trolltankkilled"
+				spawnflags 1 // SF_REMOVE_ON_FIRE
+				OnTrigger  "tankboss,Kill,,-1,-1"
+				OnTrigger  "portalhead*,Kill,,-1,-1"
+				OnTrigger  "BigNetRunScriptCodeClientPrint(null,3,`Trolled`)5-1"
+			}
+		}
+		FakePortalBuild
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"573 -3474 -50"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -3123 -341"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		FakePortalBuild2
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"573 -3474 25"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -3123 -251"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		FakePortalBuild3
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"573 -3474 90"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -3123 -171"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		FakePortalBuild4
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"515 -3474 125"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -3063 -121"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		FakePortalBuild5
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"460 -3474 125"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -3000 -121"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		FakePortalBuild6
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"400 -3474 -50"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -2930 -341"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		FakePortalBuild7
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"400 -3474 25"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -2930 -251"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
+		FakePortalBuild8
+		{
+			RemoveIfKilled "portalhead"
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"400 -3474 90"
+				"angles"		"-15 90 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+			prop_dynamic
+			{
+				"targetname"	"portalhead"
+				"origin"		"-1126 -2930 -171"
+				"angles"		"-15 0 -0"
+				"model"			"models/player/items/all_class/troll_head_scout.mdl"
+				"modelscale"	"4.0"
+			}
+		}
 		FortniteCard
 		{
 			prop_dynamic
@@ -785,33 +653,33 @@ Node "-118.26 966.32 1003.73"
 				"model" "models/props_fortnitecard/fortnite_card.mdl"
 				"solid" "0"
 				"spawnflags" "0"
-				"StartDisabled" "0"	
+				"StartDisabled" "0"
 			}
 		}
 		WhiteoutEffect
 		{
-            NoFixup 1
+			NoFixup 1
 			env_fade
 			{
 				"duration"	"2"
 				"holdtime"	"3"
 				"rendercolor"	"255 255 255"
-                "targetname"	"whiteout_trigger"
+				"targetname"	"whiteout_trigger"
 			}
 		}
 		ShakePortal
-        {
-            NoFixup 1
-            env_shake
-            {
-                "spawnflags" "1" 
-                "amplitude" "16"
-                "duration" "5.1"
-                "frequency" "200"
-                "radius" "10000"
-                "targetname" "shake_portal"
-            }
-        }
+		{
+			NoFixup 1
+			env_shake
+			{
+				"spawnflags" "1"
+				"amplitude" "16"
+				"duration" "5.1"
+				"frequency" "200"
+				"radius" "10000"
+				"targetname" "shake_portal"
+			}
+		}
 		Props
 		{
 			prop_dynamic
@@ -1057,29 +925,16 @@ Node "-118.26 966.32 1003.73"
 				"classname"		"prop_dynamic"
 				"modelscale"	"0.8"
 			}
-			
 		}
 	}
 
-	SpawnTemplate "Trolled" [$SIGSEGV] 
+	SpawnTemplate "Trolled" [$SIGSEGV]
+	SpawnTemplate "Props" [$SIGSEGV]
+	SpawnTemplate "Players" [$SIGSEGV]
+	SpawnTemplate "WhiteoutEffect" [$SIGSEGV]
+	SpawnTemplate "ShakePortal" [$SIGSEGV]
 
-	SpawnTemplate "Props" [$SIGSEGV] 
-
-	SpawnTemplate "Players" [$SIGSEGV] 
-
-	SpawnTemplate
-	{
-		Name	"WhiteoutEffect"
-		Origin	"0 0 0"
-	}
-
-    SpawnTemplate
-	{
-		Name	"ShakePortal"
-		Origin	"0 0 0"
-	}
-
-    Templates
+	Templates
 	{
 		T_TFBot_Fortnite_SMG
 		{
@@ -1095,7 +950,7 @@ Node "-118.26 966.32 1003.73"
 			{
 				"hand scale"	1.2
 			}
-			
+
 		}
 		T_TFBot_Fortnite_Assault
 		{
@@ -1117,7 +972,7 @@ Node "-118.26 966.32 1003.73"
 			CharacterAttributes
 			{
 				"hand scale"		1.2
-				
+
 			}
 
 		}
@@ -1125,7 +980,7 @@ Node "-118.26 966.32 1003.73"
 		{
 			Name				"fortnite revolver"
 			Class				Spy
-			Action				FetchFlag
+			Action				FetchFlag [$SIGSEGV]
 			ClassIcon			fortnite_icon
 			Skill				Easy
 			Item				"tf_weapon_revolver"
@@ -1181,7 +1036,7 @@ Node "-118.26 966.32 1003.73"
 			WeaponRestrictions	PrimaryOnly
 			ClassIcon			fortnite_icon
 			Skill				Easy
-			Action				 mobber
+			Action				Mobber [$SIGSEGV]
 			Item				"Pyrovision Goggles"
 			Item				"Military Grade JACK Hat"
 			Item				"The Bruiser's Bandanna"
@@ -1203,7 +1058,7 @@ Node "-118.26 966.32 1003.73"
 			Item				"Pyrovision Goggles"
 			Item				"Military Grade JACK Hat"
 			Item				"The Bruiser's Bandanna"
-			Action mobber
+			Action				Mobber [$SIGSEGV]
 			ItemAttributes
 			{
 				ItemName	tf_weapon_smg
@@ -1223,7 +1078,7 @@ Node "-118.26 966.32 1003.73"
 			Name				"FREE V-BUCKS GENERATOR 2021"
 			Class				Scout
 			ClassIcon			fortnite_vbucks
-			UseCustomModel		"models/items/currencypack_large.mdl"
+			UseCustomModel		"models/items/currencypack_large.mdl" [$SIGSEGV]
 			WeaponRestrictions	MeleeOnly
 			Scale				1.8
 			Skill Expert
@@ -1251,12 +1106,12 @@ Node "-118.26 966.32 1003.73"
 			ClassIcon			fortnitecard
 			Item				"TF_WEAPON_GRENADELAUNCHER"
 			Item				"Scout Beanie"
-			Attributes			UseBossHealthBar	
+			Attributes			UseBossHealthBar
 			Attributes 			HoldFireUntilFullReload
 			Attributes			MiniBoss
-			UseHumanModel		1
-			DeathSound			"mm_nomorefortnite.mp3"
-			ShootTemplate  
+			UseHumanModel		1 [$SIGSEGV]
+			DeathSound			"mm_nomorefortnite.mp3" [$SIGSEGV]
+			ShootTemplate [$SIGSEGV]
 			{
 				Name   FortniteCard
 				AttachToProjectile 1
@@ -1303,94 +1158,92 @@ Node "-118.26 966.32 1003.73"
 				"rage giving scale" 0.5
 				"attach particle effect"	60
 			}
-			
+
 		}
 		T_TFBot_Troll_Sniper
-        {
-            Name            "cover yourself in jarate"
-            Class           Sniper
+		{
+			Name            "cover yourself in jarate"
+			Class           Sniper
 			ClassIcon		troll
-            Skill           Expert
-            Item            "The Sydney Sleeper"
-            Attributes      AlwaysFireWeapon
-            UseCustomModel	models/bots/sniper/bot_sniper_troll.mdl
-            ShootTemplate [$SIGSEGV]  //Shoot defined point template. Template is spawned at bot position in looking direction, forward velocity being applied to spawned entities
+			Skill           Expert
+			Item            "The Sydney Sleeper"
+			Attributes      AlwaysFireWeapon
+			UseCustomModel	models/bots/sniper/bot_sniper_troll.mdl [$SIGSEGV]
+			ShootTemplate [$SIGSEGV]  //Shoot defined point template. Template is spawned at bot position in looking direction, forward velocity being applied to spawned entities
 			{
 				Name Jarate
 				Speed 2000
 				Offset "0 0 0"
 				Angles "0 0 0"
-				OverrideShoot 1 
+				OverrideShoot 1
 				Spread 0.1
-				ItemName "The Sydney Sleeper" 
+				ItemName "The Sydney Sleeper"
 			}
-            CharacterAttributes
-            {
-                "cannot pick up intelligence" 	1
-                "voice pitch scale"             0
-            }
-        }
-        T_TFBot_Troll
-        {
-            Name            "troll"
-            Class           Soldier
-            Skill           Expert
+			CharacterAttributes
+			{
+				"cannot pick up intelligence" 	1
+				"voice pitch scale"             0
+			}
+		}
+		T_TFBot_Troll
+		{
+			Name            "troll"
+			Class           Soldier
+			Skill           Expert
 			ClassIcon		troll
-            Item            "The Top Notch"
-            PainSound		"mm_hit.mp3"
-			DeathSound		"mm_oof.mp3"
-            UseHumanAnimations 	1 [$SIGSEGV]
-            ItemModel [$SIGSEGV]
+			Item            "The Top Notch"
+			PainSound		"mm_hit.mp3" [$SIGSEGV]
+			DeathSound		"mm_oof.mp3" [$SIGSEGV]
+			UseHumanAnimations 	1 [$SIGSEGV]
+			ItemModel [$SIGSEGV]
 			{
 				ItemName "The Top Notch"
 				Model "models/player/items/all_class/troll_head_scout.mdl"
-                
 			}
-            Taunt [$SIGSEGV] 
+			Taunt [$SIGSEGV]
 			{
-                Delay   0.1
+				Delay   0.1
 				Duration 5
-                Cooldown 10
+				Cooldown 10
 				Name "Taunt: Kazotsky Kick"
 			}
-            CharacterAttributes
-            {
-                "cannot pick up intelligence" 	1
-                "voice pitch scale"             0
-                "projectile lifetime"           0.1
-            }
-        }
-        T_TFBot_Troll_Melee
-        {
-            Name            "troll"
-            Class           Soldier
-            Skill           Expert
+			CharacterAttributes
+			{
+				"cannot pick up intelligence" 	1
+				"voice pitch scale"             0
+				"projectile lifetime"           0.1
+			}
+		}
+		T_TFBot_Troll_Melee
+		{
+			Name            "troll"
+			Class           Soldier
+			Skill           Expert
 			ClassIcon		troll
-            Item            "The Top Notch"
-            PainSound		"mm_hit.mp3"
-			DeathSound		"mm_oof.mp3"
-            Item            "The Escape Plan"
-            WeaponRestrictions  MeleeOnly
-            UseHumanAnimations 	1 [$SIGSEGV]
-            ItemModel [$SIGSEGV]
+			Item            "The Top Notch"
+			PainSound		"mm_hit.mp3" [$SIGSEGV]
+			DeathSound		"mm_oof.mp3" [$SIGSEGV]
+			Item            "The Escape Plan"
+			WeaponRestrictions  MeleeOnly
+			UseHumanAnimations 	1 [$SIGSEGV]
+			ItemModel [$SIGSEGV]
 			{
 				ItemName "The Top Notch"
 				Model "models/player/items/all_class/troll_head_scout.mdl"
 			}
-            Taunt [$SIGSEGV] 
+			Taunt [$SIGSEGV]
 			{
-                Delay   0.1
+				Delay   0.1
 				Duration 5
-                Cooldown 10
+				Cooldown 10
 				Name "RPS Taunt"
 			}
-            CharacterAttributes
-            {
-                "cannot pick up intelligence" 	1
-                "voice pitch scale"             0
-
-            }
-        }
+			CharacterAttributes
+			{
+				"cannot pick up intelligence" 	1
+				"voice pitch scale"             0
+			}
+		}
 		T_TFBot_Troll_Buster
 		{
 			Name "troll buster"
@@ -1401,8 +1254,8 @@ Node "-118.26 966.32 1003.73"
 			Item "The Ullapool Caber"
 			Attributes MiniBoss
 			WeaponRestrictions MeleeOnly
-			UseCustomModel	"models/trollface/coolface4.mdl"
-			Scale			1
+			UseCustomModel	"models/trollface/coolface4.mdl" [$SIGSEGV]
+			Scale 1
 			CharacterAttributes
 			{
 				"airblast vulnerability multiplier" 0.5
@@ -1412,62 +1265,62 @@ Node "-118.26 966.32 1003.73"
 				"override footstep sound set" 7
 			}
 		}
-        T_TFBot_Trolldier
-        {
-            Name            "trolldier"
-            Class           Soldier
-            Skill           Expert
+		T_TFBot_Trolldier
+		{
+			Name            "trolldier"
+			Class           Soldier
+			Skill           Expert
 			ClassIcon		troll
-            RocketJump 		1
-            Item            "The Top Notch"
-            Item            "The Market Gardener"
-            Item            "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
-            PainSound		"mm_hit.mp3"
-			DeathSound		"mm_oof.mp3"
-            ItemModel [$SIGSEGV]
+			RocketJump 		1 [$SIGSEGV]
+			Item            "The Top Notch"
+			Item            "The Market Gardener"
+			Item            "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			PainSound		"mm_hit.mp3" [$SIGSEGV]
+			DeathSound		"mm_oof.mp3" [$SIGSEGV]
+			ItemModel [$SIGSEGV]
 			{
 				ItemName "The Top Notch"
 				Model "models/player/items/all_class/troll_head_scout.mdl"
 			}
-            UseMeleeThreatPrioritization 1
-            CharacterAttributes
-            {
-                "cannot pick up intelligence"   1
-                "increased jump height"         2
-                "projectile lifetime"           0.1
-            }
-        }
-        T_TFBot_Trolldier_Spammer_Faster
-        {
-            Name            "trolldier"
-            Class           Soldier
-            Skill           Expert
+			UseMeleeThreatPrioritization 1 [$SIGSEGV]
+			CharacterAttributes
+			{
+				"cannot pick up intelligence"   1
+				"increased jump height"         2
+				"projectile lifetime"           0.1
+			}
+		}
+		T_TFBot_Trolldier_Spammer_Faster
+		{
+			Name            "trolldier"
+			Class           Soldier
+			Skill           Expert
 			ClassIcon		troll
-            Health          3800
-            Attributes      AlwaysFireWeapon
-            Attributes      MiniBoss
+			Health          3800
+			Attributes      AlwaysFireWeapon
+			Attributes      MiniBoss
 			WeaponRestrictions PrimaryOnly
-            Item            "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
-            Item            "The Top Notch"
-            ItemModel [$SIGSEGV]
+			Item            "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item            "The Top Notch"
+			ItemModel [$SIGSEGV]
 			{
 				ItemName "The Top Notch"
 				Model "models/player/items/all_class/troll_head_scout.mdl"
 			}
-            DropWeapon      1
-            ItemAttributes
+			DropWeapon 1 [$SIGSEGV]
+			ItemAttributes
 			{
 				ItemName                        "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
 				"faster reload rate"            -0.3
 				"fire rate bonus"               0.01
-                "is australium item"            1
-                "projectile lifetime"           0.1
-                "maxammo primary increased"     100
-                "damage bonus"                  0
-                "clip size bonus"               100
-                "item style override"           1
 				"is australium item"            1
-                "turn to gold"                  1
+				"projectile lifetime"           0.1
+				"maxammo primary increased"     100
+				"damage bonus"                  0
+				"clip size bonus"               100
+				"item style override"           1
+				"is australium item"            1
+				"turn to gold"                  1
 			}
 			CharacterAttributes
 			{
@@ -1476,13 +1329,13 @@ Node "-118.26 966.32 1003.73"
 				"move speed bonus"                  0.5
 				"override footstep sound set"       3
 				"Projectile speed increased"        0.65
-                "projectile lifetime"               0.1
-                "damage bonus"                      1
-                "item style override"               1
+				"projectile lifetime"               0.1
+				"damage bonus"                      1
+				"item style override"               1
 				"is australium item"                1
-                "turn to gold"                      1
+				"turn to gold"                      1
 			}
-        }
+		}
 		T_TFBot_SusBuster
 		{
 			Name "sentry bSUSter"
@@ -1493,8 +1346,8 @@ Node "-118.26 966.32 1003.73"
 			Item "The Ullapool Caber"
 			Attributes MiniBoss
 			WeaponRestrictions MeleeOnly
-			UseCustomModel	"models/bots/demo/bot_sus_buster.mdl"
-			Scale			1
+			UseCustomModel	"models/bots/demo/bot_sus_buster.mdl" [$SIGSEGV]
+			Scale 1
 			CharacterAttributes
 			{
 				"airblast vulnerability multiplier" 0.5
@@ -1514,8 +1367,8 @@ Node "-118.26 966.32 1003.73"
 			Item "The Ullapool Caber"
 			Attributes MiniBoss
 			WeaponRestrictions MeleeOnly
-			UseCustomModel	"models/bots/demo/bot_sus_buster.mdl"
-			Scale			1.7
+			UseCustomModel	"models/bots/demo/bot_sus_buster.mdl" [$SIGSEGV]
+			Scale 1.7
 			CharacterAttributes
 			{
 				"airblast vulnerability multiplier" 0.5
@@ -1533,8 +1386,8 @@ Node "-118.26 966.32 1003.73"
 			Skill Expert
 			ClassIcon jermasus
 			WeaponRestrictions MeleeOnly
-			UseCustomModel	"models/bots/demo/bot_redsus_buster.mdl"
-			Scale			1.5
+			UseCustomModel "models/bots/demo/bot_redsus_buster.mdl" [$SIGSEGV]
+			Scale 1.5
 			CharacterAttributes
 			{
 				"airblast vulnerability multiplier" 0.5
@@ -1553,8 +1406,8 @@ Node "-118.26 966.32 1003.73"
 			Skill 		Expert
 			ClassIcon 	jermasus
 			WeaponRestrictions MeleeOnly
-			UseCustomModel	"models/bots/demo/bot_purpleguy_buster.mdl"
-			Scale			1
+			UseCustomModel "models/bots/demo/bot_purpleguy_buster.mdl" [$SIGSEGV]
+			Scale 1
 		}
 		T_TFBot_Cow_Milk
 		{
@@ -1565,21 +1418,21 @@ Node "-118.26 966.32 1003.73"
 			WeaponRestrictions 	SecondaryOnly
 			Attributes 			AlwaysFireWeapon
 			Item 				"Mad Milk"
-			UseCustomModel 		"models/props_2fort/cow001_reference.mdl"
+			UseCustomModel 		"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
 			ItemAttributes
 			{
 				ItemName "Mad Milk"
 				"effect bar recharge rate increased" -2
 			}
-			
+
 		}
 		T_TFBot_Giant_Cow_Rocket
 		{
 			Template 	T_TFBot_Giant_Soldier
 			Name		"oops, all cows!"
 			ClassIcon	cow_giant
-			UseCustomModel 			"models/props_2fort/cow001_reference.mdl"
-			RocketCustomModel 		"models/props_2fort/cow001_reference.mdl"
+			UseCustomModel 			"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
+			RocketCustomModel 		"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
 			CharacterAttributes
 			{
 				"damage bonus"	0.5
@@ -1591,11 +1444,11 @@ Node "-118.26 966.32 1003.73"
 			}
 		}
 		T_TFBot_Cow_Gatebot
-		{ 
+		{
 			Name				"oops, all cows"
 			ClassIcon			cow
-			UseCustomModel 		"models/props_2fort/cowgatebot_reference.mdl"
-			RocketCustomModel 	"models/props_2fort/cow001_reference.mdl"
+			UseCustomModel 		"models/props_2fort/cowgatebot_reference.mdl" [$SIGSEGV]
+			RocketCustomModel 	"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
 			CustomWeaponModel 	[$SIGSEGV]
 			{
 				Slot 						0
@@ -1635,9 +1488,9 @@ Node "-118.26 966.32 1003.73"
 		{
 			Name					"cow pusher"
 			Template 				T_TFGateBot_Giant_Soldier_RocketPush
-			ClassIcon				cow_giant 
-			"UseCustomModel" 		"models/props_2fort/cowgatebot_reference.mdl"
-			"RocketCustomModel" 	"models/props_2fort/cow001_reference.mdl"
+			ClassIcon				cow_giant
+			"UseCustomModel" 		"models/props_2fort/cowgatebot_reference.mdl" [$SIGSEGV]
+			"RocketCustomModel" 	"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
 			CustomWeaponModel [$SIGSEGV]
 			{
 				Slot 						0
@@ -1653,7 +1506,7 @@ Node "-118.26 966.32 1003.73"
 			Name		"cowtapult"
 			Template	T_TFBot_Giant_Demoman
 			ClassIcon	cow_giant
-			"UseCustomModel" 	"models/props_2fort/cowtroll_reference.mdl"
+			"UseCustomModel" 	"models/props_2fort/cowtroll_reference.mdl" [$SIGSEGV]
 			Item	"TF_WEAPON_GRENADELAUNCHER"
 			ItemAttributes
 			{
@@ -1671,20 +1524,20 @@ Node "-118.26 966.32 1003.73"
 			Skill					Easy
 			Name					"holy cow!"
 			ClassIcon				cow
-			"UseCustomModel" 		"models/props_2fort/cow001_reference.mdl"
-			"RocketCustomModel" 	"models/props_2fort/cow001_reference.mdl"
+			"UseCustomModel" 		"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
+			"RocketCustomModel" 	"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
 			HomingRockets 	[$SIGSEGV]
 			{
 				IgnoreDisguisedSpies 	1
 				IgnoreStealthedSpies 	1
-				RocketSpeed 			0.5 
-				TurnPower 				90 
+				RocketSpeed 			0.5
+				TurnPower 				90
 				MaxAimError 			200
 			}
 			CustomWeaponModel [$SIGSEGV]
 			{
 				Slot 						0
-				Model 						"models/props_2fort/cow001_reference.mdl"	
+				Model 						"models/props_2fort/cow001_reference.mdl"
 			}
 			CharacterAttributes
 			{
@@ -1696,7 +1549,7 @@ Node "-118.26 966.32 1003.73"
 			Template			T_TFBot_Scout_Melee
 			Name				"cow"
 			ClassIcon			cow2
-			UseCustomModel 		"models/props_2fort/cow001_reference.mdl"
+			UseCustomModel 		"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
 		}
 		T_TFBot_Cow_Mad
 		{
@@ -1709,7 +1562,7 @@ Node "-118.26 966.32 1003.73"
 				Slot 						2
 				Model 						"models/props_2fort/cow001_reference.mdl"
 			}
-			UseCustomModel 					"models/props_2fort/cow001_reference.mdl"
+			UseCustomModel 					"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
 		}
 		T_TFBot_BigChungus
 		{
@@ -1724,14 +1577,14 @@ Node "-118.26 966.32 1003.73"
 			Attributes MiniBoss
 			Attributes	AlwaysCrit
 			Attributes	AlwaysFireWeapon
-			Action		FetchFlag
+			Action		FetchFlag [$SIGSEGV]
 			WeaponRestrictions MeleeOnly
-			UseHumanModel		1
+			UseHumanModel 1 [$SIGSEGV]
 			DamageAppliesCond [$SIGSEGV]
-            {
+			{
 				Index 84
-			  	Duration 4     
-            }
+			  	Duration 4
+			}
 			CharacterAttributes
 			{
 				"airblast vulnerability multiplier" 0
@@ -1749,9 +1602,9 @@ Node "-118.26 966.32 1003.73"
 			Item	"TTG Max Hat"
 			Item 	"The Level Three Chin"
 			Item	"The Egghead's Overalls"
-			Action		FetchFlag
+			Action		FetchFlag [$SIGSEGV]
 			WeaponRestrictions MeleeOnly
-			UseHumanModel		1
+			UseHumanModel		1 [$SIGSEGV]
 		}
 		T_TFBot_BigChungus_Buster
 		{
@@ -1761,7 +1614,7 @@ Node "-118.26 966.32 1003.73"
 			Item			"TTG Max Hat"
 			Item 			"The Level Three Chin"
 			Item			"The Egghead's Overalls"
-			UseHumanModel	1
+			UseHumanModel	1 [$SIGSEGV]
 			CharacterAttributes
 			{
 				"airblast vulnerability multiplier" 0.5
@@ -1795,7 +1648,7 @@ Node "-118.26 966.32 1003.73"
 				Duration 5
 			}
 			Scale		1.8
-			UseHumanModel		1
+			UseHumanModel 1 [$SIGSEGV]
 			CharacterAttributes
 			{
 				"airblast vulnerability multiplier" 0.3
@@ -1808,7 +1661,8 @@ Node "-118.26 966.32 1003.73"
 			}
 		}
 	}
-	Mission //Wave 1
+
+	Mission // Wave 1
 	{
 		BeginAtWave 1
 		RunForThisManyWaves 1
@@ -1816,12 +1670,12 @@ Node "-118.26 966.32 1003.73"
 		Where spawnbot_among_us
 		CooldownTime 30
 		TFBot
-			{
-				Template T_TFBot_SusBuster
-			}
+		{
+			Template T_TFBot_SusBuster
+		}
 	}
 
-	Mission //Wave 2 
+	Mission // Wave 2
 	{
 		BeginAtWave 2
 		RunForThisManyWaves 1
@@ -1831,19 +1685,39 @@ Node "-118.26 966.32 1003.73"
 		Where spawnbot_main2
 		CooldownTime 30
 		SuppressSentryBusterModel 1 [$SIGSEGV]
-		
+
 		TFBot
 		{
 			Template 			T_TFBot_SentryBuster
 			Tag 				bot_sentrybuster
-			ClassIcon			cow3
+			ClassIcon			cow4 // Fixes icon stacking with WaveSpawn support.
 			Name				"steak buster"
-			DeathSound			"mm_moo.mp3"
-			UseCustomModel 		"models/props_2fort/cow001_reference.mdl"
+			DeathSound			"mm_moo.mp3" [$SIGSEGV]
+			UseCustomModel 		"models/props_2fort/cow001_reference.mdl" [$SIGSEGV]
+		}
+	}
+	Mission // Wave 2
+	{
+		Where spawnbot_upper0
+		Where spawnbot_main1
+		Where spawnbot_main2
+		Objective Sniper
+		BeginAtWave 2
+		RunForThisManyWaves 1
+		DesiredCount 1
+		InitialCooldown 35
+		CooldownTime 35
+
+		TFBot
+		{
+			Template 			T_TFBot_Sniper_Sydney_Sleeper
+			Name				"cow piss"
+			ClassIcon			cow3
+			UseCustomModel		"models/props_2fort/cowgatebot_reference.mdl" [$SIGSEGV]
 		}
 	}
 
-	Mission //Wave 3 - 5
+	Mission // Wave 3 - 5
 	{
 		BeginAtWave 3
 		RunForThisManyWaves 2
@@ -1864,7 +1738,7 @@ Node "-118.26 966.32 1003.73"
 		}
 	}
 
-	Mission //Wave 6
+	Mission // Wave 6
 	{
 		BeginAtWave 6
 		RunForThisManyWaves 1
@@ -1878,8 +1752,8 @@ Node "-118.26 966.32 1003.73"
 			Template	T_TFBot_Troll_Buster
 		}
 	}
-	
-	Mission //Wave 7
+
+	Mission // Wave 7
 	{
 		BeginAtWave 7
 		RunForThisManyWaves 1
@@ -1900,7 +1774,7 @@ Node "-118.26 966.32 1003.73"
 		}
 	}
 
-	Mission //Wave 8
+	Mission // Wave 8
 	{
 		BeginAtWave 8
 		RunForThisManyWaves 1
@@ -1916,7 +1790,7 @@ Node "-118.26 966.32 1003.73"
 		}
 	}
 
-	Mission //Wave 9
+	Mission // Wave 9
 	{
 		BeginAtWave 9
 		RunForThisManyWaves 1
@@ -1930,189 +1804,163 @@ Node "-118.26 966.32 1003.73"
 		}
 	}
 
-
-	Mission // For Wave 2
-	{
-		Where spawnbot_upper0
-		Where spawnbot_main1
-		Where spawnbot_main2
-		Objective Sniper
-		BeginAtWave 2
-		RunForThisManyWaves 1
-		DesiredCount 1
-		InitialCooldown 35
-		CooldownTime 35
-	
-		TFBot
-		{ 	
-			Template 			T_TFBot_Sniper_Sydney_Sleeper
-			Name				"cow piss"
-			ClassIcon			cow2
-			UseCustomModel		"models/props_2fort/cowgatebot_reference.mdl"
-			
-		}
-	}
-	
 	// fortniteburger
-
-		Wave
+	Wave // Wave 1
+	{
+		StartWaveOutput
 		{
-			WaitWhenDone 60
-			Checkpoint Yes
-			StartWaveOutput
+			Target wave_start_relay
+			Action Trigger
+		}
+		InitWaveOutput
+		{
+			Target holograms_3way_relay
+			Action Trigger
+		}
+		WaveSpawn
+		{
+			TotalCurrency 35
+			name 11
+			Where spawnbot_main0
+			Where spawnbot_main1
+			Where spawnbot_main2
+			TotalCount 35
+			MaxActive 20
+			SpawnCount 1
+			WaitBetweenSpawns 1
+			RandomChoice
 			{
-				Target wave_start_relay
-				Action Trigger
-			}
-			InitWaveOutput
-			{
-				Target holograms_3way_relay
-				Action Trigger
-			}
-			WaveSpawn
-			{
-				TotalCurrency 35
-				name 11
-				Where spawnbot_main0
-				Where spawnbot_main1
-				Where spawnbot_main2
-				TotalCount 35
-				MaxActive 20
-				SpawnCount 1
-				WaitBetweenSpawns 1
-				RandomChoice
+				TFBot
 				{
-					TFBot
+					Class Heavyweapons
+					Classicon pyro_troll
+					name "punch"
+					WeaponRestrictions MeleeOnly
+				}
+				TFBot
+				{
+					Class Heavyweapons
+					Classicon pyro_troll
+					name "punch"
+					WeaponRestrictions MeleeOnly
+				}
+				TFBot
+				{
+					Class Heavyweapons
+					Classicon pyro_troll
+					name "punch"
+					WeaponRestrictions MeleeOnly
+				}
+				TFBot
+				{
+					Class Heavyweapons
+					Classicon pyro_troll
+					Taunt [$SIGSEGV] //Taunt periodically
 					{
-						Class Heavyweapons
-						Classicon pyro_troll
-						name "punch"
-						WeaponRestrictions MeleeOnly
+						Delay 4
+						Cooldown 10
+						Repeats 0 //troll
+						IfSeeTarget 1
 					}
-					TFBot
+					CharacterAttributes
 					{
-						Class Heavyweapons
-						Classicon pyro_troll
-						name "punch"
-						WeaponRestrictions MeleeOnly
+						"gesture speed increase" 2
 					}
-					TFBot
+					name "lol"
+					WeaponRestrictions MeleeOnly
+				}
+				TFBot
+				{
+					Class Heavyweapons
+					Classicon pyro_troll
+					name "car"
+					DamageAppliesCond [$SIGSEGV]
 					{
-						Class Heavyweapons
-						Classicon pyro_troll
-						name "punch"
-						WeaponRestrictions MeleeOnly
+						Name TF_COND_HALLOWEEN_KART // <-- required: condition name/index
+						Duration 8         // <-- optional: limited duration
 					}
-					TFBot
-					{
-						Class Heavyweapons
-						Classicon pyro_troll
-						Taunt [$SIGSEGV] //Taunt periodically
-						{
-							Delay 4
-							Cooldown 10
-							Repeats 0 //troll
-							IfSeeTarget 1
-						}
-						CharacterAttributes
-						{
-							"gesture speed increase" 2
-						}
-						name "lol"
-						WeaponRestrictions MeleeOnly
-					}
-					TFBot
-					{
-						Class Heavyweapons
-						Classicon pyro_troll
-						name "car"
-						DamageAppliesCond [$SIGSEGV]
-						{
-							Name TF_COND_HALLOWEEN_KART // <-- required: condition name/index
-							Duration 8         // <-- optional: limited duration
-						}
-						WeaponRestrictions MeleeOnly
-					}
+					WeaponRestrictions MeleeOnly
 				}
 			}
-			WaveSpawn 
+		}
+		WaveSpawn
+		{
+			TotalCurrency 31
+			Where spawnbot_main0
+			TotalCount 31
+			MaxActive 20
+			SpawnCount 1
+			WaitBetweenSpawns 0
+			WaitBeforeStarting 0
+			WaitForAllDead 11
+			RandomChoice
 			{
-				TotalCurrency 31
-				Where spawnbot_main0
-				TotalCount 31
-				MaxActive 20
-				SpawnCount 1
-				WaitBetweenSpawns 0
-				WaitBeforeStarting 0
-				WaitForAllDead 11
-				RandomChoice
+				TFBot
 				{
-					TFBot
+					Name	"broken soldier"
+					Class	Soldier
+					Classicon pyro_troll
+					Skill	Easy
+					Attributes	AlwaysFireWeapon
+					ItemAttributes
 					{
-							Name	"broken soldier"
-							Class	Soldier
-							Classicon pyro_troll
-							Skill	Easy
-							Attributes	AlwaysFireWeapon
-							ItemAttributes
-							{
-								ItemName	"the liberty launcher"
-								"stun enemies wielding same weapon"	1
-								"Blast radius increased"	1.15
-								"damage bonus" 0.31
-							}
-							CharacterAttributes
-							{
-								"head scale"	0
-								"voice pitch scale"	0.5
-								"faster reload rate" 4
-							}
-							Item	"the liberty launcher"
+						ItemName	"the liberty launcher"
+						"stun enemies wielding same weapon"	1
+						"Blast radius increased"	1.15
+						"damage bonus" 0.31
 					}
-					TFBot
+					CharacterAttributes
 					{
-							Name	"broken soldier"
-							Class	Soldier
-							Skill	hard
-							Classicon pyro_troll
-							Attributes	AlwaysFireWeapon
-							ItemAttributes
-							{
-								ItemName	"the liberty launcher"
-								"stun enemies wielding same weapon"	1
-								"damage bonus" 0.31
-							}
-							CharacterAttributes
-							{
-								"hand scale"	0.5
-								"faster reload rate" 1.5
-								"voice pitch scale"	1.5
-							}
-							Item	"the liberty launcher"
+						"head scale"	0
+						"voice pitch scale"	0.5
+						"faster reload rate" 4
 					}
-					TFBot
+					Item	"the liberty launcher"
+				}
+				TFBot
+				{
+					Name	"broken soldier"
+					Class	Soldier
+					Skill	hard
+					Classicon pyro_troll
+					Attributes	AlwaysFireWeapon
+					ItemAttributes
 					{
-							Name	"broken soldier"
-							Class	Soldier
-							Skill	expert
-							Classicon pyro_troll
-							Attributes	AlwaysFireWeapon
-							ItemAttributes
-							{
-								ItemName	"the liberty launcher"
-								"damage bonus" 0.31
-								"stun enemies wielding same weapon"	1
-							}
-							CharacterAttributes
-							{
-								"torso scale"	0
-								"move speed bonus" 0.9
-							}
-							Item	"the liberty launcher"
+						ItemName	"the liberty launcher"
+						"stun enemies wielding same weapon"	1
+						"damage bonus" 0.31
 					}
+					CharacterAttributes
+					{
+						"hand scale"	0.5
+						"faster reload rate" 1.5
+						"voice pitch scale"	1.5
+					}
+					Item	"the liberty launcher"
+				}
+				TFBot
+				{
+					Name	"broken soldier"
+					Class	Soldier
+					Skill	expert
+					Classicon pyro_troll
+					Attributes	AlwaysFireWeapon
+					ItemAttributes
+					{
+						ItemName	"the liberty launcher"
+						"damage bonus" 0.31
+						"stun enemies wielding same weapon"	1
+					}
+					CharacterAttributes
+					{
+						"torso scale"	0
+						"move speed bonus" 0.9
+					}
+					Item	"the liberty launcher"
 				}
 			}
-		WaveSpawn 
+		}
+		WaveSpawn
 		{
 			TotalCurrency 150
 			WaitForAllDead 11
@@ -2125,24 +1973,24 @@ Node "-118.26 966.32 1003.73"
 			SpawnCount 1
 			WaitBetweenSpawns 20
 			TFBot
+			{
+				Name	"mini gun heavy"
+				Skill	Hard
+				Template	T_TFBot_Giant_Heavyweapons
+				ItemAttributes
 				{
-					Name	"mini gun heavy"
-					Skill	Hard
-					Template	T_TFBot_Giant_Heavyweapons
-					ItemAttributes
-					{
-						ItemName	tf_weapon_minigun
-						"damage bonus"	0.1
-						"fire rate bonus"	0.5
-					}
-					CharacterAttributes
-					{
-						"hand scale"	0.2
-						"dmg taken increased"	1.1
-					}
+					ItemName	tf_weapon_minigun
+					"damage bonus"	0.1
+					"fire rate bonus"	0.5
 				}
+				CharacterAttributes
+				{
+					"hand scale"	0.2
+					"dmg taken increased"	1.1
+				}
+			}
 		}
-		WaveSpawn 
+		WaveSpawn
 		{
 			TotalCurrency 50
 			WaitForAllSpawned XD
@@ -2168,10 +2016,9 @@ Node "-118.26 966.32 1003.73"
 			}
 		}
 	}
-	Wave
+
+	Wave  // Wave 2
 	{
-		WaitWhenDone 60
-		Checkpoint Yes
 		StartWaveOutput
 		{
 			Target wave_start_relay
@@ -2180,30 +2027,43 @@ Node "-118.26 966.32 1003.73"
 		InitWaveOutput
 		{
 			Target holograms_3way_relay
-			Action Trigger
-		}
-		DoneOutput
-		{
-			Target sourcemod_plugin
-			Action "DestroyEntityTemplate(CowProp)"
+			Action RunScriptCode
+			Param "
+				self.AcceptInput(`Trigger`, ``, null, null)
+
+				// Kill cow ragdolls as they throw an error on client.
+				::MetrollW2 <- {
+					function OnGameEvent_player_death(event) {
+						local bot = GetPlayerFromUserID(event.userid)
+						if (!bot.IsBotOfType(Constants.EBotType.TF_BOT_TYPE)) return
+						EntFireByHandle(bot, `RunScriptCode`,
+							`NetProps.GetPropEntity(self,\`m_hRagdoll\`).Kill()`,
+						-1.0, null, null)
+					}
+					function OnGameEvent_recalculate_holidays(_) {
+						delete ::MetrollW2
+					}
+					function OnGameEvent_mvm_wave_complete(_) {
+						delete ::MetrollW2
+					}
+
+				}
+				__CollectGameEventCallbacks(::MetrollW2)
+			"
 		}
 		WaveSpawn // Dummy
 		{
-			TotalCount 0
-			SpawnCount 0
-			WaitBeforeStarting 0
 			FirstSpawnWarningSound "mm_farm.mp3"
 		}
 		WaveSpawn // Dummy
 		{
-			Name	"cows"
-			TotalCount 0
-			SpawnCount 0
+			Name "cows"
 			WaitBeforeStarting 10
-			FirstSpawnOutput
+			Support Limited
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "EntityInput(wave_start_relay, Trigger)::DeployEntityTemplate(CowProp)"
+				Name "CowProp"
 			}
 		}
 		WaveSpawn
@@ -2238,7 +2098,7 @@ Node "-118.26 966.32 1003.73"
 			SpawnCount 2
 			WaitBeforeStarting 10
 			WaitBetweenSpawns 3
-		
+
 			TotalCurrency 125
 			RandomChoice
 			{
@@ -2358,13 +2218,13 @@ Node "-118.26 966.32 1003.73"
 			Where 	spawnbot_main0
 			Where	spawnbot_main1
 	 		Where 	spawnbot_main2
-			 
+
 			TotalCount 29
 			MaxActive 8
 			SpawnCount 1
 			WaitBeforeStarting 0
 			WaitBetweenSpawns 1.5
-		
+
 			TotalCurrency 110
 			RandomChoice
 			{
@@ -2429,20 +2289,30 @@ Node "-118.26 966.32 1003.73"
 			SpawnCount 1
 			WaitBeforeStarting 0
 			WaitBetweenSpawns 0
-			Support		1
+			Support	1
 			TotalCurrency 0
 			TFBot
 			{
-				Template	T_TFBot_Cow
+				Template T_TFBot_Cow
 				CharacterAttributes
 				{
 					"voice pitch scale"	0
 				}
 			}
 		}
+		WaveSpawn
+		{
+			WaitForAllDead "cows3"
+
+			FirstSpawnOutput
+			{
+				Target w2cowprop
+				Action Kill
+			}
+		}
 	}
 
-	Wave
+	Wave // Wave 3
 	{
 		StartWaveOutput
 		{
@@ -2543,13 +2413,13 @@ Node "-118.26 966.32 1003.73"
 				Template T_TFBot_Giant_Heavyweapons
 				Name "the police"
 				CharacterAttributes
-					{
-						"heal on hit for rapidfire"	15
-					}
-					Item	"copper's hard top"
-				AddCond 
 				{
-					Name "TF_COND_REPROGRAMMED" 
+					"heal on hit for rapidfire"	15
+				}
+				Item	"copper's hard top"
+				AddCond [$SIGSEGV]
+				{
+					Name "TF_COND_REPROGRAMMED"
 					Delay 0.1
 				}
 			}
@@ -2564,28 +2434,25 @@ Node "-118.26 966.32 1003.73"
 			SpawnCount	1
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	10
-			Where	spawnbot_main0	
-			Squad
+			Where	spawnbot_main0
+			TFBot
 			{
-				TFBot
+				Template	T_TFBot_Giant_Heavyweapons
+				Classicon gangstA
+				ItemAttributes
 				{
-					Template	T_TFBot_Giant_Heavyweapons
-					Classicon gangstA
-					ItemAttributes
-					{
-						ItemName	tomislav
-						"damage bonus"	1.2
-						"item style override"	1
-						"is australium item"	1
-					}
-					ItemAttributes
-					{
-						ItemName	"capone's capper"
-						"attach particle effect"	60
-					}
-					Item	"tomislav"
-					Item	"capone's capper"
+					ItemName	tomislav
+					"damage bonus"	1.2
+					"item style override"	1
+					"is australium item"	1
 				}
+				ItemAttributes
+				{
+					ItemName	"capone's capper"
+					"attach particle effect"	60
+				}
+				Item	"tomislav"
+				Item	"capone's capper"
 			}
 		}
 		WaveSpawn
@@ -2639,11 +2506,8 @@ Node "-118.26 966.32 1003.73"
 	//Support:
 	//01 chungus buster
 	//01 boxtroll
-
-	Wave
+	Wave // Wave 4
 	{
-		WaitWhenDone	65
-		Checkpoint	Yes
 		StartWaveOutput
 		{
 			Target wave_start_relay
@@ -2661,7 +2525,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBeforeStarting 0
 			FirstSpawnWarningSound "mm_bigchungus.mp3"
 		}
-		
+
 		WaveSpawn
 		{
 			Name 	4A
@@ -2673,10 +2537,10 @@ Node "-118.26 966.32 1003.73"
 			MaxActive 10
 			SpawnCount 10
 			WaitBeforeStarting 0
-			WaitBetweenSpawns 1		
+			WaitBetweenSpawns 1
 			TotalCurrency 200
 			TFBot
-			{ 
+			{
 				Template 	T_TFBot_Smol_BigChungus
 				Attributes	AlwaysCrit
 				CharacterAttributes
@@ -2697,10 +2561,10 @@ Node "-118.26 966.32 1003.73"
 			MaxActive 9
 			SpawnCount 3
 			WaitBeforeStarting 0
-			WaitBetweenSpawns 5	
+			WaitBetweenSpawns 5
 			TotalCurrency 200
 			TFBot
-			{ 
+			{
 				Template 	T_TFBot_Smol_BigChungus
 				Attributes	AlwaysCrit
 				CharacterAttributes
@@ -2724,7 +2588,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 0
 			TotalCurrency 200
 			TFBot
-			{ 
+			{
 				Template 	T_TFBot_Smol_BigChungus
 				Attributes	AlwaysCrit
 				CharacterAttributes
@@ -2748,7 +2612,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 25
 			TotalCurrency 200
 			TFBot
-			{ 
+			{
 				Template 	T_TFBot_BigChungus
 				CharacterAttributes
 				{
@@ -2760,312 +2624,384 @@ Node "-118.26 966.32 1003.73"
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7.2
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7.4
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7.6
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7.8
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 8
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 8
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 8
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 8
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 8
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 8.2
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 8.4
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus has joined the game)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus has joined the game`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn // Dummy
 		{
 			Name 	4C
 			WaitForAllDead	4B
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 25
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintMessage(chungus joined team ROBOTS)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`chungus joined team ROBOTS`)
+				"
 			}
 		}
 		WaveSpawn
@@ -3086,68 +3022,68 @@ Node "-118.26 966.32 1003.73"
 			Squad
 			{
 				TFBot
-				{ 
+				{
 					Template 	T_TFBot_SuperBigChungus
-					Action		FetchFlag
+					Action		FetchFlag [$SIGSEGV]
 				}
 				TFBot
-                {
-                    Name "chungus"
-                    Class Engineer
-                    ClassIcon sentry_buster
-                    Health 10000
-                    Skill Expert
-                    Action SuicideBomber     
-                    Attributes SuppressFire
-                    Item "The Ullapool Caber"
-                    UseHumanModel 1  
+				{
+					Name "chungus"
+					Class Engineer
+					ClassIcon sentry_buster
+					Health 10000
+					Skill Expert
+					Action SuicideBomber [$SIGSEGV]
+					Attributes SuppressFire
+					Item "The Ullapool Caber"
+					UseHumanModel 1 [$SIGSEGV]
 					Item		"TTG Max Hat"
 					Item 		"The Level Three Chin"
 					Item		"The Egghead's Overalls"
-					Addcond
+					AddCond [$SIGSEGV]
 					{
 						Index 51
 						Duration 100
 					}
-                    CharacterAttributes
-                    {
-                        "move speed bonus" 3
-                        "dmg taken increased" 0
-                        "damage force reduction" 0
-                        "airblast vulnerability multiplier" 0
-                        "rage giving scale" 0
-						"cannot pick up intelligence" 1	
-                    }
-                }
+					CharacterAttributes
+					{
+						"move speed bonus" 3
+						"dmg taken increased" 0
+						"damage force reduction" 0
+						"airblast vulnerability multiplier" 0
+						"rage giving scale" 0
+						"cannot pick up intelligence" 1
+					}
+				}
 				TFBot
-                {
-                    Name "chungus"
-                    Class Engineer
-                    ClassIcon sentry_buster
-                    Health 10000
-                    Skill Expert
-                    Action SuicideBomber     
-                    Attributes SuppressFire
-                    Item "The Ullapool Caber"
-                    UseHumanModel 1
+				{
+					Name "chungus"
+					Class Engineer
+					ClassIcon sentry_buster
+					Health 10000
+					Skill Expert
+					Action SuicideBomber [$SIGSEGV]
+					Attributes SuppressFire
+					Item "The Ullapool Caber"
+					UseHumanModel 1 [$SIGSEGV]
 					Item		"TTG Max Hat"
 					Item 		"The Level Three Chin"
 					Item		"The Egghead's Overalls"
-					Addcond
+					AddCond [$SIGSEGV]
 					{
 						Index 51
 						Duration 100
 					}
-                   	CharacterAttributes
-                    {
-                        "move speed bonus" 3
-                        "dmg taken increased" 0
-                        "damage force reduction" 0
-                        "airblast vulnerability multiplier" 0
-                        "rage giving scale" 0
-						"cannot pick up intelligence" 1	
-                    }
-                }
+				   	CharacterAttributes
+					{
+						"move speed bonus" 3
+						"dmg taken increased" 0
+						"damage force reduction" 0
+						"airblast vulnerability multiplier" 0
+						"rage giving scale" 0
+						"cannot pick up intelligence" 1
+					}
+				}
 			}
 		}
 		WaveSpawn
@@ -3162,8 +3098,10 @@ Node "-118.26 966.32 1003.73"
 			MaxActive 12
 			SpawnCount 12
 			WaitBeforeStarting 25
-			WaitBetweenSpawns 0	
+			WaitBetweenSpawns 0
 			TotalCurrency 0
+
+			// Hide icon on wavebar.
 			RandomChoice
 			{
 				Squad
@@ -3174,14 +3112,14 @@ Node "-118.26 966.32 1003.73"
 						Class Engineer
 						Health 10000
 						Skill Expert
-						Action SuicideBomber     
+						Action SuicideBomber [$SIGSEGV]
 						Attributes SuppressFire
 						Item "The Ullapool Caber"
-						UseHumanModel 1  
+						UseHumanModel 1 [$SIGSEGV]
 						Item		"TTG Max Hat"
 						Item 		"The Level Three Chin"
 						Item		"The Egghead's Overalls"
-						Addcond
+						AddCond [$SIGSEGV]
 						{
 							Index 51
 							Duration 100
@@ -3210,11 +3148,12 @@ Node "-118.26 966.32 1003.73"
 			MaxActive 1
 			SpawnCount 1
 			WaitBeforeStarting 0
-			WaitBetweenSpawns 5	
+			WaitBetweenSpawns 5
 			TotalCurrency 0
 			Support			1
+
 			TFBot
-			{ 
+			{
 				Template 	T_TFBot_Smol_BigChungus
 				Name		"chungus"
 				Attributes	AlwaysCrit
@@ -3226,7 +3165,7 @@ Node "-118.26 966.32 1003.73"
 		}
 	}
 
-	Wave 
+	Wave // Wave 5
 	{
 		StartWaveOutput
 		{
@@ -3237,11 +3176,6 @@ Node "-118.26 966.32 1003.73"
 		{
 			Target holograms_3way_relay
 			Action Trigger
-		}
-		DoneOutput
-		{
-			Target sourcemod_plugin
-			Action "FakeWaveHudValues(420,0)::PrintMessage(troll joined the game, 5.0)::PrintMessage(troll joined team SPECTATOR, 10.0)::PrintMessage([AD] https://australium.pineapple.tf/ for free australium, 30.0)"
 		}
 		WaveSpawn
 		{
@@ -3255,17 +3189,16 @@ Node "-118.26 966.32 1003.73"
 			TotalCurrency 0
 			TFBot
 			{
-			Template T_TFbot_Giant_soldier_extended_buff_banner
-			name "hello fellas"
-			Action Mobber
-			CharacterAttributes
-			{
-			"faster reload rate" 0.1
-			}
-			AddCond //Adds conditions to bots
+				Template T_TFbot_Giant_soldier_extended_buff_banner
+				name "hello fellas"
+				Action Mobber [$SIGSEGV]
+				CharacterAttributes
+				{
+					"faster reload rate" 0.1
+				}
+				AddCond [$SIGSEGV] // Adds conditions to bots.
 				{
 					Name "TF_COND_REPROGRAMMED" // Condition to apply. List of available conditions https://wiki.teamfortress.com/wiki/Cheats#addcond
-					//Index 43 //Condition index can be used instead
 					Delay 0.1 // Delay before the condition activates (Default: 0)
 				}
 			}
@@ -3283,72 +3216,71 @@ Node "-118.26 966.32 1003.73"
 			FirstSpawnWarningSound    "mm_engi.mp3"
 			RandomChoice
 			{
-					TFBot
-					{
-						Action FetchFlag
-						Class	Engineer
-						Name "robot engineer gaming"
-						Skill	Expert
-						Item	"the rescue ranger"
-					}
-					TFBot
-					{
-						Action FetchFlag
-						Class	Engineer
-						Name "robot engineer gaming"
-						Skill	Expert
-						Item	"the widowmaker"
-					}
-					TFBot
-					{
-						Action FetchFlag
-						Name "robot engineer gaming"
-						Class	Engineer
-						Skill	Expert
-						Item	"the pomson 6000"
-					}
-					TFBot
-					{
-						Action FetchFlag
-						Class	Engineer
-						Name "robot engineer gaming"
-						Skill	Expert
-						Item	"the rescue ranger"
-					}
-					TFBot
-					{
-						Action FetchFlag
-						Class	Engineer
-						Skill	Expert
-						Name "robot engineer gaming"
-						Item	"the widowmaker"
-					}
-					TFBot
-					{
-						Action FetchFlag
-						Name "robot engineer gaming"
-						Class	Engineer
-						Skill	Expert
-						Item	"the pomson 6000"
-					}
-					TFBot
-					{
-						Action FetchFlag
-						Class	Engineer
-						Name "short circuit gaming"
-						Item	"the short circuit"
-						Skill	Expert
-						FireWeapon [$SIGSEGV]  //Periodically fires weapon
-                {
-                    Delay 0 //Time before the first fire input starts (Default: 10)
-                    Cooldown 3 //Time between each fire input (Default: 10)
-                    Repeats 0 //How many times should bot use the fire input in total (Default: 0 - Infinite)
-					IfSeeTarget 0 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
-					Type "Secondary" // Type of fire input, Possible values:
-
+				TFBot
+				{
+					Action FetchFlag [$SIGSEGV]
+					Class	Engineer
+					Name "robot engineer gaming"
+					Skill	Expert
+					Item	"the rescue ranger"
 				}
-						WeaponRestrictions SecondaryOnly
+				TFBot
+				{
+					Action FetchFlag [$SIGSEGV]
+					Class	Engineer
+					Name "robot engineer gaming"
+					Skill	Expert
+					Item	"the widowmaker"
+				}
+				TFBot
+				{
+					Action FetchFlag [$SIGSEGV]
+					Name "robot engineer gaming"
+					Class	Engineer
+					Skill	Expert
+					Item	"the pomson 6000"
+				}
+				TFBot
+				{
+					Action FetchFlag [$SIGSEGV]
+					Class	Engineer
+					Name "robot engineer gaming"
+					Skill	Expert
+					Item	"the rescue ranger"
+				}
+				TFBot
+				{
+					Action FetchFlag [$SIGSEGV]
+					Class	Engineer
+					Skill	Expert
+					Name "robot engineer gaming"
+					Item	"the widowmaker"
+				}
+				TFBot
+				{
+					Action FetchFlag [$SIGSEGV]
+					Name "robot engineer gaming"
+					Class	Engineer
+					Skill	Expert
+					Item	"the pomson 6000"
+				}
+				TFBot
+				{
+					Action FetchFlag [$SIGSEGV]
+					Class	Engineer
+					Name "short circuit gaming"
+					Item	"the short circuit"
+					Skill	Expert
+					WeaponRestrictions SecondaryOnly
+					FireWeapon [$SIGSEGV]  //Periodically fires weapon
+					{
+						Delay 0 //Time before the first fire input starts (Default: 10)
+						Cooldown 3 //Time between each fire input (Default: 10)
+						Repeats 0 //How many times should bot use the fire input in total (Default: 0 - Infinite)
+						IfSeeTarget 0 //When set to 1, this task activates only when the bot can see the target player (Default 0 - Always activate)
+						Type "Secondary" // Type of fire input, Possible values:
 					}
+				}
 			}
 		}
 		WaveSpawn
@@ -3365,21 +3297,21 @@ Node "-118.26 966.32 1003.73"
 			DoneWarningSound "mm_troll.mp3"
 			Tank
 			{
-				Name tankboss
+				Name "tankboss"
 				StartingPathTrackNode "aroundtheworld_1"
 				Health 35000
-				MaxTurnRate 420
+				MaxTurnRate 420 [$SIGSEGV]
 				Speed 95
-				Gravity 0
+				Gravity 0 [$SIGSEGV]
 				Skin 0
 			}
 		}
 	}
 
-	Wave
+	Wave // Wave 6
 	{
-		WaitWhenDone	65
-		Checkpoint	Yes
+		CustomWaveNumber 420 [$SIGSEGV]
+		CustomMaxWaveNumber 0 [$SIGSEGV]
 		StartWaveOutput
 		{
 			Target wave_start_relay
@@ -3388,14 +3320,57 @@ Node "-118.26 966.32 1003.73"
 		InitWaveOutput
 		{
 			Target holograms_3way_relay
-			Action Trigger
+			Action RunScriptCode
+			Param "
+				self.AcceptInput(`Trigger`, ``, null, null)
+
+				// Stop music on wave fail.
+				SendGlobalGameEvent(`teamplay_broadcast_audio`, {
+					sound = `mm_stal_new.mp3`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+				})
+				SendGlobalGameEvent(`teamplay_broadcast_audio`, {
+					sound = `mm_tankappear.mp3`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+				})
+
+				if (`DoTrollSpeak` in getroottable()) return
+				::DoTrollSpeak <- true
+
+				::MetrollW6 <- {
+					function OnGameEvent_recalculate_holidays(_) {
+						// Don't repeat this message if we have failed the wave.
+						// Mimics original Hydromod behaviour.
+						if (NetProps.GetPropInt(Entities.FindByClassname(null, `tf_mann_vs_machine_stats`), `m_iCurrentWaveIdx`) == 5) return
+						delete ::DoTrollSpeak
+						delete ::MetrollW6
+					}
+				}
+				__CollectGameEventCallbacks(::MetrollW6)
+
+				function TrollSpeak1() {
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`troll has joined the game`)
+				}
+				function TrollSpeak2() {
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						`troll joined team SPECTATOR`)
+				}
+				function TrollSpeak3() {
+					ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+						// This originally linked to https://australium.pineapple.tf/ but since we
+						//  don't own that domain I figured it was better to be safe.
+						`[AD] https://australium.potato.tf/ for free australium`)
+				}
+
+				EntFireByHandle(self, `CallScriptFunction`, `TrollSpeak1`, 5.0, null, null)
+				EntFireByHandle(self, `CallScriptFunction`, `TrollSpeak2`, 10.0, null, null)
+				EntFireByHandle(self, `CallScriptFunction`, `TrollSpeak3`, 30.0, null, null)
+			"
 		}
-		DoneOutput
-		{
-			Target sourcemod_plugin
-			Action "FakeWaveHudValues()"
-		}
-		PlayerAttributes
+		PlayerAttributes [$SIGSEGV]
 		{
 			Scout
 			{
@@ -3435,52 +3410,49 @@ Node "-118.26 966.32 1003.73"
 				"torso scale"				0.5
 			}
 		}
-        WaveSpawn
+		WaveSpawn
 		{
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7
 			FirstSpawnWarningSound "mm_one_trolled_angel.mp3"
 		}
-        //Print Hint Text
-        WaveSpawn
+		//Print Hint Text
+		WaveSpawn
 		{
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 30
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHintText(Wanna be a robot? Type '!joinblu',0)::PrintHintText(Wanna be a robot? Type '!joinblu',60)::PrintHintText(Wanna be a robot? Type '!joinblu',120)"
+				Target holograms_3way_relay
+				Action RunScriptCode
+				Param "
+					function JoinBluSpeak() {
+						ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+							`Wanna be a robot? Type '!joinblu'`)
+					}
+					EntFireByHandle(self, `CallScriptFunction`, `JoinBluSpeak`, -1.0, null, null)
+					EntFireByHandle(self, `CallScriptFunction`, `JoinBluSpeak`, 60.0, null, null)
+					EntFireByHandle(self, `CallScriptFunction`, `JoinBluSpeak`, 120.0, null, null)
+				"
 			}
 		}
 		WaveSpawn
 		{
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 3
-			FirstSpawnMessage "{CDCDCD}troll :  {FBECCB}we do a little trolling"
+			FirstSpawnMessage "{CDCDCD}troll :  {FBECCB}we do a little trolling" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7
-			FirstSpawnMessage "{CDCDCD}troll :  {FBECCB}!joinblu troll"
+			FirstSpawnMessage "{CDCDCD}troll :  {FBECCB}!joinblu troll" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 7
-			FirstSpawnMessage "troll joined team ROBOTS"
+			FirstSpawnMessage "troll joined team ROBOTS" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 16
-			FirstSpawnMessage "{9ACDFF}troll :  {FBECCB}Behold! My FINAL FORM!"
+			FirstSpawnMessage "{9ACDFF}troll :  {FBECCB}Behold! My FINAL FORM!" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
@@ -3492,10 +3464,10 @@ Node "-118.26 966.32 1003.73"
 			WaitBeforeStarting 16
 			WaitBetweenSpawns 0
 			Support	Limited
-            FirstSpawnWarningSound	"mm_troll2.mp3"
+			FirstSpawnWarningSound	"mm_troll2.mp3"
 			TotalCurrency 800
 			TFBot
-			{ 
+			{
 				Name				"troll"
 				Class				Heavy
 				ClassIcon			troll
@@ -3503,8 +3475,8 @@ Node "-118.26 966.32 1003.73"
 				Health				99999
 				WeaponRestrictions	MeleeOnly
 				Attributes 			UseBossHealthBar
-				UseCustomModel 		"models/trollface/coolface4.mdl"
-				DeathSound			"mm_ded.mp3"
+				UseCustomModel 		"models/trollface/coolface4.mdl" [$SIGSEGV]
+				DeathSound			"mm_ded.mp3" [$SIGSEGV]
 				Scale				1.25
 				CharacterAttributes
 				{
@@ -3516,163 +3488,143 @@ Node "-118.26 966.32 1003.73"
 			}
 		}
 
-        WaveSpawn
+		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 6
-			FirstSpawnMessage "{9ACDFF}troll :  {FBECCB}No, This isn't over!"
+			FirstSpawnMessage "{9ACDFF}troll :  {FBECCB}No, This isn't over!" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 10
-			FirstSpawnMessage "{9ACDFF}troll :  {FBECCB}Time to do a large amount of trolling!"
+			FirstSpawnMessage "{9ACDFF}troll :  {FBECCB}Time to do a large amount of trolling!" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 13
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild)"
+				Name "FakePortalBuild"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 13.5
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild2)"
+				Name "FakePortalBuild2"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 14
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild3)"
+				Name "FakePortalBuild3"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 14.5
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild4)"
+				Name "FakePortalBuild4"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 15
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild5)"
+				Name "FakePortalBuild5"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 15.5
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild6)"
+				Name "FakePortalBuild6"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 16
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild7)"
+				Name "FakePortalBuild7"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 16.5
 			FirstSpawnWarningSound "mm_block.mp3"
-			FirstSpawnOutput
+
+			PointTemplate [$SIGSEGV]
 			{
-				Target sourcemod_plugin
-				Action "DeployEntityTemplate(FakePortalBuild8)"
+				Name "FakePortalBuild8"
 			}
 		}
 		WaveSpawn
-        {
-            WaitForAllDead "troll"
-            WaitBeforeStarting 17
-            FirstSpawnWarningSound "ambient/thunder4.wav"
-            FirstSpawnOutput
-            {
-                Target shake_portal
-                Action StartShake
-            }
-        }
+		{
+			WaitForAllDead "troll"
+			WaitBeforeStarting 17
+			FirstSpawnWarningSound "ambient/thunder4.wav"
+
+			FirstSpawnOutput
+			{
+				Target shake_portal
+				Action StartShake
+			}
+		}
 		WaveSpawn
-        {
-            WaitForAllDead "troll"
-            WaitBeforeStarting 17
-            FirstSpawnWarningSound "ambient/thunder4.wav"
-            FirstSpawnOutput
+		{
+			WaitForAllDead "troll"
+			WaitBeforeStarting 17
+			FirstSpawnWarningSound "ambient/thunder4.wav"
+
+			FirstSpawnOutput
 			{
 				Target	whiteout_trigger
 				Action	Fade
 			}
-        }
+		}
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
-			TotalCount 0
-			SpawnCount 0
 			WaitBeforeStarting 22
 			FirstSpawnWarningSound "mm_stal_new.mp3"
-			FirstSpawnMessage "{fd0000}it's time!"
+			FirstSpawnMessage "{fd0000}it's time!" [$SIGSEGV]
 		}
 
-        WaveSpawn
+		WaveSpawn
 		{
 			WaitForAllDead "troll"
 			Where	portal
-            Where   portal2
+			Where   portal2
 			TotalCount 60
 			MaxActive 12
 			SpawnCount 3
@@ -3683,35 +3635,35 @@ Node "-118.26 966.32 1003.73"
 			RandomChoice
 			{
 				TFBot
-				{ 
+				{
 					Template	T_TFBot_Trolldier
 					ClassIcon		troll
 				}
 				TFBot
-				{ 
+				{
 					Template	T_TFBot_Troll_Melee
 					ClassIcon		troll
 				}
 				TFBot
-				{ 
+				{
 					Template	T_TFBot_Troll_Melee
 					ClassIcon		troll
 				}
 				TFBot
-				{ 
+				{
 					Template	T_TFBot_Troll_Sniper
 					Attributes	AlwaysFireWeapon
 					ClassIcon		troll
 				}
 				TFBot
-				{ 
+				{
 					Template	T_TFBot_Troll
 					ClassIcon		troll
 				}
 			}
 		}
 
-        WaveSpawn
+		WaveSpawn
 		{
 			WaitForAllDead 		"troll"
 			Where 				portal2
@@ -3722,18 +3674,17 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	20
 			Support				Limited
 			TotalCurrency 		0
-			
+
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Trolldier_Spammer_Faster
 				ClassIcon		troll
-				PainSound		"mm_hit.mp3"
-				DeathSound		"mm_oof.mp3"
+				PainSound		"mm_hit.mp3" [$SIGSEGV]
+				DeathSound		"mm_oof.mp3" [$SIGSEGV]
 			}
 		}
 
-        
-        WaveSpawn
+		WaveSpawn
 		{
 			WaitForAllDead	"troll"
 			TotalCount 1
@@ -3742,38 +3693,47 @@ Node "-118.26 966.32 1003.73"
 			WaitBeforeStarting 113
 			WaitBetweenSpawns 0
 			TotalCurrency 0
-			Support		Limited
+			Support Limited
+
 			Tank
 			{
 				Name "tankboss"
-				DisableSmokestack 1
-				ClassIcon	troll
+				DisableSmokestack 1 [$SIGSEGV]
+				ClassIcon troll [$SIGSEGV]
 				StartingPathTrackNode "trolltank_1"
 				Health 696969
 				Speed 300
-				MaxTurnRate 9999999
+				MaxTurnRate 9999999 [$SIGSEGV]
 				IsMiniBoss 0 [$SIGSEGV]
-				Model [$SIGSEGV] //Set custom model on tank. Will spit harmless errors on client console if the model does not have enough sequences
+
+				Model [$SIGSEGV] // Set custom model on tank. Will spit harmless errors on client console if the model does not have enough sequences
 				{
 					Default "models/trollface/coolface8.mdl"
-                    LeftTrack "models/trollface/coolface8.mdl"
-                    RightTrack "models/trollface/coolface8.mdl"
-                    Bomb "models/trollface/coolface8.mdl"
+
+					// Model has no attachments for these anyway, so suppress some of the error spam.
+					LeftTrack "models/empty.mdl"
+					RightTrack "models/empty.mdl"
+					Bomb "models/empty.mdl"
 				}
-                OnBombDroppedOutput
-                {
-                    Target	sourcemod_plugin
-                    Action "SetCvar(sv_cheats, 1)::ServerCommand(ent_remove tank_boss)::SetCvar(sv_cheats, 0)::DestroyAllEntityTemplates()::PrintMessage(Trolled, 5.0)"
-                }
+
+				SpawnTemplate "TrollTankDeath" [$SIGSEGV]
+
+				OnBombDroppedOutput
+				{
+					// IDK why but I couldn't get RunScriptCode to work here, developer 2 gave "Entity tankboss encountered an error in RunScript()".
+					Target trolltankkilled
+					Action Trigger
+				}
 			}
 		}
+
 		WaveSpawn
 		{
 			WaitForAllDead	"troll"
 			TotalCount 0
 			SpawnCount 0
 			WaitBeforeStarting 100
-			FirstSpawnMessage "{fd0000}It's time for phase 2"
+			FirstSpawnMessage "{fd0000}It's time for phase 2" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
@@ -3789,7 +3749,7 @@ Node "-118.26 966.32 1003.73"
 			TotalCount 0
 			SpawnCount 0
 			WaitBeforeStarting 113
-			FirstSpawnMessage "{fd0000}T A N K"
+			FirstSpawnMessage "{fd0000}T A N K" [$SIGSEGV]
 		}
 		WaveSpawn
 		{
@@ -4141,7 +4101,7 @@ Node "-118.26 966.32 1003.73"
 			{
 				ClassIcon	troll27
 			}
-		}	
+		}
 		WaveSpawn
 		{
 			Name Wave11
@@ -4154,7 +4114,7 @@ Node "-118.26 966.32 1003.73"
 			{
 				ClassIcon	troll28
 			}
-		}			
+		}
 		WaveSpawn
 		{
 			Name Wave11
@@ -4167,10 +4127,10 @@ Node "-118.26 966.32 1003.73"
 			{
 				ClassIcon	troll29
 			}
-		}	
+		}
 	}
 
-	Wave 
+	Wave // Wave 7
 	{
 		StartWaveOutput
 		{
@@ -4182,10 +4142,16 @@ Node "-118.26 966.32 1003.73"
 			Target holograms_3way_relay
 			Action Trigger
 		}
+
 		DoneOutput
 		{
-			Target sourcemod_plugin
-			Action "FakeWaveHudValues()::PrintMessage([AD] https://australium.pineapple.tf/ for free australium, 30.0)"
+			Target BigNet
+			Action RunScriptCode
+			Delay 30
+			Param "
+				ClientPrint(null, Constants.EHudNotify.HUD_PRINTTALK,
+					`[AD] https://australium.potato.tf/ for free australium`)
+			"
 		}
 		WaveSpawn
 		{
@@ -4199,42 +4165,43 @@ Node "-118.26 966.32 1003.73"
 			TotalCurrency 0
 			TFBot
 			{
-					Name "Vehicular Mannslaughter"
-					Health	10000
-					Scale	1.75
-					Class	Demoman
-					classicon tank
-					Skill	Expert
-					Attributes	"UseBossHealthBar"
-					WeaponRestrictions MeleeOnly
-					"UseCustomModel" "models/bots/boss_bot/boss_tank.mdl"
-					Attributes Miniboss
-					FireWeapon [$SIGSEGV] //Periodically fires weapon
-                {
-                    Delay 1 //Time before the first fire input starts (Default: 10)
-                    Cooldown 4 //Time between each fire input (Default: 10)
-                    Repeats 0 //How many times should bot use the fire input in total (Default: 0 - Infinite)
-                    Duration 0.6 //How long should the button be pressed (Default: 0.1)
-					Type "Secondary" 
+				Name "Vehicular Mannslaughter"
+				Health	10000
+				Scale	1.75
+				Class	Demoman
+				classicon tank
+				Skill	Expert
+				Attributes	"UseBossHealthBar"
+				WeaponRestrictions MeleeOnly
+				"UseCustomModel" "models/bots/boss_bot/boss_tank.mdl"
+				Attributes Miniboss
+
+				FireWeapon [$SIGSEGV] //Periodically fires weapon
+				{
+					Delay 1 //Time before the first fire input starts (Default: 10)
+					Cooldown 4 //Time between each fire input (Default: 10)
+					Repeats 0 //How many times should bot use the fire input in total (Default: 0 - Infinite)
+					Duration 0.6 //How long should the button be pressed (Default: 0.1)
+					Type "Secondary"
 				}
-					ItemAttributes
-					{
-						ItemName	"the crossing guard"
-						"Attack not cancel charge"	1
-						"damage bonus"	1.5
-						"dmg bonus vs buildings"	7.9
-					}
-					CharacterAttributes
-					{
-						"charge impact damage increased"	69
-						"charge recharge rate increased" 69
-						"airblast vertical pushback scale"	0.1
-						"airblast vulnerability multiplier"	0.1
-						"damage force reduction"	0.1
-						"move speed bonus"	0.5
-					}
-					Item	"the splendid screen"
-					Item	"the crossing guard"
+				ItemAttributes
+				{
+					ItemName	"the crossing guard"
+					"Attack not cancel charge"	1
+					"damage bonus"	1.5
+					"dmg bonus vs buildings"	7.9
+				}
+				CharacterAttributes
+				{
+					"charge impact damage increased"	69
+					"charge recharge rate increased" 69
+					"airblast vertical pushback scale"	0.1
+					"airblast vulnerability multiplier"	0.1
+					"damage force reduction"	0.1
+					"move speed bonus"	0.5
+				}
+				Item	"the splendid screen"
+				Item	"the crossing guard"
 			}
 		}
 		WaveSpawn
@@ -4255,7 +4222,7 @@ Node "-118.26 966.32 1003.73"
 				Speed 69
 				Scale 0.2
 				Skin 0
-		
+
 				OnBombDroppedOutput //LOSE
 				{
 					Target boss_deploy_relay
@@ -4279,9 +4246,8 @@ Node "-118.26 966.32 1003.73"
 				Health 5000
 				Speed 69
 				Scale 1
-				MaxTurnRate 420
-				Skin 0
-		
+				MaxTurnRate 420 [$SIGSEGV]
+
 				OnBombDroppedOutput //LOSE
 				{
 					Target boss_deploy_relay
@@ -4305,9 +4271,8 @@ Node "-118.26 966.32 1003.73"
 				Health 5000
 				Speed 69
 				Scale 0.8
-				Skin 0
-				MaxTurnRate 420
-		
+				MaxTurnRate 420 [$SIGSEGV]
+
 				OnBombDroppedOutput //LOSE
 				{
 					Target boss_deploy_relay
@@ -4331,9 +4296,8 @@ Node "-118.26 966.32 1003.73"
 				Health 5000
 				Speed 69
 				Scale 0.8
-				MaxTurnRate 420
-				Skin 0
-		
+				MaxTurnRate 420 [$SIGSEGV]
+
 				OnBombDroppedOutput //LOSE
 				{
 					Target boss_deploy_relay
@@ -4357,9 +4321,8 @@ Node "-118.26 966.32 1003.73"
 				Health 5000
 				Speed 69
 				Scale 1
-				MaxTurnRate 420
-				Skin 0
-		
+				MaxTurnRate 420 [$SIGSEGV]
+
 				OnBombDroppedOutput //LOSE
 				{
 					Target boss_deploy_relay
@@ -4369,11 +4332,8 @@ Node "-118.26 966.32 1003.73"
 		}
 	}
 
-
-	Wave //Addcash $700
+	Wave // Wave 8
 	{
-		WaitWhenDone	65
-		Checkpoint	Yes
 		StartWaveOutput
 		{
 			Target wave_start_relay
@@ -4382,561 +4342,616 @@ Node "-118.26 966.32 1003.73"
 		InitWaveOutput
 		{
 			Target holograms_3way_relay
-			Action Trigger
-		}
-		DoneOutput
-		{
-			Target sourcemod_plugin
-			Action "FakeWaveHudValues()"
+			Action RunScriptCode
+			Param "
+				self.AcceptInput(`Trigger`, ``, null, null)
+
+				SendGlobalGameEvent(`teamplay_broadcast_audio`, {
+					sound = `mm_fortnite.mp3`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+				})
+			"
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	1.7
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(We got a, 0.2, 0.5, 1, 128, 255, 128)"
+				Target BigNet
+				Action RunScriptCode
+				Param "
+					local w8txtent = SpawnEntityFromTable(`game_text`, {
+						targetname = `w8txtent`
+						spawnflags = 0x1 // SF_ENVTEXT_ALLPLAYERS
+						fadeout = 0.05
+					})
+					NetProps.SetPropBool(w8txtent, `m_bForcePurgeFixedupStrings`, true)
+					w8txtent.ValidateScriptScope()
+					local scope = w8txtent.GetScriptScope()
+
+					scope.Channel <- 0
+					scope.HudMsg <- function(msg, x, y, holdtime, colour) {
+						// These values don't need to be set by prop as they are networked by user message.
+						self.KeyValueFromString(`message`, msg)
+						self.KeyValueFromFloat(`x`, x)
+						self.KeyValueFromFloat(`y`, y)
+						self.KeyValueFromFloat(`holdtime`, holdtime)
+						self.KeyValueFromVector(`color`, colour)
+						self.KeyValueFromInt(`channel`, Channel)
+						self.AcceptInput(`Display`, ``, null, null)
+
+						Channel >= 5 ? Channel = 0 : ++Channel
+					}
+
+					scope.HudMsg(`We got a`, 0.2, 0.5, 1, Vector(128, 255, 128))
+				"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	2.6
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(number one victory royale, 0.4, 0.5, 1, 100, 232, 200)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`number one Victory Royale`, 0.4, 0.5, 1, Vector(100, 232, 200))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	4.1
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Yeah, 0.2, 0.8, 1, 120, 200, 200)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Yeah`, 0.2, 0.8, 1, Vector(120, 200, 200))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	4.5
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Fortnite, 0.4, 0.2, 1, 120, 200, 200)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Fortnite`, 0.4, 0.2, 1, Vector(120, 200, 200))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	5
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(we 'bout to get down, 0.4, 0.4, 2, 120, 120, 250)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`we 'bout to get down`, 0.4, 0.4, 2, Vector(120, 120, 250))"
+			}
+		}
+		WaveSpawn
+		{
+			WaitForAllDead		"fortnite1"
+			WaitBeforeStarting 	6
+
+			FirstSpawnOutput
+			{
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`(get down)`, 0.55, 0.35, 1, Vector(120, 120, 120))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	6.5
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(ten kills on the board now, 0.1, 0.8, 2, 255, 100, 244)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Ten kills on the board right now`, 0.1, 0.78, 2, Vector(255, 100, 244))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	8.2
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Just wiped out Tomato Town, 0.4, 0.3, 2, 255, 120, 224)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Just wiped out Tomato Town`, 0.4, 0.3, 2, Vector(255, 120, 224))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting  11
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(My friend just got downed, 0.4, 0.7, 2, 225, 112, 203)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`My friend just got downed`, 0.4, 0.7, 2, Vector(225, 112, 230))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	12.3
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I revived him, 0.3, 0.2, 2, 123, 123, 0)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I revived him`, 0.3, 0.2, 2, Vector(123, 123, 0))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	13
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(now we're heading south-bound, 0.2, 0.4, 1, 123, 125, 233)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`now we're heading south-bound`, 0.2, 0.4, 1, Vector(123, 125, 233))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	14.4
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Now we're in the Pleasant Park streets, 0.6, 0.7, 2, 0, 255, 203)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Now we're in the Pleasant Park streets`, 0.6, 0.7, 2, Vector(0, 255, 203))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	16.2
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Look at the map, 0.4, 0.5, 2, 111, 111, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Look at the map`, 0.4, 0.5, 2, Vector(111, 111, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	17
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(go to the marked sheet, 0.4, 0.6, 1, 255, 255, 203)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`go to the marked sheet`, 0.4, 0.6, 1, Vector(255, 255, 203))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	18.3
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Take me to your Xbox, 0.8, 0.3, 1, 255, 255, 203)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Take me to your Xbox`, 0.8, 0.3, 1, Vector(255, 255, 203))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	19.8
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(to play, 0.7, 0.4, 1, 255, 255, 203)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`to play`, 0.7, 0.4, 1, Vector(255, 255, 203))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	20.1
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Fortnite, 0.8, 0.5, 0.8, 255, 255, 203)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Fortnite`, 0.8, 0.5, 0.8, Vector(255, 255, 203))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	20.8
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(T o d a y, 0.1, 0.1, 1, 246, 255, 0)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`t o d a y`, 0.1, 0.1, 1, Vector(246, 255, 0))"
 			}
 		}
-		//You can take me to moist mire
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	22.3
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(You can take me to moist mire, 0.1, 0.1, 2, 45, 201, 252)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`You can take me to Moisty Mire`, 0.1, 0.1, 2, Vector(45, 201, 252))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	24.2
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(but not loot lake, 0.7, 0.3, 2, 16, 113, 145)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`but not loot lake`, 0.7, 0.3, 2, Vector(16, 113, 145))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	25.9
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I would really love to, 0.2, 0.3, 2, 164, 115, 199)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I really love to`, 0.2, 0.3, 2, Vector(164, 115, 199))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	28.4
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(chug with you, 0.5, 0.4, 2, 246, 255, 0)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Chug Jug with you`, 0.5, 0.4, 2, Vector(246, 255, 0))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	30.5
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(We can be, 0.4, 0.5, 2, 217, 37, 130)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`We can be`, 0.4, 0.5, 2, Vector(217, 37, 130))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	31.3
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(pro, 0.5, 0.3, 2, 235, 201, 178)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`pro`, 0.5, 0.3, 2, Vector(235, 201, 178))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	31.6
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(fortnite, 0.5, 0.7, 2, 252, 234, 129)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Fortnite`, 0.5, 0.7, 2, Vector(252, 234, 129))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	32.6
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(g a m e r s, 0.4, 0.5, 2, 255, 255, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`g a m e r s`, 0.4, 0.5, 2, Vector(255, 255, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	34.8
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(He said, 0.2, 0.5, 2, 89, 207, 101)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`He said`, 0.2, 0.5, 2, Vector(89, 207, 101))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	36.1
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Hey Broski, 0.3, 0.5, 2, 186, 2, 237)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Hey broski`, 0.3, 0.5, 2, Vector(186, 2, 237))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	37.4
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(You got some heals and a shield pot, 0.4, 0.7, 2, 200, 178, 207)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`You got some heals and a shield pot?`, 0.4, 0.7, 2, Vector(200, 178, 207))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	39.4
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I need healing, 0.3, 0.2, 2, 152, 252, 30)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I need healing`, 0.3, 0.2, 2, Vector(152, 252, 30))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	40.6
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(and, 0.4, 0.2, 2, 30, 208, 252)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`and`, 0.42, 0.22, 2, Vector(30, 208, 252))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	40.9
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I am only at one HP, 0.5, 0.5, 2, 220, 238, 242)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I am only at one HP`, 0.5, 0.5, 2, Vector(220, 238, 242))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	43.7
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Hey dude sorry, 0.5, 0.6, 2, 82, 199, 62)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`Hey dude, sorry`, 0.5, 0.6, 2, Vector(82, 199, 62))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	45.4
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I found nothing on the safari, 0.6, 0.7, 2, 255, 255, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I found nothing on the safari`, 0.6, 0.7, 2, Vector(255, 255, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	47.6
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I checked the upstairs, 0.3, 0.7, 2, 196, 8, 124)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I checked the upstairs`, 0.3, 0.7, 2, Vector(196, 28, 124))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	48.8
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(of that house but not the underneath yet, 0.4, 0.6, 2, 181, 255, 234)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`of that house but not the underneath yet`, 0.4, 0.6, 2, Vector(181, 255, 234))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	52
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(There’s a chest that’s just down there, 0.2, 0.2, 2, 255, 255, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`There's a chest that's just down there`, 0.2, 0.2, 2, Vector(255, 255, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	54.6
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(The storm is coming fast, 0.7, 0.4, 2, 106, 34, 230)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`The storm is coming fast`, 0.7, 0.4, 2, Vector(106, 34, 230))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	56.3
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(and you need heals to prepare, 0.4, 0.5, 2, 255, 255, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`and you need heals to pre~pare`, 0.4, 0.5, 2, Vector(255, 255, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	58.7
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I’ve got V-Bucks, 0.1, 0.1, 2, 255, 153, 0)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I've got V-Bucks`, 0.1, 0.1, 2, Vector(255, 153, 0))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	59.7
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(that I’ll spend, 0.2, 0.2, 2, 64, 64, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`that I'll spend`, 0.2, 0.2, 2, Vector(64, 64, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	60.9
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(More than, 0.3, 0.3, 2, 255, 255, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`More than`, 0.3, 0.3, 2, Vector(255, 255, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	61.6
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(you can contend, 0.4, 0.4, 2, 219, 218, 171)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`you can contend`, 0.4, 0.4, 2, Vector(219, 218, 171))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	63
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(I'm a cool, 0.8, 0.8, 2, 205, 53, 232)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`I'm a cool`, 0.8, 0.8, 2, Vector(205, 53, 232))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	63.9
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(Pro, 0.3, 0.9, 2, 255, 255, 255)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`pro`, 0.3, 0.9, 2, Vector(255, 255, 255))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	64.1
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(F o r t n i t e, 0.4, 0.5, 2, 205, 53, 232)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`F o r t n i t e`, 0.4, 0.5, 2, Vector(205, 53, 232))"
 			}
 		}
 		WaveSpawn
 		{
 			WaitForAllDead		"fortnite1"
 			WaitBeforeStarting 	64.7
-			WaitBetweenSpawns 	0
-			TotalCurrency 		0
+
 			FirstSpawnOutput
 			{
-				Target sourcemod_plugin
-				Action "PrintHudText(g a m e r, 0.7, 0.5, 2, 234, 255, 0)"
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`g a m e r`, 0.7, 0.5, 2, Vector(234, 255, 0))"
+			}
+		}
+		WaveSpawn
+		{
+			WaitForAllDead		"fortnite1"
+			WaitBeforeStarting 	67
+
+			FirstSpawnOutput
+			{
+				Target w8txtent
+				Action RunScriptCode
+				Param "HudMsg(`(Fin.)`, 0.48, 0.52, 2, Vector(255, 255, 255))"
 			}
 		}
 		WaveSpawn
@@ -4950,12 +4965,14 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	0
 			TotalCurrency 		0
 			Support				Limited
+
+			// Hide icons from wavebar.
 			RandomChoice
 			{
 				Squad
 				{
 					TFBot
-					{ 
+					{
 						Template		T_TFBot_Fortnite_Assault
 						Name			"3. Who is Tindall Berry?"
 						Attributes		AlwaysFireWeapon
@@ -4965,7 +4982,7 @@ Node "-118.26 966.32 1003.73"
 						CharacterAttributes
 						{
 							"cannot pick up intelligence" 	1
-							
+
 						}
 					}
 				}
@@ -4985,7 +5002,7 @@ Node "-118.26 966.32 1003.73"
 			TotalCurrency 		0
 			FirstSpawnWarningSound	"mm_fortnite.mp3"
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Fortnite_Assault
 				Attributes		AlwaysFireWeapon
 			}
@@ -5003,7 +5020,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	4
 			TotalCurrency 		0
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Fortnite_SMG
 			}
 		}
@@ -5019,7 +5036,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	0
 			TotalCurrency 		0
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Fortnite_Bow
 			}
 		}
@@ -5035,7 +5052,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	1
 			TotalCurrency 		0
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Fortnite_Revolver
 				Attributes		AlwaysFireWeapon
 			}
@@ -5055,7 +5072,7 @@ Node "-118.26 966.32 1003.73"
 			RandomChoice
 			{
 				TFBot
-				{ 
+				{
 					Template		T_TFBot_Fortnite_Pistol
 				}
 				TFBot
@@ -5076,7 +5093,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	20
 			TotalCurrency 		0
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Fortnite_SMG_Giant
 			}
 		}
@@ -5092,7 +5109,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	10
 			TotalCurrency 		1999
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Fortnite_Card_Boss
 			}
 		}
@@ -5109,7 +5126,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 	5
 			TotalCurrency 		0
 			TFBot
-			{ 
+			{
 				Template		T_TFBot_Fortnite_Pistol
 				ClassIcon		fortnite_icon_2
 			}
@@ -5123,9 +5140,9 @@ Node "-118.26 966.32 1003.73"
 			WaitBeforeStarting 	0
 			FirstSpawnWarningSound	"mm_fortnite_card.mp3"
 		}
-    }
+	}
 
-	Wave 
+	Wave
 	{
 		StartWaveOutput
 		{
@@ -5137,7 +5154,7 @@ Node "-118.26 966.32 1003.73"
 			Target holograms_3way_relay
 			Action Trigger
 		}
-		Explanation [$SIGSEGV] //Dispayed once the wave is initialized
+		Explanation [$SIGSEGV]
 		{
 			Line "{blue}impending doom approaches....."
 			Line "{red}however, captain drip will help you."
@@ -5149,7 +5166,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 3
 			WaitBeforeStarting 4
 			TotalCurrency 0
-			where spawnbot_dripboss_red
+			Where spawnbot_dripboss_red
 			Support		1
 			FirstSpawnWarningSound    "mm_fishing.mp3"
 			TFBot
@@ -5160,13 +5177,12 @@ Node "-118.26 966.32 1003.73"
 				Scale	1.5
 				Class	Heavyweapons
 				Skill	Hard
-				Action mobber
+				Action  Mobber [$SIGSEGV]
 				WeaponRestrictions	MeleeOnly
 				Attributes AlwaysCrit
-				AddCond //Adds conditions to bots
+				AddCond [$SIGSEGV] //Adds conditions to bots
 				{
 					Name "TF_COND_REPROGRAMMED" // Condition to apply. List of available conditions https://wiki.teamfortress.com/wiki/Cheats#addcond
-					//Index 43 //Condition index can be used instead
 					Delay 0.1 // Delay before the condition activates (Default: 0)
 				}
 				ItemAttributes
@@ -5193,7 +5209,7 @@ Node "-118.26 966.32 1003.73"
 			WaitBetweenSpawns 2
 			WaitBeforeStarting 15
 			TotalCurrency 0
-			where spawnbot_dripboss_red
+			Where spawnbot_dripboss_red
 			Support		limited
 			TFBot
 			{
@@ -5203,16 +5219,15 @@ Node "-118.26 966.32 1003.73"
 				Scale	1.8
 				Class	Heavyweapons
 				Skill	Hard
-				Action mobber
+				Action  Mobber [$SIGSEGV]
 				WeaponRestrictions	MeleeOnly
 				Attributes	"UseBossHealthBar"
 				Attributes AlwaysFireWeapon
 				Attributes AlwaysCrit
 				Attributes miniboss
-				AddCond //Adds conditions to bots
+				AddCond [$SIGSEGV] //Adds conditions to bots
 				{
 					Name "TF_COND_REPROGRAMMED" // Condition to apply. List of available conditions https://wiki.teamfortress.com/wiki/Cheats#addcond
-					//Index 43 //Condition index can be used instead
 					Delay 0.1 // Delay before the condition activates (Default: 0)
 				}
 				ItemAttributes
@@ -5235,7 +5250,7 @@ Node "-118.26 966.32 1003.73"
 				Item	"dead of night"
 			}
 		}
-	
+
 		WaveSpawn
 		{
 			TotalCount 1
@@ -5248,63 +5263,63 @@ Node "-118.26 966.32 1003.73"
 			RandomChoice
 			{
 				TFBot
-				{ 
+				{
 					Template T_TFBot_Giant_Demoman
 				}
 				TFBot
-				{ 
+				{
 					Template T_TFBot_Giant_Heavyweapons
 				}
 				TFBot
-				{ 
+				{
 					Template T_TFBot_Giant_Soldier
 				}
 				TFBot
-				{ 
+				{
 					class heavyweapons
 				}
 				TFBot
-				{ 
+				{
 					class scout
 				}
 				TFBot
-				{ 
+				{
 					class heavyweapons
 				}
 				TFBot
-				{ 
+				{
 					class pyro
 				}
 				TFBot
-				{ 
+				{
 					class scout
 				}
 				TFBot
-				{ 
+				{
 					class heavyweapons
 				}
 				TFBot
-				{ 
+				{
 					class soldier
 				}
 				TFBot
-				{ 
+				{
 					class pyro
 				}
 				TFBot
-				{ 
+				{
 					class scout
 				}
 				TFBot
-				{ 
+				{
 					class pyro
 				}
 				TFBot
-				{ 
+				{
 					class scout
 				}
 				TFBot
-				{ 
+				{
 					class pyro
 				}
 			}
@@ -5325,13 +5340,13 @@ Node "-118.26 966.32 1003.73"
 				Name	popbob
 				Scale	7
 				Class	Soldier
-				Skill	expert
-				Action mobber
+				Skill	Expert
+				Action  Mobber [$SIGSEGV]
 				Attributes UseBossHealthBar
-				Attributes miniboss
+				Attributes MiniBoss
 				Attributes AlwaysCrit
 				Attributes AlwaysFireWeapon
-				UseCustomModel	"models/bots/sniper/bot_sniper_troll.mdl"
+				UseCustomModel	"models/bots/sniper/bot_sniper_troll.mdl" [$SIGSEGV]
 				ItemAttributes
 				{
 					ItemName	tf_weapon_rocketlauncher
@@ -5344,17 +5359,17 @@ Node "-118.26 966.32 1003.73"
 				HomingRockets [$SIGSEGV]
 				{
 					IgnoreDisguisedSpies 1
-						IgnoreStealthedSpies 1
-						RocketSpeed 0.8 // Multiplier of rocket speed. 1 for default speed
-						TurnPower 90 
-						MaxAimError 120
+					IgnoreStealthedSpies 1
+					RocketSpeed 0.8 // Multiplier of rocket speed. 1 for default speed
+					TurnPower 90
+					MaxAimError 120
 				}
-				CustomWeaponModel //Sets custom weapon model
+				CustomWeaponModel [$SIGSEGV] //Sets custom weapon model
 				{
 					Slot 1
 					Model "models/props_urban/urban_crate_troll.mdl"
 				}
-				CustomWeaponModel //Sets custom weapon model
+				CustomWeaponModel [$SIGSEGV] //Sets custom weapon model
 				{
 					Slot 0
 					Model "models/props_urban/urban_crate_troll.mdl"
@@ -5366,7 +5381,7 @@ Node "-118.26 966.32 1003.73"
 					"is_passive_weapon" 1
 					"fire rate bonus"	0.1
 				}
-				RocketCustomModel 		"models/player/items/all_class/troll_head_scout.mdl"
+				RocketCustomModel "models/player/items/all_class/troll_head_scout.mdl" [$SIGSEGV]
 				CharacterAttributes
 				{
 					"damage force reduction"	0.1
@@ -5380,4 +5395,3 @@ Node "-118.26 966.32 1003.73"
 		}
 	}
 }
-
