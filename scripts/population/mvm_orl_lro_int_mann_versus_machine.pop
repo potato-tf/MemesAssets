@@ -5768,7 +5768,7 @@ WaveSchedule
 			Item "dec2014 Pyromancer's Raiments"
 			Item "Wandering Wraith"
 			Item "The Flare Gun"
-			Item "The Necro Smasher"
+			Item "Necro Smasher"
 			UseHumanModel 1
 			SpawnTemplate FuckYouText
 			ClassIcon random_lite //temp, gets replaced on wave init
