@@ -59,6 +59,7 @@ WaveSchedule
 	PrecacheSound "fat_bababooey.mp3" [$SIGSEGV]
 	PrecacheSound "fat_among_knife_kill.mp3" [$SIGSEGV]
 	PrecacheSound "fat_among_gun_kill.mp3" [$SIGSEGV]
+	PrecacheSound "fat_slimeking.mp3" [$SIGSEGV]
 	PrecacheModel "models/weapons/w_models/heavensentcataclysm.mdl" [$SIGSEGV]
 	
 	CustomUpgradesFile "mvm_upgrades_fat_ujealous.txt" [$SIGSEGV]
