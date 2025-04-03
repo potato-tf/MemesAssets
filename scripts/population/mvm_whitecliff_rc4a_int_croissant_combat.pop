@@ -3174,31 +3174,70 @@ Sneed's_Seed_And_Feed_(Formerly_Chuck's)
 	{
 		InitWaveOutput
 		{
-			// Fix players being stuck on wave init since they spawn with no weapons.
 			Target BigNet
 			Action RunScriptCode
 			Param "
-				for (local p; p = Entities.FindByClassname(p, `player`);)
-					if (!p.IsBotOfType(Constants.EBotType.TF_BOT_TYPE))
-						p.ForceRespawn()
-						
-				// Kill target ragdolls as they throw an error on client.
-				::CrossaintCombatW1 <- {
+				::CrossaintCombat <- {
+					mvm_stats = Entities.FindByClassname(null, `tf_mann_vs_machine_stats`)
+
+					// Fix players being stuck on wave init since they spawn with
+					//  no weapons.
+					function UnstuckPlayers() {
+						for (local p; p = Entities.FindByClassname(p, `player`);)
+							p.ForceRespawn()
+					}
+					// Kill player viewmodel when they have no weapons.
+					function TestKillViewmodel(p) {
+						for (local i = 0; i < 8; ++i) {
+							local wep = NetProps.GetPropEntityArray(p, `m_hMyWeapons`, i)
+							if (wep) {
+								// Swap to first weapon if it exists so we don't T-pose.
+								p.Weapon_Switch(wep)
+								return
+							}
+						}
+						local vm = NetProps.GetPropEntity(p, `m_hViewModel`)
+						if (vm) vm.Kill()
+					}
+
+					// Kill player viewmodel when they have no weapons.
+					function OnGameEvent_player_spawn(event) {
+						if (event.team != Constants.ETFTeam.TF_TEAM_RED) return
+						TestKillViewmodel(GetPlayerFromUserID(event.userid))
+					}
+					function OnGameEvent_teamplay_round_start(_) {
+						// Work around tanks falling through the hatch grate by moving
+						//  the final node to the position of the previous node.
+						Entities.FindByName(null, `tank_path_68`).SetAbsOrigin(
+							Vector(-2536.0, -1360.0, 456.0)
+						)
+						EntFireByHandle(mvm_stats, `RunScriptCode`,
+							`::CrossaintCombat.UnstuckPlayers()`,
+						-1.0, null, null)
+					}
 					function OnGameEvent_player_death(event) {
 						local bot = GetPlayerFromUserID(event.userid)
 						if (!bot.IsBotOfType(Constants.EBotType.TF_BOT_TYPE)) return
-						if (bot.GetModelName() != `models/props_medieval/target/target.mdl`) return
+						if (bot.GetModelName().find(`player`, 7) != null) return
+
+						// Kill non-player ragdolls as they throw an error on client.
 						EntFireByHandle(bot, `RunScriptCode`,
 							`NetProps.GetPropEntity(self,\`m_hRagdoll\`).Kill()`,
 						-1.0, null, null)
 					}
-					function OnGameEvent_recalculate_holidays(_)
-						delete ::CrossaintCombatW1
-					function OnGameEvent_mvm_wave_complete(_)
-						delete ::CrossaintCombatW1
-
+					function OnGameEvent_recalculate_holidays(_) {
+						if (NetProps.GetPropInt(mvm_stats, `m_iWaveIdx`) != 0) return
+						delete ::CrossaintCombat
+					}
 				}
-				__CollectGameEventCallbacks(::CrossaintCombatW1)
+				__CollectGameEventCallbacks(::CrossaintCombat)
+
+				Entities.FindByName(null,
+					`tank_path_68`).SetAbsOrigin(Vector(-2536.0, -1360.0, 456.0))
+				for (local p; p = Entities.FindByClassname(p, `player`);)
+					if (!p.IsBotOfType(Constants.EBotType.TF_BOT_TYPE))
+						::CrossaintCombat.TestKillViewmodel(p)
+				::CrossaintCombat.UnstuckPlayers()
 			"
 		}
 		StartWaveOutput
