@@ -3172,6 +3172,35 @@ Sneed's_Seed_And_Feed_(Formerly_Chuck's)
 
 	Wave
 	{
+		InitWaveOutput
+		{
+			// Fix players being stuck on wave init since they spawn with no weapons.
+			Target BigNet
+			Action RunScriptCode
+			Param "
+				for (local p; p = Entities.FindByClassname(p, `player`);)
+					if (!p.IsBotOfType(Constants.EBotType.TF_BOT_TYPE))
+						p.ForceRespawn()
+						
+				// Kill target ragdolls as they throw an error on client.
+				::CrossaintCombatW1 <- {
+					function OnGameEvent_player_death(event) {
+						local bot = GetPlayerFromUserID(event.userid)
+						if (!bot.IsBotOfType(Constants.EBotType.TF_BOT_TYPE)) return
+						if (bot.GetModelName() != `models/props_medieval/target/target.mdl`) return
+						EntFireByHandle(bot, `RunScriptCode`,
+							`NetProps.GetPropEntity(self,\`m_hRagdoll\`).Kill()`,
+						-1.0, null, null)
+					}
+					function OnGameEvent_recalculate_holidays(_)
+						delete ::CrossaintCombatW1
+					function OnGameEvent_mvm_wave_complete(_)
+						delete ::CrossaintCombatW1
+
+				}
+				__CollectGameEventCallbacks(::CrossaintCombatW1)
+			"
+		}
 		StartWaveOutput
 		{
 			Target	wave_start_relay
@@ -3293,6 +3322,14 @@ Sneed's_Seed_And_Feed_(Formerly_Chuck's)
 					"voice pitch scale"	0
 				}
 				UseCustomModel	"models/props_medieval/target/target.mdl"
+
+				// Hide target weapons as they don't use them anyway.
+				// "is invisible" 1 didn't seem to work on TF_WEAPON_BAT here.
+				CustomWeaponModel [$SIGSEGV]
+				{
+					Slot 2
+					Model "models/empty.mdl"
+				}
 			}
 		}
 		WaveSpawn
