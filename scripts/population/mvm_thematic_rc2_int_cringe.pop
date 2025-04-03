@@ -73,48 +73,48 @@ WaveSchedule
 	}
 	ExtraTankPath [$SIGSEGV] //Adds tank path to follow
 	{
-		Name "caravan_path_b" //name of the starting path node prefix. First tank node name would be name_1
+		Name "caravan_path_b" // name of the starting path node prefix. First tank node name would be name_1
 		Node "667 926 137" // note XYZ coordinates. First node is the starting point
 		Node "0 350 137"
-		Node "-750 350 137"//loop 1
+		Node "-750 350 137" // loop 1
 		Node "-900 500 137"
 		Node "-900 800 137"
 		Node "-500 900 137"
 		Node "-50 900 137"
 		Node "130 700 137"
 		Node "35 350 137"
-		Node "-750 350 137"//loop 2
+		Node "-750 350 137" // loop 2
 		Node "-900 500 137"
 		Node "-900 800 137"
 		Node "-500 900 137"
 		Node "-50 900 137"
 		Node "130 700 137"
 		Node "35 350 137"
-		Node "-750 350 137"//loop 3
+		Node "-750 350 137" // loop 3
 		Node "-900 500 137"
 		Node "-900 800 137"
 		Node "-500 900 137"
 		Node "-50 900 137"
 		Node "130 700 137"
 		Node "35 350 137"
-		Node "-750 350 137"//loop 4
+		Node "-750 350 137" // loop 4
 		Node "-900 500 137"
 		Node "-900 800 137"
 		Node "-500 900 137"
 		Node "-50 900 137"
 		Node "130 700 137"
-		Node "35 350 137"//end of small loop
+		Node "35 350 137" // end of small loop
 		Node "-300 200 137"
 		Node "-300 -1050 137"
 		Node "-300 -500 137"
 		Node "-750 -500 137"
-		Node "-750 -1500 200"//start of big loop
+		Node "-750 -1500 200" // start of big loop
 		Node "-1300 -1500 200"
 		Node "-1300 -2850 200"
 		Node "600 -2850 200"
 		Node "1000 -2100 200"
 		Node "500 -1600 200"
-		Node "-1300 -1500 200"//end of big loop
+		Node "-1300 -1500 200" // end of big loop
 		Node "-1350 -1600 200"
 		Node "-1350 -1700 200"
 		Node "-1300 -1800 200"
@@ -1793,7 +1793,7 @@ WaveSchedule
 		{
 			Line "Biggie Smalls has joined the game"
 		}
-		WaveSpawn
+		WaveSpawn //Attemtping to fix a softlock this guy somehow causes if he doesn't die
 		{
 			SpawnCount 1
 			MaxActive 1
@@ -1821,6 +1821,7 @@ WaveSchedule
 							ItemName "The Hardy Laurel"
 							"vision opt in flags" 0
 							"always_transmit_so" 0
+							"receive friendly fire" 1 [$SIGSEGV] //Recieve friendly fire, so the wave can't softlock via this guy surviving.
 						}
 						AddCond [$SIGSEGV]
 						{
