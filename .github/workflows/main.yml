@@ -44,6 +44,8 @@ jobs:
         run: |
             ssh-agent -a $SSH_AUTH_SOCK > /dev/null
             ssh-add - <<< "${{ secrets.DEPLOY_KEY }}"
+            ssh-add - <<< "${{ secrets.TOHRU_KEY_USA }}"
+            ssh-add - <<< "${{ secrets.TOHRU_KEY_EU }}"
 
       # Compress WAV files before packaging
       # - name: Compress WAV files
@@ -122,6 +124,24 @@ jobs:
         run: |
 
           cd tf/download
+          {
+            echo -e "${{ secrets.TOHRU_KEY_USA }}" > /tmp/deploy_key
+            chmod 600 /tmp/deploy_key
+
+            rsync -a -e "ssh -p 47422 -i /tmp/deploy_key -o StrictHostKeyChecking=no" --delete --update --exclude=".*" --exclude="*.bz2" --exclude="*.zip" . redho@pnj.thebel.net:~/tf2server/tf/archive_memes/
+
+            rm -rf /tmp/deploy_key
+          } &
+
+          {
+            echo -e "${{ secrets.TOHRU_KEY_EU }}" > /tmp/deploy_key_eu
+            chmod 600 /tmp/deploy_key_eu
+
+            rsync -a -e "ssh -p 59922 -i /tmp/deploy_key_eu -o StrictHostKeyChecking=no" --delete --update --exclude=".*" --exclude="*.bz2" --exclude="*.zip" . redho@eu2.thebel.net:~/tf2server/tf/archive_memes/
+
+            rm -rf /tmp/deploy_key_eu
+          } &
+
           for i in "22 pterodactyl@10.243.40.231" "22 pterodactyl@ustx.potato.tf" "22 pterodactyl@us.potato.tf" "22 pterodactyl@br.potato.tf" "22 pterodactyl@usw2.potato.tf" "22 pterodactyl@sgp.potato.tf" "22 pterodactyl@eu1.potato.tf" "22 pterodactyl@eu2.potato.tf" "27035 pterodactyl@eu.potato.tf"; do a=( $i );
           {
             ssh -o StrictHostKeyChecking=no -p ${a[0]} ${a[1]} "touch /var/tf2server/tf/occupiedservers/wake; exit 0"
