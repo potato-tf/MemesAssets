@@ -770,7 +770,7 @@ ExtraSpawnPoint [$SIGSEGV]  //Adds spawn points on specified location
             env_screenoverlay
             {
                 "targetname"    "p11"
-                "OverlayName1"  "memes/final/11_BREAKOUT"
+                "OverlayName1"  "memes/final/11_breakout"
                 "OverlayTime1"  "0"
             }
             NoFixUp 1
@@ -791,7 +791,7 @@ ExtraSpawnPoint [$SIGSEGV]  //Adds spawn points on specified location
             env_screenoverlay
             {
                 "targetname"    "p14"
-                "OverlayName1"  "memes/final/14_BODY_OF_A_ROBOT"
+                "OverlayName1"  "memes/final/14_body_of_a_robot"
                 "OverlayTime1"  "0"
             }
             NoFixUp 1
@@ -840,7 +840,7 @@ ExtraSpawnPoint [$SIGSEGV]  //Adds spawn points on specified location
             env_screenoverlay
             {
                 "targetname"    "p21"
-                "OverlayName1"  "memes/final/21_CATCHYOU"
+                "OverlayName1"  "memes/final/21_catchyou"
                 "OverlayTime1"  "0"
             }
             NoFixUp 1
