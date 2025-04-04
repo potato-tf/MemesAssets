@@ -51,6 +51,9 @@ big_big_chungus_big_chungus_big_chgunus
 	PrecacheModel "models/bots/demo/bot_purpleguy_buster.mdl" [$SIGSEGV]
 	PrecacheModel "models/bots/demo/bot_sus_buster.mdl" [$SIGSEGV]
 
+	// Tank
+	PrecacheModel "models/trollface/coolface8.mdl" [$SIGSEGV]
+
 	//Cosmetics
 	PrecacheModel "models/player/items/engineer/engineer_ttg_max.mdl" [$SIGSEGV]
 	PrecacheModel "models/player/items/all_class/troll_head_scout.mdl" [$SIGSEGV]
@@ -58,6 +61,9 @@ big_big_chungus_big_chungus_big_chgunus
 	//Models and Props
 	PrecacheModel "models/items/currencypack_large.mdl" [$SIGSEGV]
 	PrecacheModel "models/player/trollface/trollface.mdl" [$SIGSEGV]
+		// For some reason, this texture associated with the above model is not being downloaded
+		//  properly.
+		PrecacheGeneric "materials/models/trollfacepm/body.vmt" [$SIGSEGV]
 	PrecacheModel "models/props_urban/urban_crate_troll.mdl" [$SIGSEGV]
 	PrecacheModel "models/bots/sniper/bot_sniper_troll.mdl" [$SIGSEGV]
 	PrecacheModel "models/trollface/trollface.mdl" [$SIGSEGV]
