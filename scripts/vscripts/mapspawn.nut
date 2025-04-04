@@ -216,6 +216,9 @@ if (::__potato.IsSigmod) {
 // Judging Restrictions.
 ::__potato.Include("judging", "judging")
 
+// Restore unused cash expiration sound.
+::__potato.Include("cash_expire_sound", "memes")
+
 // These scripts are not included in ArchiveAssets.
 // TODO: These scripts should be modified to be integrated better with this file.
 // Contract progress tracker.
