@@ -22,6 +22,11 @@ WaveSchedule
 
     PrecacheModel "models\props_medical\med_blackboard.mdl" [$SIGSEGV] 
     PrecacheModel "models\props_mvm\clipboard.mdl" [$SIGSEGV]
+
+	// Download overlays
+	PrecacheGeneric "materials/memes/bb.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/mlg_overlay.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/hud/collab_w6_censor.vmt" [$SIGSEGV]
 	
 	PrecacheSound "c_ult_w5_charge.wav" [$SIGSEGV]
 	PrecacheSound "c_ult_w5_shoot.wav" [$SIGSEGV]

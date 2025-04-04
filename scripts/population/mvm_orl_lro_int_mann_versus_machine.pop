@@ -144,6 +144,20 @@ WaveSchedule
     PrecacheSound "presidents/music/bidenmusic.mp3" [$SIGSEGV]
     PrecacheSound "presidents/music/fnafmusic.mp3" [$SIGSEGV]
 
+	// Download overlays.
+	PrecacheGeneric "materials/memes/the_scary_overlay_i_think.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/custom/overlays/newcamerahud.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/slenderman/explosive_3.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/slenderman/explosive_4.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/slenderman/explosive_5.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/slenderman/explosive_6.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/slenderman/explosive_7.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/slenderman/explosive_8.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/memes/slenderman/standby2.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/effects/blackbars.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/effects/obama_intro.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/effects/biden_intro.vmt" [$SIGSEGV]
+
 	SpawnTemplate "everything"
 
 	//COLLAB WAVE 2 (Ciaran)

@@ -42,6 +42,9 @@ WaveSchedule
 	PrecacheSound "pda_break_the_targets.mp3"
 	PrecacheSound "pda_w4_hardboiled_heavies.mp3"
 	PrecacheSound "pda_w3_i_am_the_eggman.mp3"
+
+	// Download overlay.
+	PrecacheGeneric "materials/effects/meme/lazyexplode.vmt" [$SIGSEGV]
 	
 	SpawnTemplate rift_stuff
 	SpawnTemplate musical_chairs

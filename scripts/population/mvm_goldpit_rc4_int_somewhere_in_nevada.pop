@@ -133,6 +133,11 @@ Sneed's_Seed_And_Feed_(Formerly_Chuck's)
 	PrecacheModel	"models/enhancedbowserbaddies/goombaenhanced.mdl"
 	PrecacheModel	"models/props_mining/rock005.mdl"
 	PrecacheModel	"models/eathan/moai_thumper.mdl"
+
+	// Download overlays.
+	PrecacheGeneric "materials/hud/sergeant_strikeout_titlecard.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/hud/overlay_ohno_our_screen_its_broken.vmt" [$SIGSEGV]
+	PrecacheGeneric "materials/hud/overlay_trollge.vmt" [$SIGSEGV]
 	
 	OverrideSounds [$SIGSEGV]
 	{

@@ -257,6 +257,9 @@ POLSKA_POLSKA_POZDROWIENIA_DLA_POLAKOW
 	PrecacheSound "fatty_w6_boss_defeated.mp3"
 	PrecacheSound "fatty_w6_fart.mp3"
 
+	// Download overlay.
+	PrecacheGeneric "materials/memes/fatty_w6_meme.vmt" [$SIGSEGV]
+
 	ExtraTankPath   //blimp
     {
         Name rapping_tank_path

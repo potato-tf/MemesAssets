@@ -59,6 +59,8 @@ WaveSchedule
 	PrecacheModel "models\props_forest\rock003.mdl" [$SIGSEGV]
 	PrecacheModel "models\props_forest\rock004.mdl" [$SIGSEGV]	
 
+	// Download overlay.
+	PrecacheGeneric "materials/hud/fatty_intro_card.vmt" [$SIGSEGV]
 
 	NoThrillerTaunt 1 [$SIGSEGV]
 	FlagCarrierMovementPenalty 0.3 [$SIGSEGV]

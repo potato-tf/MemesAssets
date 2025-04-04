@@ -20,6 +20,9 @@ WaveSchedule
 	// BodyPartScaleSpeed 10 [$SIGSEGV] // doesn't work
 	MedigunShieldDamage 1 [$SIGSEGV]
 	NoRomevisionCosmetics 1 [$SIGSEGV]
+
+	// Download overlay.
+	PrecacheGeneric "materials/effects/com_shield002a.vmt" [$SIGSEGV]
 	
 	Templates
 	{

@@ -29,11 +29,10 @@ Sneed's_Seed_And_Feed_(Formerly_Chuck's)
 	PrecacheModel	"models/weapons/c_models/c_bread/c_bread_plainloaf.mdl"
 	PrecacheModel	"models/props_medieval/target/target.mdl"
 
-
 	DisableSound	"music.mvm_end_wave"
 	DisableSound	"music.mvm_end_last_wave"	
 
-
+	PrecacheGeneric "materials/hud/vince_gilligan_overlay.vmt"
 	PrecacheGeneric	"onlyred25.raw"
 	PrecacheGeneric	"onlyred50.raw"
 	PrecacheGeneric	"onlyred75.raw"
