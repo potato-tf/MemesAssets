@@ -11468,6 +11468,7 @@ WaveSchedule
 	}
 	Wave
 	{
+		WaveSpawn { TFBot { ClassIcon vergil }} // Add vergil icon to download list.
 		InitWaveOutput
 		{
 			Target wave_7_setup
