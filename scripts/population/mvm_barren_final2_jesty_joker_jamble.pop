@@ -961,7 +961,7 @@ WaveSchedule
 				TFBot
 				{
 					Class Medic
-					ClassIcon Soldier_burst_buff
+					ClassIcon soldier_burstfire_buff
 					Name "Giant Buff Burst Soldier :3"
 					Health 3800
 					Item "Pestering Jester"
