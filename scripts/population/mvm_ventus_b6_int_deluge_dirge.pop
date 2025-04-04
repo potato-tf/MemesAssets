@@ -694,7 +694,7 @@ WaveSchedule
 	{
 		Name "tank_path_mothership2"
 		Node "-1700 -1450 800"
-		Node "-200 -1450 800"
+		Node "-200 -1450 500" //Modified 2025, stops mothership from getting stuck on a cliff
 		Node "600 -1450 50"
 		Node "1800 -1450 50"
 		Node "1900 -1350 50"
