@@ -18,6 +18,10 @@ WaveSchedule
 	PrecacheSound "busterparty/frustrationend.wav" [$SIGSEGV]
 	PrecacheSound "busterparty/wave6intro.wav" [$SIGSEGV]
 
+	// Download custom upgrades files.
+	PrecacheGeneric "scripts/items/mvm_upgrades_stinky.txt" [$SIGSEGV]
+	PrecacheGeneric "scripts/items/mvm_upgrades_stinky_3.txt" [$SIGSEGV]
+
     ItemAttributes [$SIGSEGV] //Adds attributes to specified item given to players
     {
         ItemName "Battery Canteens"
