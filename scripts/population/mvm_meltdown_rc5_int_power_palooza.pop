@@ -2154,6 +2154,7 @@ WaveSchedule
 		{
 			Where spawnbot
 			TotalCount 6
+			Name "2-C"
 			WaitForAllDead "2-A"
 			TFBot
 			{
@@ -2161,11 +2162,17 @@ WaveSchedule
 				Attributes AlwaysCrit
 			}
 		}
+
+		WaveSpawn
+		{
+			// Wave ends early because these WaveSpawns are dependent on each other, so they never spawn.
+			Name "2-A"
+			WaitForAllDead "2-C"
+		}
 		WaveSpawn
 		{
 			StartWaveWarningSound "gamestartup11_short.mp3"
-			Name "2-A" // Wave ends early because all WaveSpawns with WaitForAllDead are listed before this
-			// and there are no other WaveSpawns active
+			Name "2-B"
 			Where spawnbot
 			TotalCount 1
 			TotalCurrency 100
