@@ -70,6 +70,11 @@ big_big_chungus_big_chungus_big_chgunus
 	PrecacheModel "models/trollface/coolface4.mdl" [$SIGSEGV]
 	PrecacheModel "models/goofus/fortnite_card.mdl" [$SIGSEGV]
 
+	// Precache sounds. Unsure which ones are not automatically added to download table
+	//  but we received at least one bug report about these ones.
+	PrecacheSound "mm_hit.mp3" [$SIGSEGV]
+	PrecacheSound "mm_oof.mp3" [$SIGSEGV]
+
 	ExtraSpawnPoint [$SIGSEGV]
 	{
 		Name "spawnbot_skybox"
