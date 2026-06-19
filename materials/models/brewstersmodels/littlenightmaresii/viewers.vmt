@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/brewstersmodels/littlenightmaresii/viewers"
+	"$bumpmap" "models/brewstersmodels/littlenightmaresii/viewersn"
+	"$halflambert"			"1"
+	"$nocull"			"1"
+
+
+
+}
+

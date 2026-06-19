@@ -1,0 +1,1385 @@
+WaveSchedule
+{
+	Templates
+	{
+		T_TFBot_Bomb_Recall
+		{
+			Class Heavy
+			Health	1000000
+			BehaviorModifiers	Mobber
+			Scale	1.1
+			Name	"M1-CH_43L"
+			WeaponRestrictions MeleeOnly
+			Item    "Apoco-Fists"
+			Item	"Hog Heels"
+			Item	"Capone's Capper"
+			ItemAttributes
+			{
+				ItemName	"Capone's Capper"
+				"attach particle effect"	14
+			}
+			ItemAttributes
+			{
+				ItemName    "Apoco-Fists"
+				"damage bonus"	0
+				"attach particle effect"	4
+				"no_attack"			1
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	.30
+				"damage force reduction"    0.1
+				"cannot pick up intelligence"   1
+				"health regen"  5000
+				"afterburn immunity"    1
+                "ignored by enemy sentries" 1
+			}
+		}
+		T_TFBot_Nothing
+		{
+			Class Scout
+			Health	5000
+			Attributes	IgnoreFlag
+            BehaviorModifiers	Mobber
+			Name	"Super Scout"
+			WeaponRestrictions MeleeOnly
+			Item    "Upgradeable TF_WEAPON_SCATTERGUN"
+			ItemAttributes
+			{
+				ItemName    "Upgradeable TF_WEAPON_SCATTERGUN"
+				"no_attack"					1
+//              "is suicide counter"		1
+			}
+		}
+		T_TFBot_Soldier_EasterEgg
+		{
+			Class Soldier
+			Health	500
+			BehaviorModifiers	Mobber
+			Attributes SpawnWithFullCharge
+			WeaponRestrictions PrimaryOnly	
+			Name	"ST-3V_#"
+			Item    "warbird_rocketlauncher_warhawk"
+			Item 	"The Buff Banner"
+			Item    "Upgradeable TF_WEAPON_SHOVEL"
+			Item	"The All-Father"
+			Item	"eotl_winter_coat"
+			MaxVisionRange	250
+			ItemAttributes
+			{
+				ItemName	"The Buff Banner"
+				"single wep deploy time decreased"	0.75
+				"attach particle effect"	3002
+				"attach particle effect static"	3001
+				"increase buff duration"	0
+				"item_meter_charge_type"	1
+				"item_meter_charge_rate"	10
+			}
+			ItemAttributes
+			{
+				ItemName	"The All-Father"
+				"attach particle effect"	4
+			}
+			ItemAttributes
+			{
+				ItemName    "warbird_rocketlauncher_warhawk"
+				"provide on active"	1
+				"mod rage on hit bonus"	100
+				"projectile speed increased"	0.25
+				"Blast radius increased"	2.5
+				"clip size bonus"	0.25
+				"fire rate bonus"	30
+				"single wep deploy time decreased"	0.75
+				"damage bonus"	0.000001
+				"set_item_texture_wear"	0.2
+				"attach particle effect"	701
+				"mini rockets"	1
+				//"no_attack"			1
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	.7
+				"damage force reduction"    0.1
+				"cannot pick up intelligence"   1
+				"health regen"  5000
+				"afterburn immunity"    1
+				"dmg taken increased"	0
+				"increase buff duration"	0.1
+                "ignored by enemy sentries" 1
+			}
+		}
+		T_TFBot_Heavy_EasterEgg
+		{
+			Class Heavy
+			Health	500
+			BehaviorModifiers	Mobber
+			Name	"B4-UC_#"
+			Item	"gentlemanne_minigun_topshelf"
+			Item    "The Robo-Sandvich"
+			Item    "Upgradeable TF_WEAPON_FISTS"
+			Item	"Security Shades"
+			Item	"The Purity Fist"
+			WeaponRestrictions	SecondaryOnly
+			ItemAttributes
+			{
+				ItemName	"Security Shades"
+				"attach particle effect"	31
+			}
+			ItemAttributes
+			{
+				ItemName	"gentlemanne_minigun_topshelf"
+				"no_attack"			1
+				"set_item_texture_wear"	0.2
+				"attach particle effect"	704
+			}
+			ItemAttributes
+			{
+				ItemName    "The Robo-Sandvich"
+				"provide on active"	1
+				"max health additive bonus"	100
+				"gesture speed increase" 0.75
+				"mult_item_meter_charge_rate"	0.33
+				"single wep deploy time decreased"	1.75
+				"lunchbox healing decreased"	0
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	.6
+				"damage force reduction"    0.1
+				"cannot pick up intelligence"   1
+				"afterburn immunity"    1
+				"dmg taken increased"	0
+                "ignored by enemy sentries" 1
+			}
+		}
+		T_TFBot_Scout_EasterEgg
+		{
+			Class Scout
+			Health	500
+			BehaviorModifiers	Mobber
+			WeaponRestrictions	SecondaryOnly
+			Name	"B0-CK_7"
+			Item 	"The C.A.P.P.E.R"
+			Item    "Upgradeable TF_WEAPON_BAT"
+			Item	"EOTL_hiphunter_boots"
+			Item	"The Electric Twanger"
+			Item	"Thrilling Tracksuit"
+			Item	"The Biomech Backpack"
+			Item	"The Bolt Boy"
+			ItemAttributes
+			{
+				ItemName	"The C.A.P.P.E.R"
+				"no_attack"	1
+			}
+			ItemAttributes
+			{
+				ItemName	"The Bolt Boy"
+				"attach particle effect"	67
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	.75
+				"damage force reduction"    0.1
+				"cannot pick up intelligence"   1
+				"health regen"  5000
+				"afterburn immunity"    1
+				"dmg taken increased"	0
+                "ignored by enemy sentries" 1
+			}
+		}
+		T_TFBot_Demo_EasterEgg
+		{
+			Class Demoman
+			Health	500
+			BehaviorModifiers	Mobber
+			WeaponRestrictions	MeleeOnly
+			Scale	1.15
+			Name	"K4-1T_0"
+			Item 	"The Half-Zatoichi"
+			Item	"The Dark Age Defender"
+			Item	"The King of Scotland Cape"
+			Item	"Hong Kong Cone"
+			ItemAttributes
+			{
+				ItemName	"The Half-Zatoichi"
+				"no_attack"	1
+				"attach particle effect"	3123
+			}
+			ItemAttributes
+			{
+				ItemName	"Hong Kong Cone"
+				"attach particle effect"	347
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	.35
+				"damage force reduction"    0.1
+				"cannot pick up intelligence"   1
+				"health regen"  5000
+				"afterburn immunity"    1
+				"dmg taken increased"	0
+                "ignored by enemy sentries" 1
+			}
+		}
+		T_TFBot_Scout_Chaos_Bat
+		{
+			Class Scout
+			Health	7500
+			ClassIcon scout_bat_chaos2
+			Skill Hard
+			Name	"Respawnable Chaos Scout"
+			WeaponRestrictions MeleeOnly
+			Attributes AlwaysCrit
+			Item	"Upgradeable TF_WEAPON_SCATTERGUN"
+			Item    "Upgradeable TF_WEAPON_BAT"
+			Item    "Juvenile's Jumper"
+			ItemAttributes
+			{
+				ItemName    "Upgradeable TF_WEAPON_BAT"
+				"damage bonus"						8
+				"health regen"						20
+				"move speed bonus"					1.1
+				"halloween increased jump height"	1.1
+				"teleport instead of die"			0.35
+			}
+			ItemAttributes
+			{
+				ItemName    "Juvenile's Jumper"
+				"attach particle effect"	3076 //3216
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.35
+			}
+		}
+		T_TFBot_Scout_Chaos
+		{
+			Class Scout
+			Skill Hard
+			Health  8500
+			ClassIcon scout_chaos2
+			Name	"Chaos Scout"
+			Item	"Upgradeable TF_WEAPON_SCATTERGUN"
+			Item    "Upgradeable TF_WEAPON_BAT"
+			Item    "Juvenile's Jumper"
+			ItemAttributes
+			{
+				ItemName    "Upgradeable TF_WEAPON_SCATTERGUN"
+				"damage bonus"					16
+				"clip size bonus upgrade"		8
+				"fire rate bonus"				0.2
+				"faster reload rate"			0.25
+				"restore health on kill"		10
+				"bullets per shot bonus"		3
+				"spread penalty"				2.5
+				"projectile penetration"		1
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			}
+			ItemAttributes
+			{
+				ItemName    "Juvenile's Jumper"
+				"attach particle effect static"	3076 //3216
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.35
+			}
+		}
+        T_TFBot_Scout_Chaos_Pistol
+		{
+			Class Scout
+			Skill Hard
+			Health  7500
+			ClassIcon	scout_pistol_chaos2
+			Name	"Chaos Scout"
+			WeaponRestrictions SecondaryOnly
+			Item	"Upgradeable TF_WEAPON_PISTOL"
+			Item	"Juvenile's Jumper"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_PISTOL"
+				"damage bonus"						10
+				"clip size bonus upgrade"			5
+				"fire rate bonus"					0.6
+				"restore health on kill"			8
+				"projectile spread angle penalty"	2
+				"mini rockets"						1
+				"override projectile type"			2
+                "paintkit_proto_def_index"			413
+                "item color rgb"					16765560
+			}
+			ItemAttributes
+			{
+				ItemName    "Juvenile's Jumper"
+				"attach particle effect static"	3076 //3216
+			}
+			CharacterAttributes
+			{
+			    "damage bonus"  0.35
+				"damage force reduction"    0.25
+			}
+		}
+		T_TFBot_Soldier_Chaos
+		{
+			Class Soldier
+			ClassIcon soldier_chaos2
+			Name	"Chaos Soldier"
+			Skill Normal
+			Health	15000
+			Item	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item    "Upgradeable TF_WEAPON_SHOVEL"
+			Item    "eotl_winter_coat"
+			ItemAttributes
+			{
+				ItemName    "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"damage bonus"						13.5
+				"clip size upgrade atomic"			46
+				"fire rate bonus"					0.15
+				"faster reload rate"				0.75
+				"restore health on kill"			10
+				"Blast radius increased"			1.2
+				"projectile spread angle penalty"	4
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			}
+			ItemAttributes
+			{
+				ItemName    "eotl_winter_coat"
+				"attach particle effect static"	3076 //3216
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.2
+			}
+		}
+		T_TFBot_Pyro_Chaos
+		{
+			ClassIcon	pyro_chaos2
+			Health	12500
+			Name	"Chaos Pyro"
+			Class	Pyro
+			Skill	Hard
+			Item	"Upgradeable TF_WEAPON_FLAMETHROWER"
+			Item    "Upgradeable TF_WEAPON_FIREAXE"
+			Item    "Juvenile's Jumper"
+			Item    "The Sub Zero Suit"
+			ItemAttributes
+			{
+				ItemName    "Upgradeable TF_WEAPON_FLAMETHROWER"
+				"damage bonus"					100
+				"weapon burn dmg increased"		50
+				"airblast pushback scale"		3
+				"mult airblast refire time"		2
+				"restore health on kill"		10
+				"minicritboost on kill"			2
+				"extinguish restores health"	475
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			}
+			ItemAttributes
+			{
+				ItemName    "The Sub Zero Suit"
+				"attach particle effect static"	3076 //3216
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.2
+			}
+		}
+		T_TFBot_Demo_Chaos
+		{
+			Class Demoman
+			ClassIcon demo_chaos2
+			Name	"Chaos Demoman"
+			Skill Normal
+			Health	12500
+			Item	"Upgradeable TF_WEAPON_GRENADELAUNCHER"
+			Item    "Upgradeable TF_WEAPON_BOTTLE"
+			Item    "The Sub Zero Suit"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_GRENADELAUNCHER"
+				"damage bonus"					14
+				"clip size upgrade atomic"		21
+				"fire rate bonus"				0.15
+				"faster reload rate"			0.75
+				"restore health on kill"		10
+				"Projectile speed increased"	2
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			}
+			ItemAttributes
+			{
+				ItemName    "The Sub Zero Suit"
+				"attach particle effect static"	3076 //3216
+				"damage force reduction"    0.5
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.2
+			}
+		}
+		T_TFBot_Heavy_Chaos
+		{
+			ClassIcon	heavy_chaos2
+			Health	17500
+			Name	"Chaos Heavy"
+			Class	HeavyWeapons
+			Skill	Normal
+			Item	"Upgradeable TF_WEAPON_MINIGUN"
+			Item    "Upgradeable TF_WEAPON_FISTS"
+			Item	"Heavy Metal"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_MINIGUN"
+				"damage bonus"						45
+				"restore health on kill"			10
+				"bullets per shot bonus"			2
+				"spread penalty"					3
+				"projectile penetration heavy"		2
+				"minicritboost on kill"				3
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			}
+			ItemAttributes
+			{
+				ItemName    "Heavy Metal"
+				"attach particle effect static"	3076 //3216
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"	0.1
+			}
+		}
+		T_TFBot_Soldier_Chaos_Giant
+		{
+			Name	"Giant Chaos Soldier"
+			Class	Soldier
+			Scale	1.75
+			Health	250000
+			ClassIcon soldier_chaos_giant2
+			Item	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item    "Upgradeable TF_WEAPON_SHOVEL"
+			Item    "eotl_winter_coat"
+			Attributes	Miniboss
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"damage bonus"						25
+				"fire rate bonus"					0.5
+				"faster reload rate"				0
+				"projectile speed decreased"		0.65
+				"restore health on kill"			10
+				"Blast radius increased"			1.5
+				"mod projectile heat seek power"	2
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.4
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+				"attach particle effect static"	3076 //3216
+			}
+		}
+		T_TFBot_Demo_Chaos_Giant
+		{
+			Name	"Giant Chaos Demoman"
+			Class	Demoman
+			Scale	1.75
+			Health	250000
+			ClassIcon	demo_chaos_giant2
+			Item	"Upgradeable TF_WEAPON_GRENADELAUNCHER"
+			Item    "Upgradeable TF_WEAPON_BOTTLE"
+			Item    "The Sub Zero Suit"
+			Attributes	Miniboss
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_GRENADELAUNCHER"
+				"damage bonus"					14
+				"clip size upgrade atomic"		4
+				"fire rate bonus"				0.15
+				"faster reload rate"			0.75
+				"restore health on kill"		10
+				"Projectile speed increased"	1.5
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			} 
+			CharacterAttributes
+			{
+				"move speed bonus"	0.4
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 4
+				"attach particle effect static"	3076 //3216
+			}
+		}
+		T_TFBot_Heavy_Chaos_Giant
+		{
+			Name	"Giant Chaos Heavy"
+			Class	Heavyweapons
+			Scale	1.75
+			Health	350000
+			ClassIcon heavy_chaos2
+			Item	"Upgradeable TF_WEAPON_MINIGUN"
+			Item    "Upgradeable TF_WEAPON_FISTS"
+			Item    "Heavy Metal"
+			Attributes	Miniboss
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_MINIGUN"
+				"damage bonus"					30
+				"restore health on kill"		8
+				"bullets per shot bonus"		3
+				"spread penalty"				2.5
+				"projectile penetration heavy"	5
+				"minicritboost on kill"			3
+                "paintkit_proto_def_index"		413
+                "item color rgb"				16765560
+			} 
+			CharacterAttributes
+			{
+				"move speed bonus"	0.35
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 2
+				"attach particle effect static"	3076 //3216
+			}
+		}
+		T_TFBot_Engineer_Chaos_Giant
+		{
+			Class	Engineer
+			ClassIcon engie_chaos2
+			Attributes MiniBoss
+			Attributes IgnoreFlag
+			Health 250000
+			Scale	1.75
+			Name	"Giant Chaos Engineer"
+			Item	"The Dogfighter"
+			Item	"Golden Wrench"
+			Attributes	UseBossHealthBar
+			Attributes	IgnoreFlag
+			Attributes	MiniBoss
+			ItemAttributes
+			{
+				ItemName	"Golden Wrench"
+				"melee attack rate bonus"								0.25
+				"engy building health bonus"							32
+				"engy sentry damage bonus"								60
+			} 
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"override footstep sound set" 4
+				"damage force reduction" 0.1
+				"airblast vulnerability multiplier" 0.4
+				"airblast vertical vulnerability multiplier" 0.1
+				"attach particle effect static"	3076 //3216
+			}
+		}
+		T_TFBot_Scout_Cursed
+		{
+			ClassIcon	scout_cursed
+			Health	10000
+			Name	"Cursed Scout"
+			Class	Scout
+			Skill	Hard
+			Item    "Upgradeable TF_WEAPON_BAT"
+			Item    "Upgradeable TF_WEAPON_SCATTERGUN"
+			Item    "Juvenile's Jumper"
+			ItemAttributes
+			{
+				ItemName    "Upgradeable TF_WEAPON_SCATTERGUN"
+				"mark for death"    1
+				"mod stun waist high airborne"  "1"
+				"fire rate penalty"   1.5
+                "paintkit_proto_def_index"		255
+                "item color rgb"				65380
+			}
+			ItemAttributes
+			{	
+				ItemName	"Juvenile's Jumper"
+				"attach particle effect"    3215
+				"damage force reduction"	0.5
+			}
+		}
+		T_TFBot_Soldier_Cursed
+		{
+			Class Soldier
+			Name	"Cursed Soldier"
+			Skill Expert
+			ClassIcon   soldier_cursed
+			Health	12500
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"reload time increased" 			1.5
+				"clip size penalty" 				0.5
+				"mark for death"					1
+				"mod stun waist high airborne"		2
+				"projectile spread angle penalty"	2
+				"projectile trail particle"			"~rockettrail_green"
+                "mod projectile heat seek power"	3
+				"paintkit_proto_def_index"			255
+                "item color rgb"					65380
+			}
+			ItemAttributes
+			{
+				ItemName	"eotl_winter_coat"
+				"attach particle effect"	3215
+				"damage force reduction"	0.5
+			}
+			Item	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item	"the escape plan"
+			Item	"eotl_winter_coat"
+		}
+		T_TFBot_Pyro_Cursed
+		{
+			ClassIcon	pyro_cursed
+			Health	12500
+			Name	"Cursed Pyro"
+			Class	Pyro
+			Skill	Hard
+			ItemAttributes
+			{	
+				ItemName	"The Sub Zero Suit"
+				"attach particle effect"    3215
+			}
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_FLAMETHROWER"
+				"SPELL: Halloween green flames"	1
+				"afterburn duration bonus"	10
+				"mark for death"	1
+				"damage bonus"  4
+				"damage force reduction"    0.5
+				"mod stun waist high airborne"  1
+                "paintkit_proto_def_index"			255
+                "item color rgb"					65380
+			}
+			CharacterAttributes
+			{
+				"SPELL: Halloween green flames"	1
+			}
+			Item    "The Sub Zero Suit"
+			Item	"Upgradeable TF_WEAPON_FLAMETHROWER"
+			Item    "Sharpened Volcano Fragment"
+		}
+		T_TFBot_Heavy_Cursed
+		{
+			Health	15000
+			Name	"Cursed Heavy"
+			Class	Heavy
+			Skill	Hard
+			ItemAttributes
+			{	
+				ItemName	"EOTL_sheavyshirt"
+				"attach particle effect"    3215
+			}
+			ItemAttributes
+			{
+				ItemName	"Deflector"
+				"mark for death"	1
+				"damage bonus"  2.5
+				"damage force reduction"    0.5
+				"mod stun waist high airborne"  "1"
+			}
+			Item    "EOTL_sheavyshirt"
+			Item	"Deflector"
+			Item    "Upgradeable TF_WEAPON_FISTS"
+		}
+		T_TFBot_Scout_Shadow
+		{
+			Class	Scout
+			ClassIcon	scout_shadow
+			Name	"Shadow Scout"
+			Health	8000
+			Skill	Expert
+			Item    "Upgradeable TF_WEAPON_BAT"
+			Item   	"Upgradeable TF_WEAPON_SCATTERGUN"
+			Item    "Juvenile's Jumper"
+			ItemAttributes
+			{
+			    ItemName    "Upgradeable TF_WEAPON_SCATTERGUN"
+				"damage bonus"					2.5
+			    "mark for death"    			1
+			    "bleeding duration"     		3
+				"slow enemy on hit major"   	3
+                "paintkit_proto_def_index"		271
+                "item color rgb"				11827455
+			}
+			ItemAttributes
+			{	
+				ItemName	"Juvenile's Jumper"
+				"attach particle effect static"	3082 //3217
+			}
+            CharacterAttributes
+			{
+				"damage force reduction"    0.5
+			}
+		}
+		T_TFBot_Soldier_Shadow
+		{
+			Class Soldier
+			ClassIcon   soldier_shadow
+			Name	"Shadow Soldier"
+			Health	10000
+			Skill Hard
+			Item	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item	"Upgradeable TF_WEAPON_SHOVEL"
+			Item	"eotl_winter_coat"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+				"SPELL: Halloween pumpkin explosions"		1
+				"damage bonus"						2.5
+				"Projectile speed decreased"		0.75
+				"bleeding duration"     			3
+				"slow enemy on hit major"   		3
+				"mark for death"       				1
+                "mod projectile heat seek power"	3
+                "paintkit_proto_def_index"			271
+                "item color rgb"					11827455
+			}
+			ItemAttributes
+			{
+				ItemName	"eotl_winter_coat"
+				"attach particle effect static"	3082 //3217
+			}
+            CharacterAttributes
+			{
+				"damage force reduction"    0.5
+			}
+		}
+		T_TFBot_Pyro_Shadow
+		{
+			Class	Pyro
+			ClassIcon	pyro_shadow2
+			Name	"Shadow Pyro"
+			Health	8500
+			Skill	Hard
+			Attributes	"AlwaysFireWeapon"
+			Item	"Upgradeable TF_WEAPON_FLAMETHROWER"
+			Item    "Upgradeable TF_WEAPON_FIREAXE"
+			Item    "The Sub Zero Suit"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_FLAMETHROWER"
+				"damage bonus" 					4
+				"bleeding duration"     		3
+				"slow enemy on hit major"   	3
+				"mark for death"        		1
+				"lunchbox adds minicrits"		2
+                "paintkit_proto_def_index"		271
+                "item color rgb"				11827455
+			}
+            ItemAttributes
+			{	
+				ItemName	"The Sub Zero Suit"
+				"attach particle effect static"	3082 //3217
+			}
+			CharacterAttributes
+			{
+				"damage force reduction"    0.5
+			}
+		}
+        T_TFBot_Scout_Solid
+		{
+			Class Scout
+			Skill Hard
+			Health  5000
+			ClassIcon scout_solid
+			Name	"Solid Scout"
+			Item    "Juvenile's Jumper"
+            Item    "Upgradeable TF_WEAPON_SCATTERGUN"
+			Item    "Upgradeable TF_WEAPON_BAT"
+			CharacterAttributes
+			{
+                "damage bonus" 2.5
+				"attach particle effect"	"3130"
+				"damage force reduction"    0
+				"dmg taken from fire reduced" 0.1
+                "dmg taken from blast reduced" 0.1
+                "dmg taken from bullets reduced" 0.1
+                "mult dmgtaken from melee" 0.1
+			}
+		}
+		T_TFBot_Soldier_solid
+		{
+			Class Soldier
+			ClassIcon soldier_solid
+			Name	"Solid Soldier"
+			Skill Normal
+			Health	8000
+            Item    "Upgradeable TF_WEAPON_ROCKETLAUNCHER"
+			Item    "The Escape Plan"
+			Item    "eotl_winter_coat"
+			CharacterAttributes
+			{
+                "damage bonus" 2.5
+				"attach particle effect"	"3130"
+				"damage force reduction"    0
+				"dmg taken from fire reduced" 0.1
+                "dmg taken from blast reduced" 0.1
+                "dmg taken from bullets reduced" 0.1
+                "mult dmgtaken from melee" 0.1
+			}
+		}
+        T_TFBot_Pyro_Solid
+		{
+			ClassIcon	pyro_solid
+			Health	7500
+			Name	"Solid Pyro"
+			Class	Pyro
+			Skill	Hard
+            Item    "Upgradeable TF_WEAPON_FLAMETHROWER"
+			Item    "The Sub Zero Suit"
+			Item	"Sharpened Volcano Fragment"
+			CharacterAttributes
+			{
+                "damage bonus" 2.5
+				"attach particle effect"	"3130"
+				"damage force reduction"    0
+				"dmg taken from fire reduced" 0.1
+                "dmg taken from blast reduced" 0.1
+                "dmg taken from bullets reduced" 0.1
+                "mult dmgtaken from melee" 0.1
+			}
+		}
+		T_TFBot_Demo_Solid
+		{
+			Class Demoman
+			ClassIcon demo_solid
+			Name	"Solid Demoman"
+			Skill Normal
+			Health	7500
+            Item    "Upgradeable TF_WEAPON_GRENADELAUNCHER"
+			Item    "The Scottish Handshake"
+			Item    "The Sub Zero Suit"
+			CharacterAttributes
+			{
+                "damage bonus" 2.5
+				"attach particle effect"	"3130"
+				"damage force reduction"    0
+				"dmg taken from fire reduced" 0.1
+                "dmg taken from blast reduced" 0.1
+                "dmg taken from bullets reduced" 0.1
+                "mult dmgtaken from melee" 0.1
+			}
+		}
+		T_TFBot_Heavy_Solid
+		{
+			ClassIcon	heavy_solid
+			Health	10000
+			Name	"Solid Heavy"
+			Class	HeavyWeapons
+			Skill	Normal
+            Item    "Upgradeable TF_WEAPON_MINIGUN"
+			Item    "The Holiday Punch"
+			Item	"Heavy Metal"
+			CharacterAttributes
+			{
+                "damage bonus" 2.5
+				"attach particle effect"	"3130"
+				"damage force reduction"    0
+				"dmg taken from fire reduced" 0.1
+                "dmg taken from blast reduced" 0.1
+                "dmg taken from bullets reduced" 0.1
+                "mult dmgtaken from melee" 0.1
+			}
+		}
+        T_TFBot_Demoman_Knight_Solid
+		{
+			ClassIcon	demoknight_solid
+			Health	6500
+			Name	"Solid Demoknight"
+			Class	Demoman
+			Skill	Hard
+            WeaponRestrictions MeleeOnly
+            Item "The Chargin' Targe"
+			Item "The Eyelander"
+            Item    "The Sub Zero Suit"
+			CharacterAttributes
+			{
+                "damage bonus" 2.5
+				"attach particle effect"	"3130"
+				"damage force reduction"    0
+				"dmg taken from fire reduced" 0.1
+                "dmg taken from blast reduced" 0.1
+                "dmg taken from bullets reduced" 0.1
+                "mult dmgtaken from melee" 0.1
+			}
+        }
+        T_TFBot_Demoman_Knight_Burning
+		{
+			ClassIcon	demoknight_burning
+			Health	7500
+			Name	"Fiery Demoknight"
+			Class	Demoman
+			Skill	Hard
+            WeaponRestrictions MeleeOnly
+            Item "The Chargin' Targe"
+			Item "The Eyelander"
+            ItemAttributes
+            {
+                ItemName "The Eyelander"
+                "attach particle effect" 2
+                "set dmgtype ignite" 1
+                "damage bonus" 2.5
+                "weapon burn dmg increased" 5
+            }
+			CharacterAttributes
+			{
+				"damage force reduction"    0.5
+			}
+        }
+        T_TFBot_Sniper_Shadow
+		{
+            Class Sniper
+			ClassIcon	sniper_shadow
+            Health 10000
+        	Name	"Shadow Sniper"
+            Item	"the awper hand"
+        	Item    "The Tribalman's Shiv"
+        	Item    "Final Frontiersman"
+        	ItemAttributes
+        	{
+        		ItemName	"the awper hand"
+        		"sniper fires tracer"	1
+        		"damage force reduction"    0
+        		"bleeding duration"     10
+        		"slow enemy on hit major"   10
+        		"mark for death"        1
+        	}
+        	CharacterAttributes
+        	{
+        		"attach particle effect"	3082 //3217
+        	}
+		}
+		T_TFBot_Sniper_Cursed
+		{
+            Class Sniper
+			ClassIcon	sniper_cursed
+            Health 10000
+        	Name	"Cursed Sniper"
+            Item	"the awper hand"
+        	Item    "Final Frontiersman"
+        	ItemAttributes
+        	{
+        		ItemName	"the awper hand"
+        		"mod stun waist high airborne"	10
+        		"sniper fires tracer"	1
+        		"damage force reduction"    0
+        		"mark for death"        1
+        	}
+        	CharacterAttributes
+        	{
+        		"attach particle effect"	3215
+        	}
+		}
+		T_TFBot_Sniper_Instakill
+		{
+            Class Sniper
+        	ClassIcon	sniper_gold
+            Health 10000
+        	Name	"Insta-Kill Sniper"
+            Item	"the awper hand"
+            Item    "Final Frontiersman"
+        	Attributes	"AlwaysCrit"
+        	ItemAttributes
+        	{
+        		ItemName	"the awper hand"
+        		"damage bonus"	10000
+        		"turn to gold"	1
+        		"damage force reduction"    0
+        		"sniper fires tracer"   1
+        		"lunchbox adds minicrits"	3
+        	}
+		}
+        T_TFBot_Sniper_Chaos
+		{
+            Class Sniper
+			ClassIcon	sniper_chaos2
+            Health 20000
+        	Name	"Chaos Sniper"
+            Item	"the awper hand"
+            Item    "Final Frontiersman"
+        	Attributes	"AlwaysCrit"
+        	ItemAttributes
+        	{
+        		ItemName	"the awper hand"
+        		"projectile speed increased"	"3"
+        		"blast radius increased"    "4"
+        		"damage bonus"      "6.5"
+        		"apply z velocity on damage"    "2000"
+        		"override projectile type"  "2"
+        		"use large smoke explosion" "1"
+        	}
+        	ItemAttributes
+        	{
+        		ItemName	"Final Frontiersman"
+        		"attach particle effect"	3076 //3216
+        	}
+		}
+		T_TFBot_Sniper_Ultimate
+		{
+			Class Sniper
+			ClassIcon	sniper_warning
+            Health 25000
+        	Name	"4nt1-Hum4n_Pr0t0co1"
+            Item	"the awper hand"
+        	Item    "Final Frontiersman"
+        	Item    "Corona Australis"
+        	Item    "The Tribalman's Shiv"
+        	Attributes	"AlwaysCrit"
+        	Attributes  "UseBossHealthBar"
+        	Attributes  "MiniBoss"
+        	Scale   1
+        	ItemAttributes
+        	{
+        		ItemName	"the awper hand"
+        		"projectile speed increased"	"1.2"
+        		"blast radius increased"    "500"
+        		"damage bonus"      "2500"
+        		"apply z velocity on damage"    "5000"
+        		"override projectile type"  "2"
+        		"use large smoke explosion" "1"
+        		"turn to gold"	1
+        		"damage force reduction"    0
+        		"fire rate penalty" "5"
+        		"damage force reduction"    0
+        	}
+        	ItemAttributes
+        	{
+        		ItemName	"The Tribalman's Shiv"
+        		"damage bonus"  "999"
+        	}
+        	CharacterAttributes
+        	{
+        		"attach particle effect"	3076 //3216
+        		"attach particle effect static"	3085
+        	}
+		}
+        T_TFBot_Spy_Instakill
+		{
+            Class	Spy
+			ClassIcon	spy_gold
+            Skill	Expert
+            Health 2500
+        	Name	"Insta-Kill Spy"
+        	Attributes	IgnoreFlag
+            Item	"Upgradeable TF_WEAPON_KNIFE"
+        	ItemAttributes
+		    {
+			      ItemName    "tf_weapon_builder_spy"
+			      "sapper damage bonus" 50
+			}
+    		ItemAttributes
+			{
+				  ItemName	"Upgradeable TF_WEAPON_KNIFE"
+				  "turn to gold"	1
+				  "damage bonus"	9999
+			}
+		}
+        T_TFBot_Spy_Telepresence
+		{
+            Class	Spy
+			ClassIcon	spy_dark
+            Skill	Expert
+            Health 2500
+        	Name	"Telepresence Spy"
+        	Attributes	IgnoreFlag
+			Attributes	AlwaysFireWeapon
+            Item	"Upgradeable TF_WEAPON_KNIFE"
+    		ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_KNIFE"
+				"damage bonus"	.5
+				"melee range multiplier"	999
+				"attach particle effect"	3072
+			}
+		}
+        T_TFBot_Scout_Supercharge
+		{
+			Class Scout
+			Skill Hard
+			ClassIcon   scout_charged
+			Name	"Supercharged Scout"
+			Health	12000
+			Scale 1.1
+			Attributes	AlwaysCrit
+			Item	"Upgradeable TF_WEAPON_BAT"
+			Item	"Upgradeable TF_WEAPON_SCATTERGUN"
+            Item    "Juvenile's Jumper"
+			ItemAttributes
+			{
+			    ItemName	"Upgradeable TF_WEAPON_SCATTERGUN"
+			    "fire rate bonus"	0.1
+			    "faster reload rate"	0.05
+			    "item style override"	1
+			    "is australium item"	1
+			}
+            ItemAttributes
+			{
+			    ItemName	"Juvenile's Jumper"
+                "attach particle effect static"	3149
+            }
+			CharacterAttributes
+			{
+                "damage force reduction"	0
+			}
+		}
+		T_TFBot_Sniper_Supercharge
+		{
+			ClassIcon	sniper_charged
+			Health	12000
+			Name	"Supercharged Sniper"
+			Class	Sniper
+			Scale 1.1
+			Skill	Normal
+			MaxVisionRange	1000
+			Attributes	"AlwaysCrit"
+			WeaponRestrictions	SecondaryOnly
+			Item    "Upgradeable TF_WEAPON_SMG"
+			Item	"Upgradeable TF_WEAPON_CLUB"
+            Item	"Final Frontiersman"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_SMG"
+				"damage bonus"	2
+				"fire rate bonus"	0.75
+				"clip size bonus"	5
+				"move speed bonus"	0.9
+				"item style override"	1
+				"is australium item"	1
+			}
+            ItemAttributes
+			{
+			    ItemName	"Final Frontiersman"
+                "attach particle effect static"	3149
+            }
+			CharacterAttributes
+			{
+                "damage force reduction"	0
+			}
+		}
+		T_TFBot_Heavy_Supercharge
+		{
+			Class Heavyweapons
+			Skill Normal
+			Name	"Supercharged Heavy"
+			Health	17500
+			Scale 1.1
+			ClassIcon	heavy_charged
+			Attributes	AlwaysCrit
+			Item	"Upgradeable TF_WEAPON_MINIGUN"
+			Item	"The Holiday Punch"
+            Item	"Heavy Metal"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_MINIGUN"
+				"fire rate bonus" 0.2
+				"item style override"	1
+				"is australium item"	1
+			}
+            ItemAttributes
+			{
+			    ItemName	"Heavy Metal"
+                "attach particle effect static"	3149
+            }
+			CharacterAttributes
+			{
+                "damage force reduction"	0
+			}
+		}
+        T_TFBot_Soldier_Homing
+		{
+			Class Soldier
+			ClassIcon soldier_homing_nys
+			Name "Seeker Soldier"
+			Skill Expert
+            Health 15000
+			WeaponRestrictions PrimaryOnly
+			Attributes HoldFireUntilFullReload
+			Item	"warbird_rocketlauncher_warhawk"
+            Item	"Jumper's Jeepcap"
+            Item	"eotl_winter_coat"
+			ItemAttributes
+			{
+				ItemName "warbird_rocketlauncher_warhawk"
+				"paintkit_proto_def_index"	226
+				"damage bonus" 3
+				"fire rate bonus" 1
+				"faster reload rate" 0.4
+				"clip size upgrade atomic" 2
+				"blast radius increased" 1.1
+				"Projectile speed decreased" 0.75
+				"mod projectile heat seek power" 30
+				"mod projectile heat aim start time" 0.1
+				"mod projectile heat aim error" 120
+                "projectile trail particle"			"~rockettrail_pink"
+                "explosion particle"				"drg_cow_explosioncore_charged_blue"
+                "projectile detonate time"			5
+			}
+            ItemAttributes
+			{
+				ItemName "eotl_winter_coat"
+                "attach particle effect" 3141
+            }
+		}
+		T_TFBot_Giant_Soldier_Homing
+		{
+			Class Soldier
+			ClassIcon soldier_homing_nys
+			Name "Kaizo Seeker Soldier"
+			Skill Expert
+			Health 400000
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss
+			Attributes HoldFireUntilFullReload
+            Attributes AlwaysCrit
+			Item	"warbird_rocketlauncher_warhawk"
+            Item	"Jumper's Jeepcap"
+            Item	"eotl_winter_coat"
+			ItemAttributes
+			{
+				ItemName "warbird_rocketlauncher_warhawk"
+				"paintkit_proto_def_index"	226
+				"damage bonus" 2.5
+				"fire rate bonus" 1
+				"faster reload rate" 0.4
+				"clip size upgrade atomic" 2
+				"blast radius increased" 1.1
+				"Projectile speed decreased" 0.7
+				"mod projectile heat seek power" 60
+				"mod projectile heat aim start time" 0.1
+				"mod projectile heat aim error" 120
+                "projectile trail particle"			"~rockettrail_pink_charged"
+                "explosion particle"				"drg_cow_explosioncore_charged_blue"
+                "projectile detonate time"			5
+			}
+            ItemAttributes
+			{
+				ItemName "eotl_winter_coat"
+                "attach particle effect" 3141
+            }
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+			}
+		}
+		T_TFBot_Giant_Soldier_Multihoming
+		{
+			Class Soldier
+			ClassIcon soldier_rocketrain_homing_nys
+			Name "Kaizo Multi-Seeker Soldier"
+			Skill Expert
+			Health 500000
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss
+            Attributes AlwaysCrit
+			Attributes HoldFireUntilFullReload
+			Item	"warbird_rocketlauncher_warhawk"
+            Item	"Jumper's Jeepcap"
+            Item	"eotl_winter_coat"
+            Attributes AlwaysCrit
+			ItemAttributes
+			{
+				ItemName "warbird_rocketlauncher_warhawk"
+				"damage bonus" 2
+				"fire rate bonus" 1.5
+				"faster reload rate" 0.5
+				"clip size upgrade atomic" 2
+				"blast radius increased" 1.1
+				"Projectile speed decreased" 0.6
+				"ignores other projectiles" 1
+				"mult projectile count" 5
+				"spread angle pattern" "-15 30 0|-30 15 0|-5 0 0|-30 -15 0|-15 -30 0"
+				"mod projectile heat seek power" 45
+				"mod projectile heat aim start time" 0.2
+				"mod projectile heat aim error" 120
+                "projectile trail particle"			"~rockettrail_pink_charged"
+                "explosion particle"				"drg_cow_explosioncore_charged_blue"
+                "projectile detonate time"			5
+			}
+            ItemAttributes
+			{
+				ItemName "eotl_winter_coat"
+                "attach particle effect" 3141
+            }
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+			}
+		}
+        T_TFBot_Giant_Heavy_Supercharge
+		{
+			Name	"Supercharged Juggernaut"
+			WeaponRestrictions	PrimaryOnly
+			Scale	1.75
+			ClassIcon   heavy_charged_giant
+			Template	T_TFBot_Giant_Heavyweapons_Deflector
+			Attributes	"AlwaysCrit"
+			Item    "The Holiday Punch"
+			Item	"Upgradeable TF_WEAPON_MINIGUN"
+            Item	"Heavy Metal"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_MINIGUN"
+				"fire rate bonus" 0.075
+				"item style override"	1
+				"is australium item"	1
+                "addcond immunity" 15
+			}
+            CharacterAttributes
+			{
+                "attach particle effect static"	3149
+			}
+    	}        
+        T_TFBot_Pyro_Cursed_King
+		{
+			Name	"King Cursed Pyro"
+			Skill	Expert
+			ClassIcon	pyro_cursed
+			Template	T_TFBot_Giant_Pyro
+			Attributes	"AlwaysCrit"
+			Attributes	"AlwaysFireWeapon"
+			Attributes	"UseBossHealthBar"
+			Item	"Upgradeable TF_WEAPON_FLAMETHROWER"
+			Item	"The Sub Zero Suit"
+			ItemAttributes
+			{
+				ItemName	"Upgradeable TF_WEAPON_FLAMETHROWER"
+				"Spell: Halloween green flames"	1
+				"mark for death"	1
+				"damage bonus"  5
+				"flame_drag"	5.2
+				"flame_speed"	4000
+				"flame_gravity"	0
+				"mod stun waist high airborne"  2
+                "paintkit_proto_def_index"		255
+                "item color rgb"				65380
+			}
+            ItemAttributes
+			{	
+				ItemName	"The Sub Zero Suit"
+				"attach particle effect"    3215
+			}
+			CharacterAttributes
+			{
+				"damage force reduction" 0.1
+				"airblast vulnerability multiplier" 0.2
+                "addcond immunity" 15
+			}
+		}
+	}
+}

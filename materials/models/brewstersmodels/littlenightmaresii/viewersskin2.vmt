@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/brewstersmodels/littlenightmaresii/viewersskin"
+	"$bumpmap" "models/brewstersmodels/littlenightmaresii/viewersskinn"
+	"$detail" "models/brewstersmodels/littlenightmaresii/viewersskinglow"
+	$detailblendmode 5
+	$detailscale 1
+
+	$halflambert 1
+	$phong 1
+
+}

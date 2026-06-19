@@ -1,0 +1,8 @@
+WaveSchedule
+{
+	PlayerAttributes
+	{
+		"no revive"				1
+        "min respawn time"		5
+	}
+}

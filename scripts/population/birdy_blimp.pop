@@ -1,0 +1,77 @@
+// Bird Blimp Sutff
+
+WaveSchedule
+{
+	ExtraTankPath   //Adds tank path to follow
+	{
+		Name "blimp_path"
+		Node "-2860 4700 -580"
+		Node "-2860 4050 -140"
+		Node "-750 4050 -140"
+		Node "300 3150 -100"
+		Node "200 750 60"
+		Node "-750 500 75"
+		Node "-1135 -260 95"
+		Node "-520 -875 95"
+	}
+	CustomWeapon
+	{
+		"The Bats"
+		{
+			OriginalItemName "The Air Strike"
+			"projectile spread angle penalty" 10
+			"custom projectile model" "models/props_forest/dove.mdl"
+			"projectile trail particle" "tranq_distortion_trail"
+		}
+	}
+	PointTemplates
+	{
+		BirdBlimp
+		{
+			NoFixup	1
+			OnSpawnOutput
+			{
+				Target "!activator"
+				Action "color"
+				Param "200 200 255" 
+			}
+			prop_dynamic
+			{
+				"targetname" "blimp_bird_prop"
+				"origin" "80 0 200"
+				"angles" "90 0 0"
+				"disableshadows" "1"
+				"disablereceiveshadows" "1"
+				"model" "models/workshop/player/items/soldier/sf14_the_battle_bird/sf14_the_battle_bird.mdl"
+				"skin" "1"
+				"solid" "0"
+				"modelscale" 3.8
+				"rendercolor" "200 200 255"
+			}
+			tf_point_weapon_mimic
+			{
+				"targetname" "bird_blimp_weapon_mimic"
+				"$weaponname" "The Bats"
+				"TeamNum" "3"
+				"origin" "200 0 200"
+				"$preventshootparent" 1
+				"$firetime" 0.15
+				"angles" "45 0 0"
+			}
+			logic_timer
+			{
+				"targetname" "bird_weapon_mimic_timer"
+				"UseRandomTime" 1
+				"LowerRandomBound" 5
+				"UpperRandomBound" 10
+				"startdisabled" 0
+				"OnTimer" "bird_blimp_weapon_mimic,$PlaySound,=120|ambient/rottenburg/dove_01.wav,0,-1"
+				"OnTimer" "bird_blimp_weapon_mimic,FireOnce,,0,-1"
+				"OnTimer" "bird_blimp_weapon_mimic,FireOnce,,0.15,-1"
+				"OnTimer" "bird_blimp_weapon_mimic,FireOnce,,0.3,-1"
+				"OnTimer" "bird_blimp_weapon_mimic,FireOnce,,0.45,-1"
+				"OnTimer" "bird_blimp_weapon_mimic,FireOnce,,0.6,-1"
+			}
+		}
+	}
+}

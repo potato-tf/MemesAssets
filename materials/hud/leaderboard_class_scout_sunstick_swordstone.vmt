@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "hud/leaderboard_class_scout_sunstick_swordstone"
+	"$ignorez" 1
+	"$no_fullbright" 1
+	"$translucent" 1
+	"%keywords" "tf"
+}

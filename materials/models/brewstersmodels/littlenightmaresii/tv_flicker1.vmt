@@ -1,0 +1,42 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/brewstersmodels/littlenightmaresii/tv_flicker1"
+	"$translucent" 1
+
+"Proxies"
+   {
+   
+      "TextureScroll"
+      {
+         "texturescrollvar" "$basetexturetransform"      
+         "texturescrollrate" 3
+         "texturescrollangle" 180
+      }
+		sine
+		{
+			sineperiod	1.3
+			sinemin		0
+			sinemax		1
+			timeoffset	0
+			resultvar	"$color[0]"
+		}
+		sine
+		{
+			sineperiod	1.7
+			sinemin		0
+			sinemax		1
+			timeoffset	0
+			resultvar	"$color[1]"
+		}
+		sine
+		{
+			sineperiod	2.3
+			sinemin		0
+			sinemax		1
+			timeoffset	0
+			resultvar	"$color[2]"
+		}
+   
+ 
+   }
+}

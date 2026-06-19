@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "hud/leaderboard_class_sniper_bow_ignite_multi"
+	"$ignorez" 1
+	"$no_fullbright" 1
+	"$translucent" 1
+	"%keywords" "tf"
+}

@@ -1,0 +1,4336 @@
+// mvm_coastrock_rc2
+// meme mission hexerfixation by Hexalina!
+
+#base robot_giant.pop
+#base robot_standard.pop
+
+WaveSchedule
+{
+	StartingCurrency 2016
+	RespawnWaveTime 2
+	CanBotsAttackWhileInSpawnRoom no
+	AddSentryBusterWhenKillCountExceeds 11
+	AddSentryBusterWhenDamageDealtExceeds 1000
+	Advanced 1
+
+	// Mission
+
+	Mission // Sentry Busters
+	{
+		Objective DestroySentries
+
+		InitialCooldown 30
+		Where spawnbot
+		BeginAtWave 1
+		RunForThisManyWaves 3
+		CooldownTime 30
+
+        TFBot
+	    {
+		    Template T_TFBot_SentryBuster
+			Item "Potato Hat"
+			Name "NO MEDALS FOR YOU"
+			ItemAttributes
+			{
+				ItemName "Potato Hat"
+				"set item tint rgb" 16738740
+			}
+			CharacterAttributes
+			{
+				"head scale" 1.3
+			}
+        }
+	}
+
+	Mission // Sentry Busters
+	{
+		Objective DestroySentries
+
+		InitialCooldown 30
+		Where spawnbot
+		BeginAtWave 5
+		RunForThisManyWaves 1
+		CooldownTime 30
+
+        TFBot
+	    {
+		    Template T_TFBot_SentryBuster
+			Item "Potato Hat"
+			Name "NO MEDALS FOR YOU"
+			ItemAttributes
+			{
+				ItemName "Potato Hat"
+				"set item tint rgb" 16738740
+			}
+			CharacterAttributes
+			{
+				"head scale" 1.3
+			}
+        }
+	}
+
+	Templates
+	{
+		T_TFBot_Soldier_Self
+		{
+			Class Soldier
+			Name "Hexerfixation"
+			ClassIcon soldier_self
+			Skill Expert
+			Health 60000
+			Item "The Original"
+			Item "Exquisite Rack"
+			Item "All Hallows' Hatte"
+			Attributes AlwaysCrit
+			WeaponRestrictions PrimaryOnly
+			Attributes HoldFireUntilFullReload
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+			ItemAttributes
+			{
+				ItemName "All Hallows' Hatte"
+				"set item tint rgb" 14204632
+			}
+			ItemAttributes
+			{
+				ItemName "The Original"
+				"faster reload rate" 0.5
+				"fire rate bonus" 2
+				"Projectile speed increased" 0.75
+				"clip size bonuse" 2
+				"damage bonus" 3
+				"use large smoke explosion" 1
+			}
+			CharacterAttributes
+			{
+				"move speed penalty" 0.2
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+			}
+		}
+		T_TFBot_Tracer
+		{
+		    Class Scout
+            ClassIcon scout_tracer
+            Name "Tracer"
+            Skill Normal
+			Health 175
+			Item "tf_weapon_pistol"
+			Item "The Airdog"
+			Item "The Flapjack"
+            WeaponRestrictions SecondaryOnly
+			MaxVisionRange 1000
+			ItemAttributes
+			{
+				ItemName "tf_weapon_pistol"
+				"clip size bonus" 2
+				"fire rate bonus" 0.25
+				"damage penalty" 0.2
+			}
+		}
+		T_TFBot_Winston
+		{
+			Class Heavy
+			Skill Expert
+			Name "Winston"
+			ClassIcon heavy_winston
+			Health 625
+			Scale 1.5
+			Item "Warrior's Spirit"
+			Item "The Mantreads"
+			Item "yeti_head"
+			WeaponRestrictions MeleeOnly
+			Attributes AutoJump
+			AutoJumpMin 4
+			AutoJumpMax 4
+			ItemAttributes
+			{
+				ItemName "Warrior's Spirit"
+				"fire rate bonus" 0.8
+			}
+			CharacterAttributes
+			{
+				"increased jump height" 3
+				"move speed bonus" 1.5
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"cancel falling damage" 1
+			}
+		}
+		T_TFBot_Winton
+		{
+			Class Heavy
+			Skill Expert
+			Name "Winton"
+			ClassIcon heavy_winton
+			Health 300
+			Scale 0.65
+			Item "Warrior's Spirit"
+			Item "The Mantreads"
+			Item "yeti_head"
+			WeaponRestrictions MeleeOnly
+			Attributes AutoJump
+			AutoJumpMin 4
+			AutoJumpMax 4
+			ItemAttributes
+			{
+				ItemName "Warrior's Spirit"
+				"fire rate bonus" 0.8
+				"damage penalty" 0.65
+			}
+			CharacterAttributes
+			{
+				"increased jump height" 3
+				"move speed bonus" 1.5
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"cancel falling damage" 1
+			}
+		}
+		T_TFBot_Genji_DragonBlade
+		{
+			Class Soldier
+			Name "Genji"
+			Skill Expert
+			ClassIcon soldier_genji
+			Item "The Half-Zatoichi"
+			Item "The Mantreads"
+			Item "The Menpo"
+			Item "Soldier Samurai Hat"
+			WeaponRestrictions MeleeOnly
+			Health 250
+			Attributes AutoJump
+			AutoJumpMin 8
+			AutoJumpMax 8
+			CharacterAttributes
+			{
+				"move speed bonus" 1.5
+				"increased jump height" 1
+				"cancel falling damage" 1
+			}
+			ItemAttributes
+			{
+				ItemName "The Half-Zatoichi"
+				"fire rate bonus" 0.9
+				"damage bonus" 1.2
+			}
+		}
+		T_TFBot_Mercy_DMGBoost
+		{
+			Class Medic
+			ClassIcon medic_mercy_a
+			Name "DMGBoost Mercy"
+			Skill Expert
+			Attributes AlwaysCrit
+			Attributes SpawnWithFullCharge
+			WeaponRestrictions SecondaryOnly
+			Health 225
+			Item "The KritzKrieg"
+			Item "Honest Halo"
+			Item "Wings of Purity"
+			Attributes AutoJump
+			AutoJumpMin 8
+			AutoJumpMax 8
+			ItemAttributes
+			{
+				ItemName "The KritzKrieg"
+				"uber duration bonus" 900
+				"ubercharge rate bonus" 900
+			}
+			CharacterAttributes
+			{
+				"heal rate bonus" 2
+				"bot medic uber health threshold" 226
+				"move speed bonus" 1.3
+				"increased jump height" 1
+				"cancel falling damage" 1
+			}
+		}
+		T_TFBot_Reaper
+		{
+			Class Soldier
+			Skill Expert
+			Name "Reaper"
+			ClassIcon soldier_reaper_ow
+			Health 300
+			WeaponRestrictions SecondaryOnly
+			Attributes HoldFireUntilFullReload
+			Item "TF_WEAPON_SHOTGUN_SOLDIER"
+			Item "The Hellmet"
+			MaxVisionRange 1500
+			ItemAttributes
+			{
+				ItemName "TF_WEAPON_SHOTGUN_SOLDIER"
+				"clip size bonus" 2
+				"fire rate bonus" 0.5
+				"faster reload rate" 0.2
+				"damage penalty" 0.45
+			}
+		}
+		T_TFBot_Dva
+		{
+		    Class Heavy
+            Name "Dva"
+            Skill Expert
+			ClassIcon heavy_dva
+			Health 700
+			Scale 1.4
+            Item "Iron Curtain"
+			Item "TTG Max Hat"
+			ItemAttributes
+			{
+				ItemName "TTG Max Hat"
+				"set item tint rgb" 16738740
+			}
+            ItemAttributes
+            {
+                ItemName "Iron Curtain"
+                "projectile spread angle penalty" 4.0
+                "override projectile type" 2.0
+                "fire rate penalty" 2.0
+                "damage bonus" 4
+            }
+		}
+		T_TFBot_Junkrat
+		{
+			Class Demoman
+			Name "Junkrat"
+			Skill Hard
+			Health 250
+			ClassIcon demoman_junkrat
+			Item "The Iron Bomber"
+			Item "Short Fuse"
+			Item "The Polar Pullover"
+			ItemAttributes
+			{
+				ItemName "The Iron Bomber"
+				"clip size bonus" 2
+				"faster reload rate" 0.8
+			}
+		}
+		T_TFBot_Zarya
+		{
+			Class Heavy
+            ClassIcon heavy_zarya
+            Name "Zarya"
+            Skill Expert
+			Health 550
+			Scale 1.2
+            Item "teufort_minigun_warroom"
+			Item "Mo'Horn"
+			ItemAttributes
+			{
+				ItemName "Mo'Horn"
+				"set item tint rgb" 16738740
+			}
+            ItemAttributes
+            {
+                ItemName "teufort_minigun_warroom"
+                "projectile spread angle penalty" 0.5
+                "override projectile type" 13
+                "attach particle effect" 704
+                "killstreak idleeffect" 1
+                "set_item_texture_wear" 0
+                "fire rate penalty" 1.5
+                "damage penalty" 0.25
+            }
+		}
+		T_TFBot_Winston_Primal_Rage
+		{
+			Class Heavy
+			Skill Expert
+			Name "Primal Rage Winston"
+			ClassIcon heavy_winston_primal_rage
+			Health 10000
+			Scale 1.9
+			Item "Warrior's Spirit"
+			Item "The Mantreads"
+			Item "yeti_head"
+			WeaponRestrictions MeleeOnly
+			Attributes MiniBoss
+			Attributes UseBossHealthBar
+			Attributes AutoJump
+			Attributes AlwaysCrit
+			AutoJumpMin 6
+			AutoJumpMax 6
+			ItemAttributes
+			{
+				ItemName "Warrior's Spirit"
+				"fire rate bonus" 0.7
+			}
+			CharacterAttributes
+			{
+				"increased jump height" 3
+				"move speed bonus" 1.1
+				"damage force reduction" 0.7
+				"airblast vulnerability multiplier" 0.7
+				"cancel falling damage" 1
+			}
+		}
+		T_TFBot_Touhou_Hijack
+		{
+			Class Soldier
+			ClassIcon soldier_touhou_hijack
+			Skill Expert
+			Name "Touhou Hijack LOL"
+			Item "The Cow Mangler 5000"
+			Item "The Crone's Dome"
+			Health 3800
+			WeaponRestrictions PrimaryOnly
+			Attributes MiniBoss
+			ItemAttributes
+			{
+				ItemName "The Cow Mangler 5000"
+				"faster reload rate" -0.8
+				"fire rate bonus" 0.5
+			}
+			CharacterAttributes
+			{
+				"move speed bonus"	0.5
+				"damage force reduction" 0.4
+				"airblast vulnerability multiplier" 0.4
+				"override footstep sound set" 3
+				"Projectile speed increased" 0.65
+			}
+		}
+	}
+
+	Wave // Wave 1 - $784 ($2900 if A+)
+	{
+		StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+		
+		InitWaveOutput
+        {
+            Target wave_finished_relay
+            Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `overwatch_main_menu1.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+				})
+			"
+        }
+
+        DoneOutput
+        {
+            Target wave_finished_relay
+            Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `overwatch_main_menu1.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+				})
+			"
+        }
+		
+		WaveSpawn
+		{
+			WaitBeforeStarting 0
+			FirstSpawnMessage "{5ed5f6}Now Playing - Overwatch (Main Menu)"  
+		}
+
+		WaveSpawn
+		{
+			Name "1a tracer"
+
+			Where spawnbot
+			TotalCount 20
+			TotalCurrency 50
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+			FirstSpawnWarningSound  "overwatch_main_menu1.wav"
+
+			TFBot
+			{
+				Template T_TFBot_Tracer
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1a"
+
+			Where spawnbot
+			TotalCount 4
+			TotalCurrency 34
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 3
+
+			TFBot
+			{
+				Template T_TFBot_Winston
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1b"
+			WaitForAllDead "1a"
+
+			Where spawnbot
+			TotalCount 16
+			TotalCurrency 50
+			MaxActive 8
+			SpawnCount 2
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Genji_DragonBlade
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Mercy_DMGBoost
+					Tag sqaud_bot_memeber
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1c"
+			WaitForAllDead "1b"
+
+			Where spawnbot_tunnel
+			TotalCount 10
+			TotalCurrency 50
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Template T_TFBot_Reaper
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1c"
+			WaitForAllDead "1b"
+
+			Where spawnbot
+			TotalCount 3
+			TotalCurrency 50
+			MaxActive 3
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 3
+
+			TFBot
+			{
+				Template T_TFBot_Dva
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1d"
+			WaitForAllDead "1c"
+
+			Where spawnbot_tunnel
+			TotalCount 12
+			TotalCurrency 50
+			MaxActive 3
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Template T_TFBot_Junkrat
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1d"
+			WaitForAllDead "1c"
+
+			Where spawnbot
+			TotalCount 3
+			TotalCurrency 50
+			MaxActive 3
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 3
+
+			TFBot
+			{
+				Template T_TFBot_Zarya
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1b tracer"
+			WaitForAllDead "1a tracer"
+
+			Where spawnbot
+			Where spawnbot_tunnel
+			Support 1
+			MaxActive 3
+			SpawnCount 1
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 5
+
+			TFBot
+			{
+				Template T_TFBot_Tracer
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1e"
+			WaitForAllDead "1d"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 450
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Template T_TFBot_Winston_Primal_Rage
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "1e"
+			WaitForAllDead "1d"
+
+			Where spawnbot
+			Where spawnbot_tunnel
+			Support 1
+			MaxActive 3
+			SpawnCount 1
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 3
+
+			TFBot
+			{
+				Template T_TFBot_Winton
+			}
+		}
+	}
+
+	Wave // Wave 2 - $800 ($3800 if A+)
+	{
+		StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+		
+		InitWaveOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `fighting_knight.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+
+        DoneOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `fighting_knight.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+		
+		WaveSpawn
+		{
+			WaitBeforeStarting 0
+			FirstSpawnMessage "{5ed5f6}Now Playing - Celeste - Scattered And Lost"  
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 2
+			FirstSpawnWarningSound "scattered_and_lost.wav"
+
+			TFBot
+			{
+				Class Scout
+				Skill Normal
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "Madeline Can Double Jump"
+				ClassIcon badeline
+				Item "Wipe Out Wraps"
+				ItemAttributes
+				{
+					ItemName "Wipe Out Wraps"
+					"set item tint rgb" 5801378
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Soldier
+				Skill Normal
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "climb my mountain"
+				ClassIcon badeline
+				Item "Towering Pillar of Beanies"
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Pyro
+				Skill Normal
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "buy Celeste"
+				ClassIcon badeline
+				Item "Hot Spaniel"
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_FLAMETHROWER"
+					"airblast disabled" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Demoman
+				Skill Normal
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "Theo"
+				ClassIcon badeline
+				Item "Professional's Pom Pom"
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Heavy
+				Skill Easy
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "listen to Celeste OST"
+				ClassIcon badeline
+				Item "Trapper's Flap"
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Medic
+				Skill Normal
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "collect my strawberry"
+				ClassIcon badeline
+				Item "Smissmas Saxton"
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 6
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Sniper
+				Skill Normal
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "Old Woman"
+				ClassIcon badeline
+				Item "Cozy Cover-Up"
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 10
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 7
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class sniper
+				Skill Normal
+				Health 100
+				WeaponRestrictions PrimaryOnly
+				Name "Badeline"
+				Item "The Huntsman"
+				ClassIcon badeline
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot
+			TotalCount 5
+			TotalCurrency 20
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 5
+			Squad
+			{
+				TFBot
+				{
+					Template T_TFBot_Giant_Scout
+					Health 1000
+					Skill Normal
+					Name "You should seek help lady"
+					ClassIcon badeline
+					Item "Wipe Out Wraps"
+					ItemAttributes
+					{
+						ItemName "Wipe Out Wraps"
+						"set item tint rgb" 5801378
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Giant_Soldier
+					Health 1200
+					Skill Normal
+					Name "Celeste Marketable Plush"
+					ClassIcon badeline
+					Item "Towering Pillar of Beanies"
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Giant_Pyro
+					Health 1050
+					Skill Normal
+					Name "Scattered and Lost"
+					ClassIcon badeline
+					Item "Hot Spaniel"
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_FLAMETHROWER"
+						"airblast disabled" 1
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Giant_Demoman
+					Health 1100
+					Skill Normal
+					Name "play Celeste for the plot"
+					ClassIcon badeline
+					Item "Professional's Pom Pom"
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Giant_Heavyweapons
+					Health 1400
+					Skill Easy
+					Name "Mount Celeste"
+					ClassIcon badeline
+					Item "Trapper's Flap"
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2a"
+
+			Where spawnbot_tunnel
+			Support limited
+			TotalCount 6
+			TotalCurrency 0
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Class Heavy
+				Skill Easy
+				WeaponRestrictions MeleeOnly
+				Scale 0.5
+				Health 1
+				Name "Strawberry"
+				Item "dec2014 heavy_parka"
+				ClassIcon heavy_strawberry
+				ItemAttributes
+				{
+					ItemName "dec2014 heavy_parka"
+					"set item tint rgb" 12073019
+				}
+				CharacterAttributes
+				{
+					"move speed bonus" 1.6
+				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			WaitForAllDead "2a"
+			WaitBeforeStarting 2
+			FirstSpawnMessage "{5ed5f6}Now Playing - Super Mario Bros - World 1-1"  
+		}
+
+		WaveSpawn
+		{
+			Name "2b"
+			WaitForAllDead "2a"
+
+			Where spawnbot_tunnel
+			TotalCount 16
+			TotalCurrency 100
+			MaxActive 8
+			SpawnCount 2
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 2
+			FirstSpawnWarningSound "world_one_one.wav"
+
+			Squad
+			{
+				TFBot
+				{
+					Class Pyro
+					ClassIcon pyro_fire_bro
+					Name "Fire Bro"
+					Scale 1.2
+					Skill Normal
+					Health 250
+					Item "The Dragon's Fury"
+					Item "Jungle Wreath"
+					MaxVisionRange 1200
+					ItemAttributes
+					{
+						ItemName "Jungle Wreath"
+						"set item tint RGB" 13595446
+					}
+				}
+
+				TFBot
+				{
+					Class Pyro
+					ClassIcon pyro_hammer_bro
+					Name "Hammer Bro"
+					Skill Expert
+					Health 350
+					Scale 1.2
+					WeaponRestrictions MeleeOnly
+					Item "The powerjack"
+					Item "Full Metal Helmet"
+					ItemAttributes
+					{
+						ItemName "Full Metal Helmet"
+						"set item tint RGB" 3329330
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2b"
+			WaitForAllDead "2a"
+
+			Where spawnbot
+			TotalCount 21
+			TotalCurrency 50
+			MaxActive 7
+			SpawnCount 7
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Soldier
+				Name "Stomping On...Goombas!"
+				ClassIcon soldier_goomba
+				Skill Expert
+				WeaponRestrictions MeleeOnly
+				Health 75
+				Scale 0.5
+				Attributes AutoJump
+				AutoJumpMin 4
+				AutoJumpMax 4
+				Item "The Toadstool Topper"
+				Item "TF_WEAPON_SHOVEL"
+				ItemAttributes
+				{
+					ItemName "The Toadstool Topper"
+					"set item tint rgb" 6901050
+				}
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_SHOVEL"
+					"fire rate bonus" 0.7
+					"damage bonus" 1.3
+				}
+				CharacterAttributes
+				{
+					"increased jump height" 1.5
+					"move speed bonus" 1.4
+					"damage force reduction" 0.7
+					"airblast vulnerability multiplier" 0.7
+					"cancel falling damage" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2b"
+			WaitForAllDead "2a"
+
+			Where spawnbot
+			TotalCount 6
+			TotalCurrency 25
+			MaxActive 3
+			SpawnCount 1
+			WaitBeforeStarting 4
+			WaitBetweenSpawns 6
+
+			TFBot
+			{
+				Class Heavy
+				ClassIcon heavy_dry_bones
+				Skill Expert
+				Name "Dry Bones, He Fu*ks"
+				WeaponRestrictions MeleeOnly
+				Item "Fists of Steel"
+				Item "Spine-Chilling Skull"
+				Scale 1.25
+				Health 666
+				Attributes AlwaysCrit
+				ItemAttributes
+				{
+					ItemName "Spine-Chilling Skull"
+					"set item tint RGB" 15132390
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2b"
+			WaitForAllDead "2a"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 25
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 8
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Soldier_Crit
+				Name "Bullet Bill in 1st place"
+				ClassIcon soldier_bill
+				Item "The Tank Top"
+				ItemAttributes
+				{
+					ItemName "The Tank Top"
+					"set item tint RGB" 1315860
+				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			WaitForAllDead "2b"
+			WaitBeforeStarting 2
+			FirstSpawnMessage "{5ed5f6}Now Playing - Sonic And The Black Knight - Fight The Knight"  
+		}
+
+		WaveSpawn
+		{
+			Name "2c"
+			WaitForAllDead "2b"
+
+			Where spawnbot
+			TotalCount 12
+			TotalCurrency 50
+			MaxActive 6
+			SpawnCount 3
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 4
+			FirstSpawnWarningSound "fighting_knight.wav"
+
+			TFBot
+			{
+				Template T_TFBot_Scout_Shortstop
+				Health 400
+				Name "Mecha Sonic Overhyped Z"
+				ClassIcon scout_mecha_sonic
+				Item "Cadet Visor"
+				ItemAttributes
+				{
+					ItemName "Cadet Visor"
+					"set item tint rgb" 13595446
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2c demoknight"
+			WaitForAllDead "2b"
+
+			Where spawnbot_tunnel
+			TotalCount 30
+			TotalCurrency 50
+			MaxActive 12
+			SpawnCount 6
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 5
+			Support limited
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "THROUGH THE FIRE"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 13595446
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "FIGHT THE KNIGHT"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 12073019
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "KNIGHT OF THE WIND"
+					Item "The Dark Falkirk Helm"
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "WITH ME"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 8208497
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2d demoknight"
+			WaitForAllDead "2c demoknight"
+
+			Where spawnbot_tunnel
+			MaxActive 12
+			SpawnCount 6
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 4
+			Support 1
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "THROUGH THE FIRE"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 13595446
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "FIGHT THE KNIGHT"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 12073019
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "KNIGHT OF THE WIND"
+					Item "The Dark Falkirk Helm"
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon demoman_black_knight
+					Name "WITH ME"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 8208497
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2d"
+			WaitForAllDead "2c"
+
+			Where spawnbot
+			TotalCount 16
+			TotalCurrency 100
+			MaxActive 8
+			SpawnCount 2
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 2
+
+			TFBot
+			{
+				Class Soldier
+				ClassIcon soldier_egg_robo
+				Name "EggRobo, Not Eggmann"
+				Skill Normal
+				WeaponRestrictions PrimaryOnly
+				Item "The Cow Mangler 5000"
+				Item "Thousand-Yard Stare"
+				ItemAttributes
+				{
+					ItemName "Thousand-Yard Stare"
+					"set item tint RGB" 8289918
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "2d"
+			WaitForAllDead "2c"
+
+			Where spawnbot_tunnel
+			TotalCount 1
+			TotalCurrency 300
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 6
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_neo_metal
+				Name "Neo Metal Sonic Best Robo"
+				Skill Expert
+				Health 7500
+				Scale 1.9
+				WeaponRestrictions PrimaryOnly
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				Item "TF_WEAPON_SCATTERGUN"
+				Item "Cadet Visor"
+				ItemAttributes
+				{
+					ItemName "Cadet Visor"
+					"set item tint rgb" 12073019
+				}
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_SCATTERGUN"
+					"fire rate bonus" 0.8
+					"damage bonus" 1.5
+				}
+				CharacterAttributes
+				{
+					"move speed penalty" 0.5
+					"damage force reduction" 0.7
+					"airblast vulnerability multiplier" 0.7
+					"override footstep sound set" 5
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "null 1"
+
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			Support 1
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_no_rosalina
+				Skill Easy
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "null 2"
+
+			TotalCount 1
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			Support 1
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_metal_plush
+				Skill Easy
+			}
+		}
+	}
+
+	Wave // Wave 3 - $800 ($4700 if A+)
+	{
+		StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+		
+		InitWaveOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `love-colored_master_spark.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+
+        DoneOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `love-colored_master_spark.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+		
+		WaveSpawn
+		{
+			WaitBeforeStarting 0
+			FirstSpawnMessage "{5ed5f6}Now Playing - Touhou: Imperishable Night - Love-colored Master Spark"  
+		}
+
+		WaveSpawn
+		{
+			Name "3a"
+
+			Where spawnbot
+			Where spawnbot_tunnel
+			TotalCount 30
+			TotalCurrency 300
+			MaxActive 12
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+			FirstSpawnWarningSound "love-colored_master_spark.wav"
+
+			RandomChoice
+			{
+				TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 10027263
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 10027263
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+					Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 3394815
+					}
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 3394815
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16750899
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				                "set item tint RGB" 16750899
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16711935
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16711935
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16777011
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16777011
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16777215
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16777215
+                    }
+				}
+
+				TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 6723840
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 6723840
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 8421504
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 8421504
+                    }
+				}
+
+				TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 3394815
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 3394815
+                    }
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3a"
+
+			Where spawnbot
+			TotalCount 2
+			TotalCurrency 50
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 5
+			WaitBetweenSpawns 5
+
+			TFBot
+			{
+				Template T_TFBot_Touhou_Hijack
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3b"
+			WaitForAllDead "3a"
+
+			Where spawnbot
+			TotalCount 2
+			TotalCurrency 50
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 8
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Soldier_Spammer_Reload
+				Item "The Crone's Dome"
+				Name "yeah just dodge, Baka!"
+				ClassIcon soldier_cirno
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_ROCKETLAUNCHER"
+					"damage penalty" 0.5
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3b"
+			WaitForAllDead "3a"
+
+			Where spawnbot_tunnel
+			TotalCount 20
+			TotalCurrency 50
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Class Soldier
+				ClassIcon soldier_chen
+				Name "Honk Honk"
+				Item "The Grand Duchess Fairy Wings"
+				Skill Expert
+				Item "The Direct Hit"
+				ItemAttributes
+				{
+					ItemName "The Direct Hit"
+					"damage penalty" 0.25
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3b"
+			WaitForAllDead "3a"
+
+			Where spawnbot_tunnel
+			TotalCount 20
+			TotalCurrency 50
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Class Demoman
+				Name "Sniper Bnuuy"
+				ClassIcon demoman_reisen
+				Skill Expert
+				Item "The Grand Duchess Fairy Wings"
+				Item "The Loch-n-Load"
+				ItemAttributes
+				{
+					ItemName "The Loch-n-Load"
+					"damage penalty" 0.25
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3c"
+			WaitForAllDead "3b"
+
+			Where spawnbot
+			TotalCount 2
+			TotalCurrency 50
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 8
+
+			TFBot
+			{
+				Class Demoman
+				Name "Nuclear Chicken"
+				ClassIcon demoman_reiuji
+				Skill Normal
+				Health 3300
+				Item "The Crone's Dome"
+				WeaponRestrictions PrimaryOnly
+				Attributes MiniBoss
+				Attributes HoldFireUntilFullReload
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_GRENADELAUNCHER"
+					"fire rate bonus" 0.2
+					"faster reload rate" 0.3
+					"clip size penalty" 3.0
+					"Projectile speed increased" 1.5
+					"use large smoke explosion" 1
+					"damage penalty" 0.7
+				}
+				CharacterAttributes
+				{
+					"move speed bonus"	0.35
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3c"
+			WaitForAllDead "3b"
+
+			Where spawnbot_tunnel
+			TotalCount 20
+			TotalCurrency 50
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Class Soldier
+				Name "Please donate to shrine!"
+				ClassIcon soldier_reimu
+				Skill Expert
+				Item "The Grand Duchess Fairy Wings"
+				WeaponRestrictions PrimaryOnly
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_ROCKETLAUNCHER"
+					"faster reload rate" -0.8
+					"fire rate bonus" 0.5
+					"damage penalty" 0.7
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3c"
+			WaitForAllDead "3b"
+
+			Where spawnbot_tunnel
+			TotalCount 20
+			TotalCurrency 50
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Class Demoman
+				Name "Japanese Goblin"
+				ClassIcon demoman_suika
+				Item "The Grand Duchess Fairy Wings"
+				Skill Expert
+				WeaponRestrictions PrimaryOnly
+				Attributes HoldFireUntilFullReload
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_GRENADELAUNCHER"
+					"faster reload rate" 1.75
+					"fire rate bonus" 0.05
+					"clip size penalty" 0.5
+					"projectile spread angle penalty" 3
+					"damage penalty" 0.7
+					//"Projectile speed increased"	1.1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3d"
+			WaitForAllDead "3c"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 50
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Heavy
+				ClassIcon soldier_marsia_boss
+				Name "Marisa Best Girl"
+				Health 17000
+				Skill Expert
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				Tag bot_giant
+				Item "Iron Curtain"
+				Item "The Crone's Dome"
+				ItemAttributes
+				{
+					ItemName "Iron Curtain"
+					"projectile spread angle penalty" 4.0
+					"override projectile type" 2.0
+					"fire rate penalty" 4.0
+					"damage bonus" 7.75
+				}
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier" 0.30
+					"override footstep sound set" 2.0
+					"damage force reduction" 0.30
+					"move speed bonus" 0.4
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3d"
+			WaitForAllDead "3c"
+
+			Where spawnbot_tunnel
+			Support 1
+			TotalCurrency 0
+			MaxActive 12
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 1
+
+			RandomChoice
+			{
+				TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 10027263
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 10027263
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+					Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 3394815
+					}
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 3394815
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16750899
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				                "set item tint RGB" 16750899
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16711935
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16711935
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16777011
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16777011
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16777215
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16777215
+                    }
+				}
+
+				TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 6723840
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 6723840
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 8421504
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 8421504
+                    }
+				}
+
+				TFBot
+				{
+			        ClassIcon soldier_marsia
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					//Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 3394815
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 3394815
+                    }
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "3d"
+			WaitForAllDead "3c"
+
+			Where spawnbot_tunnel
+			Support 1
+			TotalCurrency 0
+			MaxActive 4
+			SpawnCount 4
+			WaitBeforeStarting 8
+			WaitBetweenSpawns 35
+			Support 1
+
+			TFBot
+			{
+				Class Spy
+				Skill Expert
+				ClassIcon spy_sakuya
+				Name "Sakuya also best girl"
+			}
+		}
+	}
+
+	Wave // Wave 4 - $1100 ($5900 if A+)
+	{
+		StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+		
+		InitWaveOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `cynthia_battle.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+
+        DoneOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `cynthia_battle.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+		
+		WaveSpawn
+		{
+			WaitBeforeStarting 0
+			FirstSpawnMessage "{5ed5f6}Now Playing - Pokémon Diamond - Champion Cynthia Battle Music"  
+		}
+
+		WaveSpawn
+		{
+			Name "Charizard"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			FirstSpawnWarningSound "cynthia_battle.wav"
+
+			TFBot
+			{
+				Class Pyro
+				ClassIcon pyro_charizard
+				Name "Used Flamethrower"
+				Health 9500
+	            Skill Expert
+				Scale 1.9
+				Item "The Fire Breather"
+				Item "The Razorback"
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				Attributes AlwaysFireWeapon
+				Attributes AlwaysCrit
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_FLAMETHROWER"
+					"flame_drag" 4.75
+				}
+				CharacterAttributes
+				{
+					"airblast vulnerability multiplier" 0.5
+					"override footstep sound set" 6.0
+					"damage force reduction" 0.60
+					"move speed bonus" 0.50
+					"cannot be backstabbed" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Lopunny"
+			WaitForAllDead "Charizard"
+
+			Where spawnbot_tunnel
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_lopunny
+				Name "Used Quick Attack"
+				Health 7500
+				Skill Expert
+				Scale 1.7
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				Item "TTG Max Hat"
+				Item "The Razorback"
+				ItemAttributes
+				{
+					ItemName "TTG Max Hat"
+					"set item tint RGB" 6901050
+				}
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_SCATTERGUN"
+					"faster reload rate" 0.8
+					"clip size atomic" 2
+					"fire rate bonus" 0.80
+					"damage bonus" 1.25
+				}
+				CharacterAttributes
+				{
+					"damage force reduction" 0.7
+					"airblast vulnerability multiplier" 3.0
+					"override footstep sound set" 5
+					"airblast vertical vulnerability multiplier" 0.1
+					"move speed bonus" 0.70
+					"cannot be backstabbed" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Gengar"
+			WaitForAllDead "Lopunny"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Heavy
+				ClassIcon heavy_gengar
+				Name "Used Shadow Punch"
+				Health 8500
+				Skill Expert
+				Scale 1.7
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				WeaponRestrictions MeleeOnly
+				Item "Fists of Steel"
+				Item "Zepheniah's Shroud"
+				Item "The Razorback"
+				ItemAttributes
+				{
+					ItemName "Zepheniah's Shroud"
+					"set item tint RGB" 8208497
+				}
+				ItemAttributes
+				{
+					ItemName "Fists of Steel"
+					"fire rate bonus" 0.6
+					"damage bonus" 1.5
+				}
+				CharacterAttributes
+				{
+					"move speed bonus"	0.6
+					"damage force reduction" 0.3
+					"airblast vulnerability multiplier" 0.3
+					"override footstep sound set" 2
+					"airblast vertical vulnerability multiplier" 0.1
+					"cannot be backstabbed" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Garchomp"
+			WaitForAllDead "Gengar"
+
+			Where spawnbot_tunnel
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Demoman
+				ClassIcon demoman_garchomp
+				Name "Used Dragon Rush"
+				Health 9000
+				Skill Expert
+				Scale 1.9
+				Item "Prehistoric Pullover"
+				Item "The Chargin' Targe"
+				Item "The Razorback"
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				Attributes HoldFireUntilFullReload
+				ItemAttributes
+				{
+					ItemName "Prehistoric Pullover"
+					"set item tint RGB" 15185211
+				}
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_GRENADELAUNCHER"
+					"faster reload rate" 0.3
+					"clip size penalty" 3.0
+					"Projectile speed increased" 1.5
+					"damage bonus" 1.5
+					"blast radius increased" 1.5
+					"use large smoke explosion" 1
+				}
+				ItemAttributes
+				{
+					ItemName "The Chargin' Targe"
+					"Attack not cancel charge" 1
+				}
+				CharacterAttributes
+				{
+					"charge recharge rate increased" 2
+					"cancel falling damage" 1
+					"move speed bonus" 0.6
+					"cannot be backstabbed" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Gardevoir"
+			WaitForAllDead "Garchomp"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Soldier
+				ClassIcon soldier_gardevoir
+				Name "Used Draining Kiss"
+				Health 12250
+				Skill Expert
+				Scale 1.9
+				Item "Thousand-Yard Stare"
+				Item "The Black Box"
+				Item "The Razorback"
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				WeaponRestrictions PrimaryOnly
+				Attributes HoldFireUntilFullReload
+				Attributes AlwaysCrit
+				ItemAttributes
+				{
+					ItemName "Thousand-Yard Stare"
+					"set item tint RGB" 7511618
+				}
+				ItemAttributes
+				{
+					ItemName "The Black Box"
+					"damage bonus" 1.2
+					"fire rate bonus" 0.001
+					"clip size upgrade atomic" 0
+					"faster reload rate" 1.5
+					"blast radius increased" 1.25
+					//"Projectile speed increased" 0.4
+					"projectile spread angle penalty" 4
+					"heal on hit for rapidfire" 1250
+				}
+				CharacterAttributes
+				{
+					"move speed bonus"	0.40
+					"damage force reduction" 0.4
+					"airblast vulnerability multiplier" 0.4
+					"override footstep sound set" 3
+					"Projectile speed increased" 0.9
+					"cannot be backstabbed" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Hex Maniac"
+			WaitForAllDead "Gardevoir"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 1100
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_hex_maniac
+				Name "Hex Maniac"
+				Skill Expert
+				Health 5666
+				Scale 1.0
+				Item "The Sandman"
+				Item "The Triple Jumper"
+				WeaponRestrictions MeleeOnly
+				Attributes MiniBoss
+				Attributes UseBossHealthBar
+				ItemAttributes
+				{
+					ItemName "The Triple Jumper"
+					"set item tint RGB" 8208497
+				}
+				ItemAttributes
+				{
+					ItemName "The Sandman"
+					"effect bar recharge rate increased" 0.05
+					"max health additive penalty" -0
+					"damage bonus" 1
+				}
+				CharacterAttributes
+				{
+					"damage force reduction" 0.7
+					"airblast vulnerability multiplier" 0.7
+					"override footstep sound set" 5
+					"move speed penalty" 0.7
+				}
+			}
+		}
+	}
+
+	Wave // Wave 5 - $900 ($6900 if A+)
+	{
+		StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+		
+		InitWaveOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `rosalina_song.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+
+        DoneOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `rosalina_song.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+
+		WaveSpawn
+		{
+			Name "5 intro1"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "So...Want to hear a story?"
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5 intro2"
+			WaitForAllDead "5 intro1"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Happy to explain everything!"
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5 intro3"
+			WaitForAllDead "5 intro2"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "But first...BEAT MY WAVE!"
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+		    Name "5a"
+			WaitForAllDead "5 intro3"
+
+			Where spawnbot
+			TotalCount 15
+			TotalCurrency 100
+			MaxActive 15
+			SpawnCount 5
+			WaitBeforeStarting 3
+			WaitBetweenSpawns 1
+			Support limited
+
+			TFBot
+			{
+				Class Sniper
+				Skill Normal
+				Health 50
+				WeaponRestrictions PrimaryOnly
+				Name "ERROR"
+				ClassIcon scout_luma
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5a intro4"
+			WaitForAllDead "5a"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Oh...wave corrupted..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5a intro5"
+			WaitForAllDead "5a intro4"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Guess not telling the story!"
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5a intro6"
+			WaitForAllDead "5a intro5"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Okay fine...Finish this mess."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5a intro7"
+			WaitForAllDead "5a intro6"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "And I'll explain all!"
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5b"
+			WaitForAllDead "5a intro7"
+
+			TotalCount 10
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 1
+			TotalCurrency 100
+			FirstSpawnWarningSound	"mvm\mvm_tank_start.wav"
+
+			Tank
+			{
+				Health 2500
+				Name "tankboss"
+				Speed 125
+				Skin 1
+				StartingPathTrackNode "tankpath_same"
+
+				OnKilledOutput
+				{
+					Target boss_dead_relay
+					Action Trigger
+				}
+				OnBombDroppedOutput
+				{
+					Target boss_deploy_relay
+					Action Trigger
+				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			WaitForAllDead "5b"
+			WaitBeforeStarting 2
+			FirstSpawnMessage "{5ed5f6}Now Playing - Rhythm Heaven Fever - Beautiful One Day"  
+		}
+
+		WaveSpawn
+		{
+			Name "5c"
+			WaitForAllDead "5b"
+
+			Where spawnbot
+			TotalCount 20
+			TotalCurrency 20
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 4
+			FirstSpawnWarningSound "beautiful_one_day.wav"
+			Support limited
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Tracer
+					ClassIcon scout_luma
+					Scale 0.6
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Tracer
+					ClassIcon scout_luma
+					Scale 0.8
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Tracer
+					ClassIcon scout_luma
+					Scale 1.6
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Tracer
+					ClassIcon scout_luma
+					Scale 1.8
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5c"
+			WaitForAllDead "5b"
+
+			Where spawnbot_tunnel
+			TotalCount 20
+			TotalCurrency 20
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 4
+			Support limited
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Class Soldier
+					Name "Stomping On...Goombas!"
+					ClassIcon scout_luma
+					Skill Expert
+					WeaponRestrictions MeleeOnly
+					Health 75
+					Scale 0.6
+					Attributes AutoJump
+					Attributes AlwaysCrit
+					AutoJumpMin 4
+					AutoJumpMax 4
+					Item "The Toadstool Topper"
+					Item "TF_WEAPON_SHOVEL"
+					ItemAttributes
+					{
+						ItemName "The Toadstool Topper"
+						"set item tint rgb" 6901050
+					}
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_SHOVEL"
+						"fire rate bonus" 0.7
+						"damage bonus" 1.3
+					}
+					CharacterAttributes
+					{
+						"increased jump height" 1.5
+						"move speed bonus" 1.4
+						"damage force reduction" 0.7
+						"airblast vulnerability multiplier" 0.7
+						"cancel falling damage" 1
+					}
+				}
+
+				TFBot
+				{
+					Class Soldier
+					Name "Stomping On...Goombas!"
+					ClassIcon scout_luma
+					Skill Expert
+					WeaponRestrictions MeleeOnly
+					Health 75
+					Scale 0.8
+					Attributes AutoJump
+					Attributes AlwaysCrit
+					AutoJumpMin 4
+					AutoJumpMax 4
+					Item "The Toadstool Topper"
+					Item "TF_WEAPON_SHOVEL"
+					ItemAttributes
+					{
+						ItemName "The Toadstool Topper"
+						"set item tint rgb" 6901050
+					}
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_SHOVEL"
+						"fire rate bonus" 0.7
+						"damage bonus" 1.3
+					}
+					CharacterAttributes
+					{
+						"increased jump height" 1.5
+						"move speed bonus" 1.4
+						"damage force reduction" 0.7
+						"airblast vulnerability multiplier" 0.7
+						"cancel falling damage" 1
+					}
+				}
+
+				TFBot
+				{
+					Class Soldier
+					Name "Stomping On...Goombas!"
+					ClassIcon scout_luma
+					Skill Expert
+					WeaponRestrictions MeleeOnly
+					Health 75
+					Scale 1.6
+					Attributes AutoJump
+					Attributes AlwaysCrit
+					AutoJumpMin 4
+					AutoJumpMax 4
+					Item "The Toadstool Topper"
+					Item "TF_WEAPON_SHOVEL"
+					ItemAttributes
+					{
+						ItemName "The Toadstool Topper"
+						"set item tint rgb" 6901050
+					}
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_SHOVEL"
+						"fire rate bonus" 0.7
+						"damage bonus" 1.3
+					}
+					CharacterAttributes
+					{
+						"increased jump height" 1.5
+						"move speed bonus" 1.4
+						"damage force reduction" 0.7
+						"airblast vulnerability multiplier" 0.7
+						"cancel falling damage" 1
+					}
+				}
+
+				TFBot
+				{
+					Class Soldier
+					Name "Stomping On...Goombas!"
+					ClassIcon scout_luma
+					Skill Expert
+					WeaponRestrictions MeleeOnly
+					Health 75
+					Scale 1.8
+					Attributes AutoJump
+					Attributes AlwaysCrit
+					AutoJumpMin 4
+					AutoJumpMax 4
+					Item "The Toadstool Topper"
+					Item "TF_WEAPON_SHOVEL"
+					ItemAttributes
+					{
+						ItemName "The Toadstool Topper"
+						"set item tint rgb" 6901050
+					}
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_SHOVEL"
+						"fire rate bonus" 0.7
+						"damage bonus" 1.3
+					}
+					CharacterAttributes
+					{
+						"increased jump height" 1.5
+						"move speed bonus" 1.4
+						"damage force reduction" 0.7
+						"airblast vulnerability multiplier" 0.7
+						"cancel falling damage" 1
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5d"
+			WaitForAllDead "5c"
+
+			Where spawnbot_tunnel
+			TotalCount 20
+			TotalCurrency 20
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 4
+			Support limited
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon scout_luma
+					Scale 0.6
+					Name "THROUGH THE FIRE"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 13595446
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon scout_luma
+					Scale 0.8
+					Name "FIGHT THE KNIGHT"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 12073019
+					}
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon scout_luma
+					Scale 1.6
+					Name "KNIGHT OF THE WIND"
+					Item "The Dark Falkirk Helm"
+				}
+
+				TFBot
+				{
+					Template T_TFBot_Demoman_Knight
+					ClassIcon scout_luma
+					Scale 1.8
+					Name "WITH ME"
+					Item "The Dark Falkirk Helm"
+					ItemAttributes
+					{
+						ItemName "The Dark Falkirk Helm"
+						"set item tint rgb" 8208497
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5d"
+			WaitForAllDead "5c"
+
+			Where spawnbot
+			TotalCount 20
+			TotalCurrency 20
+			MaxActive 5
+			SpawnCount 5
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 2
+			Support limited
+
+			RandomChoice
+			{
+
+				TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 0.6
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 10027263
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 10027263
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 0.8
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+					Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 3394815
+					}
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 3394815
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 1.6
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16750899
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				                "set item tint RGB" 16750899
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 1.8
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16711935
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16711935
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 0.6
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16777011
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16777011
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 0.8
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 16777215
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 16777215
+                    }
+				}
+
+				TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 1.6
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 6723840
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 6723840
+                    }
+				}
+
+                TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Scale 1.8
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 8421504
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 8421504
+                    }
+				}
+
+				TFBot
+				{
+			        ClassIcon scout_luma
+					WeaponRestrictions	SecondaryOnly
+					Health	200
+					Skill	Hard
+					Name	"Love Colored Master Spark"
+					Attributes	AlwaysCrit
+					Class	Soldier
+                    Item "The Crone's Dome"
+					Item "The Righteous Bison"
+					WeaponRestrictions SecondaryOnly
+                    ItemAttributes
+                    {
+						ItemName	"The Crone's Dome"
+				        "set item tint RGB" 3394815
+                    }
+					ItemAttributes
+                    {
+						ItemName	"the righteous bison"
+				        "set item tint RGB" 3394815
+                    }
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5e"
+			WaitForAllDead "5d"
+
+			Where spawnbot_tunnel
+			TotalCount 10
+			TotalCurrency 10
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 4
+			Support limited
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Class Soldier
+					ClassIcon scout_luma
+					Name "Used Draining Kiss"
+					Health 200
+					Skill Hard
+					Scale 0.6
+					Item "Thousand-Yard Stare"
+					Item "The Black Box"
+					WeaponRestrictions PrimaryOnly
+					Attributes HoldFireUntilFullReload
+					ItemAttributes
+					{
+						ItemName "Thousand-Yard Stare"
+						"set item tint RGB" 7511618
+					}
+					ItemAttributes
+					{
+						ItemName "The Black Box"
+						"damage bonus" 1.2
+						"fire rate bonus" 0.001
+						"clip size upgrade atomic" 0
+						"faster reload rate" 1.5
+						"blast radius increased" 1.25
+						//"Projectile speed increased" 0.4
+						"projectile spread angle penalty" 4
+						"heal on hit for rapidfire" 300
+					}
+				}
+
+				TFBot
+				{
+					Class Soldier
+					ClassIcon scout_luma
+					Name "Used Draining Kiss"
+					Health 200
+					Skill Hard
+					Scale 0.8
+					Item "Thousand-Yard Stare"
+					Item "The Black Box"
+					WeaponRestrictions PrimaryOnly
+					Attributes HoldFireUntilFullReload
+					Attributes AlwaysCrit
+					ItemAttributes
+					{
+						ItemName "Thousand-Yard Stare"
+						"set item tint RGB" 7511618
+					}
+					ItemAttributes
+					{
+						ItemName "The Black Box"
+						"damage bonus" 1.2
+						"fire rate bonus" 0.001
+						"clip size upgrade atomic" 0
+						"faster reload rate" 1.5
+						"blast radius increased" 1.25
+						//"Projectile speed increased" 0.4
+						"projectile spread angle penalty" 4
+						"heal on hit for rapidfire" 300
+					}
+				}
+
+				TFBot
+				{
+					Class Soldier
+					ClassIcon scout_luma
+					Name "Used Draining Kiss"
+					Health 200
+					Skill Hard
+					Scale 1.6
+					Item "Thousand-Yard Stare"
+					Item "The Black Box"
+					WeaponRestrictions PrimaryOnly
+					Attributes HoldFireUntilFullReload
+					Attributes AlwaysCrit
+					ItemAttributes
+					{
+						ItemName "Thousand-Yard Stare"
+						"set item tint RGB" 7511618
+					}
+					ItemAttributes
+					{
+						ItemName "The Black Box"
+						"damage bonus" 1.2
+						"fire rate bonus" 0.001
+						"clip size upgrade atomic" 0
+						"faster reload rate" 1.5
+						"blast radius increased" 1.25
+						//"Projectile speed increased" 0.4
+						"projectile spread angle penalty" 4
+						"heal on hit for rapidfire" 300
+					}
+				}
+
+				TFBot
+				{
+					Class Soldier
+					ClassIcon scout_luma
+					Name "Used Draining Kiss"
+					Health 200
+					Skill Hard
+					Scale 1.8
+					Item "Thousand-Yard Stare"
+					Item "The Black Box"
+					WeaponRestrictions PrimaryOnly
+					Attributes HoldFireUntilFullReload
+					Attributes AlwaysCrit
+					ItemAttributes
+					{
+						ItemName "Thousand-Yard Stare"
+						"set item tint RGB" 7511618
+					}
+					ItemAttributes
+					{
+						ItemName "The Black Box"
+						"damage bonus" 1.2
+						"fire rate bonus" 0.001
+						"clip size upgrade atomic" 0
+						"faster reload rate" 1.5
+						"blast radius increased" 1.25
+						//"Projectile speed increased" 0.4
+						"projectile spread angle penalty" 4
+						"heal on hit for rapidfire" 300
+					}
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5e"
+			WaitForAllDead "5d"
+
+			Where spawnbot
+			TotalCount 10
+			TotalCurrency 10
+			MaxActive 10
+			SpawnCount 5
+			WaitBeforeStarting 2
+			WaitBetweenSpawns 4
+			Support limited
+
+			RandomChoice
+			{
+				TFBot
+				{
+					Class Pyro
+					ClassIcon scout_luma
+					Name "Used Flamethrower"
+					Health 175
+					Skill Expert
+					Scale 0.6
+					Item "The Fire Breather"
+					Attributes AlwaysFireWeapon
+					Attributes AlwaysCrit
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_FLAMETHROWER"
+						"flame_drag" 4.75
+					}
+				}
+
+				TFBot
+				{
+					Class Pyro
+					ClassIcon scout_luma
+					Name "Used Flamethrower"
+					Health 175
+					Skill Expert
+					Scale 0.8
+					Item "The Fire Breather"
+					Attributes AlwaysFireWeapon
+					Attributes AlwaysCrit
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_FLAMETHROWER"
+						"flame_drag" 4.75
+					}
+				}
+
+				TFBot
+				{
+					Class Pyro
+					ClassIcon scout_luma
+					Name "Used Flamethrower"
+					Health 175
+					Skill Expert
+					Scale 1.6
+					Item "The Fire Breather"
+					Attributes AlwaysFireWeapon
+					Attributes AlwaysCrit
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_FLAMETHROWER"
+						"flame_drag" 4.75
+					}
+				}
+
+				TFBot
+				{
+					Class Pyro
+					ClassIcon scout_luma
+					Name "Used Flamethrower"
+					Health 175
+					Skill Expert
+					Scale 1.8
+					Item "The Fire Breather"
+					Attributes AlwaysFireWeapon
+					Attributes AlwaysCrit
+					ItemAttributes
+					{
+						ItemName "TF_WEAPON_FLAMETHROWER"
+						"flame_drag" 4.75
+					}
+				}
+			}
+		}
+
+
+		WaveSpawn
+		{
+			Name "5e boss1"
+			WaitForAllDead "5e"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 20
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			Support limited
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Scout
+				Health 1200
+				Scale 1.0
+				Skill Expert
+				Name "Overwatch"
+				ClassIcon scout_luma
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5e boss2"
+			WaitForAllDead "5e boss1"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 20
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			Support limited
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Soldier
+				Health 1400
+				Scale 1.0
+				Skill Expert
+				Name "Celeste, Mario, Sonic"
+				ClassIcon scout_luma
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5e boss3"
+			WaitForAllDead "5e boss2"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 20
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			Support limited
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Pyro
+				Health 1600
+				Scale 1.0
+				Skill Expert
+				Name "Touhou"
+				ClassIcon scout_luma
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_FLAMETHROWER"
+					"airblast disabled" 1
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5e boss4"
+			WaitForAllDead "5e boss3"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 20
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			Support limited
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Demoman
+				Health 1800
+				Scale 1.0
+				Skill Expert
+				Name "Pokemon"
+				ClassIcon scout_luma
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5e boss5"
+			WaitForAllDead "5e boss4"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 20
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 0
+			WaitBetweenSpawns 0
+			Support limited
+
+			TFBot
+			{
+				Template T_TFBot_Giant_Heavyweapons
+				Health 2000
+				Scale 1.0
+				Skill Expert
+				Name "Memes Vs Machine"
+				ClassIcon scout_luma
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro1"
+			WaitForAllDead "5e boss5"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Was it worth it?"
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro2"
+			WaitForAllDead "5f outro1"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Didn't think so..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro3"
+			WaitForAllDead "5f outro2"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "This mission..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro4"
+			WaitForAllDead "5f outro3"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Filled with hyperfixation!"
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro5"
+			WaitForAllDead "5f outro4"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Was to keep it contained..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro6"
+			WaitForAllDead "5f outro5"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Beat the last subwave..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro7"
+			WaitForAllDead "5f outro6"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "And you'll free it..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro8"
+			WaitForAllDead "5f outro7"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "The Creator..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "5f outro9"
+			WaitForAllDead "5f outro8"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 1
+			WaitBetweenSpawns 0
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_book
+				Attributes MiniBoss
+				Health 1
+				Name "Good luck..."
+				Attributes HoldFireUntilFullReload
+				WeaponRestrictions MeleeOnly
+			}
+		}
+
+		WaveSpawn
+		{
+			WaitForAllDead "5f outro9"
+			WaitBeforeStarting 2
+			FirstSpawnMessage "{5ed5f6}Now Playing - Dexter Manning - The Rosalina Song"  
+		}
+		
+		WaveSpawn
+		{
+			Name "Rosalina OP"
+			WaitForAllDead "5f outro9"
+
+			Where spawnbot
+			TotalCount 10
+			TotalCurrency 500
+			MaxActive 5
+			SpawnCount 1
+			WaitBeforeStarting 6
+			WaitBetweenSpawns 4
+			FirstSpawnWarningSound "rosalina_song.wav"
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_rosalina
+				Name "Rosalina OP As Balls"
+				Skill Expert
+				Health 1600
+				Item "The Sandman"
+				Item "Class Crown"
+				Item "Thrilling Tracksuit"
+				WeaponRestrictions MeleeOnly
+				Attributes MiniBoss
+				Attributes AlwaysCrit
+				ItemAttributes
+				{
+					ItemName "Class Crown"
+					"set item tint RGB" 8289918
+				}
+				ItemAttributes
+				{
+					ItemName "The Sandman"
+					"effect bar recharge rate increased" 0.05
+					"max health additive penalty" -0
+					"damage bonus"	2
+				}
+				CharacterAttributes
+				{
+					"damage force reduction" 0.7
+					"airblast vulnerability multiplier" 0.7
+					"override footstep sound set" 5
+					"move speed penalty" 0.7
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Luma OP"
+			WaitForAllDead "5f outro9"
+
+			Where spawnbot_tunnel
+			Support 1
+			TotalCurrency 0
+			MaxActive 10
+			SpawnCount 2
+			WaitBeforeStarting 9
+			WaitBetweenSpawns 1
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_luma
+				Name "Luma OP As Balls"
+				Skill Expert
+				Health 125
+				Scale 0.8
+				WeaponRestrictions MeleeOnly
+				Item "The Sandman"
+				Item "Smissmas Saxton"
+				ItemAttributes
+				{
+					ItemName "Smissmas Saxton"
+					"set item tint RGB" 15185211
+				}
+				ItemAttributes
+				{
+					ItemName "The Sandman"
+					"max health additive penalty" -0
+					"effect bar recharge rate increased" 0.25
+					"damage bonus"	2
+				}
+			}
+		}
+	}
+
+	Wave //Wave 06
+	{
+		StartWaveOutput
+        {
+            Target wave_start_relay
+            Action Trigger
+        }
+		
+		InitWaveOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `big_arms_boss_v2.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+
+        DoneOutput
+        {
+            Target wave_finished_relay
+			Action RunScriptCode
+			Param
+			"
+				self.AcceptInput(`Trigger`, ``, null, null)
+				SendGlobalGameEvent(`teamplay_broadcast_audio`,
+				{
+					sound = `big_arms_boss_v2.wav`
+					additional_flags = 0x4 // SND_STOP
+					team = 255
+        		})
+			"
+        }
+		
+		WaveSpawn
+		{
+			Name "Dummy"
+			WaitBeforeStarting 0
+			FirstSpawnMessage "{5ed5f6}Now Playing - Sonic Generations - Boss: Big Arm"  
+		}
+
+		WaveSpawn
+		{
+			Name "Dummy"
+
+			WaitBeforeStarting 0
+			StartWaveWarningSound "big_arms_boss_v2.wav"
+		}
+		
+		WaveSpawn
+		{
+			Name "Boss Text1"
+			WaitBeforeStarting 10
+			FirstSpawnMessage "{Blue}Hexerfixation: How dare you come here and trash my favorite things, all for what? Medals?"
+		}
+		
+		WaveSpawn
+		{
+			Name "Boss Text2"
+			WaitForAllSpawned "Boss Text1"
+			WaitBeforeStarting 5
+			FirstSpawnMessage "{Blue}Hexerfixation: Well too bad! WELCOME TO YOUR DOOM!!!"
+		}
+
+		WaveSpawn
+		{
+			Name "Boss"
+
+			Where spawnbot
+			TotalCount 1
+			TotalCurrency 0
+			MaxActive 1
+			SpawnCount 1
+			WaitBeforeStarting 10
+			WaitBetweenSpawns 0
+
+
+			TFBot
+			{
+				Template T_TFBot_Soldier_Self
+			}
+		}
+		
+		WaveSpawn
+		{
+			Name "Boss Defeat"
+			WaitForAllDead "Boss"
+			WaitBeforeStarting 0
+			FirstSpawnMessage "{Blue}Hexerfixation: GGGRRRAAAHHHHH!, H-HOW DID YOU BEAT ME??? M-MMY THINGS!, MMY MEDALS!!, MMY BODY!!! UUGGHHAAA! TAKE YOUR FOOLS MEDAL, I'LL RETURN SOMEDAY TO TAKE THEM BACK!"
+		}
+
+		WaveSpawn
+		{
+			Name "Rosalina 1"
+
+			Where spawnbot_tunnel
+			Support limited
+			TotalCurrency 300
+			TotalCount 30
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 22
+			WaitBetweenSpawns 6
+
+			TFBot
+			{
+				Class Scout
+				Name "Rosalina"
+				ClassIcon scout_rosalina
+				Skill Normal
+				Scale 1.5
+				Health 450
+				Item "The Sandman"
+				Item "Class Crown"
+				Item "Thrilling Tracksuit"
+				WeaponRestrictions MeleeOnly
+				ItemAttributes
+				{
+					ItemName "Class Crown"
+					"set item tint RGB" 8289918
+				}
+				ItemAttributes
+				{
+					ItemName "The Sandman"
+					"effect bar recharge rate increased" 0.1
+					"max health additive penalty" -0
+				}
+				CharacterAttributes
+				{
+					"damage force reduction" 0.7
+					"airblast vulnerability multiplier" 0.7
+					"override footstep sound set" 5
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Rosalina 2"
+			WaitForAllDead "Rosalina 1"
+
+			Where spawnbot_tunnel
+			Support 1
+			TotalCurrency 0
+			MaxActive 2
+			SpawnCount 1
+			WaitBeforeStarting 22
+			WaitBetweenSpawns 6
+
+			TFBot
+			{
+				Class Scout
+				Name "Rosalina"
+				ClassIcon scout_rosalina
+				Skill Normal
+				Scale 1.5
+				Health 450
+				Item "The Sandman"
+				Item "Class Crown"
+				Item "Thrilling Tracksuit"
+				WeaponRestrictions MeleeOnly
+				ItemAttributes
+				{
+					ItemName "Class Crown"
+					"set item tint RGB" 8289918
+				}
+				ItemAttributes
+				{
+					ItemName "The Sandman"
+					"effect bar recharge rate increased" 0.1
+					"max health additive penalty" -0
+				}
+				CharacterAttributes
+				{
+					"damage force reduction" 0.7
+					"airblast vulnerability multiplier" 0.7
+					"override footstep sound set" 5
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Hex Maniac 1"
+
+			Where spawnbot_tunnel
+			Support limited
+			TotalCount 30
+			TotalCurrency 300
+			MaxActive 6
+			SpawnCount 2
+			WaitBeforeStarting 22
+			WaitBetweenSpawns 3
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_hex_maniac
+				Name "Hex Maniac"
+				Skill Easy
+				Health 125
+				Item "The Triple Jumper"
+				ItemAttributes
+				{
+					ItemName "The Triple Jumper"
+					"set item tint RGB" 8208497
+				}
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_SCATTERGUN"
+					"fire rate bonus" 1.15
+				}
+			}
+		}
+
+		WaveSpawn
+		{
+			Name "Hex Maniac 2"
+			WaitForAllDead "Hex Maniac 1"
+
+			Where spawnbot_tunnel
+			Support 1
+			TotalCurrency 0
+			MaxActive 6
+			SpawnCount 2
+			WaitBeforeStarting 22
+			WaitBetweenSpawns 3
+
+			TFBot
+			{
+				Class Scout
+				ClassIcon scout_hex_maniac
+				Name "Hex Maniac"
+				Skill Easy
+				Health 125
+				Item "The Triple Jumper"
+				ItemAttributes
+				{
+					ItemName "The Triple Jumper"
+					"set item tint RGB" 8208497
+				}
+				ItemAttributes
+				{
+					ItemName "TF_WEAPON_SCATTERGUN"
+					"fire rate bonus" 1.15
+				}
+			}
+		}
+	}
+}

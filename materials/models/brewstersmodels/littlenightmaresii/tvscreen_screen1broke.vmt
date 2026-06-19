@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/brewstersmodels/littlenightmaresii/tv_screen1"
+	"$envmap" "env_cubemap"
+	"$detail" "models/brewstersmodels/littlenightmaresii/tvscreen_screen1d"
+	$detailblendmode 5
+	$detailscale 1
+}
